@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大口注文のお見積依頼｜スーパー三河屋 ご予約サイト</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=9">
+<link rel="stylesheet" href="assets/css/base.css?v=9">
+<link rel="stylesheet" href="assets/css/components.css?v=9">
+</head>
+<body data-theme="regular">
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">予</span>
+      <span class="brand-text">三河屋<small>季節のご予約サイト</small></span>
+    </a>
+    <nav class="site-header__nav" aria-label="サイト内">
+      <a href="lookup.html">予約の照会</a>
+      <a href="https://www.biglive.jp/" class="back-main">本店サイト</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="site-main">
+<h1>大口注文のお見積依頼</h1>
+<p>お弁当50個以上、法人・学校・ご葬祭のお料理は、お見積りから承ります。<br>
+内容を確認のうえ、担当者よりお電話またはメールでご連絡し、金額確定後にお支払い方法をご案内します。</p>
+<p class="field-note">※プレビュー版のため送信はできません</p>
+
+<form class="paper">
+  <div class="field">
+    <label for="q-company">会社・団体名（任意）</label>
+    <input type="text" id="q-company">
+  </div>
+  <div class="field">
+    <label for="q-name">ご担当者名<span class="req">必須</span></label>
+    <input type="text" id="q-name">
+  </div>
+  <div class="field">
+    <label for="q-tel">お電話番号<span class="req">必須</span></label>
+    <input type="tel" id="q-tel" placeholder="ハイフン無しでも可">
+  </div>
+  <div class="field">
+    <label for="q-email">メールアドレス（推奨）</label>
+    <input type="email" id="q-email">
+  </div>
+  <div class="field">
+    <label for="q-shop">ご希望のお受取店舗（任意）</label>
+    <select id="q-shop">
+      <option>未定・相談したい</option>
+      <option>ビッグリブ小牧店</option>
+      <option>ビッグリブ安城店</option>
+      <option>Mikawaya 稲熊店</option>
+      <option>Mikawaya 上飯田店</option>
+      <option>Mikawaya 犬山店</option>
+      <option>ほか直営13店舗</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="q-date">お受取希望日（任意）</label>
+    <input type="date" id="q-date">
+  </div>
+  <div class="field">
+    <label for="q-detail">ご希望の内容<span class="req">必須</span></label>
+    <textarea id="q-detail" rows="5" placeholder="例: 幕の内弁当 60個／お茶付き／会議用"></textarea>
+  </div>
+  <div class="field">
+    <label for="q-budget">ご予算（任意・円）</label>
+    <input type="text" id="q-budget" inputmode="numeric" placeholder="例: 60000">
+  </div>
+  <div class="notice" style="font-size:.92rem">
+    ご入力いただいた情報は、<strong>お見積りのご回答とご注文に関するご連絡のみ</strong>に使用し、第三者への提供は行いません。
+    詳しくは<a href="legal-privacy.html">プライバシーポリシー</a>をご覧ください。
+  </div>
+  <div class="field">
+    <label style="display:flex;gap:10px;align-items:center;min-height:var(--tap);font-weight:700">
+      <input type="checkbox" style="width:24px;height:24px"> 個人情報の取扱いに同意します<span class="req">必須</span>
+    </label>
+  </div>
+  <button type="button" class="btn btn--primary btn--block">見積を依頼する</button>
+</form>
+</main>
+<aside class="tel-band" aria-label="お電話でのご相談" style="margin-top:48px">
+  <p class="tel-band__lead">お電話でのご相談も承ります</p>
+  <p class="tel-band__num"><a href="tel:0568713201">0568-71-3201</a><span class="tel-band__name">（代表）</span></p>
+  <p class="tel-band__note">大口のご注文はお近くの店舗でも承ります。</p>
+</aside>
+<footer class="site-footer">
+  <nav aria-label="ご案内">
+    <a href="legal-tokushoho.html">特定商取引法に基づく表記</a>
+    <a href="legal-cancel.html">キャンセルポリシー</a>
+    <a href="legal-privacy.html">プライバシーポリシー</a>
+    <a href="quote.html">大口注文のご相談</a>
+    <a href="https://www.biglive.jp/30shops/">店舗一覧(本店サイト)</a>
+  </nav>
+  <p class="site-footer__copy">&copy; 2026 株式会社三河屋</p>
+</footer>
+</body>
+</html>

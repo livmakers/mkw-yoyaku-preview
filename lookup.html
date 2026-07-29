@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ご予約の照会・キャンセル｜スーパー三河屋 ご予約サイト</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=9">
+<link rel="stylesheet" href="assets/css/base.css?v=9">
+<link rel="stylesheet" href="assets/css/components.css?v=9">
+</head>
+<body data-theme="none">
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">予</span>
+      <span class="brand-text">三河屋<small>季節のご予約サイト</small></span>
+    </a>
+    <nav class="site-header__nav" aria-label="サイト内">
+      <a href="lookup.html">予約の照会</a>
+      <a href="https://www.biglive.jp/" class="back-main">本店サイト</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="site-main">
+<h1>ご予約の照会・キャンセル</h1>
+<p>ご予約番号（例: MKW-260729-0431）と、ご予約時のお電話番号の下4桁を入力してください。</p>
+<p class="field-note">※プレビュー版のため照会はできません</p>
+
+<form class="paper">
+  <div class="field">
+    <label for="f-no">ご予約番号<span class="req">必須</span></label>
+    <input type="text" id="f-no" placeholder="MKW-000000-0000" style="text-transform:uppercase">
+  </div>
+  <div class="field">
+    <label for="f-tel4">お電話番号の下4桁<span class="req">必須</span></label>
+    <input type="tel" id="f-tel4" inputmode="numeric" maxlength="4" placeholder="0000" style="max-width:10em">
+  </div>
+  <button type="button" class="btn btn--primary">照会する</button>
+</form>
+
+<div class="notice" style="margin-top:22px">
+  締切前のご予約はこちらからキャンセルできます。カード決済分は自動で返金されます（反映まで数日かかる場合があります）。
+  締切後のキャンセルはお受けできません。お困りの際はお受取店舗までお電話ください。
+</div>
+</main>
+<aside class="tel-band" aria-label="お電話でのご予約" style="margin-top:48px">
+  <p class="tel-band__lead">お電話でのお問い合わせ</p>
+  <p class="tel-band__num"><a href="tel:0568713201">0568-71-3201</a><span class="tel-band__name">（代表）</span></p>
+  <p class="tel-band__note">ご予約番号がわからない場合もお電話でお調べできます。</p>
+</aside>
+<footer class="site-footer">
+  <nav aria-label="ご案内">
+    <a href="legal-tokushoho.html">特定商取引法に基づく表記</a>
+    <a href="legal-cancel.html">キャンセルポリシー</a>
+    <a href="legal-privacy.html">プライバシーポリシー</a>
+    <a href="quote.html">大口注文のご相談</a>
+    <a href="https://www.biglive.jp/30shops/">店舗一覧(本店サイト)</a>
+  </nav>
+  <p class="site-footer__copy">&copy; 2026 株式会社三河屋</p>
+</footer>
+</body>
+</html>
