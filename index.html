@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>プレビュー: トップ｜スーパー三河屋 ご予約サイト</title>
+<title>スーパー三河屋 ご予約サイト</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,11 +29,11 @@
 </header>
 <main id="main">
 
-<!-- ══════════ 写真ヒーロー ══════════ -->
-<section class="hero hero--unagi hero--photo">
-  <div class="hero__photo" style="background-image:url('assets/img/photos/hero-unagi.jpg')" role="img" aria-label="うなぎ予約のイメージ写真"></div>
+<!-- ══════════ 透かしヒーロー(季節食材アソート) ══════════ -->
+<section class="hero hero--washi hero--photo">
+  <div class="hero__photo" style="background-image:url('assets/img/photos/assort.jpg');background-position:50% 45%" role="img" aria-label="三河屋の季節の食材・ごちそうイメージ写真"></div>
   <div class="hero__scrim" aria-hidden="true"></div>
-  <span class="hero__mark" aria-hidden="true">丑</span>
+  <span class="hero__mark" aria-hidden="true">夏</span>
   <span class="hero__note">写真はイメージです</span>
   <p class="hero__badge" aria-hidden="true">予約受付中</p>
   <div class="hero__inner">
@@ -45,12 +45,12 @@
       </h1>
       <p class="hero__lead">季節の行事のごちそうを、ご予約分だけ丁寧にご用意。お近くの直営13店舗で、お待たせせずお受け取りいただけます。</p>
       <div class="hero__chips">
-        <a class="hero__chip" href="campaign.html">
+        <a class="hero__chip" href="form.html">
           <span class="hero__chip-title">土用の丑 うなぎ予約</span>
-          <span class="hero__chip-state countdown" data-deadline="2026-07-31T15:00:00+09:00" data-closed-text="受付終了">締切 7/31 15:00</span>
+          <span class="hero__chip-state">締切 7月31日(金) 15:00</span>
           <span class="hero__chip-arrow" aria-hidden="true">→</span>
         </a>
-        <a class="hero__chip" href="#">
+        <a class="hero__chip" href="form.html">
           <span class="hero__chip-title">お弁当・オードブル</span>
           <span class="hero__chip-state">通年受付中</span>
           <span class="hero__chip-arrow" aria-hidden="true">→</span>
@@ -62,11 +62,6 @@
       </div>
     </div>
   </div>
-  <div class="hero__foot" aria-hidden="true">
-    <svg viewBox="0 0 1200 46" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 46 L0 24 Q30 4 60 24 T120 24 T180 24 T240 24 T300 24 T360 24 T420 24 T480 24 T540 24 T600 24 T660 24 T720 24 T780 24 T840 24 T900 24 T960 24 T1020 24 T1080 24 T1140 24 T1200 24 L1200 46 Z" fill="#F6F1E4"/>
-    </svg>
-  </div>
 </section>
 
 <div class="site-main">
@@ -76,13 +71,16 @@
   <div class="trust-band__item"><span class="trust-band__num">1971</span><span class="trust-band__label">創業。地元の台所55年</span></div>
   <div class="trust-band__item"><span class="trust-band__num">紙・電話</span><span class="trust-band__label">でもご予約OK</span></div>
 </div>
+</div>
 
+<!-- ══════════ 年間6カテゴリ 特大カード ══════════ -->
+<div class="wide-main">
 <section id="koyomi" style="margin-top:56px">
   <header class="band-head reveal" data-mark="年">
     <span class="band-head__kicker">Calendar</span>
     <h2 class="band-head__title">三河屋の一年、六つのご予約</h2>
   </header>
-  <p class="center" style="max-width:34em;margin:0 auto 22px">クリスマスから丑の日まで。季節の行事にあわせて予約の暦がめぐります。受付中のものはそのままご予約へ、季節外のものは受付開始を店頭・本サイトでご案内します。</p>
+  <p class="center" style="max-width:34em;margin:0 auto 22px">クリスマスから丑の日まで。季節の行事にあわせて予約の暦がめぐります。受付中のカードを押すと、そのまま申込フォームへ進めます。</p>
   <div class="cat-grid">
 
     <div class="k-poster cat-card cat-card--idle reveal" style="--poster-bg:linear-gradient(150deg,#0B2E22,#14503C 60%,#1E6A50)">
@@ -112,21 +110,10 @@
     </div>
 
     <div class="k-poster cat-card cat-card--idle reveal" style="--poster-bg:linear-gradient(150deg,#3A2D0E,#6B5320 60%,#B99334)">
-      <div class="k-poster__visual">
+      <div class="k-poster__visual k-poster__visual--photo" style="background-image:url('assets/img/photos/newyear.jpg');background-position:50% 50%">
         <span class="k-poster__tag">年始</span>
         <span class="k-poster__time">1月</span>
-        <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg" role="presentation">
-          <circle cx="210" cy="120" r="74" fill="#C4342E"/>
-          <g transform="translate(210 250)">
-            <ellipse cx="0" cy="0" rx="120" ry="30" fill="#8C1F1A"/>
-            <ellipse cx="0" cy="-26" rx="96" ry="42" fill="#F6F1E4" stroke="#E0D7C2" stroke-width="3"/>
-            <ellipse cx="0" cy="-64" rx="72" ry="34" fill="#FFFFFF" stroke="#E0D7C2" stroke-width="3"/>
-            <path d="M-16 -110 q16 -22 32 0 q-4 18 -16 18 q-12 0 -16 -18 Z" fill="#E8862E"/>
-          </g>
-          <g stroke="#D9BC6B" stroke-width="5" fill="none" stroke-linecap="round">
-            <path d="M60 90 q-24 40 0 84"/><path d="M360 90 q24 40 0 84"/>
-          </g>
-        </svg>
+        <span class="k-poster__note">写真はイメージです</span>
       </div>
       <div class="k-poster__body">
         <h3 class="k-poster__title">年始のご予約</h3>
@@ -135,7 +122,7 @@
       </div>
     </div>
 
-    <a class="k-poster cat-card reveal" href="campaign.html" style="--poster-bg:linear-gradient(150deg,#16283F,#21395B 60%,#2C4A73)">
+    <a class="k-poster cat-card reveal" href="form.html" style="--poster-bg:linear-gradient(150deg,#16283F,#21395B 60%,#2C4A73)">
       <div class="k-poster__visual k-poster__visual--photo" style="background-image:url('assets/img/photos/hero-unagi.jpg');background-position:50% 46%">
         <span class="k-poster__tag">丑の日</span>
         <span class="k-poster__time">7月</span>
@@ -146,13 +133,13 @@
         <h3 class="k-poster__title">丑の日のご予約</h3>
         <p class="k-poster__subtitle">土用の丑。三河一色産うなぎを、ご予約分だけ丁寧に焼き上げます。</p>
         <div class="k-poster__foot">
-          <span class="k-poster__state k-poster__state--open countdown" data-deadline="2026-07-31T15:00:00+09:00" data-closed-text="受付を終了しました">締切 7/31(金)15:00</span>
-          <span class="k-poster__cta">ご予約へ</span>
+          <span class="k-poster__state k-poster__state--open">締切 7月28日(火) 15:00まで</span>
+          <span class="k-poster__cta">申込フォームへ</span>
         </div>
       </div>
     </a>
 
-    <a class="k-poster cat-card reveal" href="#" style="--poster-bg:linear-gradient(150deg,#2F3F1A,#6F8F3A 70%,#86A653)">
+    <a class="k-poster cat-card reveal" href="form.html" style="--poster-bg:linear-gradient(150deg,#2F3F1A,#6F8F3A 70%,#86A653)">
       <div class="k-poster__visual k-poster__visual--photo" style="background-image:url('assets/img/photos/bento.jpg');background-position:50% 62%">
         <span class="k-poster__tag">お惣菜・お弁当</span>
         <span class="k-poster__time">通年</span>
@@ -163,12 +150,12 @@
         <p class="k-poster__subtitle">会議・行事・ご法要に。お弁当・オードブルを前日締切でご用意します。</p>
         <div class="k-poster__foot">
           <span class="k-poster__state k-poster__state--open">ご予約受付中（受取日の2日前締切）</span>
-          <span class="k-poster__cta">ご予約へ</span>
+          <span class="k-poster__cta">申込フォームへ</span>
         </div>
       </div>
     </a>
 
-    <a class="k-poster cat-card reveal" href="#" style="--poster-bg:linear-gradient(150deg,#2A0F0C,#6E2B25 60%,#9A4038)">
+    <a class="k-poster cat-card reveal" href="form.html" style="--poster-bg:linear-gradient(150deg,#2A0F0C,#6E2B25 60%,#9A4038)">
       <div class="k-poster__visual k-poster__visual--photo" style="background-image:url('assets/img/photos/wagyu.jpg');background-position:50% 55%">
         <span class="k-poster__tag">レア和牛</span>
         <span class="k-poster__time">不定期</span>
@@ -179,7 +166,7 @@
         <p class="k-poster__subtitle">入荷数の少ない希少部位・塊肉を、店頭受取でご予約いただけます。</p>
         <div class="k-poster__foot">
           <span class="k-poster__state k-poster__state--open">ご予約受付中（受取日の3日前締切）</span>
-          <span class="k-poster__cta">ご予約へ</span>
+          <span class="k-poster__cta">申込フォームへ</span>
         </div>
       </div>
     </a>
@@ -188,7 +175,7 @@
 </section>
 </div>
 
-<!-- ══════════ こだわり写真帯(透かし暗幕) ══════════ -->
+<!-- ══════════ こだわり写真帯 ══════════ -->
 <section class="photo-band bleed" style="background-image:url('assets/img/photos/unagi-close.jpg')">
   <p class="photo-band__kicker">Our Promise</p>
   <h2 class="photo-band__title">ご予約分だけ、店で仕上げる。</h2>
@@ -206,7 +193,7 @@
     <div class="steps3__item">
       <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><rect x="10" y="8" width="44" height="48" rx="4"/><path d="M20 22h24M20 32h24M20 42h14"/></svg>
       <h3>お品を選ぶ</h3>
-      <p>企画から商品と数量を選んでカートへ。</p>
+      <p>カテゴリのカードから商品と数量を選ぶ。</p>
     </div>
     <div class="steps3__item">
       <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><rect x="8" y="12" width="48" height="42" rx="4"/><path d="M8 24h48M20 8v10M44 8v10"/><circle cx="32" cy="38" r="9"/><path d="M32 33v5l4 3"/></svg>
@@ -264,6 +251,5 @@
   <p class="site-footer__copy">&copy; 2026 株式会社三河屋</p>
 </footer>
 <script src="assets/js/app.js" defer></script>
-<script src="assets/js/countdown.js" defer></script>
 </body>
 </html>

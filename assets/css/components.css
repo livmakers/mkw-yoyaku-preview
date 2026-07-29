@@ -405,11 +405,48 @@ a.year-koyomi__item:hover { transform: translateY(-3px); box-shadow: 0 10px 24px
   .k-poster--wide .k-poster__visual { min-height: 230px; }
 }
 
-/* ---- 年間6カテゴリ 大型カード ---- */
-.cat-grid { display: grid; gap: 26px; grid-template-columns: 1fr; }
-@media (min-width: 760px) { .cat-grid { grid-template-columns: 1fr 1fr; } }
-.cat-card .k-poster__visual { min-height: 280px; }
-.cat-card .k-poster__title { font-size: 1.6rem; }
+/* ---- 透かしヒーロー(生成り×季節食材アソート写真の透かし) ---- */
+.hero--washi { background: var(--kinari); color: var(--sumi); }
+.hero--washi::before { content: none; }
+.hero--washi .hero__photo { opacity: .3; filter: saturate(.9); }
+.hero--washi .hero__scrim {
+  background:
+    linear-gradient(100deg, rgba(246,241,228,.94) 0%, rgba(246,241,228,.78) 44%, rgba(246,241,228,.28) 100%),
+    linear-gradient(0deg, var(--kinari) 0%, rgba(246,241,228,0) 30%),
+    linear-gradient(180deg, rgba(246,241,228,.9) 0%, rgba(246,241,228,0) 22%);
+}
+.hero--washi .hero__mark { -webkit-text-stroke: 1.5px rgba(27,25,23,.12); }
+.hero--washi .hero__kicker { color: var(--kin); }
+.hero--washi .hero__kicker::before, .hero--washi .hero__kicker::after { background: var(--kin); }
+.hero--washi .hero__title-main { color: var(--sumi); text-shadow: none; }
+.hero--washi .hero__title-sub { color: var(--sumi-soft); }
+.hero--washi .hero__lead { color: var(--sumi-soft); }
+.hero--washi .hero__note { color: rgba(27,25,23,.4); }
+.hero--washi .hero__chip {
+  background: rgba(255,255,255,.82); border: 1px solid var(--washi-line);
+  color: var(--sumi); box-shadow: 0 2px 10px rgba(27,25,23,.06);
+}
+.hero--washi .hero__chip:hover { background: #fff; color: var(--sumi); }
+.hero--washi .hero__chip-state { color: var(--shu); }
+.hero--washi .hero__chip-arrow { color: var(--kin); }
+.hero--washi .btn--outline-light { border-color: var(--sumi); color: var(--sumi); }
+.hero--washi .btn--outline-light:hover { background: rgba(27,25,23,.06); color: var(--sumi); }
+.hero--washi .hero__foot { display: none; }
+
+/* ---- 広幅コンテナ(特大カード用) ---- */
+.wide-main { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+/* ---- 年間6カテゴリ 特大カード(1列・全幅・クリックで申込フォームへ) ---- */
+.cat-grid { display: grid; gap: 34px; grid-template-columns: 1fr; }
+.cat-card .k-poster__visual { min-height: 250px; }
+@media (min-width: 700px) {
+  .cat-card { display: grid; grid-template-columns: 1.15fr 1fr; }
+  .cat-card .k-poster__visual { min-height: 340px; height: 100%; }
+  .cat-card .k-poster__body { display: flex; flex-direction: column; justify-content: center; padding: 30px 30px; }
+}
+.cat-card .k-poster__title { font-size: clamp(1.5rem, 3.2vw, 2rem); }
+.cat-card .k-poster__subtitle { font-size: 1.02rem; }
+.cat-card .k-poster__cta { min-height: 54px; padding: 10px 30px; font-size: 1.05rem; }
 .cat-card .k-poster__time {
   position: absolute; top: 14px; right: 16px; z-index: 1;
   font-family: var(--font-latin); font-style: italic; font-weight: 600; font-size: 1.6rem;
