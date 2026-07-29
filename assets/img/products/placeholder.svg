@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+  <!-- 熨斗紙風プレースホルダ(実写真差替までの仮画像・自作) -->
+  <rect width="640" height="640" fill="#F6F1E4"/>
+  <rect x="24" y="24" width="592" height="592" fill="#FFFFFF" stroke="#E0D7C2" stroke-width="3"/>
+  <path d="M470 0 L530 0 L500 90 Z" fill="#C4342E" opacity=".85"/>
+  <path d="M488 0 L512 0 L500 66 Z" fill="#B99334"/>
+  <g fill="none" stroke="#E0D7C2" stroke-width="2">
+    <line x1="80" y1="180" x2="560" y2="180"/>
+    <line x1="80" y1="460" x2="560" y2="460"/>
+  </g>
+  <text x="320" y="335" font-family="serif" font-size="48" fill="#4A443D" text-anchor="middle">御予約品</text>
+  <text x="320" y="395" font-family="sans-serif" font-size="22" fill="#8A8377" text-anchor="middle">写真は準備中です</text>
+</svg>

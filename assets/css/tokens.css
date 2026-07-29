@@ -1,0 +1,40 @@
+/* ==========================================================
+   日めくり暦 — デザイントークン
+   ========================================================== */
+:root {
+  /* 色 */
+  --sumi:       #1B1917;
+  --kinari:     #F6F1E4;
+  --washi-line: #E0D7C2;
+  --shu:        #C4342E;
+  --kin:        #B99334;
+  --ai:         #21395B;
+  --tokiwa:     #14503C;
+  --wakakusa:   #6F8F3A;
+  --kogecha:    #4A3A28;   /* 焦茶(年末) */
+  --azuki:      #6E2B25;   /* 小豆(レア和牛) */
+  --accent:     var(--sumi);
+  --kinari-deep:#EFE7D3;
+  --sumi-soft:  #4A443D;
+
+  /* 書体(高級構成: 明朝ディスプレイ×欧文セリフ数字×Noto本文) */
+  --font-display: 'Zen Old Mincho', 'Shippori Mincho B1', serif;
+  --font-heading: 'Zen Old Mincho', 'Shippori Mincho B1', serif;
+  --font-body:    'Noto Sans JP', sans-serif;
+  --font-latin:   'Cormorant Garamond', 'Zen Old Mincho', serif;
+
+  /* 寸法 */
+  --fs-base: 17px;
+  --content-w: 720px;
+  --tap: 48px;
+  --radius: 0;
+  --shadow-paper: none;
+}
+
+/* 企画テーマでアクセント切替(CTAは常に朱) */
+body[data-theme="unagi"]   { --accent: var(--ai); }
+body[data-theme="xmas"]    { --accent: var(--tokiwa); }
+body[data-theme="newyear"] { --accent: var(--kin); }
+body[data-theme="regular"] { --accent: var(--wakakusa); }
+body[data-theme="yearend"] { --accent: var(--kogecha); }
+body[data-theme="wagyu"]   { --accent: var(--azuki); }

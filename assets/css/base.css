@@ -1,0 +1,153 @@
+/* ==========================================================
+   基礎(リセット・タイポ・レイアウト骨格) — モバイルファースト
+   ========================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.8;
+  color: var(--sumi);
+  background: var(--kinari);
+  /* 青海波は components 側で必要ページのみ敷く */
+}
+img, svg { max-width: 100%; height: auto; }
+a { color: var(--ai); text-underline-offset: 3px; }
+a:hover { color: var(--shu); }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.4; margin: 0 0 .6em; }
+h1 { font-size: 1.55rem; }
+h2 { font-size: 1.3rem; }
+h3 { font-size: 1.1rem; }
+p { margin: 0 0 1em; }
+table { border-collapse: collapse; width: 100%; }
+strong.price, .num { font-weight: 900; font-variant-numeric: tabular-nums; }
+
+:focus-visible { outline: 3px solid var(--ai); outline-offset: 2px; border-radius: var(--radius); }
+.skip-link { position: absolute; left: -9999px; top: 0; background: var(--sumi); color: #fff; padding: .6em 1em; z-index: 100; }
+.skip-link:focus { left: 0; }
+
+/* ---- ヘッダ(ロゴタイプ＋落款・ヘアライン) ---- */
+.site-header { background: var(--kinari); border-bottom: 1px solid var(--washi-line); }
+.site-header__inner {
+  max-width: 960px; margin: 0 auto; padding: 18px 20px 14px;
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+.site-header__brand { display: flex; align-items: baseline; gap: 12px; text-decoration: none; color: var(--sumi); }
+.brand-mark {
+  align-self: center;
+  display: grid; place-items: center; width: 26px; height: 26px;
+  background: var(--shu); color: #fff; font-family: var(--font-heading);
+  font-size: 15px; font-weight: 700; border-radius: 1px; /* 落款 */
+}
+.brand-text { font-family: var(--font-heading); font-size: 1.35rem; letter-spacing: .14em; line-height: 1.2; }
+.brand-text small { margin-left: .9em; font-family: var(--font-body); font-weight: 500; font-size: .7rem; letter-spacing: .34em; color: var(--sumi-soft); }
+.site-header__nav { display: flex; gap: 22px; }
+.site-header__nav a {
+  display: inline-flex; align-items: center; min-height: var(--tap);
+  font-size: .85rem; letter-spacing: .1em; text-decoration: none; color: var(--sumi);
+  border-bottom: 1px solid transparent;
+}
+.site-header__nav a:hover { border-bottom-color: var(--shu); color: var(--sumi); }
+.site-header__nav a.back-main::after { content: " →"; color: var(--kin); }
+
+/* ---- メイン ---- */
+.site-main { max-width: var(--content-w); margin: 0 auto; padding: 24px 16px 56px; }
+
+/* ---- ステップ(暦送り) ---- */
+.steps { border-bottom: 1px solid var(--washi-line); background: var(--kinari-deep); }
+.steps ol {
+  max-width: var(--content-w); margin: 0 auto; padding: 10px 16px;
+  display: flex; gap: 4px; list-style: none; counter-reset: step;
+}
+.steps li { flex: 1; text-align: center; font-size: .72rem; color: var(--sumi-soft); position: relative; padding-top: 18px; }
+.steps li::before {
+  content: ""; display: block; width: 12px; height: 12px; border-radius: 50%;
+  border: 2px solid var(--washi-line); background: #fff;
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+}
+.steps li.is-done::before { background: var(--kin); border-color: var(--kin); }
+.steps li.is-current { color: var(--sumi); font-weight: 700; }
+.steps li.is-current::before { background: var(--shu); border-color: var(--shu); }
+
+/* ---- 電話帯・フッタ ---- */
+.tel-band {
+  max-width: var(--content-w); margin: 0 auto 24px; padding: 18px 16px;
+  border: 2px solid var(--shu); border-radius: var(--radius); background: #fff; text-align: center;
+}
+.tel-band__lead { margin: 0; font-family: var(--font-heading); }
+.tel-band__num { margin: .2em 0; font-size: 1.7rem; font-weight: 900; font-variant-numeric: tabular-nums; }
+.tel-band__num a { color: var(--shu); text-decoration: none; }
+.tel-band__name { font-size: .85rem; font-weight: 400; }
+.tel-band__note { margin: 0; font-size: .82rem; color: var(--sumi-soft); }
+
+.site-footer { border-top: 2px solid var(--sumi); padding: 24px 16px 40px; text-align: center; }
+.site-footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; margin-bottom: 12px; }
+.site-footer nav a { font-size: .85rem; color: var(--sumi-soft); min-height: var(--tap); display: inline-flex; align-items: center; }
+.site-footer__copy { font-size: .78rem; color: var(--sumi-soft); }
+
+/* ---- フォーム(高齢者配慮: 17px+ / 48px+) ---- */
+label { display: block; font-weight: 700; margin-bottom: 6px; }
+.req { color: var(--shu); font-size: .78rem; font-weight: 700; margin-left: 6px; }
+input[type="text"], input[type="tel"], input[type="email"], input[type="number"],
+input[type="date"], input[type="password"], select, textarea {
+  width: 100%; min-height: var(--tap); padding: 10px 12px;
+  font: inherit; font-size: var(--fs-base);
+  border: 2px solid var(--sumi-soft); border-radius: var(--radius); background: #fff; color: var(--sumi);
+}
+input:focus, select:focus, textarea:focus { border-color: var(--ai); }
+.field { margin-bottom: 22px; }
+.field-error {
+  display: block; background: #FBEAE9; border-left: 4px solid var(--shu);
+  color: #8C1F1A; padding: 8px 12px; margin-bottom: 6px; font-size: .95rem;
+}
+.field-note { font-size: .85rem; color: var(--sumi-soft); margin-top: 4px; }
+
+/* ---- ボタン ---- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 52px; padding: 10px 28px; font: inherit; font-weight: 700; font-size: 1.05rem;
+  border: 2px solid var(--sumi); border-radius: var(--radius);
+  background: #fff; color: var(--sumi); cursor: pointer; text-decoration: none;
+}
+.btn--primary { background: var(--shu); border-color: var(--shu); color: #fff; }
+.btn--primary:hover { background: #A82823; color: #fff; }
+.btn--ghost { border-color: var(--washi-line); }
+.btn--block { display: flex; width: 100%; }
+.btn[disabled], .btn.is-disabled { opacity: .45; cursor: not-allowed; }
+
+/* ---- 汎用 ---- */
+.paper {
+  background: #fff; border: 1px solid var(--washi-line);
+  border-radius: var(--radius); box-shadow: var(--shadow-paper); padding: 20px 16px;
+}
+.hairline { border: 0; border-top: 1px solid var(--washi-line); margin: 20px 0; }
+.center { text-align: center; }
+.mt-0 { margin-top: 0; } .mb-0 { margin-bottom: 0; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.notice {
+  background: var(--kinari-deep); border-left: 4px solid var(--kin);
+  padding: 12px 14px; font-size: .95rem; margin-bottom: 20px;
+}
+
+@media (min-width: 640px) {
+  h1 { font-size: 1.9rem; }
+  .site-main { padding: 36px 20px 72px; }
+  .steps li { font-size: .8rem; }
+}
+
+/* ---- スクロール出現(JSが .reveal を付与) ---- */
+.reveal { opacity: 0; transform: translateY(8px); transition: opacity .4s ease, transform .4s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}

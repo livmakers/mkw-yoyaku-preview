@@ -1,0 +1,495 @@
+/* ==========================================================
+   コンポーネント(暦の一葉・品書き・枠選択・のれん・管理画面)
+   ========================================================== */
+
+/* ---- 和柄背景(SVG patternはインラインdata URI・4〜6%) ---- */
+.bg-seigaiha { /* 青海波: トップ */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40'%3E%3Cg fill='none' stroke='%231B1917' stroke-opacity='.05' stroke-width='1.5'%3E%3Cpath d='M0 40a40 40 0 0 1 80 0M-20 40a20 20 0 0 1 40 0M20 40a20 20 0 0 1 40 0M60 40a20 20 0 0 1 40 0M0 40a12 12 0 0 1 24 0M28 40a12 12 0 0 1 24 0M56 40a12 12 0 0 1 24 0'/%3E%3C/g%3E%3C/svg%3E");
+}
+.bg-asanoha { /* 麻の葉: 企画ページ */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97'%3E%3Cg fill='none' stroke='%231B1917' stroke-opacity='.045' stroke-width='1'%3E%3Cpath d='M28 0 56 16v32L28 64 0 48V16zM28 0v64M0 16l56 32M56 16 0 48M28 64l28 16v17M28 64 0 80v17M28 64v33'/%3E%3C/g%3E%3C/svg%3E");
+}
+.bg-shippo { /* 七宝: 完了 */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='%23B99334' stroke-opacity='.12' stroke-width='1.2'%3E%3Ccircle cx='24' cy='24' r='24'/%3E%3Ccircle cx='0' cy='0' r='24'/%3E%3Ccircle cx='48' cy='0' r='24'/%3E%3Ccircle cx='0' cy='48' r='24'/%3E%3Ccircle cx='48' cy='48' r='24'/%3E%3C/g%3E%3C/svg%3E");
+}
+.bg-yagasuri { /* 矢絣: 管理ログイン */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='72'%3E%3Cg fill='%231B1917' fill-opacity='.05'%3E%3Cpath d='M0 0h4L12 24 20 0h4L12 36zM0 36h4l8 24 8-24h4L12 72z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ---- 暦の一葉(企画カード) ---- */
+.koyomi-leaf {
+  position: relative; display: grid; grid-template-columns: 1fr 64px;
+  background: #fff; border: 1px solid var(--washi-line); border-radius: var(--radius);
+  box-shadow: var(--shadow-paper); margin-bottom: 28px; overflow: hidden;
+  text-decoration: none; color: var(--sumi);
+}
+.koyomi-leaf::before { /* 綴じ穴風の上帯 */
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 6px; background: var(--leaf-accent, var(--accent));
+}
+.koyomi-leaf__body { padding: 26px 18px 20px; }
+.koyomi-leaf__title { font-family: var(--font-display); font-size: 1.9rem; font-weight: 400; margin: 0 0 2px; letter-spacing: .04em; }
+.koyomi-leaf__subtitle { font-family: var(--font-heading); color: var(--sumi-soft); margin-bottom: 10px; }
+.koyomi-leaf__meta { font-size: .9rem; margin: 0 0 4px; }
+.koyomi-leaf__meta dt { display: inline; color: var(--sumi-soft); }
+.koyomi-leaf__meta dd { display: inline; margin: 0 12px 0 4px; font-weight: 700; }
+.koyomi-leaf__tanzaku { /* 縦書き短冊 */
+  writing-mode: vertical-rl; font-family: var(--font-heading); font-size: .95rem;
+  background: var(--leaf-accent, var(--accent)); color: #fff;
+  display: flex; align-items: center; justify-content: center; padding: 14px 0; letter-spacing: .3em;
+}
+.koyomi-leaf--closed { filter: grayscale(1); opacity: .62; }
+.koyomi-leaf--closed .koyomi-leaf__tanzaku { background: var(--sumi-soft); }
+.leaf-cta {
+  display: inline-flex; align-items: center; min-height: var(--tap); margin-top: 8px;
+  padding: 8px 22px; background: var(--shu); color: #fff; font-weight: 700;
+  border-radius: var(--radius); text-decoration: none;
+}
+.koyomi-leaf:hover .leaf-cta { background: #A82823; }
+
+/* ---- 締切カウントダウン ---- */
+.countdown { font-size: .95rem; color: var(--sumi-soft); }
+.countdown .num {
+  display: inline-block; min-width: 1.4em; text-align: center;
+  color: var(--kin); font-size: 1.25em; overflow: hidden;
+}
+.countdown .num span { display: inline-block; }
+.countdown .num.tick span { animation: himekuri .28s ease; }
+@keyframes himekuri {
+  from { transform: translateY(4px); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+.countdown--closed { color: var(--shu); font-weight: 700; }
+
+/* ---- のれん(シグネチャ・1回限り) ---- */
+.noren-overlay {
+  position: fixed; inset: 0; z-index: 90; display: flex; pointer-events: none;
+}
+.noren-overlay .noren-panel {
+  flex: 1; background: var(--accent); position: relative;
+  transform: translateY(-101%);
+}
+.noren-overlay.play .noren-panel { animation: noren-drop .35s ease-out forwards; }
+.noren-overlay.play.split .noren-panel:nth-child(-n+2) { animation: noren-left .55s .35s ease-in forwards; }
+.noren-overlay.play.split .noren-panel:nth-child(n+3)  { animation: noren-right .55s .35s ease-in forwards; }
+.noren-overlay .noren-panel::after { /* 裾の切込み */
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 14px;
+  background: inherit; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 30%, 0 100%);
+}
+@keyframes noren-drop  { to { transform: translateY(0); } }
+@keyframes noren-left  { from { transform: translateY(0); } to { transform: translate(-105%, 0) rotate(-2deg); } }
+@keyframes noren-right { from { transform: translateY(0); } to { transform: translate(105%, 0) rotate(2deg); } }
+
+/* ---- 品書き(商品) ---- */
+.shinagaki { list-style: none; padding: 0; margin: 0; }
+.shinagaki__item { border-bottom: 1px solid var(--washi-line); padding: 18px 0; display: grid; grid-template-columns: 96px 1fr; gap: 14px; }
+.shinagaki__item img { width: 96px; height: 96px; object-fit: cover; border: 1px solid var(--washi-line); background: #fff; }
+.shinagaki__name { font-family: var(--font-heading); font-size: 1.12rem; margin: 0; }
+.shinagaki__name a { color: var(--sumi); text-decoration: none; }
+.shinagaki__name a:hover { color: var(--shu); }
+.shinagaki__price { font-weight: 900; font-variant-numeric: tabular-nums; font-size: 1.2rem; margin: 2px 0; }
+.shinagaki__price small { font-size: .75rem; font-weight: 400; color: var(--sumi-soft); }
+.spec-table th { text-align: left; font-weight: 500; color: var(--sumi-soft); padding: 8px 12px 8px 0; width: 7.5em; vertical-align: top; border-bottom: 1px solid var(--washi-line); font-size: .92rem; }
+.spec-table td { padding: 8px 0; border-bottom: 1px solid var(--washi-line); font-size: .95rem; }
+
+/* ---- 数量ステッパー ---- */
+.qty-stepper { display: inline-flex; align-items: stretch; border: 2px solid var(--sumi-soft); border-radius: var(--radius); background: #fff; }
+.qty-stepper button {
+  width: 52px; min-height: 52px; font-size: 1.5rem; font-weight: 700;
+  border: 0; background: var(--kinari-deep); color: var(--sumi); cursor: pointer;
+}
+.qty-stepper input { width: 72px; text-align: center; border: 0; font-size: 1.2rem; font-weight: 900; min-height: 52px; }
+.qty-stepper input:focus { outline-offset: -3px; }
+
+/* ---- 受取枠選択 ---- */
+.slot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.slot-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  min-height: 64px; padding: 8px; border: 2px solid var(--sumi-soft); border-radius: var(--radius);
+  background: #fff; font: inherit; cursor: pointer;
+}
+.slot-btn .slot-time { font-weight: 700; }
+.slot-btn .slot-left { font-size: .8rem; color: var(--sumi-soft); }
+.slot-btn[aria-pressed="true"] { border-color: var(--shu); background: #FDF6F5; box-shadow: inset 0 0 0 1px var(--shu); }
+.slot-btn:disabled { opacity: .4; cursor: not-allowed; background: var(--kinari-deep); }
+.date-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(108px, 1fr)); gap: 10px; margin-bottom: 20px; }
+.date-btn, .shop-btn {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  min-height: 64px; padding: 8px; border: 2px solid var(--sumi-soft); border-radius: var(--radius);
+  background: #fff; font: inherit; cursor: pointer; text-align: center;
+}
+.date-btn[aria-pressed="true"], .shop-btn[aria-pressed="true"] { border-color: var(--shu); background: #FDF6F5; box-shadow: inset 0 0 0 1px var(--shu); }
+.shop-btn small { font-size: .75rem; color: var(--sumi-soft); }
+
+/* ---- カート/確認 明細 ---- */
+.order-table th { font-family: var(--font-heading); text-align: left; border-bottom: 2px solid var(--sumi); padding: 8px 4px; font-size: .92rem; }
+.order-table td { border-bottom: 1px solid var(--washi-line); padding: 12px 4px; vertical-align: middle; }
+.order-table .ta-r { text-align: right; font-variant-numeric: tabular-nums; }
+.order-total { text-align: right; font-size: 1.15rem; margin-top: 12px; }
+.order-total strong { font-size: 1.5rem; font-weight: 900; font-variant-numeric: tabular-nums; color: var(--shu); }
+
+/* ---- 完了画面 ---- */
+.complete-no {
+  font-size: clamp(1.6rem, 8vw, 2.6rem); font-weight: 900; font-variant-numeric: tabular-nums;
+  letter-spacing: .04em; color: var(--sumi); background: #fff;
+  border: 3px double var(--kin); padding: 18px 10px; text-align: center; margin: 18px 0;
+}
+#confetti-canvas { position: fixed; inset: 0; pointer-events: none; z-index: 80; }
+
+/* ---- 提灯(ホバーで2度揺れ) ---- */
+.chochin { display: inline-block; transform-origin: top center; }
+a:hover .chochin, button:hover .chochin { animation: chochin-sway .5s ease-in-out 2; }
+@keyframes chochin-sway { 50% { transform: rotate(4deg); } }
+
+/* ---- 水引区切り ---- */
+.mizuhiki { text-align: center; margin: 28px 0; }
+.mizuhiki svg { width: 180px; }
+
+/* ================= LP ヒーロー(一枚ポスター型) ================= */
+.hero {
+  position: relative; overflow: hidden;
+  background: linear-gradient(168deg, #16283F 0%, var(--ai) 55%, #2C4A73 100%);
+  color: var(--kinari);
+}
+.hero--xmas    { background: linear-gradient(168deg, #0B2E22 0%, var(--tokiwa) 55%, #1E6A50 100%); }
+.hero--newyear { background: linear-gradient(168deg, #3A2D0E 0%, #6B5320 55%, var(--kin) 140%); }
+.hero--regular { background: linear-gradient(168deg, #2F3F1A 0%, var(--wakakusa) 75%, #86A653 120%); }
+.hero--yearend { background: linear-gradient(168deg, #241B10 0%, var(--kogecha) 60%, #6B563C 120%); }
+.hero--wagyu   { background: linear-gradient(168deg, #2A0F0C 0%, var(--azuki) 60%, #9A4038 120%); }
+.hero::before { /* 青海波を薄く敷く */
+  content: ""; position: absolute; inset: 0; opacity: .5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='48'%3E%3Cg fill='none' stroke='%23F6F1E4' stroke-opacity='.08' stroke-width='1.5'%3E%3Cpath d='M0 48a48 48 0 0 1 96 0M-24 48a24 24 0 0 1 48 0M24 48a24 24 0 0 1 48 0M72 48a24 24 0 0 1 48 0'/%3E%3C/g%3E%3C/svg%3E");
+}
+.hero__inner {
+  position: relative; max-width: 960px; margin: 0 auto;
+  padding: 52px 20px 120px;
+  display: grid; gap: 26px; grid-template-columns: 1fr;
+}
+.hero__kicker {
+  display: inline-flex; align-items: center; gap: 12px; margin: 0;
+  font-size: .82rem; letter-spacing: .42em; font-weight: 700; color: #D9BC6B;
+}
+.hero__kicker::before, .hero__kicker::after { content: ""; width: 34px; height: 1px; background: #D9BC6B; }
+.hero__title { margin: 0; line-height: 1.05; }
+.hero__title-main {
+  display: block; font-family: var(--font-display); font-weight: 900;
+  font-size: clamp(3.2rem, 14vw, 6.4rem); letter-spacing: .1em;
+  color: var(--kinari); text-shadow: 0 4px 26px rgba(0,0,0,.55);
+}
+.hero__title-sub {
+  display: block; margin-top: 14px; font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 4.5vw, 1.7rem); letter-spacing: .12em; color: #EFE3C0;
+}
+.hero__lead { margin: 0; font-size: 1.02rem; line-height: 2; color: #E8E9E4; max-width: 30em; }
+.hero__count {
+  display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 10px 16px;
+  padding: 14px 20px; border: 1px solid rgba(246,241,228,.45); background: rgba(0,0,0,.22);
+  backdrop-filter: blur(2px); width: fit-content;
+}
+.hero__count-label { font-size: .85rem; letter-spacing: .2em; font-weight: 700; color: #D9BC6B; }
+.hero__count .countdown { color: var(--kinari); font-size: 1.05rem; }
+.hero__count .countdown .num { color: #FFD877; font-size: 1.65em; }
+.hero__cta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.btn--xl { min-height: 64px; padding: 14px 44px; font-size: 1.2rem; letter-spacing: .14em; }
+.btn--primary.btn--glow { box-shadow: 0 0 0 4px rgba(196,52,46,.25), 0 10px 26px rgba(0,0,0,.35); }
+.btn--outline-light { background: transparent; border-color: rgba(246,241,228,.7); color: var(--kinari); }
+.btn--outline-light:hover { background: rgba(246,241,228,.12); color: #fff; }
+.hero__badge { /* 斜め掛けの帯 */
+  position: absolute; top: 26px; right: -66px; transform: rotate(35deg);
+  background: var(--shu); color: #fff; font-weight: 900; letter-spacing: .3em;
+  padding: 10px 80px; font-size: .9rem; box-shadow: 0 4px 14px rgba(0,0,0,.3);
+}
+.hero__art { position: relative; margin: 0 auto; width: min(420px, 88vw); }
+.hero__art svg { display: block; width: 100%; height: auto; }
+.hero__foot { /* 裾の生成り波切替 */
+  position: absolute; left: 0; right: 0; bottom: -1px; line-height: 0;
+}
+.hero__foot svg { width: 100%; height: 46px; display: block; }
+
+/* 湯気・浮遊(モーションはOS設定で全停止) */
+.steam { animation: steam-rise 3.2s ease-in-out infinite; transform-origin: bottom center; }
+.steam:nth-of-type(2) { animation-delay: 1.1s; }
+.steam:nth-of-type(3) { animation-delay: 2.2s; }
+@keyframes steam-rise {
+  0% { opacity: 0; transform: translateY(8px) scaleY(.85); }
+  35% { opacity: .9; }
+  100% { opacity: 0; transform: translateY(-26px) scaleY(1.12); }
+}
+.float-slow { animation: float-slow 5s ease-in-out infinite alternate; }
+@keyframes float-slow { from { transform: translateY(0); } to { transform: translateY(-10px); } }
+
+@media (min-width: 760px) {
+  .hero__inner { grid-template-columns: 1.15fr .85fr; align-items: center; padding-top: 64px; }
+  .hero__text { grid-column: 1; display: grid; gap: 24px; }
+  .hero__art { grid-column: 2; grid-row: 1; }
+}
+
+/* ---- 写真ヒーロー(写真ファースト×暗幕×特大明朝) ---- */
+.hero--photo { background: #10151E; }
+.hero--photo::before { content: none; }
+.hero__photo {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center 40%;
+}
+.hero__scrim {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(100deg, rgba(13,16,24,.94) 0%, rgba(13,16,24,.78) 42%, rgba(13,16,24,.30) 78%, rgba(13,16,24,.45) 100%),
+    linear-gradient(0deg, rgba(13,16,24,.85) 0%, transparent 38%);
+}
+.hero__mark { /* 透かし文字(白抜き輪郭) */
+  position: absolute; right: -1%; top: 46%; transform: translateY(-50%);
+  font-family: var(--font-heading); font-weight: 900; line-height: 1;
+  font-size: min(44vw, 430px); color: transparent;
+  -webkit-text-stroke: 1.5px rgba(246,241,228,.16); pointer-events: none; user-select: none;
+}
+.hero--photo .hero__inner { grid-template-columns: 1fr; max-width: 960px; }
+.hero__note { font-size: .72rem; color: rgba(246,241,228,.55); position: absolute; right: 12px; bottom: 52px; letter-spacing: .08em; }
+
+/* 欧文キッカー(Cormorant) */
+.hero__kicker, .band-head__kicker {
+  font-family: var(--font-latin); font-style: italic; font-weight: 500;
+  letter-spacing: .34em; font-size: .95rem;
+}
+.band-head__kicker { color: var(--kin); }
+
+/* 大型数字・日付は欧文セリフで */
+.k-poster__date, .hero__count .countdown .num { font-family: var(--font-latin); font-weight: 600; }
+
+/* ---- 透かし文字(セクション背景) ---- */
+.band-head { position: relative; }
+.band-head::before {
+  content: attr(data-mark);
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -54%);
+  font-family: var(--font-heading); font-weight: 900; line-height: 1;
+  font-size: clamp(120px, 30vw, 230px); color: rgba(27,25,23,.045);
+  pointer-events: none; user-select: none; white-space: nowrap;
+}
+
+/* ---- 和紙テクスチャ帯(透かし) ---- */
+.washi-band {
+  position: relative; padding: 44px 0 8px; margin-top: 64px;
+}
+.washi-band::before {
+  content: ""; position: absolute; inset: 0;
+  background: url("../img/photos/washi.jpg") center/cover;
+  opacity: .5;
+}
+.washi-band::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, var(--kinari) 0%, rgba(246,241,228,.72) 12%, rgba(246,241,228,.72) 88%, var(--kinari) 100%);
+}
+.washi-band > * { position: relative; z-index: 1; }
+
+/* ---- 写真帯(こだわり・full-bleed×暗幕) ---- */
+.photo-band {
+  position: relative; padding: 84px 20px; margin-top: 64px;
+  background-size: cover; background-position: center; background-attachment: scroll;
+  color: var(--kinari); text-align: center;
+}
+.photo-band::before { content: ""; position: absolute; inset: 0; background: rgba(14,15,20,.66); }
+.photo-band > * { position: relative; }
+.photo-band__kicker { font-family: var(--font-latin); font-style: italic; letter-spacing: .34em; color: #D9BC6B; margin: 0 0 14px; }
+.photo-band__title {
+  font-family: var(--font-heading); font-weight: 900; color: var(--kinari);
+  font-size: clamp(1.7rem, 6.5vw, 2.7rem); letter-spacing: .14em; margin: 0 0 14px;
+  text-shadow: 0 2px 14px rgba(0,0,0,.5);
+}
+.photo-band__lead { max-width: 34em; margin: 0 auto; color: #E5E2D8; line-height: 2.1; }
+.photo-band__note { font-size: .72rem; color: rgba(246,241,228,.5); position: absolute; right: 12px; bottom: 10px; }
+
+/* ---- 写真ポスター ---- */
+.k-poster__visual--photo { background-size: cover; background-position: center; min-height: 230px; }
+.k-poster__visual--photo::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(185deg, rgba(14,15,20,.06) 45%, rgba(14,15,20,.66) 100%);
+}
+.k-poster__visual--photo .k-poster__tag, .k-poster__visual--photo .k-poster__date { z-index: 1; }
+.k-poster__visual--photo svg { display: none; }
+.k-poster__note { position: absolute; left: 10px; bottom: 8px; z-index: 1; font-size: .68rem; color: rgba(246,241,228,.75); }
+
+/* ---- ヒーロー上の受付中企画チップ ---- */
+.hero__chips { display: grid; gap: 10px; margin-top: 6px; }
+.hero__chip {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px;
+  padding: 12px 16px; text-decoration: none;
+  background: rgba(246,241,228,.10); border: 1px solid rgba(246,241,228,.35);
+  backdrop-filter: blur(3px); color: var(--kinari); transition: background .2s;
+}
+.hero__chip:hover { background: rgba(246,241,228,.2); color: #fff; }
+.hero__chip-title { font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; letter-spacing: .06em; }
+.hero__chip-state { font-size: .8rem; color: #FFD877; font-weight: 700; }
+.hero__chip-arrow { margin-left: auto; color: #D9BC6B; }
+@media (min-width: 700px) { .hero__chips { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); } }
+
+/* ---- 三河屋の一年(ごよみタイムライン) ---- */
+.year-koyomi { margin-top: 18px; position: relative; }
+.year-koyomi__track {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(210px, 1fr);
+  gap: 14px; overflow-x: auto; padding: 10px 4px 18px;
+  scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch;
+}
+.year-koyomi__item {
+  scroll-snap-align: start; position: relative;
+  background: #fff; border: 1px solid var(--washi-line); border-top: 4px solid var(--yk-accent, var(--kin));
+  padding: 16px 16px 14px; text-decoration: none; color: var(--sumi);
+  display: flex; flex-direction: column; gap: 4px; transition: transform .2s, box-shadow .2s;
+}
+a.year-koyomi__item:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(27,25,23,.12); color: var(--sumi); }
+.year-koyomi__month {
+  font-family: var(--font-latin); font-style: italic; font-weight: 600;
+  font-size: 2rem; line-height: 1; color: var(--yk-accent, var(--kin));
+}
+.year-koyomi__month small { font-size: .8rem; letter-spacing: .2em; font-style: normal; margin-left: 4px; }
+.year-koyomi__name { font-family: var(--font-heading); font-weight: 700; font-size: 1.08rem; letter-spacing: .04em; }
+.year-koyomi__state { font-size: .8rem; color: var(--sumi-soft); }
+.year-koyomi__state--open { color: var(--shu); font-weight: 700; }
+.year-koyomi__state--soon { color: #7A6220; font-weight: 700; }
+.year-koyomi__hint { text-align: center; font-size: .78rem; color: var(--sumi-soft); letter-spacing: .1em; }
+@media (min-width: 900px) {
+  .year-koyomi__track { grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); overflow: visible; }
+  .year-koyomi__hint { display: none; }
+}
+
+/* ---- コンパクトヒーロー(企画ページ) ---- */
+.hero--compact .hero__inner { padding: 40px 20px 84px; }
+.hero--compact .hero__title-main { font-size: clamp(2.6rem, 11vw, 4.6rem); }
+.hero--compact .hero__art { width: min(300px, 66vw); }
+
+/* ---- 帯見出し(セクション) ---- */
+.band-head { text-align: center; margin: 0 0 30px; }
+.band-head__kicker { display: block; font-size: .8rem; letter-spacing: .4em; color: var(--shu); font-weight: 700; margin-bottom: 8px; }
+.band-head__title { font-size: clamp(1.5rem, 5.5vw, 2.1rem); letter-spacing: .1em; margin: 0; }
+.band-head__title::after { content: ""; display: block; width: 54px; height: 3px; background: var(--kin); margin: 14px auto 0; }
+
+/* ---- 企画ポスターカード ---- */
+.k-poster {
+  position: relative; display: block; text-decoration: none; color: var(--sumi);
+  background: #fff; border: 1px solid var(--washi-line); overflow: hidden;
+  margin-bottom: 30px; transition: transform .25s ease, box-shadow .25s ease;
+}
+.k-poster:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(27,25,23,.14); color: var(--sumi); }
+.k-poster__visual {
+  position: relative; display: grid; place-items: center;
+  padding: 26px 20px 18px; min-height: 190px;
+  background: var(--poster-bg, var(--ai));
+}
+.k-poster__visual svg { width: min(240px, 60vw); height: auto; }
+.k-poster__tag {
+  position: absolute; top: 0; left: 18px;
+  writing-mode: vertical-rl; letter-spacing: .28em; font-family: var(--font-heading);
+  background: var(--shu); color: #fff; padding: 12px 7px 16px; font-size: .85rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 8px), 0 100%); /* 短冊 */
+}
+.k-poster__date {
+  position: absolute; right: 14px; bottom: 12px; text-align: right;
+  color: rgba(246,241,228,.95); font-weight: 900; font-variant-numeric: tabular-nums;
+  font-size: 1.5rem; line-height: 1.15; text-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+.k-poster__date small { display: block; font-size: .68rem; font-weight: 700; letter-spacing: .24em; }
+.k-poster__body { padding: 20px 20px 22px; }
+.k-poster__title { font-size: 1.45rem; letter-spacing: .06em; margin: 0 0 4px; }
+.k-poster__subtitle { color: var(--sumi-soft); margin: 0 0 10px; font-size: .95rem; }
+.k-poster__foot { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between; }
+.k-poster .countdown { font-size: .9rem; }
+.k-poster__cta {
+  display: inline-flex; align-items: center; gap: 10px; min-height: var(--tap);
+  padding: 6px 22px; background: var(--shu); color: #fff; font-weight: 700; letter-spacing: .1em;
+}
+.k-poster__cta::after { content: "→"; transition: transform .2s; }
+.k-poster:hover .k-poster__cta::after { transform: translateX(5px); }
+.k-poster--closed { filter: grayscale(1); opacity: .55; }
+@media (min-width: 760px) {
+  .poster-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .poster-grid .k-poster { margin-bottom: 0; }
+  .poster-grid .k-poster--wide { grid-column: 1 / -1; }
+  .k-poster--wide .k-poster__visual { min-height: 230px; }
+}
+
+/* ---- 年間6カテゴリ 大型カード ---- */
+.cat-grid { display: grid; gap: 26px; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .cat-grid { grid-template-columns: 1fr 1fr; } }
+.cat-card .k-poster__visual { min-height: 280px; }
+.cat-card .k-poster__title { font-size: 1.6rem; }
+.cat-card .k-poster__time {
+  position: absolute; top: 14px; right: 16px; z-index: 1;
+  font-family: var(--font-latin); font-style: italic; font-weight: 600; font-size: 1.6rem;
+  color: rgba(246,241,228,.95); text-shadow: 0 2px 8px rgba(0,0,0,.45); letter-spacing: .06em;
+}
+.cat-card .k-poster__state { font-size: .92rem; color: var(--sumi-soft); }
+.cat-card .k-poster__state--open { color: var(--shu); font-weight: 700; }
+.cat-card .k-poster__state--soon { color: #7A6220; font-weight: 700; }
+.cat-card--idle .k-poster__visual { filter: saturate(.75); }
+div.k-poster { cursor: default; }
+div.k-poster:hover { transform: none; box-shadow: none; }
+
+/* ---- 3ステップ ---- */
+.steps3 { display: grid; gap: 18px; counter-reset: s3; }
+@media (min-width: 700px) { .steps3 { grid-template-columns: repeat(3, 1fr); } }
+.steps3__item {
+  position: relative; background: #fff; border: 1px solid var(--washi-line);
+  border-top: 4px solid var(--shu); padding: 46px 18px 20px; text-align: center;
+}
+.steps3__item::before {
+  counter-increment: s3; content: counter(s3);
+  position: absolute; top: -20px; left: 50%; transform: translateX(-50%);
+  width: 44px; height: 44px; display: grid; place-items: center;
+  background: var(--shu); color: #fff; font-weight: 900; font-size: 1.3rem; border-radius: 50%;
+}
+.steps3__item svg { width: 64px; height: 64px; margin-bottom: 8px; color: var(--ai); }
+.steps3__item h3 { margin-bottom: 4px; }
+.steps3__item p { margin: 0; font-size: .9rem; color: var(--sumi-soft); }
+
+/* ---- 信頼バッジ帯 ---- */
+.trust-band { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin: 26px 0; }
+.trust-band__item {
+  background: #fff; border: 1px solid var(--washi-line); text-align: center; padding: 16px 10px;
+}
+.trust-band__num { display: block; font-size: 1.7rem; font-weight: 900; font-variant-numeric: tabular-nums; color: var(--shu); font-family: var(--font-heading); }
+.trust-band__label { font-size: .82rem; color: var(--sumi-soft); letter-spacing: .06em; }
+
+/* ---- full-bleed 帯(main直下に置く前提。100vwハックは使わない=スクロール破壊の教訓) ---- */
+.bleed { width: 100%; }
+.bleed--deep { background: var(--sumi); color: var(--kinari); padding: 44px 20px; }
+.bleed--kin { background: linear-gradient(120deg, #A8822B, var(--kin) 45%, #D9BC6B); color: #fff; padding: 40px 20px; }
+.bleed__inner { max-width: var(--content-w); margin: 0 auto; }
+
+/* ================= 管理画面 ================= */
+.admin body, body.admin { background: #F4F2EC; }
+.admin-wrap { max-width: 1200px; margin: 0 auto; padding: 20px 16px 60px; }
+.admin-header { background: var(--sumi); color: #fff; }
+.admin-header__inner { max-width: 1200px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.admin-header__brand { font-family: var(--font-heading); font-size: 1.05rem; color: #fff; text-decoration: none; }
+.admin-nav { display: flex; gap: 2px; flex-wrap: wrap; }
+.admin-nav a { color: #E8E4DC; text-decoration: none; padding: 8px 10px; border-radius: var(--radius); font-size: .88rem; min-height: 40px; display: inline-flex; align-items: center; }
+.admin-nav a:hover, .admin-nav a.is-active { background: rgba(255,255,255,.14); color: #fff; }
+.admin-user { margin-left: auto; font-size: .82rem; color: #C9C3B8; }
+.admin-user a { color: #fff; }
+.admin-card { background: #fff; border: 1px solid var(--washi-line); border-radius: var(--radius); padding: 18px; margin-bottom: 20px; }
+.admin-table { font-size: .92rem; }
+.admin-table th { background: var(--kinari-deep); text-align: left; padding: 8px 10px; border: 1px solid var(--washi-line); white-space: nowrap; }
+.admin-table td { padding: 8px 10px; border: 1px solid var(--washi-line); }
+.admin-table tr:hover td { background: #FBF9F3; }
+.filter-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; margin-bottom: 16px; }
+.filter-bar .field { margin-bottom: 0; min-width: 150px; flex: 1 1 150px; }
+.filter-bar label { font-size: .8rem; margin-bottom: 2px; }
+.filter-bar input, .filter-bar select { min-height: 42px; font-size: .95rem; }
+.badge { display: inline-block; padding: 2px 10px; border-radius: 99px; font-size: .78rem; font-weight: 700; white-space: nowrap; }
+.badge--paid { background: #E4EFE0; color: var(--tokiwa); }
+.badge--unpaid { background: #FBEAE9; color: var(--shu); }
+.badge--onsite { background: #FCF4DE; color: #7A6220; }
+.badge--refunded { background: #E7E4DE; color: var(--sumi-soft); }
+.badge--paper { background: #E8ECF3; color: var(--ai); }
+.badge--cancel { background: #E7E4DE; color: var(--sumi-soft); text-decoration: line-through; }
+.stat-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.stat-tile { background: #fff; border: 1px solid var(--washi-line); border-top: 4px solid var(--accent); padding: 14px; }
+.stat-tile .stat-num { font-size: 2rem; font-weight: 900; font-variant-numeric: tabular-nums; }
+.stat-tile .stat-label { font-size: .82rem; color: var(--sumi-soft); }
+.matrix-table td.num, .matrix-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.matrix-table .row-total, .matrix-table .col-total { background: var(--kinari-deep); font-weight: 900; }
+
+@media (max-width: 640px) {
+  .koyomi-leaf { grid-template-columns: 1fr 48px; }
+  .koyomi-leaf__title { font-size: 1.55rem; }
+  .shinagaki__item { grid-template-columns: 72px 1fr; }
+  .shinagaki__item img { width: 72px; height: 72px; }
+}

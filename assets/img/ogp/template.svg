@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="seigaiha" width="80" height="40" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="#1B1917" stroke-opacity=".06" stroke-width="1.5">
+        <path d="M0 40a40 40 0 0 1 80 0M-20 40a20 20 0 0 1 40 0M20 40a20 20 0 0 1 40 0M60 40a20 20 0 0 1 40 0"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#F6F1E4"/>
+  <rect width="1200" height="630" fill="url(#seigaiha)"/>
+  <rect x="0" y="0" width="1200" height="14" fill="#C4342E"/>
+  <rect x="0" y="616" width="1200" height="14" fill="#B99334"/>
+  <circle cx="180" cy="315" r="120" fill="#C4342E"/>
+  <text x="180" y="360" font-family="'Yuji Syuku', serif" font-size="130" fill="#F6F1E4" text-anchor="middle">予</text>
+  <!-- ▼ 企画名に書き換える -->
+  <text x="380" y="290" font-family="'Yuji Syuku', serif" font-size="88" fill="#1B1917">土用の丑 うなぎ予約</text>
+  <text x="384" y="370" font-family="sans-serif" font-size="40" fill="#4A443D">店舗受取・事前ご予約</text>
+  <text x="384" y="470" font-family="serif" font-size="46" fill="#C4342E" font-weight="bold">スーパー三河屋</text>
+</svg>
