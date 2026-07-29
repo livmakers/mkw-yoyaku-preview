@@ -405,19 +405,37 @@ a.year-koyomi__item:hover { transform: translateY(-3px); box-shadow: 0 10px 24px
   .k-poster--wide .k-poster__visual { min-height: 230px; }
 }
 
-/* ---- 表装ヒーロー(生成り和紙 × 額装写真の分割) ---- */
+/* ---- 透かしヒーロー(full-bleed写真×和紙のベール。写真ははっきり見せる) ---- */
 .hero--washi { background: var(--kinari); color: var(--sumi); position: relative; overflow: hidden; }
-.hero--washi::before { /* 和紙テクスチャ */
-  content: ""; position: absolute; inset: 0;
+.hero--washi .hero__photo {
+  position: absolute; inset: 0; background-size: cover; background-position: center;
+}
+.hero--washi .hero__scrim { /* 文字側だけ濃い生成り、右は写真がくっきり */
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(95deg, rgba(246,241,228,.96) 0%, rgba(246,241,228,.86) 34%, rgba(246,241,228,.48) 66%, rgba(246,241,228,.28) 100%),
+    linear-gradient(0deg, var(--kinari) 0%, rgba(246,241,228,0) 26%),
+    linear-gradient(180deg, rgba(246,241,228,.8) 0%, rgba(246,241,228,0) 18%);
+}
+.hero--washi::before { /* 和紙テクスチャ(写真の上に薄く=透かしの紙質感) */
+  content: ""; position: absolute; inset: 0; z-index: 1;
   background: url("../img/photos/washi.jpg") center/cover;
-  opacity: .42; mix-blend-mode: multiply;
+  opacity: .3; mix-blend-mode: multiply; pointer-events: none;
 }
 .hero--washi::after { /* 裾のヘアライン */
-  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--washi-line);
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--washi-line); z-index: 2;
 }
+.hero--washi .hero__mark {
+  -webkit-text-stroke: 1.5px rgba(27,25,23,.18); color: transparent; z-index: 1;
+}
+.hero--washi .hero__note { color: rgba(27,25,23,.45); z-index: 2; }
 .hero--washi .hero__inner {
-  position: relative; grid-template-columns: 1fr; gap: 34px;
-  padding: 44px 20px 56px; max-width: 1080px;
+  position: relative; z-index: 2; grid-template-columns: 1fr; gap: 34px;
+  padding: 52px 20px 64px; max-width: 1080px; min-height: 480px; align-content: center;
+}
+@media (min-width: 820px) {
+  .hero--washi .hero__inner { padding: 76px 20px 88px; min-height: 560px; }
+  .hero--washi .hero__text { max-width: 56%; }
 }
 .hero--washi .hero__kicker { color: var(--kin); }
 .hero--washi .hero__kicker::before, .hero--washi .hero__kicker::after { background: var(--kin); }
@@ -435,41 +453,6 @@ a.year-koyomi__item:hover { transform: translateY(-3px); box-shadow: 0 10px 24px
 .hero--washi .btn--outline-light:hover { background: rgba(27,25,23,.06); color: var(--sumi); }
 .hero--washi .hero__foot { display: none; }
 
-/* 額装写真(白マット+金縁+落款) */
-.hero__side { position: relative; align-self: center; width: 100%; }
-.hero__side-frame {
-  position: relative; background: #fff; padding: 14px;
-  border: 1px solid var(--washi-line);
-  box-shadow: 0 1px 0 var(--washi-line), 0 18px 44px rgba(27,25,23,.16);
-}
-.hero__side-frame::after { /* 内側の金ヘアライン */
-  content: ""; position: absolute; inset: 8px; border: 1px solid rgba(185,147,52,.55); pointer-events: none;
-}
-.hero__side-photo {
-  width: 100%; aspect-ratio: 5 / 4; min-height: 280px; /* aspect-ratio非対応・CSS未達でも高さを保証 */
-  background-size: cover; background-position: center;
-}
-@media (min-width: 820px) { .hero__side-photo { min-height: 340px; } }
-.hero__side .hero__mark { /* 季節の透かし文字は額の背後に */
-  position: absolute; right: -6%; top: -14%; transform: none; z-index: -1;
-  font-size: clamp(140px, 26vw, 300px); -webkit-text-stroke: 1.5px rgba(27,25,23,.14); color: transparent;
-}
-.hero__side-note { display: block; margin-top: 8px; text-align: right; font-size: .72rem; color: rgba(27,25,23,.45); letter-spacing: .08em; }
-.hero__side-seal { /* 落款 */
-  position: absolute; right: 26px; bottom: 40px;
-  width: 34px; height: 34px; display: grid; place-items: center;
-  background: var(--shu); color: #fff; font-family: var(--font-heading); font-weight: 700; font-size: 17px;
-  box-shadow: 0 3px 10px rgba(0,0,0,.25);
-}
-@media (min-width: 820px) {
-  .hero--washi .hero__inner { grid-template-columns: 1.08fr .92fr; gap: 48px; padding: 64px 20px 72px; }
-  .hero--washi .hero__text { grid-column: 1; grid-row: 1; }
-  .hero__side { grid-column: 2; grid-row: 1; }
-}
-@media (max-width: 819px) {
-  .hero__side { max-width: 460px; margin: 0 auto; }
-  .hero__side .hero__mark { right: -4%; top: -12%; font-size: 140px; }
-}
 
 /* ---- 広幅コンテナ(特大カード用) ---- */
 .wide-main { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
