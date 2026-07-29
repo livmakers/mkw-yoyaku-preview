@@ -446,8 +446,10 @@ a.year-koyomi__item:hover { transform: translateY(-3px); box-shadow: 0 10px 24px
   content: ""; position: absolute; inset: 8px; border: 1px solid rgba(185,147,52,.55); pointer-events: none;
 }
 .hero__side-photo {
-  width: 100%; aspect-ratio: 5 / 4; background-size: cover; background-position: center;
+  width: 100%; aspect-ratio: 5 / 4; min-height: 280px; /* aspect-ratio非対応・CSS未達でも高さを保証 */
+  background-size: cover; background-position: center;
 }
+@media (min-width: 820px) { .hero__side-photo { min-height: 340px; } }
 .hero__side .hero__mark { /* 季節の透かし文字は額の背後に */
   position: absolute; right: -6%; top: -14%; transform: none; z-index: -1;
   font-size: clamp(140px, 26vw, 300px); -webkit-text-stroke: 1.5px rgba(27,25,23,.14); color: transparent;
