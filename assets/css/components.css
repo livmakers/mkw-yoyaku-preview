@@ -405,33 +405,69 @@ a.year-koyomi__item:hover { transform: translateY(-3px); box-shadow: 0 10px 24px
   .k-poster--wide .k-poster__visual { min-height: 230px; }
 }
 
-/* ---- 透かしヒーロー(生成り×季節食材アソート写真の透かし) ---- */
-.hero--washi { background: var(--kinari); color: var(--sumi); }
-.hero--washi::before { content: none; }
-.hero--washi .hero__photo { opacity: .3; filter: saturate(.9); }
-.hero--washi .hero__scrim {
-  background:
-    linear-gradient(100deg, rgba(246,241,228,.94) 0%, rgba(246,241,228,.78) 44%, rgba(246,241,228,.28) 100%),
-    linear-gradient(0deg, var(--kinari) 0%, rgba(246,241,228,0) 30%),
-    linear-gradient(180deg, rgba(246,241,228,.9) 0%, rgba(246,241,228,0) 22%);
+/* ---- 表装ヒーロー(生成り和紙 × 額装写真の分割) ---- */
+.hero--washi { background: var(--kinari); color: var(--sumi); position: relative; overflow: hidden; }
+.hero--washi::before { /* 和紙テクスチャ */
+  content: ""; position: absolute; inset: 0;
+  background: url("../img/photos/washi.jpg") center/cover;
+  opacity: .42; mix-blend-mode: multiply;
 }
-.hero--washi .hero__mark { -webkit-text-stroke: 1.5px rgba(27,25,23,.12); }
+.hero--washi::after { /* 裾のヘアライン */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--washi-line);
+}
+.hero--washi .hero__inner {
+  position: relative; grid-template-columns: 1fr; gap: 34px;
+  padding: 44px 20px 56px; max-width: 1080px;
+}
 .hero--washi .hero__kicker { color: var(--kin); }
 .hero--washi .hero__kicker::before, .hero--washi .hero__kicker::after { background: var(--kin); }
 .hero--washi .hero__title-main { color: var(--sumi); text-shadow: none; }
 .hero--washi .hero__title-sub { color: var(--sumi-soft); }
 .hero--washi .hero__lead { color: var(--sumi-soft); }
-.hero--washi .hero__note { color: rgba(27,25,23,.4); }
 .hero--washi .hero__chip {
-  background: rgba(255,255,255,.82); border: 1px solid var(--washi-line);
+  background: rgba(255,255,255,.86); border: 1px solid var(--washi-line);
   color: var(--sumi); box-shadow: 0 2px 10px rgba(27,25,23,.06);
 }
-.hero--washi .hero__chip:hover { background: #fff; color: var(--sumi); }
+.hero--washi .hero__chip:hover { background: #fff; color: var(--sumi); border-color: var(--kin); }
 .hero--washi .hero__chip-state { color: var(--shu); }
 .hero--washi .hero__chip-arrow { color: var(--kin); }
 .hero--washi .btn--outline-light { border-color: var(--sumi); color: var(--sumi); }
 .hero--washi .btn--outline-light:hover { background: rgba(27,25,23,.06); color: var(--sumi); }
 .hero--washi .hero__foot { display: none; }
+
+/* 額装写真(白マット+金縁+落款) */
+.hero__side { position: relative; align-self: center; width: 100%; }
+.hero__side-frame {
+  position: relative; background: #fff; padding: 14px;
+  border: 1px solid var(--washi-line);
+  box-shadow: 0 1px 0 var(--washi-line), 0 18px 44px rgba(27,25,23,.16);
+}
+.hero__side-frame::after { /* 内側の金ヘアライン */
+  content: ""; position: absolute; inset: 8px; border: 1px solid rgba(185,147,52,.55); pointer-events: none;
+}
+.hero__side-photo {
+  width: 100%; aspect-ratio: 5 / 4; background-size: cover; background-position: center;
+}
+.hero__side .hero__mark { /* 季節の透かし文字は額の背後に */
+  position: absolute; right: -6%; top: -14%; transform: none; z-index: -1;
+  font-size: clamp(140px, 26vw, 300px); -webkit-text-stroke: 1.5px rgba(27,25,23,.14); color: transparent;
+}
+.hero__side-note { display: block; margin-top: 8px; text-align: right; font-size: .72rem; color: rgba(27,25,23,.45); letter-spacing: .08em; }
+.hero__side-seal { /* 落款 */
+  position: absolute; right: 26px; bottom: 40px;
+  width: 34px; height: 34px; display: grid; place-items: center;
+  background: var(--shu); color: #fff; font-family: var(--font-heading); font-weight: 700; font-size: 17px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.25);
+}
+@media (min-width: 820px) {
+  .hero--washi .hero__inner { grid-template-columns: 1.08fr .92fr; gap: 48px; padding: 64px 20px 72px; }
+  .hero--washi .hero__text { grid-column: 1; grid-row: 1; }
+  .hero__side { grid-column: 2; grid-row: 1; }
+}
+@media (max-width: 819px) {
+  .hero__side { max-width: 460px; margin: 0 auto; }
+  .hero__side .hero__mark { right: -4%; top: -12%; font-size: 140px; }
+}
 
 /* ---- 広幅コンテナ(特大カード用) ---- */
 .wide-main { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
@@ -447,6 +483,12 @@ a.year-koyomi__item:hover { transform: translateY(-3px); box-shadow: 0 10px 24px
 .cat-card .k-poster__title { font-size: clamp(1.5rem, 3.2vw, 2rem); }
 .cat-card .k-poster__subtitle { font-size: 1.02rem; }
 .cat-card .k-poster__cta { min-height: 54px; padding: 10px 30px; font-size: 1.05rem; }
+.cat-card::after { /* 額装の内金線 */
+  content: ""; position: absolute; inset: 10px; border: 1px solid rgba(185,147,52,.4);
+  pointer-events: none; z-index: 2;
+}
+.cat-card .k-poster__time { font-size: 2rem; }
+.cat-card:hover { box-shadow: 0 18px 44px rgba(27,25,23,.16); }
 .cat-card .k-poster__time {
   position: absolute; top: 14px; right: 16px; z-index: 1;
   font-family: var(--font-latin); font-style: italic; font-weight: 600; font-size: 1.6rem;
@@ -476,13 +518,25 @@ div.k-poster:hover { transform: none; box-shadow: none; }
 .steps3__item h3 { margin-bottom: 4px; }
 .steps3__item p { margin: 0; font-size: .9rem; color: var(--sumi-soft); }
 
-/* ---- 信頼バッジ帯 ---- */
-.trust-band { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin: 26px 0; }
-.trust-band__item {
-  background: #fff; border: 1px solid var(--washi-line); text-align: center; padding: 16px 10px;
+/* ---- 信頼帯(ヘアライン区切りのエディトリアル型) ---- */
+.trust-band {
+  display: grid; grid-template-columns: 1fr 1fr; margin: 34px 0 8px;
+  border-top: 1px solid var(--washi-line); border-bottom: 1px solid var(--washi-line);
 }
-.trust-band__num { display: block; font-size: 1.7rem; font-weight: 900; font-variant-numeric: tabular-nums; color: var(--shu); font-family: var(--font-heading); }
-.trust-band__label { font-size: .82rem; color: var(--sumi-soft); letter-spacing: .06em; }
+@media (min-width: 700px) { .trust-band { grid-template-columns: repeat(4, 1fr); } }
+.trust-band__item {
+  text-align: center; padding: 22px 10px 18px; position: relative;
+}
+.trust-band__item + .trust-band__item::before {
+  content: ""; position: absolute; left: 0; top: 22%; bottom: 22%; width: 1px; background: var(--washi-line);
+}
+@media (max-width: 699px) { .trust-band__item:nth-child(3)::before { display: none; } }
+.trust-band__num {
+  display: block; font-family: var(--font-latin); font-style: italic; font-weight: 600;
+  font-size: 2.1rem; line-height: 1.1; color: var(--shu);
+}
+.trust-band__num small { font-family: var(--font-body); font-style: normal; font-weight: 700; }
+.trust-band__label { font-size: .82rem; color: var(--sumi-soft); letter-spacing: .1em; }
 
 /* ---- full-bleed 帯(main直下に置く前提。100vwハックは使わない=スクロール破壊の教訓) ---- */
 .bleed { width: 100%; }
