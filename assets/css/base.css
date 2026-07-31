@@ -91,6 +91,12 @@ strong.price, .num { font-weight: 900; font-variant-numeric: tabular-nums; }
   border-top: 1px solid var(--washi-line);
 }
 .site-footer__main-label { font-size: .78rem; letter-spacing: .14em; color: var(--kin); font-weight: 700; }
+.site-footer__admin { margin: 2px 0 14px; }
+.site-footer__admin .btn {
+  min-height: 40px; padding: 6px 20px; font-size: .82rem; font-weight: 500;
+  border-color: var(--washi-line); color: var(--sumi-soft); background: transparent;
+}
+.site-footer__admin .btn:hover { border-color: var(--sumi); color: var(--sumi); }
 .site-footer__main-links a { font-size: .85rem; color: var(--sumi); min-height: var(--tap); display: inline-flex; align-items: center; }
 
 /* 本店サイトへの誘導バンド */
