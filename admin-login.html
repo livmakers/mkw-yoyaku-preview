@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ログイン｜三河屋 予約管理</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=9">
+<link rel="stylesheet" href="assets/css/base.css?v=9">
+<link rel="stylesheet" href="assets/css/components.css?v=9">
+</head>
+<body class="admin">
+<div class="admin-wrap">
+  <div style="max-width:420px;margin:8vh auto 0" class="bg-yagasuri">
+    <div class="admin-card" style="padding:28px">
+      <h1 style="text-align:center">三河屋 予約管理</h1>
+      <p class="field-note" style="text-align:center">※プレビュー版。ボタンでダッシュボードのサンプルへ進めます</p>
+      <div class="field">
+        <label for="l-id">ログインID</label>
+        <input type="text" id="l-id" autocomplete="username" placeholder="mkw-owner">
+      </div>
+      <div class="field">
+        <label for="l-pw">パスワード</label>
+        <input type="password" id="l-pw" autocomplete="current-password" placeholder="••••••••">
+      </div>
+      <a class="btn btn--primary btn--block" href="admin.html">ログイン</a>
+      <p class="field-note" style="margin-top:12px">5回連続で失敗すると15分間ロックされます。<br>権限: owner(全機能)／manager(全機能)／staff(自店舗の受注のみ)</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

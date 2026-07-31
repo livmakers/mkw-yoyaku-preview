@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>商品管理｜三河屋 予約管理</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=9">
+<link rel="stylesheet" href="assets/css/base.css?v=9">
+<link rel="stylesheet" href="assets/css/components.css?v=9">
+</head>
+<body class="admin">
+<header class="admin-header">
+  <div class="admin-header__inner">
+    <a class="admin-header__brand" href="admin.html">三河屋 予約管理</a>
+    <nav class="admin-nav" aria-label="管理メニュー">
+      <a href="admin.html">ダッシュボード</a>
+      <a href="#">受注一覧</a>
+      <a href="#">ピッキング</a>
+      <a href="#">製造集計</a>
+      <a href="#">手入力</a>
+      <a href="#">大口見積</a>
+      <a href="admin-campaigns.html">企画</a>
+      <a href="admin-products.html" class="is-active">商品</a>
+      <a href="#">受取枠</a>
+      <a href="admin-settings.html">サイト設定</a>
+      <a href="#">CSV</a>
+    </nav>
+    <span class="admin-user">管理者（owner）｜<a href="admin-login.html">ログアウト</a></span>
+  </div>
+</header>
+<div class="admin-wrap">
+<h1>商品管理</h1>
+<p class="field-note">※プレビュー版のため保存はできません（本番は保存すると即サイトに反映され、操作は監査ログに記録されます）</p>
+
+<div class="admin-card" style="overflow-x:auto">
+  <table class="admin-table">
+    <tr><th>商品名</th><th>企画</th><th class="num">税込価格</th><th>写真</th><th>状態</th><th>操作</th></tr>
+    <tr><td>うなぎ蒲焼 特大(一尾) <code style="font-size:.75rem">unagi-kabayaki-l</code></td><td>土用の丑</td><td class="num">3,980</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
+    <tr><td>うなぎ蒲焼 大(一尾)</td><td>土用の丑</td><td class="num">2,980</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
+    <tr><td>黒毛和牛 サーロインブロック 500g</td><td>レア和牛</td><td class="num">9,800</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
+    <tr><td>黒毛和牛 シャトーブリアン 300g(2枚)</td><td>レア和牛</td><td class="num">12,800</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
+    <tr><td>幕の内弁当</td><td>お惣菜・お弁当</td><td class="num">780</td><td>画像なし</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
+    <tr><td>オードブル 豪華盛り</td><td>お惣菜・お弁当</td><td class="num">4,980</td><td>画像なし</td><td><span class="badge badge--refunded">停止</span></td><td><a href="#edit">編集</a></td></tr>
+  </table>
+</div>
+
+<div class="admin-card" id="edit">
+  <h2>商品を編集: うなぎ蒲焼 特大（一尾）</h2>
+  <div class="filter-bar">
+    <div class="field"><label>企画</label>
+      <select><option>土用の丑 うなぎ予約</option><option>クリスマス予約</option><option>お弁当・オードブル(通年)</option><option>レア和牛肉のご予約</option></select></div>
+    <div class="field"><label>商品名</label><input type="text" value="うなぎ蒲焼 特大（一尾）"></div>
+    <div class="field"><label>カナ</label><input type="text" value="ウナギカバヤキ トクダイ"></div>
+  </div>
+  <div class="filter-bar">
+    <div class="field"><label>税込価格(円)</label><input type="number" value="3980"></div>
+    <div class="field"><label>税率</label><select><option>8%(軽減・食品)</option><option>10%(酒類等)</option></select></div>
+    <div class="field"><label>単位</label><input type="text" value="尾"></div>
+    <div class="field"><label>1注文の上限</label><input type="number" value="10"></div>
+    <div class="field"><label>表示順</label><input type="number" value="10"></div>
+  </div>
+  <div class="field"><label>説明</label><textarea rows="2">三河一色産うなぎを備長炭でふっくらと。タレ・山椒付き。</textarea></div>
+
+  <h3>食品表示（商品ページの「商品情報」に表示）</h3>
+  <div class="filter-bar">
+    <div class="field"><label>内容量</label><input type="text" value="1尾(約200g)・タレ山椒付き"></div>
+    <div class="field"><label>アレルゲン(8品目+準ずる20品目)</label><input type="text" value="小麦・大豆"></div>
+    <div class="field"><label>原料原産地</label><input type="text" value="うなぎ(愛知県産)"></div>
+  </div>
+  <div class="field"><label>原材料名・添加物</label><textarea rows="2">うなぎ(愛知県産)、醤油(小麦・大豆を含む)、砂糖、みりん、山椒</textarea></div>
+  <div class="field"><label>栄養成分表示(任意)</label><textarea rows="2">100g当たり 熱量293kcal／たんぱく質23.0g／脂質21.0g／炭水化物3.1g／食塩相当量1.3g</textarea></div>
+  <div class="filter-bar">
+    <div class="field"><label>消費期限表示</label><input type="text" value="お受取日当日中"></div>
+    <div class="field"><label>保存方法</label><input type="text" value="要冷蔵(10℃以下)"></div>
+  </div>
+
+  <div class="field">
+    <label>商品画像（JPEG/PNG/WebP・5MBまで。実物と異なる写真は使用しない＝景表法）</label>
+    <p><img src="assets/img/products/placeholder.svg" alt="現在の商品画像" width="96" height="96" style="object-fit:cover;border:1px solid var(--washi-line)"></p>
+    <input type="file" accept="image/jpeg,image/png,image/webp">
+  </div>
+  <div class="field">
+    <label>取扱店舗（未選択=全店）</label>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:4px">
+      <label style="display:flex;gap:8px;align-items:center;font-weight:400;min-height:36px"><input type="checkbox" checked> ビッグリブ小牧店</label>
+      <label style="display:flex;gap:8px;align-items:center;font-weight:400;min-height:36px"><input type="checkbox" checked> ビッグリブ安城店</label>
+      <label style="display:flex;gap:8px;align-items:center;font-weight:400;min-height:36px"><input type="checkbox" checked> Mikawaya 稲熊店</label>
+      <label style="display:flex;gap:8px;align-items:center;font-weight:400;min-height:36px"><input type="checkbox"> パワーズ高月店</label>
+    </div>
+  </div>
+  <div class="field"><label style="display:flex;gap:8px;align-items:center"><input type="checkbox" checked> 販売する</label></div>
+  <button type="button" class="btn btn--primary">保存する（プレビューでは無効）</button>
+</div>
+</div>
+</body>
+</html>

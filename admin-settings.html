@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サイト設定｜三河屋 予約管理</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=9">
+<link rel="stylesheet" href="assets/css/base.css?v=9">
+<link rel="stylesheet" href="assets/css/components.css?v=9">
+</head>
+<body class="admin">
+<header class="admin-header">
+  <div class="admin-header__inner">
+    <a class="admin-header__brand" href="admin.html">三河屋 予約管理</a>
+    <nav class="admin-nav" aria-label="管理メニュー">
+      <a href="admin.html">ダッシュボード</a>
+      <a href="#">受注一覧</a>
+      <a href="#">ピッキング</a>
+      <a href="#">製造集計</a>
+      <a href="#">手入力</a>
+      <a href="#">大口見積</a>
+      <a href="admin-campaigns.html">企画</a>
+      <a href="admin-products.html">商品</a>
+      <a href="#">受取枠</a>
+      <a href="admin-settings.html" class="is-active">サイト設定</a>
+      <a href="#">CSV</a>
+    </nav>
+    <span class="admin-user">管理者（owner）｜<a href="admin-login.html">ログアウト</a></span>
+  </div>
+</header>
+<div class="admin-wrap">
+<h1>サイト設定 — カテゴリ写真</h1>
+<p>トップページの透かしヒーロー・6カテゴリカードの写真をここで差し替えられます（アップロード後、即サイトに反映）。</p>
+<div class="notice">写真の注意: 実物と異なる写真を特定商品の写真として使わない(景表法)。フリー素材は必ず出典台帳(CREDITS.md)に追記。人物・他店の看板が写るものは不可。</div>
+<p class="field-note">※プレビュー版のためアップロードは無効です</p>
+
+<div class="stat-tiles" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+
+  <div class="admin-card" style="margin-bottom:0">
+    <h2 style="font-size:1.05rem">トップの透かし写真(季節食材アソート) <small style="font-weight:400;color:var(--sumi-soft)">(トップ)</small></h2>
+    <div style="height:150px;background:url('assets/img/photos/assort.jpg') 50% 45% / cover;border:1px solid var(--washi-line)"></div>
+    <p class="field-note">既定写真／位置: やや上(標準)</p>
+    <div class="field" style="margin-bottom:8px">
+      <label style="font-size:.8rem">写真を差し替える(JPEG/PNG/WebP・8MBまで)</label>
+      <input type="file" accept="image/jpeg,image/png,image/webp">
+    </div>
+    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロードして差替</button>
+    <div style="margin-top:8px;display:flex;gap:8px;align-items:end;flex-wrap:wrap">
+      <div class="field" style="margin-bottom:0;flex:1">
+        <label style="font-size:.8rem">切り取り位置</label>
+        <select style="min-height:38px"><option>やや上(標準)</option><option>上寄せ</option><option>中央</option><option>下寄せ</option><option>左寄せ</option><option>右寄せ</option></select>
+      </div>
+      <button type="button" class="btn" style="min-height:38px;padding:4px 14px;font-size:.85rem">位置を変更</button>
+    </div>
+  </div>
+
+  <div class="admin-card" style="margin-bottom:0">
+    <h2 style="font-size:1.05rem">丑の日のご予約 <small style="font-weight:400;color:var(--sumi-soft)">(7月)</small></h2>
+    <div style="height:150px;background:url('assets/img/photos/hero-unagi.jpg') 50% 46% / cover;border:1px solid var(--washi-line)"></div>
+    <p class="field-note">既定写真／位置: やや上</p>
+    <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
+    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロードして差替</button>
+  </div>
+
+  <div class="admin-card" style="margin-bottom:0">
+    <h2 style="font-size:1.05rem">クリスマスのご予約 <small style="font-weight:400;color:var(--sumi-soft)">(12月)</small></h2>
+    <div style="height:150px;background:url('assets/img/photos/xmas.jpg') 50% 68% / cover;border:1px solid var(--washi-line)"></div>
+    <p class="field-note">既定写真／位置: 下寄せ</p>
+    <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
+    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロードして差替</button>
+  </div>
+
+  <div class="admin-card" style="margin-bottom:0">
+    <h2 style="font-size:1.05rem">年末のご予約 <small style="font-weight:400;color:var(--sumi-soft)">(12月)</small></h2>
+    <div style="height:150px;background:url('assets/img/photos/yearend.jpg') 72% 60% / cover;border:1px solid var(--washi-line)"></div>
+    <p class="field-note">既定写真／位置: 右下寄せ</p>
+    <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
+    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロードして差替</button>
+  </div>
+
+  <div class="admin-card" style="margin-bottom:0">
+    <h2 style="font-size:1.05rem">年始のご予約 <small style="font-weight:400;color:var(--sumi-soft)">(1月)</small></h2>
+    <div style="height:150px;background:url('assets/img/photos/newyear.jpg') 50% 50% / cover;border:1px solid var(--washi-line)"></div>
+    <p class="field-note">既定写真／位置: 中央</p>
+    <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
+    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロードして差替</button>
+  </div>
+
+  <div class="admin-card" style="margin-bottom:0">
+    <h2 style="font-size:1.05rem">レア和牛肉のご予約 <small style="font-weight:400;color:var(--sumi-soft)">(不定期)</small></h2>
+    <div style="height:150px;background:url('assets/img/photos/wagyu.jpg') 50% 55% / cover;border:1px solid var(--washi-line)"></div>
+    <p class="field-note">既定写真／位置: やや下</p>
+    <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
+    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロードして差替</button>
+  </div>
+
+  <div class="admin-card" style="margin-bottom:0">
+    <h2 style="font-size:1.05rem">お惣菜・お弁当のご予約 <small style="font-weight:400;color:var(--sumi-soft)">(通年)</small></h2>
+    <div style="height:150px;background:url('assets/img/photos/bento.jpg') 50% 62% / cover;border:1px solid var(--washi-line)"></div>
+    <p class="field-note">既定写真／位置: やや下</p>
+    <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
+    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロードして差替</button>
+  </div>
+
+</div>
+
+<div class="admin-card" style="margin-top:20px">
+  <h2>関連する設定の場所</h2>
+  <table class="admin-table">
+    <tr><th>変えたいもの</th><th>場所</th></tr>
+    <tr><td>締切(受付終了日時・受取日のN日前・時刻)</td><td><a href="admin-campaigns.html">企画</a> → 該当企画を編集</td></tr>
+    <tr><td>商品の写真・価格・内容量・原材料・栄養成分・アレルゲン</td><td><a href="admin-products.html">商品</a> → 該当商品を編集</td></tr>
+  </table>
+</div>
+</div>
+</body>
+</html>
