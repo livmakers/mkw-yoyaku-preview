@@ -85,6 +85,22 @@ strong.price, .num { font-weight: 900; font-variant-numeric: tabular-nums; }
 .site-footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; margin-bottom: 12px; }
 .site-footer nav a { font-size: .85rem; color: var(--sumi-soft); min-height: var(--tap); display: inline-flex; align-items: center; }
 .site-footer__copy { font-size: .78rem; color: var(--sumi-soft); }
+.site-footer__main-links {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 18px;
+  margin: 4px auto 14px; padding-top: 12px; max-width: 640px;
+  border-top: 1px solid var(--washi-line);
+}
+.site-footer__main-label { font-size: .78rem; letter-spacing: .14em; color: var(--kin); font-weight: 700; }
+.site-footer__main-links a { font-size: .85rem; color: var(--sumi); min-height: var(--tap); display: inline-flex; align-items: center; }
+
+/* 本店サイトへの誘導バンド */
+.mainsite-band {
+  max-width: var(--content-w); margin: 48px auto 0; padding: 26px 20px; text-align: center;
+  border-top: 1px solid var(--washi-line); border-bottom: 1px solid var(--washi-line);
+}
+.mainsite-band__lead { font-family: var(--font-heading); font-weight: 700; letter-spacing: .08em; margin: 0 0 12px; }
+.mainsite-band .btn { border-color: var(--sumi); }
+.mainsite-band__note { font-size: .82rem; color: var(--sumi-soft); margin: 10px 0 0; }
 
 /* ---- フォーム(高齢者配慮: 17px+ / 48px+) ---- */
 label { display: block; font-weight: 700; margin-bottom: 6px; }
