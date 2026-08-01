@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=18">
-<link rel="stylesheet" href="assets/css/base.css?v=18">
-<link rel="stylesheet" href="assets/css/components.css?v=18">
+<link rel="stylesheet" href="assets/css/tokens.css?v=19">
+<link rel="stylesheet" href="assets/css/base.css?v=19">
+<link rel="stylesheet" href="assets/css/components.css?v=19">
 <script>
 (function(){
-  var MYV = 18;
+  var MYV = 19;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -71,9 +71,9 @@
       <p class="hero__kicker">MIKAWAYA SEASONAL RESERVE</p>
       <h1 class="hero__title">
         <span class="hero__title-main">旬を、<br>予約する。</span>
-        <span class="hero__title-sub">うなぎも、クリスマスも、おせちも。三河屋の季節ごよみ。</span>
+        <span class="hero__title-sub"><span class="ib">うなぎも、クリスマスも、おせちも。</span><span class="ib">三河屋の季節ごよみ。</span></span>
       </h1>
-      <p class="hero__lead">季節の行事のごちそうを、ご予約分だけ丁寧にご用意。お近くの直営13店舗で、お待たせせずお受け取りいただけます。</p>
+      <p class="hero__lead"><span class="ib">季節の行事のごちそうを、</span><span class="ib">ご予約分だけ丁寧にご用意。</span><span class="ib">お近くの直営13店舗で、</span><span class="ib">お待たせせずお受け取りいただけます。</span></p>
       <div class="hero__chips">
         <a class="hero__chip" href="form.html">
           <span class="hero__chip-title">土用の丑 うなぎ予約</span>
@@ -96,9 +96,9 @@
 
 <div class="site-main">
 <div class="trust-band reveal">
-  <div class="trust-band__item"><span class="trust-band__num">13<small style="font-size:.9rem">店舗</small></span><span class="trust-band__label">愛知・岐阜・滋賀の直営店</span></div>
-  <div class="trust-band__item"><span class="trust-band__num">0<small style="font-size:.9rem">円</small></span><span class="trust-band__label">店舗受取だから送料なし</span></div>
-  <div class="trust-band__item"><span class="trust-band__num">1971</span><span class="trust-band__label">創業。地元の台所55年</span></div>
+  <div class="trust-band__item"><span class="trust-band__num">13<small style="font-size:.9rem">店舗</small></span><span class="trust-band__label"><span class="ib">愛知・岐阜・滋賀の</span><span class="ib">直営店</span></span></div>
+  <div class="trust-band__item"><span class="trust-band__num">0<small style="font-size:.9rem">円</small></span><span class="trust-band__label"><span class="ib">店舗受取だから</span><span class="ib">送料なし</span></span></div>
+  <div class="trust-band__item"><span class="trust-band__num">1971</span><span class="trust-band__label"><span class="ib">創業。</span><span class="ib">地元の台所55年</span></span></div>
   <div class="trust-band__item"><span class="trust-band__num">紙・電話</span><span class="trust-band__label">でもご予約OK</span></div>
 </div>
 </div>
@@ -217,7 +217,7 @@
 <section class="washi-band" style="margin-top:8px">
   <header class="band-head reveal" data-mark="順">
     <span class="band-head__kicker">How to</span>
-    <h2 class="band-head__title">ご予約はかんたん、3つの手順</h2>
+    <h2 class="band-head__title"><span class="ib">ご予約はかんたん、</span><span class="ib">3つの手順</span></h2>
   </header>
   <div class="steps3 reveal" style="margin-top:34px">
     <div class="steps3__item">

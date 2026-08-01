@@ -5,6 +5,8 @@
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
+  line-break: strict;       /* 禁則: 行頭の小書き仮名・長音符等を禁止 */
+  overflow-wrap: break-word;
   font-family: var(--font-body);
   font-size: var(--fs-base);
   line-height: 1.8;
@@ -15,7 +17,9 @@ body {
 img, svg { max-width: 100%; height: auto; }
 a { color: var(--ai); text-underline-offset: 3px; }
 a:hover { color: var(--shu); }
-h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.4; margin: 0 0 .6em; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.4; margin: 0 0 .6em; text-wrap: balance; }
+p { text-wrap: pretty; }
+.ib { display: inline-block; } /* 語句単位の折返し(泣き別れ防止) */
 h1 { font-size: 1.55rem; }
 h2 { font-size: 1.3rem; }
 h3 { font-size: 1.1rem; }

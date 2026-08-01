@@ -565,6 +565,12 @@ input[type="date"], input[type="password"], select, textarea { border-radius: 12
 details.paper { border-radius: 16px; }
 .complete-no { border-radius: 16px; }
 
+/* ==== 禁則・折返し調整 ==== */
+.hero__title-sub, .photo-band__title, .band-head__title, .k-poster__title { text-wrap: balance; }
+.k-poster__subtitle, .hero__lead { text-wrap: pretty; }
+.trust-band__num { white-space: nowrap; }
+.k-poster__state, .hero__chip-state { text-wrap: balance; }
+
 /* ==== 保存前プレビュー表示バナー(管理者のみ) ==== */
 .preview-banner {
   position: sticky; top: 0; z-index: 95;
