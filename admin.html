@@ -9,9 +9,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=14">
-<link rel="stylesheet" href="assets/css/base.css?v=14">
-<link rel="stylesheet" href="assets/css/components.css?v=14">
+<link rel="stylesheet" href="assets/css/tokens.css?v=15">
+<link rel="stylesheet" href="assets/css/base.css?v=15">
+<link rel="stylesheet" href="assets/css/components.css?v=15">
 </head>
 <body class="admin">
 <header class="admin-header">
@@ -73,5 +73,19 @@
   </table>
 </div>
 </div>
+<script>
+document.addEventListener('click', function(e){
+  var b = e.target.closest('button');
+  if (!b || b.dataset.print !== undefined || b.dataset.step !== undefined) return;
+  var old = document.querySelector('.demo-toast');
+  if (old) old.remove();
+  var t = document.createElement('div');
+  t.className = 'demo-toast';
+  t.textContent = 'デモ版のためこの操作は実行されません（本番の管理画面では動作します）';
+  t.style.cssText = 'position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:#1B1917;color:#fff;padding:12px 22px;border-radius:999px;z-index:99;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:90vw;text-align:center';
+  document.body.append(t);
+  setTimeout(function(){ t.remove(); }, 2400);
+});
+</script>
 </body>
 </html>
