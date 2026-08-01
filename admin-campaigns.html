@@ -9,9 +9,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=15">
-<link rel="stylesheet" href="assets/css/base.css?v=15">
-<link rel="stylesheet" href="assets/css/components.css?v=15">
+<link rel="stylesheet" href="assets/css/tokens.css?v=16">
+<link rel="stylesheet" href="assets/css/base.css?v=16">
+<link rel="stylesheet" href="assets/css/components.css?v=16">
+<script>
+(function(){
+  var MYV = 16;
+  fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+    if (d.v > MYV) {
+      var u = new URL(location.href);
+      u.searchParams.set('r', d.v);
+      location.replace(u.toString());
+    }
+  }).catch(function(){});
+})();
+</script>
 </head>
 <body class="admin">
 <header class="admin-header">
@@ -73,7 +85,7 @@
     <div class="field"><label style="display:flex;gap:8px;align-items:center;min-height:42px"><input type="checkbox" checked style="width:22px;height:22px"> 公開する</label></div>
   </div>
   <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-    <a class="btn" target="_blank" rel="noopener" href="campaign.html">プレビュー（保存せず確認）</a>
+    <a class="btn" target="_blank" rel="noopener" href="campaign.html?demoPreview=1">プレビュー（保存せず確認）</a>
     <button type="button" class="btn btn--primary">保存して本番反映（デモでは無効）</button>
   </div>
   <p class="field-note">本番では「プレビュー」で、この入力内容のまま企画ページを事前確認できます。確認後に保存すると初めて本番へ反映されます。</p>

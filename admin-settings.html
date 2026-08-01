@@ -9,9 +9,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=15">
-<link rel="stylesheet" href="assets/css/base.css?v=15">
-<link rel="stylesheet" href="assets/css/components.css?v=15">
+<link rel="stylesheet" href="assets/css/tokens.css?v=16">
+<link rel="stylesheet" href="assets/css/base.css?v=16">
+<link rel="stylesheet" href="assets/css/components.css?v=16">
+<script>
+(function(){
+  var MYV = 16;
+  fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+    if (d.v > MYV) {
+      var u = new URL(location.href);
+      u.searchParams.set('r', d.v);
+      location.replace(u.toString());
+    }
+  }).catch(function(){});
+})();
+</script>
 </head>
 <body class="admin">
 <header class="admin-header">
@@ -51,7 +63,7 @@
     </div>
     <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html">プレビュー↗（トップで見え方確認）</a>
+      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
       <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
     </div>
     <div style="margin-top:8px;display:flex;gap:8px;align-items:end;flex-wrap:wrap">
@@ -70,7 +82,7 @@
     <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
     <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html">プレビュー↗（トップで見え方確認）</a>
+      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
       <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
     </div>
   </div>
@@ -82,7 +94,7 @@
     <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
     <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html">プレビュー↗（トップで見え方確認）</a>
+      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
       <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
     </div>
   </div>
@@ -94,7 +106,7 @@
     <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
     <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html">プレビュー↗（トップで見え方確認）</a>
+      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
       <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
     </div>
   </div>
@@ -106,7 +118,7 @@
     <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
     <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html">プレビュー↗（トップで見え方確認）</a>
+      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
       <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
     </div>
   </div>
@@ -118,7 +130,7 @@
     <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
     <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html">プレビュー↗（トップで見え方確認）</a>
+      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
       <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
     </div>
   </div>
@@ -130,7 +142,7 @@
     <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
     <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html">プレビュー↗（トップで見え方確認）</a>
+      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
       <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
     </div>
   </div>

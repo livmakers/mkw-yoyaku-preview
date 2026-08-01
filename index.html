@@ -9,12 +9,42 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=15">
-<link rel="stylesheet" href="assets/css/base.css?v=15">
-<link rel="stylesheet" href="assets/css/components.css?v=15">
+<link rel="stylesheet" href="assets/css/tokens.css?v=16">
+<link rel="stylesheet" href="assets/css/base.css?v=16">
+<link rel="stylesheet" href="assets/css/components.css?v=16">
+<script>
+(function(){
+  var MYV = 16;
+  fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+    if (d.v > MYV) {
+      var u = new URL(location.href);
+      u.searchParams.set('r', d.v);
+      location.replace(u.toString());
+    }
+  }).catch(function(){});
+})();
+</script>
 </head>
 <body data-theme="unagi">
 <a class="skip-link" href="#main">本文へ移動</a>
+<div class="preview-banner" id="demo-preview-banner" hidden>プレビュー表示中（まだ保存されていません）
+  <button type="button" class="btn" id="demo-preview-save" style="min-height:38px;padding:4px 20px;font-size:.9rem;background:#fff;border-color:#fff;color:#7A6220;margin-left:12px">この内容で保存する</button>
+  <a href="#" onclick="history.back();return false" style="margin-left:10px">編集に戻る</a>
+</div>
+<script>
+(function(){
+  if (new URLSearchParams(location.search).has('demoPreview')) {
+    document.getElementById('demo-preview-banner').hidden = false;
+    document.getElementById('demo-preview-save').addEventListener('click', function(){
+      var t = document.createElement('div');
+      t.textContent = '✔ デモ版のため保存されません。本番ではこのボタンで即保存・本番反映されます';
+      t.style.cssText = 'position:fixed;left:50%%;bottom:30px;transform:translateX(-50%%);background:#14503C;color:#fff;padding:12px 22px;border-radius:999px;z-index:99;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:90vw;text-align:center';
+      document.body.append(t);
+      setTimeout(function(){ t.remove(); }, 2600);
+    });
+  }
+})();
+</script>
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__brand" href="index.html">
