@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=16">
-<link rel="stylesheet" href="assets/css/base.css?v=16">
-<link rel="stylesheet" href="assets/css/components.css?v=16">
+<link rel="stylesheet" href="assets/css/tokens.css?v=17">
+<link rel="stylesheet" href="assets/css/base.css?v=17">
+<link rel="stylesheet" href="assets/css/components.css?v=17">
 <script>
 (function(){
-  var MYV = 16;
+  var MYV = 17;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -88,7 +88,7 @@
 <script>
 document.addEventListener('click', function(e){
   var b = e.target.closest('button');
-  if (!b || b.dataset.print !== undefined || b.dataset.step !== undefined) return;
+  if (!b || b.dataset.print !== undefined || b.dataset.step !== undefined || b.dataset.live !== undefined) return;
   var old = document.querySelector('.demo-toast');
   if (old) old.remove();
   var t = document.createElement('div');

@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=16">
-<link rel="stylesheet" href="assets/css/base.css?v=16">
-<link rel="stylesheet" href="assets/css/components.css?v=16">
+<link rel="stylesheet" href="assets/css/tokens.css?v=17">
+<link rel="stylesheet" href="assets/css/base.css?v=17">
+<link rel="stylesheet" href="assets/css/components.css?v=17">
 <script>
 (function(){
-  var MYV = 16;
+  var MYV = 17;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -61,7 +61,7 @@
 
 <!-- ══════════ 透かしヒーロー(季節食材アソート) ══════════ -->
 <section class="hero hero--washi">
-  <div class="hero__photo" style="background-image:url('assets/img/photos/assort.jpg');background-position:50% 45%" role="img" aria-label="三河屋の季節の食材・ごちそうイメージ写真"></div>
+  <div class="hero__photo" data-demo-key="hero" style="background-image:url('assets/img/photos/assort.jpg');background-position:50% 45%" role="img" aria-label="三河屋の季節の食材・ごちそうイメージ写真"></div>
   <div class="hero__scrim" aria-hidden="true"></div>
   <span class="hero__mark" aria-hidden="true">夏</span>
   <span class="hero__note">写真はイメージです</span>
@@ -114,7 +114,7 @@
   <div class="cat-grid">
 
     <div class="k-poster cat-card cat-card--idle reveal" style="--poster-bg:linear-gradient(150deg,#0B2E22,#14503C 60%,#1E6A50)">
-      <div class="k-poster__visual k-poster__visual--photo" style="background-image:url('assets/img/photos/xmas.jpg');background-position:50% 68%">
+      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="xmas" style="background-image:url('assets/img/photos/xmas.jpg');background-position:50% 68%">
         <span class="k-poster__tag">クリスマス</span>
         <span class="k-poster__time">12月</span>
         <span class="k-poster__note">写真はイメージです</span>
@@ -127,7 +127,7 @@
     </div>
 
     <div class="k-poster cat-card cat-card--idle reveal" style="--poster-bg:linear-gradient(150deg,#241B10,#4A3A28 60%,#6B563C)">
-      <div class="k-poster__visual k-poster__visual--photo" style="background-image:url('assets/img/photos/yearend.jpg');background-position:72% 60%">
+      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="yearend" style="background-image:url('assets/img/photos/yearend.jpg');background-position:72% 60%">
         <span class="k-poster__tag">年末</span>
         <span class="k-poster__time">12月</span>
         <span class="k-poster__note">写真はイメージです</span>
@@ -140,7 +140,7 @@
     </div>
 
     <div class="k-poster cat-card cat-card--idle reveal" style="--poster-bg:linear-gradient(150deg,#3A2D0E,#6B5320 60%,#B99334)">
-      <div class="k-poster__visual k-poster__visual--photo" style="background-image:url('assets/img/photos/newyear.jpg');background-position:50% 50%">
+      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="newyear" style="background-image:url('assets/img/photos/newyear.jpg');background-position:50% 50%">
         <span class="k-poster__tag">年始</span>
         <span class="k-poster__time">1月</span>
         <span class="k-poster__note">写真はイメージです</span>
@@ -153,7 +153,7 @@
     </div>
 
     <a class="k-poster cat-card reveal" href="form.html" style="--poster-bg:linear-gradient(150deg,#16283F,#21395B 60%,#2C4A73)">
-      <div class="k-poster__visual k-poster__visual--photo" style="background-image:url('assets/img/photos/hero-unagi.jpg');background-position:50% 46%">
+      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="unagi" style="background-image:url('assets/img/photos/hero-unagi.jpg');background-position:50% 46%">
         <span class="k-poster__tag">丑の日</span>
         <span class="k-poster__time">7月</span>
         <span class="k-poster__date"><small>お受取</small>7.24–7.31</span>
@@ -170,7 +170,7 @@
     </a>
 
     <a class="k-poster cat-card reveal" href="form.html" style="--poster-bg:linear-gradient(150deg,#2F3F1A,#6F8F3A 70%,#86A653)">
-      <div class="k-poster__visual k-poster__visual--photo" style="background-image:url('assets/img/photos/bento.jpg');background-position:50% 62%">
+      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="regular" style="background-image:url('assets/img/photos/bento.jpg');background-position:50% 62%">
         <span class="k-poster__tag">お惣菜・お弁当</span>
         <span class="k-poster__time">通年</span>
         <span class="k-poster__note">写真はイメージです</span>
@@ -186,7 +186,7 @@
     </a>
 
     <a class="k-poster cat-card reveal" href="form-wagyu.html" style="--poster-bg:linear-gradient(150deg,#2A0F0C,#6E2B25 60%,#9A4038)">
-      <div class="k-poster__visual k-poster__visual--photo" style="background-image:url('assets/img/photos/wagyu.jpg');background-position:50% 55%">
+      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="wagyu" style="background-image:url('assets/img/photos/wagyu.jpg');background-position:50% 55%">
         <span class="k-poster__tag">レア和牛</span>
         <span class="k-poster__time">不定期</span>
         <span class="k-poster__note">写真はイメージです</span>
@@ -295,5 +295,39 @@
   <p class="site-footer__copy">&copy; 2026 株式会社三河屋</p>
 </footer>
 <script src="assets/js/app.js" defer></script>
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  var isStage = q.has('demoPreview');
+  function get(kind, key){
+    if (isStage) {
+      var st = localStorage.getItem('demo_stage_' + kind + '_' + key);
+      if (st) return st;
+    }
+    return localStorage.getItem('demo_live_' + kind + '_' + key);
+  }
+  document.querySelectorAll('[data-demo-key]').forEach(function(el){
+    var key = el.dataset.demoKey;
+    var photo = get('photo', key); var pos = get('pos', key);
+    if (photo) el.style.backgroundImage = 'url(' + photo + ')';
+    if (pos) el.style.backgroundPosition = pos;
+  });
+  // バナーの保存ボタン=実コミット
+  var save = document.getElementById('demo-preview-save');
+  if (save && isStage) {
+    save.addEventListener('click', function(){
+      var committed = 0;
+      for (var i = localStorage.length - 1; i >= 0; i--) {
+        var k = localStorage.key(i);
+        if (k && k.indexOf('demo_stage_') === 0) {
+          localStorage.setItem(k.replace('demo_stage_', 'demo_live_'), localStorage.getItem(k));
+          localStorage.removeItem(k); committed++;
+        }
+      }
+      if (committed > 0) setTimeout(function(){ location.replace(location.pathname); }, 1400);
+    }, true);
+  }
+})();
+</script>
 </body>
 </html>

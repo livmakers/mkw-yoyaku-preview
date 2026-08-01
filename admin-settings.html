@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=16">
-<link rel="stylesheet" href="assets/css/base.css?v=16">
-<link rel="stylesheet" href="assets/css/components.css?v=16">
+<link rel="stylesheet" href="assets/css/tokens.css?v=17">
+<link rel="stylesheet" href="assets/css/base.css?v=17">
+<link rel="stylesheet" href="assets/css/components.css?v=17">
 <script>
 (function(){
-  var MYV = 16;
+  var MYV = 17;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -49,101 +49,251 @@
 <h1>サイト設定 — カテゴリ写真</h1>
 <p>トップページの透かしヒーロー・6カテゴリカードの写真をここで差し替えられます。<strong>流れ: アップロード → プレビューで確認 → 保存して反映</strong>（確認するまで本番は変わりません）。</p>
 <div class="notice">写真の注意: 実物と異なる写真を特定商品の写真として使わない(景表法)。フリー素材は必ず出典台帳(CREDITS.md)に追記。人物・他店の看板が写るものは不可。</div>
-<p class="field-note">※プレビュー版のためアップロードは無効です</p>
+<p class="field-note">このデモでは変更が実際に動きます（反映されるのはこのブラウザ内のみ。本番は全お客様の画面に反映）</p>
 
 <div class="stat-tiles" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
-
-  <div class="admin-card" style="margin-bottom:0">
+  <div class="admin-card" style="margin-bottom:0" data-panel="hero">
     <h2 style="font-size:1.05rem">トップの透かし写真(季節食材アソート) <small style="font-weight:400;color:var(--sumi-soft)">(トップ)</small></h2>
-    <div style="height:150px;background:url('assets/img/photos/assort.jpg') 50% 45% / cover;border:1px solid var(--washi-line)"></div>
-    <p class="field-note">既定写真／位置: やや上(標準)</p>
+    <div class="panel-current" style="height:150px;background:url('assets/img/photos/assort.jpg') 50% 45% / cover;border:1px solid var(--washi-line);border-radius:10px"></div>
+    <p class="field-note">現在の本番表示（デモ）</p>
+    <div class="panel-staged" hidden style="padding:10px;border:2px dashed var(--kin);border-radius:10px;margin-bottom:8px">
+      <p style="margin:0 0 6px;font-weight:700;color:#7A6220">反映待ちの変更（まだ本番未反映）</p>
+      <div class="panel-staged-thumb" style="height:100px;background:center/cover;border-radius:8px;border:1px solid var(--washi-line)"></div>
+      <p class="panel-staged-pos field-note" style="margin:4px 0 0"></p>
+    </div>
     <div class="field" style="margin-bottom:8px">
-      <label style="font-size:.8rem">写真を差し替える(JPEG/PNG/WebP・8MBまで)</label>
-      <input type="file" accept="image/jpeg,image/png,image/webp">
+      <label style="font-size:.8rem">写真を差し替える(JPEG/PNG/WebP・デモは2.5MBまで)</label>
+      <input type="file" class="panel-file" data-live accept="image/jpeg,image/png,image/webp">
     </div>
-    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
-      <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
-    </div>
-    <div style="margin-top:8px;display:flex;gap:8px;align-items:end;flex-wrap:wrap">
-      <div class="field" style="margin-bottom:0;flex:1">
+    <div style="display:flex;gap:8px;align-items:end;flex-wrap:wrap;margin-bottom:8px">
+      <div class="field" style="margin-bottom:0;flex:1;min-width:150px">
         <label style="font-size:.8rem">切り取り位置</label>
-        <select style="min-height:38px"><option>やや上(標準)</option><option>上寄せ</option><option>中央</option><option>下寄せ</option><option>左寄せ</option><option>右寄せ</option></select>
+        <select class="panel-pos" style="min-height:38px">
+          <option value="50% 30%">上寄せ</option>
+          <option value="50% 45%">やや上(標準)</option>
+          <option value="50% 50%">中央</option>
+          <option value="50% 62%">やや下</option>
+          <option value="50% 70%">下寄せ</option>
+          <option value="30% 50%">左寄せ</option>
+          <option value="70% 50%">右寄せ</option>
+        </select>
       </div>
-      <button type="button" class="btn" style="min-height:38px;padding:4px 14px;font-size:.85rem">位置を変更</button>
+      <button type="button" class="btn panel-stage-pos" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">位置を変更（→反映待ちへ）</button>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn" data-live target="_blank" rel="noopener" style="min-height:38px;padding:4px 14px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗</a>
+      <button type="button" class="btn btn--primary panel-commit" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">保存して反映</button>
+      <button type="button" class="btn btn--ghost panel-reset" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">既定に戻す</button>
     </div>
   </div>
 
-  <div class="admin-card" style="margin-bottom:0">
+  <div class="admin-card" style="margin-bottom:0" data-panel="unagi">
     <h2 style="font-size:1.05rem">丑の日のご予約 <small style="font-weight:400;color:var(--sumi-soft)">(7月)</small></h2>
-    <div style="height:150px;background:url('assets/img/photos/hero-unagi.jpg') 50% 46% / cover;border:1px solid var(--washi-line)"></div>
-    <p class="field-note">既定写真／位置: やや上</p>
-    <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
-    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
-      <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
+    <div class="panel-current" style="height:150px;background:url('assets/img/photos/hero-unagi.jpg') 50% 46% / cover;border:1px solid var(--washi-line);border-radius:10px"></div>
+    <p class="field-note">現在の本番表示（デモ）</p>
+    <div class="panel-staged" hidden style="padding:10px;border:2px dashed var(--kin);border-radius:10px;margin-bottom:8px">
+      <p style="margin:0 0 6px;font-weight:700;color:#7A6220">反映待ちの変更（まだ本番未反映）</p>
+      <div class="panel-staged-thumb" style="height:100px;background:center/cover;border-radius:8px;border:1px solid var(--washi-line)"></div>
+      <p class="panel-staged-pos field-note" style="margin:4px 0 0"></p>
+    </div>
+    <div class="field" style="margin-bottom:8px">
+      <label style="font-size:.8rem">写真を差し替える(JPEG/PNG/WebP・デモは2.5MBまで)</label>
+      <input type="file" class="panel-file" data-live accept="image/jpeg,image/png,image/webp">
+    </div>
+    <div style="display:flex;gap:8px;align-items:end;flex-wrap:wrap;margin-bottom:8px">
+      <div class="field" style="margin-bottom:0;flex:1;min-width:150px">
+        <label style="font-size:.8rem">切り取り位置</label>
+        <select class="panel-pos" style="min-height:38px">
+          <option value="50% 30%">上寄せ</option>
+          <option value="50% 45%">やや上(標準)</option>
+          <option value="50% 50%">中央</option>
+          <option value="50% 62%">やや下</option>
+          <option value="50% 70%">下寄せ</option>
+          <option value="30% 50%">左寄せ</option>
+          <option value="70% 50%">右寄せ</option>
+        </select>
+      </div>
+      <button type="button" class="btn panel-stage-pos" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">位置を変更（→反映待ちへ）</button>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn" data-live target="_blank" rel="noopener" style="min-height:38px;padding:4px 14px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗</a>
+      <button type="button" class="btn btn--primary panel-commit" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">保存して反映</button>
+      <button type="button" class="btn btn--ghost panel-reset" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">既定に戻す</button>
     </div>
   </div>
 
-  <div class="admin-card" style="margin-bottom:0">
+  <div class="admin-card" style="margin-bottom:0" data-panel="xmas">
     <h2 style="font-size:1.05rem">クリスマスのご予約 <small style="font-weight:400;color:var(--sumi-soft)">(12月)</small></h2>
-    <div style="height:150px;background:url('assets/img/photos/xmas.jpg') 50% 68% / cover;border:1px solid var(--washi-line)"></div>
-    <p class="field-note">既定写真／位置: 下寄せ</p>
-    <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
-    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
-      <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
+    <div class="panel-current" style="height:150px;background:url('assets/img/photos/xmas.jpg') 50% 70% / cover;border:1px solid var(--washi-line);border-radius:10px"></div>
+    <p class="field-note">現在の本番表示（デモ）</p>
+    <div class="panel-staged" hidden style="padding:10px;border:2px dashed var(--kin);border-radius:10px;margin-bottom:8px">
+      <p style="margin:0 0 6px;font-weight:700;color:#7A6220">反映待ちの変更（まだ本番未反映）</p>
+      <div class="panel-staged-thumb" style="height:100px;background:center/cover;border-radius:8px;border:1px solid var(--washi-line)"></div>
+      <p class="panel-staged-pos field-note" style="margin:4px 0 0"></p>
+    </div>
+    <div class="field" style="margin-bottom:8px">
+      <label style="font-size:.8rem">写真を差し替える(JPEG/PNG/WebP・デモは2.5MBまで)</label>
+      <input type="file" class="panel-file" data-live accept="image/jpeg,image/png,image/webp">
+    </div>
+    <div style="display:flex;gap:8px;align-items:end;flex-wrap:wrap;margin-bottom:8px">
+      <div class="field" style="margin-bottom:0;flex:1;min-width:150px">
+        <label style="font-size:.8rem">切り取り位置</label>
+        <select class="panel-pos" style="min-height:38px">
+          <option value="50% 30%">上寄せ</option>
+          <option value="50% 45%">やや上(標準)</option>
+          <option value="50% 50%">中央</option>
+          <option value="50% 62%">やや下</option>
+          <option value="50% 70%">下寄せ</option>
+          <option value="30% 50%">左寄せ</option>
+          <option value="70% 50%">右寄せ</option>
+        </select>
+      </div>
+      <button type="button" class="btn panel-stage-pos" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">位置を変更（→反映待ちへ）</button>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn" data-live target="_blank" rel="noopener" style="min-height:38px;padding:4px 14px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗</a>
+      <button type="button" class="btn btn--primary panel-commit" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">保存して反映</button>
+      <button type="button" class="btn btn--ghost panel-reset" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">既定に戻す</button>
     </div>
   </div>
 
-  <div class="admin-card" style="margin-bottom:0">
+  <div class="admin-card" style="margin-bottom:0" data-panel="yearend">
     <h2 style="font-size:1.05rem">年末のご予約 <small style="font-weight:400;color:var(--sumi-soft)">(12月)</small></h2>
-    <div style="height:150px;background:url('assets/img/photos/yearend.jpg') 72% 60% / cover;border:1px solid var(--washi-line)"></div>
-    <p class="field-note">既定写真／位置: 右下寄せ</p>
-    <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
-    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
-      <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
+    <div class="panel-current" style="height:150px;background:url('assets/img/photos/yearend.jpg') 70% 50% / cover;border:1px solid var(--washi-line);border-radius:10px"></div>
+    <p class="field-note">現在の本番表示（デモ）</p>
+    <div class="panel-staged" hidden style="padding:10px;border:2px dashed var(--kin);border-radius:10px;margin-bottom:8px">
+      <p style="margin:0 0 6px;font-weight:700;color:#7A6220">反映待ちの変更（まだ本番未反映）</p>
+      <div class="panel-staged-thumb" style="height:100px;background:center/cover;border-radius:8px;border:1px solid var(--washi-line)"></div>
+      <p class="panel-staged-pos field-note" style="margin:4px 0 0"></p>
+    </div>
+    <div class="field" style="margin-bottom:8px">
+      <label style="font-size:.8rem">写真を差し替える(JPEG/PNG/WebP・デモは2.5MBまで)</label>
+      <input type="file" class="panel-file" data-live accept="image/jpeg,image/png,image/webp">
+    </div>
+    <div style="display:flex;gap:8px;align-items:end;flex-wrap:wrap;margin-bottom:8px">
+      <div class="field" style="margin-bottom:0;flex:1;min-width:150px">
+        <label style="font-size:.8rem">切り取り位置</label>
+        <select class="panel-pos" style="min-height:38px">
+          <option value="50% 30%">上寄せ</option>
+          <option value="50% 45%">やや上(標準)</option>
+          <option value="50% 50%">中央</option>
+          <option value="50% 62%">やや下</option>
+          <option value="50% 70%">下寄せ</option>
+          <option value="30% 50%">左寄せ</option>
+          <option value="70% 50%">右寄せ</option>
+        </select>
+      </div>
+      <button type="button" class="btn panel-stage-pos" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">位置を変更（→反映待ちへ）</button>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn" data-live target="_blank" rel="noopener" style="min-height:38px;padding:4px 14px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗</a>
+      <button type="button" class="btn btn--primary panel-commit" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">保存して反映</button>
+      <button type="button" class="btn btn--ghost panel-reset" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">既定に戻す</button>
     </div>
   </div>
 
-  <div class="admin-card" style="margin-bottom:0">
+  <div class="admin-card" style="margin-bottom:0" data-panel="newyear">
     <h2 style="font-size:1.05rem">年始のご予約 <small style="font-weight:400;color:var(--sumi-soft)">(1月)</small></h2>
-    <div style="height:150px;background:url('assets/img/photos/newyear.jpg') 50% 50% / cover;border:1px solid var(--washi-line)"></div>
-    <p class="field-note">既定写真／位置: 中央</p>
-    <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
-    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
-      <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
+    <div class="panel-current" style="height:150px;background:url('assets/img/photos/newyear.jpg') 50% 50% / cover;border:1px solid var(--washi-line);border-radius:10px"></div>
+    <p class="field-note">現在の本番表示（デモ）</p>
+    <div class="panel-staged" hidden style="padding:10px;border:2px dashed var(--kin);border-radius:10px;margin-bottom:8px">
+      <p style="margin:0 0 6px;font-weight:700;color:#7A6220">反映待ちの変更（まだ本番未反映）</p>
+      <div class="panel-staged-thumb" style="height:100px;background:center/cover;border-radius:8px;border:1px solid var(--washi-line)"></div>
+      <p class="panel-staged-pos field-note" style="margin:4px 0 0"></p>
+    </div>
+    <div class="field" style="margin-bottom:8px">
+      <label style="font-size:.8rem">写真を差し替える(JPEG/PNG/WebP・デモは2.5MBまで)</label>
+      <input type="file" class="panel-file" data-live accept="image/jpeg,image/png,image/webp">
+    </div>
+    <div style="display:flex;gap:8px;align-items:end;flex-wrap:wrap;margin-bottom:8px">
+      <div class="field" style="margin-bottom:0;flex:1;min-width:150px">
+        <label style="font-size:.8rem">切り取り位置</label>
+        <select class="panel-pos" style="min-height:38px">
+          <option value="50% 30%">上寄せ</option>
+          <option value="50% 45%">やや上(標準)</option>
+          <option value="50% 50%">中央</option>
+          <option value="50% 62%">やや下</option>
+          <option value="50% 70%">下寄せ</option>
+          <option value="30% 50%">左寄せ</option>
+          <option value="70% 50%">右寄せ</option>
+        </select>
+      </div>
+      <button type="button" class="btn panel-stage-pos" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">位置を変更（→反映待ちへ）</button>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn" data-live target="_blank" rel="noopener" style="min-height:38px;padding:4px 14px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗</a>
+      <button type="button" class="btn btn--primary panel-commit" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">保存して反映</button>
+      <button type="button" class="btn btn--ghost panel-reset" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">既定に戻す</button>
     </div>
   </div>
 
-  <div class="admin-card" style="margin-bottom:0">
+  <div class="admin-card" style="margin-bottom:0" data-panel="wagyu">
     <h2 style="font-size:1.05rem">レア和牛肉のご予約 <small style="font-weight:400;color:var(--sumi-soft)">(不定期)</small></h2>
-    <div style="height:150px;background:url('assets/img/photos/wagyu.jpg') 50% 55% / cover;border:1px solid var(--washi-line)"></div>
-    <p class="field-note">既定写真／位置: やや下</p>
-    <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
-    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
-      <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
+    <div class="panel-current" style="height:150px;background:url('assets/img/photos/wagyu.jpg') 50% 50% / cover;border:1px solid var(--washi-line);border-radius:10px"></div>
+    <p class="field-note">現在の本番表示（デモ）</p>
+    <div class="panel-staged" hidden style="padding:10px;border:2px dashed var(--kin);border-radius:10px;margin-bottom:8px">
+      <p style="margin:0 0 6px;font-weight:700;color:#7A6220">反映待ちの変更（まだ本番未反映）</p>
+      <div class="panel-staged-thumb" style="height:100px;background:center/cover;border-radius:8px;border:1px solid var(--washi-line)"></div>
+      <p class="panel-staged-pos field-note" style="margin:4px 0 0"></p>
+    </div>
+    <div class="field" style="margin-bottom:8px">
+      <label style="font-size:.8rem">写真を差し替える(JPEG/PNG/WebP・デモは2.5MBまで)</label>
+      <input type="file" class="panel-file" data-live accept="image/jpeg,image/png,image/webp">
+    </div>
+    <div style="display:flex;gap:8px;align-items:end;flex-wrap:wrap;margin-bottom:8px">
+      <div class="field" style="margin-bottom:0;flex:1;min-width:150px">
+        <label style="font-size:.8rem">切り取り位置</label>
+        <select class="panel-pos" style="min-height:38px">
+          <option value="50% 30%">上寄せ</option>
+          <option value="50% 45%">やや上(標準)</option>
+          <option value="50% 50%">中央</option>
+          <option value="50% 62%">やや下</option>
+          <option value="50% 70%">下寄せ</option>
+          <option value="30% 50%">左寄せ</option>
+          <option value="70% 50%">右寄せ</option>
+        </select>
+      </div>
+      <button type="button" class="btn panel-stage-pos" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">位置を変更（→反映待ちへ）</button>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn" data-live target="_blank" rel="noopener" style="min-height:38px;padding:4px 14px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗</a>
+      <button type="button" class="btn btn--primary panel-commit" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">保存して反映</button>
+      <button type="button" class="btn btn--ghost panel-reset" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">既定に戻す</button>
     </div>
   </div>
 
-  <div class="admin-card" style="margin-bottom:0">
+  <div class="admin-card" style="margin-bottom:0" data-panel="regular">
     <h2 style="font-size:1.05rem">お惣菜・お弁当のご予約 <small style="font-weight:400;color:var(--sumi-soft)">(通年)</small></h2>
-    <div style="height:150px;background:url('assets/img/photos/bento.jpg') 50% 62% / cover;border:1px solid var(--washi-line)"></div>
-    <p class="field-note">既定写真／位置: やや下</p>
-    <div class="field" style="margin-bottom:8px"><input type="file" accept="image/jpeg,image/png,image/webp"></div>
-    <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">アップロード（→プレビュー確認へ）</button>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-      <a class="btn" target="_blank" rel="noopener" style="min-height:38px;padding:4px 16px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗（トップで見え方確認）</a>
-      <button type="button" class="btn btn--primary" style="min-height:38px;padding:4px 16px;font-size:.85rem">保存して反映</button>
+    <div class="panel-current" style="height:150px;background:url('assets/img/photos/bento.jpg') 50% 62% / cover;border:1px solid var(--washi-line);border-radius:10px"></div>
+    <p class="field-note">現在の本番表示（デモ）</p>
+    <div class="panel-staged" hidden style="padding:10px;border:2px dashed var(--kin);border-radius:10px;margin-bottom:8px">
+      <p style="margin:0 0 6px;font-weight:700;color:#7A6220">反映待ちの変更（まだ本番未反映）</p>
+      <div class="panel-staged-thumb" style="height:100px;background:center/cover;border-radius:8px;border:1px solid var(--washi-line)"></div>
+      <p class="panel-staged-pos field-note" style="margin:4px 0 0"></p>
+    </div>
+    <div class="field" style="margin-bottom:8px">
+      <label style="font-size:.8rem">写真を差し替える(JPEG/PNG/WebP・デモは2.5MBまで)</label>
+      <input type="file" class="panel-file" data-live accept="image/jpeg,image/png,image/webp">
+    </div>
+    <div style="display:flex;gap:8px;align-items:end;flex-wrap:wrap;margin-bottom:8px">
+      <div class="field" style="margin-bottom:0;flex:1;min-width:150px">
+        <label style="font-size:.8rem">切り取り位置</label>
+        <select class="panel-pos" style="min-height:38px">
+          <option value="50% 30%">上寄せ</option>
+          <option value="50% 45%">やや上(標準)</option>
+          <option value="50% 50%">中央</option>
+          <option value="50% 62%">やや下</option>
+          <option value="50% 70%">下寄せ</option>
+          <option value="30% 50%">左寄せ</option>
+          <option value="70% 50%">右寄せ</option>
+        </select>
+      </div>
+      <button type="button" class="btn panel-stage-pos" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">位置を変更（→反映待ちへ）</button>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn" data-live target="_blank" rel="noopener" style="min-height:38px;padding:4px 14px;font-size:.85rem" href="index.html?demoPreview=1">プレビュー↗</a>
+      <button type="button" class="btn btn--primary panel-commit" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">保存して反映</button>
+      <button type="button" class="btn btn--ghost panel-reset" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">既定に戻す</button>
     </div>
   </div>
 
@@ -161,7 +311,7 @@
 <script>
 document.addEventListener('click', function(e){
   var b = e.target.closest('button');
-  if (!b || b.dataset.print !== undefined || b.dataset.step !== undefined) return;
+  if (!b || b.dataset.print !== undefined || b.dataset.step !== undefined || b.dataset.live !== undefined) return;
   var old = document.querySelector('.demo-toast');
   if (old) old.remove();
   var t = document.createElement('div');
@@ -171,6 +321,78 @@ document.addEventListener('click', function(e){
   document.body.append(t);
   setTimeout(function(){ t.remove(); }, 2400);
 });
+</script>
+<script>
+(function(){
+  function toast(msg, bg){
+    var old = document.querySelector('.demo-toast'); if (old) old.remove();
+    var t = document.createElement('div');
+    t.className = 'demo-toast'; t.textContent = msg;
+    t.style.cssText = 'position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:' + (bg||'#1B1917') + ';color:#fff;padding:12px 22px;border-radius:999px;z-index:99;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:90vw;text-align:center';
+    document.body.append(t); setTimeout(function(){ t.remove(); }, 2600);
+  }
+  document.querySelectorAll('[data-panel]').forEach(function(panel){
+    var key = panel.dataset.panel;
+    var staged = panel.querySelector('.panel-staged');
+    var thumb = panel.querySelector('.panel-staged-thumb');
+    var posNote = panel.querySelector('.panel-staged-pos');
+    var current = panel.querySelector('.panel-current');
+
+    function refresh(){
+      var live = localStorage.getItem('demo_live_photo_' + key);
+      var livePos = localStorage.getItem('demo_live_pos_' + key);
+      if (live) current.style.backgroundImage = 'url(' + live + ')';
+      if (livePos) current.style.backgroundPosition = livePos;
+      var sp = localStorage.getItem('demo_stage_photo_' + key);
+      var spos = localStorage.getItem('demo_stage_pos_' + key);
+      if (sp || spos) {
+        staged.hidden = false;
+        thumb.style.backgroundImage = sp ? 'url(' + sp + ')' : current.style.backgroundImage;
+        posNote.textContent = spos ? ('位置: ' + spos) : '';
+      } else { staged.hidden = true; }
+    }
+
+    panel.querySelector('.panel-file').addEventListener('change', function(e){
+      var f = e.target.files[0]; if (!f) return;
+      if (f.size > 2.5 * 1024 * 1024) { toast('デモは2.5MBまでの写真にしてください（本番は8MBまで）', '#C4342E'); e.target.value=''; return; }
+      var rd = new FileReader();
+      rd.onload = function(){
+        try {
+          localStorage.setItem('demo_stage_photo_' + key, rd.result);
+          toast('写真を反映待ちにしました。プレビューで確認→「保存して反映」で本番(デモ)へ');
+          refresh();
+        } catch(err) { toast('デモの保存容量を超えました。小さい写真でお試しください', '#C4342E'); }
+      };
+      rd.readAsDataURL(f);
+    });
+
+    panel.querySelector('.panel-stage-pos').addEventListener('click', function(){
+      var v = panel.querySelector('.panel-pos').value;
+      localStorage.setItem('demo_stage_pos_' + key, v);
+      toast('切り取り位置を反映待ちにしました。プレビューで確認→「保存して反映」');
+      refresh();
+    });
+
+    panel.querySelector('.panel-commit').addEventListener('click', function(){
+      var sp = localStorage.getItem('demo_stage_photo_' + key);
+      var spos = localStorage.getItem('demo_stage_pos_' + key);
+      if (!sp && !spos) { toast('反映待ちの変更がありません。先に写真か位置を変更してください', '#C4342E'); return; }
+      if (sp) { localStorage.setItem('demo_live_photo_' + key, sp); localStorage.removeItem('demo_stage_photo_' + key); }
+      if (spos) { localStorage.setItem('demo_live_pos_' + key, spos); localStorage.removeItem('demo_stage_pos_' + key); }
+      toast('✔ 本番(デモ)に反映しました。「予約サイトを開く」で確認できます', '#14503C');
+      refresh();
+    });
+
+    panel.querySelector('.panel-reset').addEventListener('click', function(){
+      ['demo_live_photo_','demo_live_pos_','demo_stage_photo_','demo_stage_pos_'].forEach(function(p){ localStorage.removeItem(p + key); });
+      current.style.backgroundImage = ''; current.style.backgroundPosition = '';
+      toast('既定に戻しました');
+      refresh();
+    });
+
+    refresh();
+  });
+})();
 </script>
 </body>
 </html>
