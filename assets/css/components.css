@@ -565,6 +565,37 @@ input[type="date"], input[type="password"], select, textarea { border-radius: 12
 details.paper { border-radius: 16px; }
 .complete-no { border-radius: 16px; }
 
+/* ==== 店舗タブ & 受取日カレンダー ==== */
+.shop-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.shop-tab {
+  border-radius: 999px; border: 1.5px solid var(--sumi-soft); background: #fff;
+  padding: 8px 20px; min-height: 44px; font: inherit; font-size: .95rem; cursor: pointer;
+}
+.shop-tab[aria-selected="true"] { background: var(--shu); border-color: var(--shu); color: #fff; font-weight: 700; }
+.shop-btn[hidden] { display: none; }
+.shop-btn span { text-wrap: balance; }
+.shop-btn small { text-wrap: balance; }
+
+.cal-wrap { display: grid; gap: 18px; }
+@media (min-width: 700px) { .cal-wrap { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; } }
+.cal { background: #fff; border: 1.5px solid var(--washi-line); border-radius: 16px; padding: 16px 14px; }
+.cal__title { font-family: var(--font-heading); font-weight: 700; text-align: center; margin: 0 0 10px; }
+.cal__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.cal__dow { text-align: center; font-size: .75rem; font-weight: 700; color: var(--sumi-soft); padding: 2px 0; }
+.cal__dow.is-sun, .cal__day.is-sun { color: var(--shu); }
+.cal__dow.is-sat, .cal__day.is-sat { color: var(--ai); }
+.cal__day {
+  display: grid; place-items: center; min-height: 46px; border-radius: 12px;
+  font-weight: 700; font-variant-numeric: tabular-nums; font-size: 1.02rem;
+}
+button.cal__day { border: 1.5px solid var(--washi-line); background: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+button.cal__day:hover { border-color: var(--shu); }
+button.cal__day[aria-pressed="true"] {
+  background: var(--shu); border-color: var(--shu); color: #fff !important;
+  box-shadow: 0 4px 12px rgba(196,52,46,.3);
+}
+.cal__day--off { color: #CFC8B8; font-weight: 400; }
+
 /* ==== 禁則・折返し調整 ==== */
 .hero__title-sub, .photo-band__title, .band-head__title, .k-poster__title { text-wrap: balance; }
 .k-poster__subtitle, .hero__lead { text-wrap: pretty; }

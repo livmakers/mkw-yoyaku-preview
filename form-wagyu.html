@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=19">
-<link rel="stylesheet" href="assets/css/base.css?v=19">
-<link rel="stylesheet" href="assets/css/components.css?v=19">
+<link rel="stylesheet" href="assets/css/tokens.css?v=20">
+<link rel="stylesheet" href="assets/css/base.css?v=20">
+<link rel="stylesheet" href="assets/css/components.css?v=20">
 <script>
 (function(){
-  var MYV = 19;
+  var MYV = 20;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -113,23 +113,38 @@
 
 <section class="paper" style="margin-bottom:22px">
   <h2>2. お受取店舗</h2>
-  <div class="slot-grid shop-grid">
-    <button type="button" class="shop-btn" aria-pressed="true"><span>ビッグリブ小牧店</span><small>小牧市大字間々原新田…</small></button>
-    <button type="button" class="shop-btn" aria-pressed="false"><span>ビッグリブ安城店</span><small>安城市三河安城町2丁目…</small></button>
-    <button type="button" class="shop-btn" aria-pressed="false"><span>Mikawaya 稲熊店</span><small>岡崎市稲熊町字後田28…</small></button>
-    <button type="button" class="shop-btn" aria-pressed="false"><span>パワーズ大井店</span><small>岐阜県大垣市大井1-34…</small></button>
+  <div class="shop-tabs" role="tablist" aria-label="地域で絞り込み">
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="true" data-region="all">全店（13）</button>
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="false" data-region="愛知">愛知（8）</button>
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="false" data-region="岐阜">岐阜（4）</button>
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="false" data-region="滋賀">滋賀（1）</button>
   </div>
-  <p class="field-note">…ほか直営13店舗から選べます</p>
+  <div class="slot-grid shop-grid">
+    <button type="button" class="shop-btn" aria-pressed="true" data-region="愛知"><span>ビッグリブ小牧店</span><small>小牧市大字間々原新田…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>ビッグリブ安城店</span><small>安城市三河安城町2丁目…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 稲熊店</span><small>岡崎市稲熊町字後田…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 上飯田店</span><small>名古屋市北区上飯田通…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 犬山店</span><small>犬山市大字五郎丸…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya御器所松風店</span><small>名古屋市昭和区明月町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 西尾一色店</span><small>西尾市一色町一色…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya ラピオ小牧店</span><small>小牧市小牧三丁目…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>Mikawaya 静里店</span><small>岐阜県大垣市静里町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>Mikawaya 船町店</span><small>岐阜県大垣市本今町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>パワーズ大井店</span><small>岐阜県大垣市大井…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>サンマート土岐口店</span><small>岐阜県土岐市土岐津町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="滋賀"><span>パワーズ高月店</span><small>滋賀県長浜市高月町…</small></button>
+  </div>
 </section>
 
 <section class="paper" style="margin-bottom:22px">
-  <h2>3. お受取日</h2>
-  <div class="date-grid">
-    <button type="button" class="date-btn" aria-pressed="false"><span>8月1日(土)</span></button>
-    <button type="button" class="date-btn" aria-pressed="true"><span>8月2日(日)</span></button>
-    <button type="button" class="date-btn" aria-pressed="false"><span>8月3日(月)</span></button>
-    <button type="button" class="date-btn" aria-pressed="false"><span>8月4日(火)</span></button>
+  <h2>3. お受取日（カレンダーから選択）</h2>
+  <div class="cal-wrap">
+    <div class="cal">
+      <p class="cal__title">2026年8月</p>
+      <div class="cal__grid"><span class="cal__dow is-sun">日</span><span class="cal__dow">月</span><span class="cal__dow">火</span><span class="cal__dow">水</span><span class="cal__dow">木</span><span class="cal__dow">金</span><span class="cal__dow is-sat">土</span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__day cal__day--off">1</span><span class="cal__day cal__day--off">2</span><span class="cal__day cal__day--off">3</span><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-04"><span>4</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="true" data-date="2026-08-05"><span>5</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-06"><span>6</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-07"><span>7</span></button><button type="button" class="date-btn cal__day is-sat" data-live aria-pressed="false" data-date="2026-08-08"><span>8</span></button><button type="button" class="date-btn cal__day is-sun" data-live aria-pressed="false" data-date="2026-08-09"><span>9</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-10"><span>10</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-11"><span>11</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-12"><span>12</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-13"><span>13</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-14"><span>14</span></button><button type="button" class="date-btn cal__day is-sat" data-live aria-pressed="false" data-date="2026-08-15"><span>15</span></button><button type="button" class="date-btn cal__day is-sun" data-live aria-pressed="false" data-date="2026-08-16"><span>16</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-17"><span>17</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-18"><span>18</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-19"><span>19</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-20"><span>20</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-21"><span>21</span></button><button type="button" class="date-btn cal__day is-sat" data-live aria-pressed="false" data-date="2026-08-22"><span>22</span></button><button type="button" class="date-btn cal__day is-sun" data-live aria-pressed="false" data-date="2026-08-23"><span>23</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-24"><span>24</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-25"><span>25</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-26"><span>26</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-27"><span>27</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-28"><span>28</span></button><button type="button" class="date-btn cal__day is-sat" data-live aria-pressed="false" data-date="2026-08-29"><span>29</span></button><button type="button" class="date-btn cal__day is-sun" data-live aria-pressed="false" data-date="2026-08-30"><span>30</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-31"><span>31</span></button><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span></div>
+    </div>
   </div>
+  <p class="field-note">枠のある日付だけ選べます。赤=日曜・青=土曜。</p>
   <h2 class="mt-0" style="margin-top:8px">4. お受取時間</h2>
   <div class="slot-grid">
     <button type="button" class="slot-btn" aria-pressed="false"><span class="slot-time">10:00〜12:00</span><span class="slot-left">残り 8 枠</span></button>
@@ -193,5 +208,31 @@
   <p class="site-footer__copy">&copy; 2026 株式会社三河屋</p>
 </footer>
 <script src="assets/js/app.js" defer></script>
+<script>
+(function(){
+  function setPressed(group, btn){
+    group.querySelectorAll('[aria-pressed]').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+    btn.setAttribute('aria-pressed','true');
+  }
+  document.querySelectorAll('.shop-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.shop-tab').forEach(function(t){ t.setAttribute('aria-selected','false'); });
+      tab.setAttribute('aria-selected','true');
+      var rg = tab.dataset.region;
+      document.querySelectorAll('.shop-btn').forEach(function(b){ b.hidden = (rg !== 'all' && b.dataset.region !== rg); });
+    });
+  });
+  document.querySelectorAll('.shop-btn').forEach(function(b){
+    b.addEventListener('click', function(){ setPressed(b.closest('.shop-grid'), b); });
+  });
+  document.querySelectorAll('button.cal__day').forEach(function(b){
+    b.addEventListener('click', function(){ setPressed(b.closest('.cal-wrap'), b); });
+  });
+  document.querySelectorAll('.slot-btn').forEach(function(b){
+    if (b.disabled) return;
+    b.addEventListener('click', function(){ setPressed(b.closest('.slot-grid'), b); });
+  });
+})();
+</script>
 </body>
 </html>

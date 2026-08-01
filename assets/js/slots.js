@@ -74,10 +74,23 @@
   });
   root.querySelectorAll('.date-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
-      setPressed(root.querySelector('.date-grid'), btn);
+      setPressed(btn.closest('.cal-wrap') || root.querySelector('.date-grid') || root, btn);
       dateInput.value = btn.dataset.date;
       loadSlots();
     });
   });
+
+  /* 店舗の地域タブ(全店/愛知/岐阜/滋賀) */
+  root.querySelectorAll('.shop-tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      root.querySelectorAll('.shop-tab').forEach((t) => t.setAttribute('aria-selected', 'false'));
+      tab.setAttribute('aria-selected', 'true');
+      const region = tab.dataset.region;
+      root.querySelectorAll('.shop-btn').forEach((b) => {
+        b.hidden = region !== 'all' && b.dataset.region !== region;
+      });
+    });
+  });
+
   updateSubmit();
 })();
