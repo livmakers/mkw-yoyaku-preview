@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>手入力（紙・電話予約）｜三河屋 予約管理</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=14">
+<link rel="stylesheet" href="assets/css/base.css?v=14">
+<link rel="stylesheet" href="assets/css/components.css?v=14">
+</head>
+<body class="admin">
+<header class="admin-header">
+  <div class="admin-header__inner">
+    <a class="admin-header__brand" href="admin.html">三河屋 予約管理</a>
+    <nav class="admin-nav" aria-label="管理メニュー">
+      <a href="admin.html">ダッシュボード</a>
+      <a href="admin-orders.html">受注一覧</a>
+      <a href="admin-picklist.html">ピッキング</a>
+      <a href="admin-production.html">製造集計</a>
+      <a href="admin-entry.html" class="is-active">手入力</a>
+      <a href="admin-quotes.html">大口見積</a>
+      <a href="admin-campaigns.html">企画</a>
+      <a href="admin-products.html">商品</a>
+      <a href="admin-slots.html">受取枠</a>
+      <a href="admin-settings.html">サイト設定</a>
+      <a href="admin-export.html">CSV</a>
+    </nav>
+    <span class="admin-user"><a href="index.html" target="_blank" rel="noopener">予約サイトを開く↗</a>｜管理者（owner）｜<a href="admin-login.html">ログアウト</a></span>
+  </div>
+</header>
+<div class="admin-wrap">
+<h1>手入力（紙・電話予約の登録）</h1>
+<p>店頭の紙予約・電話予約をここで登録すると、ネット予約と合算でピッキング・製造集計に反映されます。</p>
+<div class="admin-card">
+  <div class="filter-bar">
+    <div class="field"><label>受付方法</label><select><option>紙(店頭)</option><option>電話</option></select></div>
+    <div class="field"><label>店舗</label><select><option>ビッグリブ小牧店</option></select></div>
+    <div class="field"><label>受取日</label><input type="date" value="2026-08-02"></div>
+    <div class="field"><label>支払</label><select><option>店頭払い</option></select></div>
+  </div>
+  <div class="filter-bar">
+    <div class="field"><label>お名前(必須)</label><input type="text" placeholder="例: 山本 太郎"></div>
+    <div class="field"><label>フリガナ</label><input type="text"></div>
+    <div class="field"><label>電話(不明なら空欄可)</label><input type="tel"></div>
+  </div>
+  <h2>商品と数量</h2>
+  <table class="admin-table">
+    <tr><th>企画</th><th>商品</th><th class="num">税込単価</th><th style="width:8em">数量</th></tr>
+    <tr><td>お惣菜・お弁当</td><td>幕の内弁当</td><td class="num">780</td><td><input type="number" value="0" min="0"></td></tr>
+    <tr><td>お惣菜・お弁当</td><td>オードブル 豪華盛り</td><td class="num">4,980</td><td><input type="number" value="0" min="0"></td></tr>
+    <tr><td>レア和牛</td><td>黒毛和牛 サーロインブロック 500g</td><td class="num">9,800</td><td><input type="number" value="0" min="0"></td></tr>
+    <tr><td>レア和牛</td><td>黒毛和牛 ミスジ 焼肉用 300g</td><td class="num">4,980</td><td><input type="number" value="0" min="0"></td></tr>
+  </table>
+  <p class="field-note">在庫上限・受取枠はネット予約と同じルールで自動チェックされます。登録すると予約番号が発番されます。</p>
+  <button type="button" class="btn btn--primary" style="margin-top:12px">この内容で登録する（プレビューでは無効）</button>
+</div>
+</div>
+</body>
+</html>

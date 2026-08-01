@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>製造・発注集計｜三河屋 予約管理</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=14">
+<link rel="stylesheet" href="assets/css/base.css?v=14">
+<link rel="stylesheet" href="assets/css/components.css?v=14">
+</head>
+<body class="admin">
+<header class="admin-header">
+  <div class="admin-header__inner">
+    <a class="admin-header__brand" href="admin.html">三河屋 予約管理</a>
+    <nav class="admin-nav" aria-label="管理メニュー">
+      <a href="admin.html">ダッシュボード</a>
+      <a href="admin-orders.html">受注一覧</a>
+      <a href="admin-picklist.html">ピッキング</a>
+      <a href="admin-production.html" class="is-active">製造集計</a>
+      <a href="admin-entry.html">手入力</a>
+      <a href="admin-quotes.html">大口見積</a>
+      <a href="admin-campaigns.html">企画</a>
+      <a href="admin-products.html">商品</a>
+      <a href="admin-slots.html">受取枠</a>
+      <a href="admin-settings.html">サイト設定</a>
+      <a href="admin-export.html">CSV</a>
+    </nav>
+    <span class="admin-user"><a href="index.html" target="_blank" rel="noopener">予約サイトを開く↗</a>｜管理者（owner）｜<a href="admin-login.html">ログアウト</a></span>
+  </div>
+</header>
+<div class="admin-wrap">
+<h1>製造・発注集計（商品×受取日）</h1>
+<p>ネット・紙・電話すべての確定予約を合算しています。<strong>この表が仕入れ・製造ロットの発注根拠です。</strong></p>
+<div class="filter-bar admin-card">
+  <div class="field"><label>企画</label><select><option>土用の丑 うなぎ予約</option><option>すべて</option></select></div>
+  <div class="field"><label>店舗</label><select><option>全店合計</option></select></div>
+  <div class="field"><label>受取日 From</label><input type="date" value="2026-07-24"></div>
+  <div class="field"><label>受取日 To</label><input type="date" value="2026-07-31"></div>
+  <button type="button" class="btn" style="min-height:42px">集計する</button>
+  <button type="button" class="btn btn--primary" style="min-height:42px" data-print>A4印刷</button>
+  <button type="button" class="btn" style="min-height:42px">CSV</button>
+</div>
+<div class="admin-card" style="overflow-x:auto">
+  <p class="print-title">製造・発注集計　土用の丑 うなぎ予約</p>
+  <p class="print-meta">対象: 全店合計　出力: 7月28日 15:05　※ネット＋紙＋電話の合算</p>
+  <table class="matrix-table admin-table">
+    <tr><th>商品名</th><th class="num">7/29(水)</th><th class="num">7/30(木)</th><th class="num">7/31(金)</th><th class="num row-total">合計</th></tr>
+    <tr><td>うなぎ蒲焼 特大(一尾)</td><td class="num">46</td><td class="num">83</td><td class="num">124</td><td class="num row-total">253</td></tr>
+    <tr><td>うなぎ蒲焼 大(一尾)</td><td class="num">31</td><td class="num">57</td><td class="num">88</td><td class="num row-total">176</td></tr>
+    <tr><td class="col-total">合計</td><td class="num col-total">77</td><td class="num col-total">140</td><td class="num col-total">212</td><td class="num col-total">429</td></tr>
+  </table>
+</div>
+<p class="field-note">※締切後にこの画面を印刷→仕入発注、が毎回の運用です（朝7時の通知メールからも直行できます）。</p>
+<script src="assets/js/app.js" defer></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>受注一覧｜三河屋 予約管理</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=14">
+<link rel="stylesheet" href="assets/css/base.css?v=14">
+<link rel="stylesheet" href="assets/css/components.css?v=14">
+</head>
+<body class="admin">
+<header class="admin-header">
+  <div class="admin-header__inner">
+    <a class="admin-header__brand" href="admin.html">三河屋 予約管理</a>
+    <nav class="admin-nav" aria-label="管理メニュー">
+      <a href="admin.html">ダッシュボード</a>
+      <a href="admin-orders.html" class="is-active">受注一覧</a>
+      <a href="admin-picklist.html">ピッキング</a>
+      <a href="admin-production.html">製造集計</a>
+      <a href="admin-entry.html">手入力</a>
+      <a href="admin-quotes.html">大口見積</a>
+      <a href="admin-campaigns.html">企画</a>
+      <a href="admin-products.html">商品</a>
+      <a href="admin-slots.html">受取枠</a>
+      <a href="admin-settings.html">サイト設定</a>
+      <a href="admin-export.html">CSV</a>
+    </nav>
+    <span class="admin-user"><a href="index.html" target="_blank" rel="noopener">予約サイトを開く↗</a>｜管理者（owner）｜<a href="admin-login.html">ログアウト</a></span>
+  </div>
+</header>
+<div class="admin-wrap">
+<h1>受注一覧 <small style="font-size:.85rem;font-weight:400">4件（サンプル）</small></h1>
+<div class="filter-bar admin-card">
+  <div class="field"><label>店舗</label><select><option>全店</option><option>ビッグリブ小牧店</option><option>Mikawaya 犬山店</option></select></div>
+  <div class="field"><label>受取日</label><input type="date" value="2026-08-01"></div>
+  <div class="field"><label>企画</label><select><option>すべて</option><option>土用の丑</option><option>レア和牛</option></select></div>
+  <div class="field"><label>決済</label><select><option>すべて</option><option>支払済</option><option>店頭払い</option></select></div>
+  <div class="field"><label>検索（予約番号・氏名・電話）</label><input type="text" placeholder="MKW- / 山田 / 0568…"></div>
+  <button type="button" class="btn" style="min-height:42px">絞り込む</button>
+</div>
+<div class="admin-card" style="overflow-x:auto">
+<table class="admin-table">
+  <tr><th>予約番号</th><th>受取日</th><th>店舗</th><th>お名前</th><th>電話</th><th>内容</th><th class="num">合計</th><th>決済</th><th>状態</th><th>操作</th></tr>
+  <tr><td>MKW-260801-0417</td><td>8月1日(土)</td><td>ビッグリブ小牧店</td><td>山田 花子</td><td class="num">0568-00-0000</td><td>黒毛和牛サーロイン×1</td><td class="num">9,800</td><td><span class="badge badge--paid">支払済</span></td><td><span class="badge badge--onsite">確定</span></td><td><button class="btn btn--ghost" style="min-height:36px;padding:2px 10px;font-size:.8rem">渡し済</button></td></tr>
+  <tr><td>MKW-260801-2288 <span class="badge badge--paper">紙</span></td><td>8月1日(土)</td><td>ビッグリブ小牧店</td><td>佐藤 一郎</td><td class="num">090-0000-0000</td><td>幕の内弁当×20</td><td class="num">15,600</td><td><span class="badge badge--onsite">店頭払い</span></td><td><span class="badge badge--onsite">用意済</span></td><td><button class="btn btn--ghost" style="min-height:36px;padding:2px 10px;font-size:.8rem">渡し済</button></td></tr>
+  <tr><td>MKW-260802-0031</td><td>8月2日(日)</td><td>Mikawaya 犬山店</td><td>鈴木 桃子</td><td class="num">0568-11-1111</td><td>ミスジ×2 / 肩ロース×1</td><td class="num">15,940</td><td><span class="badge badge--paid">支払済</span></td><td><span class="badge badge--onsite">確定</span></td><td><button class="btn btn--ghost" style="min-height:36px;padding:2px 10px;font-size:.8rem">用意済</button></td></tr>
+  <tr><td>MKW-260731-1854</td><td>7月31日(金)</td><td>パワーズ大井店</td><td>高橋 実</td><td class="num">0584-22-2222</td><td>うなぎ特大×2</td><td class="num">7,960</td><td><span class="badge badge--refunded">返金済</span></td><td><span class="badge badge--cancel">取消</span></td><td></td></tr>
+</table>
+</div>
+<p class="field-note">※プレビュー版（データはサンプル）。本番はネット・紙・電話の全予約がここに集まり、staffは自店舗分のみ表示されます。</p>
+</div>
+</body>
+</html>

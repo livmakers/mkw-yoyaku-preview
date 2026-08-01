@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大口見積｜三河屋 予約管理</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=14">
+<link rel="stylesheet" href="assets/css/base.css?v=14">
+<link rel="stylesheet" href="assets/css/components.css?v=14">
+</head>
+<body class="admin">
+<header class="admin-header">
+  <div class="admin-header__inner">
+    <a class="admin-header__brand" href="admin.html">三河屋 予約管理</a>
+    <nav class="admin-nav" aria-label="管理メニュー">
+      <a href="admin.html">ダッシュボード</a>
+      <a href="admin-orders.html">受注一覧</a>
+      <a href="admin-picklist.html">ピッキング</a>
+      <a href="admin-production.html">製造集計</a>
+      <a href="admin-entry.html">手入力</a>
+      <a href="admin-quotes.html" class="is-active">大口見積</a>
+      <a href="admin-campaigns.html">企画</a>
+      <a href="admin-products.html">商品</a>
+      <a href="admin-slots.html">受取枠</a>
+      <a href="admin-settings.html">サイト設定</a>
+      <a href="admin-export.html">CSV</a>
+    </nav>
+    <span class="admin-user"><a href="index.html" target="_blank" rel="noopener">予約サイトを開く↗</a>｜管理者（owner）｜<a href="admin-login.html">ログアウト</a></span>
+  </div>
+</header>
+<div class="admin-wrap">
+<h1>大口見積</h1>
+<div class="admin-card">
+  <h2 style="font-size:1.05rem">MKQ-260731-0208 <span class="badge badge--unpaid">新規</span> <small style="font-weight:400;color:var(--sumi-soft)">7/31 09:12 受付</small></h2>
+  <table class="spec-table">
+    <tr><th>ご依頼者</th><td>田中 次郎 様（株式会社サンプル製作所）　TEL 0568-44-4444</td></tr>
+    <tr><th>希望</th><td>ビッグリブ小牧店／8月8日(土)／予算 60,000円</td></tr>
+    <tr><th>内容</th><td>幕の内弁当 60個／お茶付き／会議用</td></tr>
+  </table>
+  <div class="filter-bar" style="margin-top:10px">
+    <div class="field"><label>確定金額(税込・円)</label><input type="text" value="58800"></div>
+    <div class="field" style="flex:2"><label>内容メモ(お客様に表示)</label><input type="text" value="幕の内弁当60個・お茶付き"></div>
+    <button type="button" class="btn btn--primary" style="min-height:42px">金額確定・決済リンク送付</button>
+    <button type="button" class="btn" style="min-height:42px">店頭対応で完了</button>
+  </div>
+  <p class="field-note">「金額確定」を押すと、お客様へ7日有効の署名付き決済リンクがメールで届きます（プレビューでは無効）。</p>
+</div>
+<div class="admin-card">
+  <h2 style="font-size:1.05rem">MKQ-260730-1911 <span class="badge badge--paid">支払済</span></h2>
+  <table class="spec-table">
+    <tr><th>ご依頼者</th><td>山口 三郎 様（○○小学校PTA）</td></tr>
+    <tr><th>内容</th><td>オードブル10台・ジュース30本／68,000円 決済済み</td></tr>
+  </table>
+  <button type="button" class="btn" style="margin-top:8px">お渡し完了にする</button>
+</div>
+</div>
+</body>
+</html>

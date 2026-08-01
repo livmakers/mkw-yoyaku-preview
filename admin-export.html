@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSV出力｜三河屋 予約管理</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=14">
+<link rel="stylesheet" href="assets/css/base.css?v=14">
+<link rel="stylesheet" href="assets/css/components.css?v=14">
+</head>
+<body class="admin">
+<header class="admin-header">
+  <div class="admin-header__inner">
+    <a class="admin-header__brand" href="admin.html">三河屋 予約管理</a>
+    <nav class="admin-nav" aria-label="管理メニュー">
+      <a href="admin.html">ダッシュボード</a>
+      <a href="admin-orders.html">受注一覧</a>
+      <a href="admin-picklist.html">ピッキング</a>
+      <a href="admin-production.html">製造集計</a>
+      <a href="admin-entry.html">手入力</a>
+      <a href="admin-quotes.html">大口見積</a>
+      <a href="admin-campaigns.html">企画</a>
+      <a href="admin-products.html">商品</a>
+      <a href="admin-slots.html">受取枠</a>
+      <a href="admin-settings.html">サイト設定</a>
+      <a href="admin-export.html" class="is-active">CSV</a>
+    </nav>
+    <span class="admin-user"><a href="index.html" target="_blank" rel="noopener">予約サイトを開く↗</a>｜管理者（owner）｜<a href="admin-login.html">ログアウト</a></span>
+  </div>
+</header>
+<div class="admin-wrap">
+<h1>CSV出力</h1>
+<div class="admin-card">
+  <div class="filter-bar">
+    <div class="field"><label>種類</label>
+      <select><option>受注一覧(1行=1予約)</option><option>受注明細(1行=1商品)</option></select></div>
+    <div class="field"><label>受取日 From</label><input type="date" value="2026-08-01"></div>
+    <div class="field"><label>受取日 To</label><input type="date" value="2026-08-31"></div>
+    <button type="button" class="btn btn--primary" style="min-height:42px">ダウンロード（プレビューでは無効）</button>
+  </div>
+  <p class="field-note">Excelでそのまま開ける UTF-8(BOM付き)。製造集計のCSVは「製造集計」画面から出力できます。</p>
+</div>
+</div>
+</body>
+</html>

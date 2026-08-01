@@ -529,6 +529,51 @@ div.k-poster:hover { transform: none; box-shadow: none; }
 .bleed--kin { background: linear-gradient(120deg, #A8822B, var(--kin) 45%, #D9BC6B); color: #fff; padding: 40px 20px; }
 .bleed__inner { max-width: var(--content-w); margin: 0 auto; }
 
+/* ==== v14 やわらか調整(角丸・大きく・ふんわり) ==== */
+.btn { border-radius: 999px; }
+.paper { border-radius: var(--radius-lg); box-shadow: var(--shadow-paper); padding: 26px 22px; }
+.tel-band { border-radius: var(--radius-lg); }
+.notice { border-radius: 12px; border-left-width: 6px; }
+.hero__chip { border-radius: 18px; }
+.hero__count { border-radius: 14px; }
+.k-poster { border-radius: var(--radius-lg); overflow: hidden; border-color: rgba(224,215,194,.9); }
+.k-poster:hover { box-shadow: var(--shadow-float); }
+.cat-card::after { border-radius: 14px; border-color: rgba(185,147,52,.26); }
+.cat-card .k-poster__visual { min-height: 300px; }
+@media (min-width: 700px) { .cat-card .k-poster__visual { min-height: 420px; } }
+.cat-card .k-poster__title { font-size: clamp(1.6rem, 3.4vw, 2.15rem); }
+.cat-card .k-poster__subtitle { font-size: 1.06rem; line-height: 1.9; }
+.k-poster__cta { border-radius: 999px; padding: 8px 26px; }
+.leaf-cta { border-radius: 999px; }
+.k-poster__tag { border-radius: 0 0 6px 6px; }
+.shinagaki__item { grid-template-columns: 120px 1fr; gap: 18px; padding: 22px 0; }
+.shinagaki__item img { width: 120px; height: 120px; border-radius: 16px; }
+@media (max-width: 640px) {
+  .shinagaki__item { grid-template-columns: 96px 1fr; }
+  .shinagaki__item img { width: 96px; height: 96px; }
+}
+.qty-stepper { border-radius: 999px; overflow: hidden; border-width: 1.5px; }
+.slot-btn, .date-btn, .shop-btn { border-radius: 16px; border-width: 1.5px; }
+input[type="text"], input[type="tel"], input[type="email"], input[type="number"],
+input[type="date"], input[type="password"], select, textarea { border-radius: 12px; border-width: 1.5px; }
+.steps3__item { border-radius: 18px; border-top-width: 0; padding-top: 40px; box-shadow: var(--shadow-paper); }
+.steps3__item::before { box-shadow: 0 6px 16px rgba(196,52,46,.3); }
+.trust-band__item { padding: 26px 10px 22px; }
+.mainsite-band { border-radius: var(--radius-lg); border: 1px solid var(--washi-line); }
+.stat-tile, .admin-card { border-radius: 14px; }
+.year-koyomi__item { border-radius: 14px; }
+details.paper { border-radius: 16px; }
+.complete-no { border-radius: 16px; }
+
+/* ==== 保存前プレビュー表示バナー(管理者のみ) ==== */
+.preview-banner {
+  position: sticky; top: 0; z-index: 95;
+  background: var(--kin); color: #fff; text-align: center;
+  padding: 10px 16px; font-weight: 700; letter-spacing: .06em;
+  box-shadow: 0 4px 14px rgba(0,0,0,.18);
+}
+.preview-banner a { color: #fff; text-decoration: underline; }
+
 /* ================= 管理画面 ================= */
 .admin body, body.admin { background: #F4F2EC; }
 .admin-wrap { max-width: 1200px; margin: 0 auto; padding: 20px 16px 60px; }

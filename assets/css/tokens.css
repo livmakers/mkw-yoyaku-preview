@@ -27,8 +27,10 @@
   --fs-base: 17px;
   --content-w: 720px;
   --tap: 48px;
-  --radius: 0;
-  --shadow-paper: none;
+  --radius: 14px;      /* v14: やわらかい角丸 */
+  --radius-lg: 22px;
+  --shadow-paper: 0 6px 24px rgba(27,25,23,.07);
+  --shadow-float: 0 14px 40px rgba(27,25,23,.12);
 }
 
 /* 企画テーマでアクセント切替(CTAは常に朱) */

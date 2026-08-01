@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>受取枠設定｜三河屋 予約管理</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=14">
+<link rel="stylesheet" href="assets/css/base.css?v=14">
+<link rel="stylesheet" href="assets/css/components.css?v=14">
+</head>
+<body class="admin">
+<header class="admin-header">
+  <div class="admin-header__inner">
+    <a class="admin-header__brand" href="admin.html">三河屋 予約管理</a>
+    <nav class="admin-nav" aria-label="管理メニュー">
+      <a href="admin.html">ダッシュボード</a>
+      <a href="admin-orders.html">受注一覧</a>
+      <a href="admin-picklist.html">ピッキング</a>
+      <a href="admin-production.html">製造集計</a>
+      <a href="admin-entry.html">手入力</a>
+      <a href="admin-quotes.html">大口見積</a>
+      <a href="admin-campaigns.html">企画</a>
+      <a href="admin-products.html">商品</a>
+      <a href="admin-slots.html" class="is-active">受取枠</a>
+      <a href="admin-settings.html">サイト設定</a>
+      <a href="admin-export.html">CSV</a>
+    </nav>
+    <span class="admin-user"><a href="index.html" target="_blank" rel="noopener">予約サイトを開く↗</a>｜管理者（owner）｜<a href="admin-login.html">ログアウト</a></span>
+  </div>
+</header>
+<div class="admin-wrap">
+<h1>受取枠の上限設定</h1>
+<div class="admin-card">
+  <h2>曜日パターン一括設定</h2>
+  <div class="filter-bar">
+    <div class="field"><label>期間 From</label><input type="date" value="2026-08-01"></div>
+    <div class="field"><label>期間 To</label><input type="date" value="2026-08-31"></div>
+    <div class="field"><label>1枠の受付上限(件)</label><input type="number" value="10"></div>
+  </div>
+  <div class="field"><label>曜日</label>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <label style="font-weight:400"><input type="checkbox" checked> 土</label>
+      <label style="font-weight:400"><input type="checkbox" checked> 日</label>
+      <label style="font-weight:400"><input type="checkbox"> 月</label>
+      <label style="font-weight:400"><input type="checkbox"> 火</label>
+      <label style="font-weight:400"><input type="checkbox"> 水</label>
+      <label style="font-weight:400"><input type="checkbox"> 木</label>
+      <label style="font-weight:400"><input type="checkbox"> 金</label>
+    </div>
+  </div>
+  <div class="field"><label>時間帯(1行1枠)</label><textarea rows="4">10:00-12:00
+12:00-14:00
+14:00-16:00
+16:00-18:00</textarea></div>
+  <button type="button" class="btn btn--primary">一括設定する（プレビューでは無効）</button>
+</div>
+<div class="admin-card">
+  <h2>枠の確認・個別調整（ビッグリブ小牧店 8月1日）</h2>
+  <table class="admin-table">
+    <tr><th>時間帯</th><th class="num">上限</th><th class="num">予約数</th><th class="num">残</th><th>操作</th></tr>
+    <tr><td>10:00〜12:00</td><td class="num">10</td><td class="num">3</td><td class="num">7</td><td><button class="btn btn--ghost" style="min-height:32px;padding:0 10px;font-size:.8rem">変更</button></td></tr>
+    <tr><td>12:00〜14:00</td><td class="num">10</td><td class="num">6</td><td class="num">4</td><td><button class="btn btn--ghost" style="min-height:32px;padding:0 10px;font-size:.8rem">変更</button></td></tr>
+    <tr><td>14:00〜16:00</td><td class="num">10</td><td class="num">10</td><td class="num">0</td><td><button class="btn btn--ghost" style="min-height:32px;padding:0 10px;font-size:.8rem">変更</button></td></tr>
+    <tr><td>16:00〜18:00</td><td class="num">10</td><td class="num">1</td><td class="num">9</td><td><button class="btn btn--ghost" style="min-height:32px;padding:0 10px;font-size:.8rem">変更</button></td></tr>
+  </table>
+</div>
+</div>
+</body>
+</html>
