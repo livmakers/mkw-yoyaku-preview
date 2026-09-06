@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=26">
-<link rel="stylesheet" href="assets/css/base.css?v=26">
-<link rel="stylesheet" href="assets/css/components.css?v=26">
+<link rel="stylesheet" href="assets/css/tokens.css?v=27">
+<link rel="stylesheet" href="assets/css/base.css?v=27">
+<link rel="stylesheet" href="assets/css/components.css?v=27">
 <script>
 (function(){
-  var MYV = 26;
+  var MYV = 27;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -75,14 +75,14 @@
       </h1>
       <p class="hero__lead"><span class="ib">季節の行事のごちそうを、</span><span class="ib">ご予約分だけ丁寧にご用意。</span><span class="ib">お近くの直営13店舗で、</span><span class="ib">お待たせせずお受け取りいただけます。</span></p>
       <div class="hero__chips">
-        <a class="hero__chip" href="form.html">
-          <span class="hero__chip-title">土用の丑 うなぎ予約</span>
-          <span class="hero__chip-state">締切 7月31日(金) 15:00</span>
-          <span class="hero__chip-arrow" aria-hidden="true">→</span>
-        </a>
-        <a class="hero__chip" href="form.html">
+        <a class="hero__chip" href="form-sozai.html">
           <span class="hero__chip-title">お弁当・オードブル</span>
           <span class="hero__chip-state">通年受付中</span>
+          <span class="hero__chip-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="hero__chip" href="form-wagyu.html">
+          <span class="hero__chip-title">レア和牛肉のご予約</span>
+          <span class="hero__chip-state">ご予約受付中</span>
           <span class="hero__chip-arrow" aria-hidden="true">→</span>
         </a>
       </div>
@@ -103,14 +103,57 @@
 </div>
 </div>
 
-<!-- ══════════ 年間8カテゴリ 特大カード ══════════ -->
+<!-- ══════════ 受付中カード+年間ごよみ(受付状態はデータどおり) ══════════ -->
 <div class="wide-main">
 <section id="koyomi" style="margin-top:56px">
+  <header class="band-head reveal" data-mark="今">
+    <span class="band-head__kicker">Open Now</span>
+    <h2 class="band-head__title">ただいまご予約受付中</h2>
+  </header>
+  <p class="center" style="max-width:34em;margin:0 auto 22px">カードを押すと、そのまま申込フォームへ進めます。</p>
+  <div class="cat-grid">
+
+    <a class="k-poster cat-card reveal" href="form-sozai.html" style="--poster-bg:linear-gradient(150deg,#2F3F1A,#6F8F3A 70%,#86A653)">
+      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="regular" style="background-image:url('assets/img/photos/sozai-orderve.jpg');background-position:50% 45%">
+        <span class="k-poster__tag">お惣菜・お弁当</span>
+        <span class="k-poster__time">通年</span>
+        <span class="k-poster__note">写真は実際の商品です</span>
+      </div>
+      <div class="k-poster__body">
+        <h3 class="k-poster__title">お惣菜・お弁当のご予約</h3>
+        <p class="k-poster__subtitle">会議・行事・ご法要に。お弁当・オードブルを前日締切でご用意します。</p>
+        <div class="k-poster__foot">
+          <span class="k-poster__state k-poster__state--open">ご予約受付中（受取日の2日前締切）</span>
+          <span class="k-poster__cta">申込フォームへ</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="k-poster cat-card reveal" href="form-wagyu.html" style="--poster-bg:linear-gradient(150deg,#2A0F0C,#6E2B25 60%,#9A4038)">
+      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="wagyu" style="background-image:url('assets/img/photos/wagyu.jpg');background-position:50% 55%">
+        <span class="k-poster__tag">レア和牛</span>
+        <span class="k-poster__time">不定期</span>
+        <span class="k-poster__note">写真はイメージです</span>
+      </div>
+      <div class="k-poster__body">
+        <h3 class="k-poster__title">レア和牛肉のご予約</h3>
+        <p class="k-poster__subtitle">入荷数の少ない希少部位・塊肉を、店頭受取でご予約いただけます。</p>
+        <div class="k-poster__foot">
+          <span class="k-poster__state k-poster__state--open">ご予約受付中（受取日の3日前締切）</span>
+          <span class="k-poster__cta">申込フォームへ</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<section id="koyomi-year" style="margin-top:56px">
   <header class="band-head reveal" data-mark="年">
     <span class="band-head__kicker">Calendar</span>
-    <h2 class="band-head__title">三河屋の一年、八つのご予約</h2>
+    <h2 class="band-head__title">三河屋の一年、予約ごよみ</h2>
   </header>
-  <p class="center" style="max-width:34em;margin:0 auto 22px">クリスマスから丑の日まで。季節の行事にあわせて予約の暦がめぐります。受付中のカードを押すと、そのまま申込フォームへ進めます。</p>
+  <p class="center" style="max-width:34em;margin:0 auto 22px">季節の行事にあわせて予約の暦がめぐります。受付開始までは「お品書きを見る」で内容をご覧いただけます。</p>
   <div class="cat-grid">
 
     <div class="k-poster cat-card cat-card--idle reveal" style="--poster-bg:linear-gradient(150deg,#0B2E22,#14503C 60%,#1E6A50)">
@@ -152,7 +195,7 @@
       </div>
     </div>
 
-    <a class="k-poster cat-card reveal" href="form-ehomaki.html" style="--poster-bg:linear-gradient(150deg,#241530,#5B3A6E 60%,#7C5494)">
+    <a class="k-poster cat-card cat-card--idle reveal" href="form-ehomaki.html" style="--poster-bg:linear-gradient(150deg,#241530,#5B3A6E 60%,#7C5494)">
       <div class="k-poster__visual k-poster__visual--photo" data-demo-key="ehomaki" style="background-image:url('assets/img/photos/ehomaki.jpg');background-position:50% 55%">
         <span class="k-poster__tag">恵方巻</span>
         <span class="k-poster__time">2月</span>
@@ -168,68 +211,34 @@
       </div>
     </a>
 
-    <a class="k-poster cat-card reveal" href="form-omotenashi.html" style="--poster-bg:linear-gradient(150deg,#0E3A42,#1D7A8C 60%,#3B9DAE)">
-      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="omotenashi" style="background-image:url('assets/img/photos/omotenashi.jpg');background-position:50% 45%">
-        <span class="k-poster__tag">夏のおもてなし</span>
-        <span class="k-poster__time">8月</span>
-        <span class="k-poster__date"><small>お受取</small>8.13–8.15</span>
-        <span class="k-poster__note">写真は実際の商品です</span>
-      </div>
-      <div class="k-poster__body">
-        <h3 class="k-poster__title">夏のおもてなしのご予約</h3>
-        <p class="k-poster__subtitle">お盆・帰省のごちそう。お寿司・オードブル・お肉を朝から仕立てます。</p>
-        <div class="k-poster__foot">
-          <span class="k-poster__state k-poster__state--open">締切 8月12日(水) 15:00まで</span>
-          <span class="k-poster__cta">申込フォームへ</span>
-        </div>
-      </div>
-    </a>
-
-    <a class="k-poster cat-card reveal" href="form.html" style="--poster-bg:linear-gradient(150deg,#16283F,#21395B 60%,#2C4A73)">
+    <a class="k-poster cat-card cat-card--idle reveal" href="form.html" style="--poster-bg:linear-gradient(150deg,#16283F,#21395B 60%,#2C4A73)">
       <div class="k-poster__visual k-poster__visual--photo" data-demo-key="unagi" style="background-image:url('assets/img/photos/unagi-jyu.jpg');background-position:50% 45%">
         <span class="k-poster__tag">丑の日</span>
         <span class="k-poster__time">7月</span>
-        <span class="k-poster__date"><small>お受取</small>7.24–7.31</span>
         <span class="k-poster__note">写真は実際の商品です</span>
       </div>
       <div class="k-poster__body">
         <h3 class="k-poster__title">丑の日のご予約</h3>
         <p class="k-poster__subtitle">土用の丑。三河一色産うなぎを、ご予約分だけ丁寧に焼き上げます。</p>
         <div class="k-poster__foot">
-          <span class="k-poster__state k-poster__state--open">締切 7月28日(火) 15:00まで</span>
-          <span class="k-poster__cta">申込フォームへ</span>
+          <span class="k-poster__state k-poster__state--soon">今季の受付は終了しました。次回 6月頃受付開始予定</span>
+          <span class="k-poster__cta">お品書きを見る</span>
         </div>
       </div>
     </a>
 
-    <a class="k-poster cat-card reveal" href="form-sozai.html" style="--poster-bg:linear-gradient(150deg,#2F3F1A,#6F8F3A 70%,#86A653)">
-      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="regular" style="background-image:url('assets/img/photos/sozai-orderve.jpg');background-position:50% 45%">
-        <span class="k-poster__tag">お惣菜・お弁当</span>
-        <span class="k-poster__time">通年</span>
+    <a class="k-poster cat-card cat-card--idle reveal" href="form-omotenashi.html" style="--poster-bg:linear-gradient(150deg,#0E3A42,#1D7A8C 60%,#3B9DAE)">
+      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="omotenashi" style="background-image:url('assets/img/photos/omotenashi.jpg');background-position:50% 45%">
+        <span class="k-poster__tag">夏のおもてなし</span>
+        <span class="k-poster__time">8月</span>
         <span class="k-poster__note">写真は実際の商品です</span>
       </div>
       <div class="k-poster__body">
-        <h3 class="k-poster__title">お惣菜・お弁当のご予約</h3>
-        <p class="k-poster__subtitle">会議・行事・ご法要に。お弁当・オードブルを前日締切でご用意します。</p>
+        <h3 class="k-poster__title">夏のおもてなしのご予約</h3>
+        <p class="k-poster__subtitle">お盆・帰省のごちそう。お寿司・オードブル・お肉を朝から仕立てます。</p>
         <div class="k-poster__foot">
-          <span class="k-poster__state k-poster__state--open">ご予約受付中（受取日の2日前締切）</span>
-          <span class="k-poster__cta">申込フォームへ</span>
-        </div>
-      </div>
-    </a>
-
-    <a class="k-poster cat-card reveal" href="form-wagyu.html" style="--poster-bg:linear-gradient(150deg,#2A0F0C,#6E2B25 60%,#9A4038)">
-      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="wagyu" style="background-image:url('assets/img/photos/wagyu.jpg');background-position:50% 55%">
-        <span class="k-poster__tag">レア和牛</span>
-        <span class="k-poster__time">不定期</span>
-        <span class="k-poster__note">写真はイメージです</span>
-      </div>
-      <div class="k-poster__body">
-        <h3 class="k-poster__title">レア和牛肉のご予約</h3>
-        <p class="k-poster__subtitle">入荷数の少ない希少部位・塊肉を、店頭受取でご予約いただけます。</p>
-        <div class="k-poster__foot">
-          <span class="k-poster__state k-poster__state--open">ご予約受付中（受取日の3日前締切）</span>
-          <span class="k-poster__cta">申込フォームへ</span>
+          <span class="k-poster__state k-poster__state--soon">今季の受付は終了しました。次回 7月頃受付開始予定</span>
+          <span class="k-poster__cta">お品書きを見る</span>
         </div>
       </div>
     </a>

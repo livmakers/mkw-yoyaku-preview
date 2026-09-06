@@ -41,7 +41,7 @@
         btn.setAttribute('aria-pressed', 'false');
         const full = s.remaining <= 0;
         btn.disabled = full;
-        btn.innerHTML = `<span class="slot-time">${s.label}</span><span class="slot-left">${full ? '満枠' : `残り ${s.remaining} 枠`}</span>`;
+        btn.innerHTML = `<span class="slot-time">${s.label}</span>${full ? '<span class="slot-left">満枠</span>' : ''}`;
         if (!full) {
           btn.addEventListener('click', () => {
             setPressed(grid, btn);
