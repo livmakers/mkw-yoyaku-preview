@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=21">
-<link rel="stylesheet" href="assets/css/base.css?v=21">
-<link rel="stylesheet" href="assets/css/components.css?v=21">
+<link rel="stylesheet" href="assets/css/tokens.css?v=22">
+<link rel="stylesheet" href="assets/css/base.css?v=22">
+<link rel="stylesheet" href="assets/css/components.css?v=22">
 <script>
 (function(){
-  var MYV = 21;
+  var MYV = 22;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -54,6 +54,11 @@
     <tr><th>商品名</th><th>企画</th><th class="num">税込価格</th><th>写真</th><th>状態</th><th>操作</th></tr>
     <tr><td>うなぎ蒲焼 特大(一尾) <code style="font-size:.75rem">unagi-kabayaki-l</code></td><td>土用の丑</td><td class="num">3,980</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
     <tr><td>うなぎ蒲焼 大(一尾)</td><td>土用の丑</td><td class="num">2,980</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
+    <tr><td>厚切りローストビーフ極太巻</td><td>恵方巻</td><td class="num">780</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
+    <tr><td>幸福牛しぐれ煮巻</td><td>恵方巻</td><td class="num">680</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
+    <tr><td>穴子たっぷり恵方巻</td><td>恵方巻</td><td class="num">880</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
+    <tr><td>照りたまチキン恵方巻</td><td>恵方巻</td><td class="num">580</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
+    <tr><td>まぐろ鉄火巻</td><td>恵方巻</td><td class="num">480</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
     <tr><td>黒毛和牛 サーロインブロック 500g</td><td>レア和牛</td><td class="num">9,800</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
     <tr><td>黒毛和牛 シャトーブリアン 300g(2枚)</td><td>レア和牛</td><td class="num">12,800</td><td>画像あり</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
     <tr><td>幕の内弁当</td><td>お惣菜・お弁当</td><td class="num">780</td><td>画像なし</td><td><span class="badge badge--paid">有効</span></td><td><a href="#edit">編集</a></td></tr>
@@ -65,7 +70,7 @@
   <h2>商品を編集: うなぎ蒲焼 特大（一尾）</h2>
   <div class="filter-bar">
     <div class="field"><label>企画</label>
-      <select><option>土用の丑 うなぎ予約</option><option>クリスマス予約</option><option>お弁当・オードブル(通年)</option><option>レア和牛肉のご予約</option></select></div>
+      <select><option>土用の丑 うなぎ予約</option><option>節分 恵方巻のご予約</option><option>クリスマス予約</option><option>お弁当・オードブル(通年)</option><option>レア和牛肉のご予約</option></select></div>
     <div class="field"><label>商品名</label><input type="text" value="うなぎ蒲焼 特大（一尾）"></div>
     <div class="field"><label>カナ</label><input type="text" value="ウナギカバヤキ トクダイ"></div>
   </div>

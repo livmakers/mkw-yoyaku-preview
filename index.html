@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=21">
-<link rel="stylesheet" href="assets/css/base.css?v=21">
-<link rel="stylesheet" href="assets/css/components.css?v=21">
+<link rel="stylesheet" href="assets/css/tokens.css?v=22">
+<link rel="stylesheet" href="assets/css/base.css?v=22">
+<link rel="stylesheet" href="assets/css/components.css?v=22">
 <script>
 (function(){
-  var MYV = 21;
+  var MYV = 22;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -88,7 +88,7 @@
       </div>
       <div class="hero__cta">
         <a class="btn btn--primary btn--xl btn--glow" href="#koyomi">ご予約はこちら</a>
-        <a class="btn btn--outline-light" href="#koyomi">六つのご予約を見る</a>
+        <a class="btn btn--outline-light" href="#koyomi">七つのご予約を見る</a>
       </div>
     </div>
   </div>
@@ -103,12 +103,12 @@
 </div>
 </div>
 
-<!-- ══════════ 年間6カテゴリ 特大カード ══════════ -->
+<!-- ══════════ 年間7カテゴリ 特大カード ══════════ -->
 <div class="wide-main">
 <section id="koyomi" style="margin-top:56px">
   <header class="band-head reveal" data-mark="年">
     <span class="band-head__kicker">Calendar</span>
-    <h2 class="band-head__title">三河屋の一年、六つのご予約</h2>
+    <h2 class="band-head__title">三河屋の一年、七つのご予約</h2>
   </header>
   <p class="center" style="max-width:34em;margin:0 auto 22px">クリスマスから丑の日まで。季節の行事にあわせて予約の暦がめぐります。受付中のカードを押すと、そのまま申込フォームへ進めます。</p>
   <div class="cat-grid">
@@ -149,6 +149,19 @@
         <h3 class="k-poster__title">年始のご予約</h3>
         <p class="k-poster__subtitle">おせち・お正月のごちそう。新しい年の始まりの食卓に。</p>
         <div class="k-poster__foot"><span class="k-poster__state k-poster__state--soon">次回 11月頃受付開始予定</span></div>
+      </div>
+    </div>
+
+    <div class="k-poster cat-card cat-card--idle reveal" style="--poster-bg:linear-gradient(150deg,#241530,#5B3A6E 60%,#7C5494)">
+      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="ehomaki" style="background-image:url('assets/img/photos/ehomaki.jpg');background-position:50% 55%">
+        <span class="k-poster__tag">恵方巻</span>
+        <span class="k-poster__time">2月</span>
+        <span class="k-poster__note">写真は昨年の商品です</span>
+      </div>
+      <div class="k-poster__body">
+        <h3 class="k-poster__title">恵方巻のご予約</h3>
+        <p class="k-poster__subtitle">節分の恵方巻。成田山御祈祷済みの海苔を使用し、各店で巻き上げます。</p>
+        <div class="k-poster__foot"><span class="k-poster__state k-poster__state--soon">次回 1月頃受付開始予定</span></div>
       </div>
     </div>
 
