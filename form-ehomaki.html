@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=27">
-<link rel="stylesheet" href="assets/css/base.css?v=27">
-<link rel="stylesheet" href="assets/css/components.css?v=27">
+<link rel="stylesheet" href="assets/css/tokens.css?v=29">
+<link rel="stylesheet" href="assets/css/base.css?v=29">
+<link rel="stylesheet" href="assets/css/components.css?v=29">
 <script>
 (function(){
-  var MYV = 27;
+  var MYV = 29;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -300,6 +300,43 @@
   });
   document.addEventListener('keydown', function(ev){
     if (ev.key === 'Escape' && !modal.hidden) closeCard();
+  });
+})();
+</script>
+<script>
+(function(){
+  function applyMax(item, max){
+    var input = item.querySelector('.qty-stepper input');
+    if (!input) return;
+    input.max = max;
+    if (parseInt(input.value, 10) > max) input.value = max;
+    var note = item.querySelector('.qty-limit-note');
+    if (!note) {
+      note = document.createElement('p');
+      note.className = 'field-note qty-limit-note';
+      note.style.margin = '4px 0 0';
+      var st = item.querySelector('.qty-stepper');
+      st.parentNode.insertBefore(note, st.nextSibling);
+    }
+    note.textContent = 'お一人様 ' + max + ' 点まで';
+  }
+  function slugOf(item){
+    var img = item.querySelector('img[data-demo-key]');
+    return img ? img.dataset.demoKey.slice(2) : null;
+  }
+  document.querySelectorAll('.shinagaki__item').forEach(function(item){
+    var slug = slugOf(item);
+    if (!slug) return;
+    var mq = null;
+    try { mq = localStorage.getItem('demo_live_maxqty_' + slug); } catch(e) {}
+    applyMax(item, mq ? parseInt(mq, 10) : 20);
+  });
+  window.addEventListener('storage', function(ev){
+    if (!ev.key || ev.key.indexOf('demo_live_maxqty_') !== 0) return;
+    var slug = ev.key.slice('demo_live_maxqty_'.length);
+    document.querySelectorAll('.shinagaki__item').forEach(function(item){
+      if (slugOf(item) === slug) applyMax(item, ev.newValue ? parseInt(ev.newValue, 10) : 20);
+    });
   });
 })();
 </script>

@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=27">
-<link rel="stylesheet" href="assets/css/base.css?v=27">
-<link rel="stylesheet" href="assets/css/components.css?v=27">
+<link rel="stylesheet" href="assets/css/tokens.css?v=29">
+<link rel="stylesheet" href="assets/css/base.css?v=29">
+<link rel="stylesheet" href="assets/css/components.css?v=29">
 <script>
 (function(){
-  var MYV = 27;
+  var MYV = 29;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -26,6 +26,18 @@
 </script>
 </head>
 <body class="admin">
+<script>
+(function(){
+  var ok = null;
+  try { ok = sessionStorage.getItem('demo_admin_ok'); } catch(e) {}
+  if (ok !== '1') location.replace('admin-login.html');
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[href$="admin-login.html"]');
+    if (a) { try { sessionStorage.removeItem('demo_admin_ok'); } catch(e) {} }
+  });
+})();
+</script>
+
 <header class="admin-header">
   <div class="admin-header__inner">
     <a class="admin-header__brand" href="admin.html">三河屋 予約管理</a>

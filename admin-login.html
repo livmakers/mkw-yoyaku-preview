@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=27">
-<link rel="stylesheet" href="assets/css/base.css?v=27">
-<link rel="stylesheet" href="assets/css/components.css?v=27">
+<link rel="stylesheet" href="assets/css/tokens.css?v=29">
+<link rel="stylesheet" href="assets/css/base.css?v=29">
+<link rel="stylesheet" href="assets/css/components.css?v=29">
 <script>
 (function(){
-  var MYV = 27;
+  var MYV = 29;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -30,16 +30,18 @@
   <div style="max-width:420px;margin:8vh auto 0" class="bg-yagasuri">
     <div class="admin-card" style="padding:28px">
       <h1 style="text-align:center">三河屋 予約管理</h1>
-      <p class="field-note" style="text-align:center">※プレビュー版。ボタンでダッシュボードのサンプルへ進めます</p>
+      <p class="field-note" style="text-align:center">社員番号とパスワードを入力してログインしてください</p>
       <div class="field">
-        <label for="l-id">ログインID</label>
-        <input type="text" id="l-id" autocomplete="username" placeholder="mkw-owner">
+        <label for="l-id">社員番号</label>
+        <input type="text" id="l-id" inputmode="numeric" autocomplete="username" placeholder="例: 1001">
       </div>
       <div class="field">
         <label for="l-pw">パスワード</label>
         <input type="password" id="l-pw" autocomplete="current-password" placeholder="••••••••">
       </div>
-      <a class="btn btn--primary btn--block" href="admin.html">ログイン</a>
+      <p class="field-error" id="login-err" hidden style="text-align:center">社員番号またはパスワードが違います</p>
+      <button type="button" class="btn btn--primary btn--block" id="login-btn" data-live>ログイン</button>
+      <p class="field-note" style="margin-top:8px;text-align:center;background:#FBF6E7;border:1px solid var(--washi-line);border-radius:8px;padding:8px">社員チェック用デモ: 社員番号 <code>1001</code> / パスワード <code>mkw2026</code></p>
       <p class="field-note" style="margin-top:12px">5回連続で失敗すると15分間ロックされます。<br>権限: owner(全機能)／manager(全機能)／staff(自店舗の受注のみ)</p>
     </div>
     <p style="text-align:center;margin-top:16px">
@@ -60,6 +62,23 @@ document.addEventListener('click', function(e){
   document.body.append(t);
   setTimeout(function(){ t.remove(); }, 2400);
 });
+</script>
+<script>
+(function(){
+  var btn = document.getElementById('login-btn');
+  function tryLogin(){
+    var id = document.getElementById('l-id').value.trim();
+    var pw = document.getElementById('l-pw').value;
+    if (id === '1001' && pw === 'mkw2026') {
+      try { sessionStorage.setItem('demo_admin_ok', '1'); } catch(e) {}
+      location.href = 'admin.html';
+    } else {
+      document.getElementById('login-err').hidden = false;
+    }
+  }
+  btn.addEventListener('click', tryLogin);
+  document.getElementById('l-pw').addEventListener('keydown', function(ev){ if (ev.key === 'Enter') tryLogin(); });
+})();
 </script>
 </body>
 </html>

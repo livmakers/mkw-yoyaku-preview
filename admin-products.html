@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=27">
-<link rel="stylesheet" href="assets/css/base.css?v=27">
-<link rel="stylesheet" href="assets/css/components.css?v=27">
+<link rel="stylesheet" href="assets/css/tokens.css?v=29">
+<link rel="stylesheet" href="assets/css/base.css?v=29">
+<link rel="stylesheet" href="assets/css/components.css?v=29">
 <script>
 (function(){
-  var MYV = 27;
+  var MYV = 29;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -26,6 +26,18 @@
 </script>
 </head>
 <body class="admin">
+<script>
+(function(){
+  var ok = null;
+  try { ok = sessionStorage.getItem('demo_admin_ok'); } catch(e) {}
+  if (ok !== '1') location.replace('admin-login.html');
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[href$="admin-login.html"]');
+    if (a) { try { sessionStorage.removeItem('demo_admin_ok'); } catch(e) {} }
+  });
+})();
+</script>
+
 <header class="admin-header">
   <div class="admin-header__inner">
     <a class="admin-header__brand" href="admin.html">三河屋 予約管理</a>
@@ -193,7 +205,7 @@
     <div class="field"><label>商品名</label><input type="text" id="p-name" value="炭火焼きうなぎを使った本格うな重(松)"></div>
     <div class="field"><label>税込価格(円)</label><input type="number" value="3980"></div>
     <div class="field"><label>税率</label><select><option>8%(軽減・食品)</option><option>10%(酒類等)</option></select></div>
-    <div class="field"><label>1注文の上限</label><input type="number" value="20"></div>
+    <div class="field"><label style="font-weight:700">一回のご予約で注文できる数量(上限)</label><input type="number" id="p-maxqty" data-live min="1" max="99" value="20"><p class="field-note" style="margin-top:4px">申込ページの数量がこの値までに制限されます</p></div>
   </div>
   <div class="field"><label>説明</label><textarea rows="2">三河屋極木炭の炭火焼き。うなぎ一尾分をのせた最上のうな重。</textarea></div>
   <div class="filter-bar">
@@ -204,9 +216,9 @@
   </div>
   <div class="field"><label style="display:flex;gap:8px;align-items:center"><input type="checkbox" checked> 販売する</label></div>
   <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-    <button type="button" class="btn btn--primary">基本情報を保存（デモでは写真のみ動きます）</button>
+    <button type="button" class="btn btn--primary" id="p-save-info" data-live>基本情報を保存して反映</button>
   </div>
-  <p class="field-note">本番では写真も基本情報も「プレビュー→保存」の2段階。保存すると即サイトに反映され、操作は監査ログに記録されます。</p>
+  <p class="field-note">このデモでは<strong>写真と注文上限</strong>が実際に申込ページへ反映されます（このブラウザ内のみ）。本番では全項目が「プレビュー→保存」の2段階で反映され、操作は監査ログに記録されます。</p>
 </div>
 
 <script>
@@ -220,6 +232,8 @@
   var reset = document.getElementById('p-reset');
   var prev = document.getElementById('p-preview');
   var nameInput = document.getElementById('p-name');
+  var maxqty = document.getElementById('p-maxqty');
+  var saveInfo = document.getElementById('p-save-info');
   var stagedData = null;
 
   function toast(msg, ok){
@@ -240,6 +254,9 @@
     cur.src = live || defaultSrc(slug, o.dataset.has);
     prev.href = '' + o.dataset.page + '?demoPreview=1';
     if (nameInput) nameInput.value = o.dataset.name;
+    var mq = null;
+    try { mq = localStorage.getItem('demo_live_maxqty_' + slug); } catch(e) {}
+    maxqty.value = mq || '20';
     stagedData = null; stagedBox.hidden = true; commit.disabled = true; file.value = '';
   }
   sel.addEventListener('change', load);
@@ -267,6 +284,13 @@
     cur.src = stagedData;
     stagedData = null; stagedBox.hidden = true; commit.disabled = true; file.value = '';
     toast('✔ 保存しました。申込ページの写真が変わっています(プレビュー↗で確認)', true);
+  });
+  saveInfo.addEventListener('click', function(){
+    var slug = sel.value;
+    var v = Math.max(1, Math.min(99, parseInt(maxqty.value, 10) || 20));
+    maxqty.value = v;
+    try { localStorage.setItem('demo_live_maxqty_' + slug, String(v)); } catch(e) {}
+    toast('✔ 保存しました。申込ページの数量上限が「お一人様 ' + v + ' 点まで」になっています', true);
   });
   reset.addEventListener('click', function(){
     var o = sel.selectedOptions[0];
