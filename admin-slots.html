@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=22">
-<link rel="stylesheet" href="assets/css/base.css?v=22">
-<link rel="stylesheet" href="assets/css/components.css?v=22">
+<link rel="stylesheet" href="assets/css/tokens.css?v=23">
+<link rel="stylesheet" href="assets/css/base.css?v=23">
+<link rel="stylesheet" href="assets/css/components.css?v=23">
 <script>
 (function(){
-  var MYV = 22;
+  var MYV = 23;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -73,12 +73,12 @@
 </div>
 <div class="admin-card">
   <h2>枠の確認・個別調整（ビッグリブ小牧店 8月1日）</h2>
-  <table class="admin-table">
+  <table class="admin-table admin-table--stack">
     <tr><th>時間帯</th><th class="num">上限</th><th class="num">予約数</th><th class="num">残</th><th>操作</th></tr>
-    <tr><td>10:00〜12:00</td><td class="num">10</td><td class="num">3</td><td class="num">7</td><td><button class="btn btn--ghost" style="min-height:32px;padding:0 10px;font-size:.8rem">変更</button></td></tr>
-    <tr><td>12:00〜14:00</td><td class="num">10</td><td class="num">6</td><td class="num">4</td><td><button class="btn btn--ghost" style="min-height:32px;padding:0 10px;font-size:.8rem">変更</button></td></tr>
-    <tr><td>14:00〜16:00</td><td class="num">10</td><td class="num">10</td><td class="num">0</td><td><button class="btn btn--ghost" style="min-height:32px;padding:0 10px;font-size:.8rem">変更</button></td></tr>
-    <tr><td>16:00〜18:00</td><td class="num">10</td><td class="num">1</td><td class="num">9</td><td><button class="btn btn--ghost" style="min-height:32px;padding:0 10px;font-size:.8rem">変更</button></td></tr>
+    <tr><td data-label="時間帯">10:00〜12:00</td><td data-label="上限" class="num">10</td><td data-label="予約数" class="num">3</td><td data-label="残" class="num">7</td><td data-label="操作"><button class="btn btn--ghost" style="min-height:32px;padding:0 10px;font-size:.8rem">変更</button></td></tr>
+    <tr><td data-label="時間帯">12:00〜14:00</td><td data-label="上限" class="num">10</td><td data-label="予約数" class="num">6</td><td data-label="残" class="num">4</td><td data-label="操作"><button class="btn btn--ghost" style="min-height:32px;padding:0 10px;font-size:.8rem">変更</button></td></tr>
+    <tr><td data-label="時間帯">14:00〜16:00</td><td data-label="上限" class="num">10</td><td data-label="予約数" class="num">10</td><td data-label="残" class="num">0</td><td data-label="操作"><button class="btn btn--ghost" style="min-height:32px;padding:0 10px;font-size:.8rem">変更</button></td></tr>
+    <tr><td data-label="時間帯">16:00〜18:00</td><td data-label="上限" class="num">10</td><td data-label="予約数" class="num">1</td><td data-label="残" class="num">9</td><td data-label="操作"><button class="btn btn--ghost" style="min-height:32px;padding:0 10px;font-size:.8rem">変更</button></td></tr>
   </table>
 </div>
 </div>

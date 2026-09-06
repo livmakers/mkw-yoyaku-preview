@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=22">
-<link rel="stylesheet" href="assets/css/base.css?v=22">
-<link rel="stylesheet" href="assets/css/components.css?v=22">
+<link rel="stylesheet" href="assets/css/tokens.css?v=23">
+<link rel="stylesheet" href="assets/css/base.css?v=23">
+<link rel="stylesheet" href="assets/css/components.css?v=23">
 <script>
 (function(){
-  var MYV = 22;
+  var MYV = 23;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -58,30 +58,30 @@
 
 <div class="admin-card" style="border-left:4px solid var(--shu)">
   <h2>締切間近の企画（72時間以内）</h2>
-  <table class="admin-table">
+  <table class="admin-table admin-table--stack">
     <tr><th>企画</th><th>最終締切</th><th>操作</th></tr>
-    <tr><td>土用の丑 うなぎ予約</td><td><strong>7月31日(金) 15:00</strong></td><td><a href="#">製造集計を出す</a></td></tr>
+    <tr><td data-label="企画">土用の丑 うなぎ予約</td><td data-label="最終締切"><strong>7月31日(金) 15:00</strong></td><td data-label="操作"><a href="#">製造集計を出す</a></td></tr>
   </table>
 </div>
 
 <div class="admin-card">
   <h2>今日の受取（店舗別）</h2>
-  <table class="admin-table">
+  <table class="admin-table admin-table--stack">
     <tr><th>店舗</th><th class="num">件数</th><th>操作</th></tr>
-    <tr><td>ビッグリブ小牧店</td><td class="num">8</td><td><a href="#">ピッキングリスト</a></td></tr>
-    <tr><td>Mikawaya 犬山店</td><td class="num">6</td><td><a href="#">ピッキングリスト</a></td></tr>
-    <tr><td>パワーズ大井店</td><td class="num">4</td><td><a href="#">ピッキングリスト</a></td></tr>
+    <tr><td data-label="店舗">ビッグリブ小牧店</td><td data-label="件数" class="num">8</td><td data-label="操作"><a href="#">ピッキングリスト</a></td></tr>
+    <tr><td data-label="店舗">Mikawaya 犬山店</td><td data-label="件数" class="num">6</td><td data-label="操作"><a href="#">ピッキングリスト</a></td></tr>
+    <tr><td data-label="店舗">パワーズ大井店</td><td data-label="件数" class="num">4</td><td data-label="操作"><a href="#">ピッキングリスト</a></td></tr>
   </table>
 </div>
 
 <div class="admin-card">
   <h2>担当者ができること（変更は即サイトに反映）</h2>
-  <table class="admin-table">
+  <table class="admin-table admin-table--stack">
     <tr><th>変えたいもの</th><th>場所</th></tr>
-    <tr><td>商品の価格・写真・内容量・原材料・栄養成分・アレルゲン</td><td><a href="admin-products.html">商品</a></td></tr>
-    <tr><td>企画の受付期間・締切・公開/非公開・前年複製</td><td><a href="admin-campaigns.html">企画</a></td></tr>
-    <tr><td>トップの6カテゴリカード/ヒーローの写真・切り取り位置</td><td><a href="admin-settings.html">サイト設定</a></td></tr>
-    <tr><td>受取枠の上限・時間帯（曜日パターン一括）</td><td>受取枠</td></tr>
+    <tr><td data-label="変えたいもの">商品の価格・写真・内容量・原材料・栄養成分・アレルゲン</td><td data-label="場所"><a href="admin-products.html">商品</a></td></tr>
+    <tr><td data-label="変えたいもの">企画の受付期間・締切・公開/非公開・前年複製</td><td data-label="場所"><a href="admin-campaigns.html">企画</a></td></tr>
+    <tr><td data-label="変えたいもの">トップの6カテゴリカード/ヒーローの写真・切り取り位置</td><td data-label="場所"><a href="admin-settings.html">サイト設定</a></td></tr>
+    <tr><td data-label="変えたいもの">受取枠の上限・時間帯（曜日パターン一括）</td><td data-label="場所">受取枠</td></tr>
   </table>
 </div>
 </div>

@@ -306,7 +306,7 @@ a:hover .chochin, button:hover .chochin { animation: chochin-sway .5s ease-in-ou
 }
 .k-poster__visual--photo .k-poster__tag, .k-poster__visual--photo .k-poster__date { z-index: 1; }
 .k-poster__visual--photo svg { display: none; }
-.k-poster__note { position: absolute; left: 10px; bottom: 8px; z-index: 1; font-size: .68rem; color: rgba(246,241,228,.75); }
+.k-poster__note { position: absolute; left: 10px; bottom: 8px; z-index: 1; font-size: .72rem; color: rgba(246,241,228,.75); }
 
 /* ---- ヒーロー上の受付中企画チップ ---- */
 .hero__chips { display: grid; gap: 10px; margin-top: 6px; }
@@ -651,4 +651,24 @@ button.cal__day[aria-pressed="true"] {
   .koyomi-leaf__title { font-size: 1.55rem; }
   .shinagaki__item { grid-template-columns: 72px 1fr; }
   .shinagaki__item img { width: 72px; height: 72px; }
+}
+
+/* 管理テーブル: 390px幅では横スクロールでなく積み上げ表示(機械検査[clipped]対応) */
+@media (max-width: 600px) {
+  .admin-table--stack { font-size: .9rem; }
+  .admin-table--stack thead, .admin-table--stack tr:has(> th) { display: none; }
+  .admin-table--stack, .admin-table--stack tbody, .admin-table--stack tr, .admin-table--stack td { display: block; width: 100%; box-sizing: border-box; }
+  .admin-table--stack tr { border: 1px solid var(--washi-line); border-radius: 10px; margin-bottom: 10px; padding: 8px 12px; background: #fff; }
+  .admin-table--stack tr:hover td { background: transparent; }
+  .admin-table--stack td { border: none; padding: 3px 0; text-align: left; }
+  .admin-table--stack td.num { text-align: left; }
+  .admin-table--stack td[data-label]::before { content: attr(data-label) "： "; font-weight: 700; color: var(--sumi-soft); font-size: .82rem; }
+  .admin-table--stack td[data-label=""]::before { content: none; }
+}
+
+/* 管理カード内フォーム: 狭幅で内在幅の広い入力(select/datetime等)をはみ出させない */
+@media (max-width: 600px) {
+  .admin-card .filter-bar .field { flex: 1 1 100%; min-width: 0; }
+  .admin-card input, .admin-card select, .admin-card textarea { width: 100%; max-width: 100%; box-sizing: border-box; }
+  .admin-card input[type="checkbox"] { width: 22px; }
 }

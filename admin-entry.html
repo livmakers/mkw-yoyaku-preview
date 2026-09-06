@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=22">
-<link rel="stylesheet" href="assets/css/base.css?v=22">
-<link rel="stylesheet" href="assets/css/components.css?v=22">
+<link rel="stylesheet" href="assets/css/tokens.css?v=23">
+<link rel="stylesheet" href="assets/css/base.css?v=23">
+<link rel="stylesheet" href="assets/css/components.css?v=23">
 <script>
 (function(){
-  var MYV = 22;
+  var MYV = 23;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -61,12 +61,12 @@
     <div class="field"><label>電話(不明なら空欄可)</label><input type="tel"></div>
   </div>
   <h2>商品と数量</h2>
-  <table class="admin-table">
+  <table class="admin-table admin-table--stack">
     <tr><th>企画</th><th>商品</th><th class="num">税込単価</th><th style="width:8em">数量</th></tr>
-    <tr><td>お惣菜・お弁当</td><td>幕の内弁当</td><td class="num">780</td><td><input type="number" value="0" min="0"></td></tr>
-    <tr><td>お惣菜・お弁当</td><td>オードブル 豪華盛り</td><td class="num">4,980</td><td><input type="number" value="0" min="0"></td></tr>
-    <tr><td>レア和牛</td><td>黒毛和牛 サーロインブロック 500g</td><td class="num">9,800</td><td><input type="number" value="0" min="0"></td></tr>
-    <tr><td>レア和牛</td><td>黒毛和牛 ミスジ 焼肉用 300g</td><td class="num">4,980</td><td><input type="number" value="0" min="0"></td></tr>
+    <tr><td data-label="企画">お惣菜・お弁当</td><td data-label="商品">幕の内弁当</td><td data-label="税込単価" class="num">780</td><td data-label="数量"><input type="number" value="0" min="0"></td></tr>
+    <tr><td data-label="企画">お惣菜・お弁当</td><td data-label="商品">オードブル 豪華盛り</td><td data-label="税込単価" class="num">4,980</td><td data-label="数量"><input type="number" value="0" min="0"></td></tr>
+    <tr><td data-label="企画">レア和牛</td><td data-label="商品">黒毛和牛 サーロインブロック 500g</td><td data-label="税込単価" class="num">9,800</td><td data-label="数量"><input type="number" value="0" min="0"></td></tr>
+    <tr><td data-label="企画">レア和牛</td><td data-label="商品">黒毛和牛 ミスジ 焼肉用 300g</td><td data-label="税込単価" class="num">4,980</td><td data-label="数量"><input type="number" value="0" min="0"></td></tr>
   </table>
   <p class="field-note">在庫上限・受取枠はネット予約と同じルールで自動チェックされます。登録すると予約番号が発番されます。</p>
   <button type="button" class="btn btn--primary" style="margin-top:12px">この内容で登録する（プレビューでは無効）</button>

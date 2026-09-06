@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=22">
-<link rel="stylesheet" href="assets/css/base.css?v=22">
-<link rel="stylesheet" href="assets/css/components.css?v=22">
+<link rel="stylesheet" href="assets/css/tokens.css?v=23">
+<link rel="stylesheet" href="assets/css/base.css?v=23">
+<link rel="stylesheet" href="assets/css/components.css?v=23">
 <script>
 (function(){
-  var MYV = 22;
+  var MYV = 23;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -337,10 +337,10 @@
 
 <div class="admin-card" style="margin-top:20px">
   <h2>関連する設定の場所</h2>
-  <table class="admin-table">
+  <table class="admin-table admin-table--stack">
     <tr><th>変えたいもの</th><th>場所</th></tr>
-    <tr><td>締切(受付終了日時・受取日のN日前・時刻)</td><td><a href="admin-campaigns.html">企画</a> → 該当企画を編集</td></tr>
-    <tr><td>商品の写真・価格・内容量・原材料・栄養成分・アレルゲン</td><td><a href="admin-products.html">商品</a> → 該当商品を編集</td></tr>
+    <tr><td data-label="変えたいもの">締切(受付終了日時・受取日のN日前・時刻)</td><td data-label="場所"><a href="admin-campaigns.html">企画</a> → 該当企画を編集</td></tr>
+    <tr><td data-label="変えたいもの">商品の写真・価格・内容量・原材料・栄養成分・アレルゲン</td><td data-label="場所"><a href="admin-products.html">商品</a> → 該当商品を編集</td></tr>
   </table>
 </div>
 </div>
