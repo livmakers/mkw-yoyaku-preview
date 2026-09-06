@@ -14,6 +14,7 @@
   --kogecha:    #4A3A28;   /* 焦茶(年末) */
   --azuki:      #6E2B25;   /* 小豆(レア和牛) */
   --murasaki:   #5B3A6E;   /* 江戸紫(恵方巻・節分) */
+  --asagi:      #1D7A8C;   /* 浅葱(夏のおもてなし) */
   --accent:     var(--sumi);
   --kinari-deep:#EFE7D3;
   --sumi-soft:  #4A443D;
@@ -42,3 +43,4 @@ body[data-theme="regular"] { --accent: var(--wakakusa); }
 body[data-theme="yearend"] { --accent: var(--kogecha); }
 body[data-theme="wagyu"]   { --accent: var(--azuki); }
 body[data-theme="ehomaki"] { --accent: var(--murasaki); }
+body[data-theme="omotenashi"] { --accent: var(--asagi); }

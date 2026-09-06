@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=23">
-<link rel="stylesheet" href="assets/css/base.css?v=23">
-<link rel="stylesheet" href="assets/css/components.css?v=23">
+<link rel="stylesheet" href="assets/css/tokens.css?v=24">
+<link rel="stylesheet" href="assets/css/base.css?v=24">
+<link rel="stylesheet" href="assets/css/components.css?v=24">
 <script>
 (function(){
-  var MYV = 23;
+  var MYV = 24;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -52,71 +52,232 @@
 <div class="admin-card" style="overflow-x:auto">
   <table class="admin-table admin-table--stack">
     <tr><th>商品名</th><th>企画</th><th class="num">税込価格</th><th>写真</th><th>状態</th><th>操作</th></tr>
-    <tr><td data-label="商品名">うなぎ蒲焼 特大(一尾) <code style="font-size:.75rem">unagi-kabayaki-l</code></td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">3,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit">編集</a></td></tr>
-    <tr><td data-label="商品名">うなぎ蒲焼 大(一尾)</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">2,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit">編集</a></td></tr>
-    <tr><td data-label="商品名">厚切りローストビーフ極太巻</td><td data-label="企画">恵方巻</td><td data-label="税込価格" class="num">780</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit">編集</a></td></tr>
-    <tr><td data-label="商品名">幸福牛しぐれ煮巻</td><td data-label="企画">恵方巻</td><td data-label="税込価格" class="num">680</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit">編集</a></td></tr>
-    <tr><td data-label="商品名">穴子たっぷり恵方巻</td><td data-label="企画">恵方巻</td><td data-label="税込価格" class="num">880</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit">編集</a></td></tr>
-    <tr><td data-label="商品名">照りたまチキン恵方巻</td><td data-label="企画">恵方巻</td><td data-label="税込価格" class="num">580</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit">編集</a></td></tr>
-    <tr><td data-label="商品名">まぐろ鉄火巻</td><td data-label="企画">恵方巻</td><td data-label="税込価格" class="num">480</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit">編集</a></td></tr>
-    <tr><td data-label="商品名">黒毛和牛 サーロインブロック 500g</td><td data-label="企画">レア和牛</td><td data-label="税込価格" class="num">9,800</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit">編集</a></td></tr>
-    <tr><td data-label="商品名">黒毛和牛 シャトーブリアン 300g(2枚)</td><td data-label="企画">レア和牛</td><td data-label="税込価格" class="num">12,800</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit">編集</a></td></tr>
-    <tr><td data-label="商品名">幕の内弁当</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">780</td><td data-label="写真">画像なし</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit">編集</a></td></tr>
-    <tr><td data-label="商品名">オードブル 豪華盛り</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">4,980</td><td data-label="写真">画像なし</td><td data-label="状態"><span class="badge badge--refunded">停止</span></td><td data-label="操作"><a href="#edit">編集</a></td></tr>
+    <tr><td data-label="商品名">炭火焼きうなぎを使った本格うな重(松)</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">3,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u17-matsu">編集</a></td></tr>
+    <tr><td data-label="商品名">炭火焼きうなぎを使った本格うな重(竹)</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">2,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u18-take">編集</a></td></tr>
+    <tr><td data-label="商品名">メスうなぎを使った艶鰻うな重</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">4,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u19-enman">編集</a></td></tr>
+    <tr><td data-label="商品名">愛知県産うなぎを使った本格うな重</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">3,480</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u20-aichi">編集</a></td></tr>
+    <tr><td data-label="商品名">手作りうな丼</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">1,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u21-unadon">編集</a></td></tr>
+    <tr><td data-label="商品名">うなぎまぶしと蒲焼のセット重</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">2,680</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u22-mabushi">編集</a></td></tr>
+    <tr><td data-label="商品名">これぞ特盛うな丼</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">2,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u23-tokumori">編集</a></td></tr>
+    <tr><td data-label="商品名">手作りうな重</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">2,480</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u24-unaju">編集</a></td></tr>
+    <tr><td data-label="商品名">うなぎ握りと太巻き</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">1,680</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u25-nigiri-futomaki">編集</a></td></tr>
+    <tr><td data-label="商品名">うなぎ太巻き寿司</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">1,280</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u26-futomaki">編集</a></td></tr>
+    <tr><td data-label="商品名">うなぎ姿寿司</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">1,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u07-sugata">編集</a></td></tr>
+    <tr><td data-label="商品名">うなぎ握り寿司15貫</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">2,480</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u-nigiri15">編集</a></td></tr>
+    <tr><td data-label="商品名">うなぎ白焼き(一尾)</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">1,880</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u-shirayaki">編集</a></td></tr>
+    <tr><td data-label="商品名">うなぎ蒲焼(一尾)</td><td data-label="企画">土用の丑</td><td data-label="税込価格" class="num">1,780</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="u-kabayaki">編集</a></td></tr>
+    <tr><td data-label="商品名">厚切りローストビーフ極太巻</td><td data-label="企画">恵方巻</td><td data-label="税込価格" class="num">780</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="ehomaki-roastbeef">編集</a></td></tr>
+    <tr><td data-label="商品名">幸福牛しぐれ煮巻</td><td data-label="企画">恵方巻</td><td data-label="税込価格" class="num">680</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="ehomaki-gyushigure">編集</a></td></tr>
+    <tr><td data-label="商品名">穴子たっぷり恵方巻</td><td data-label="企画">恵方巻</td><td data-label="税込価格" class="num">880</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="ehomaki-anago">編集</a></td></tr>
+    <tr><td data-label="商品名">照りたまチキン恵方巻</td><td data-label="企画">恵方巻</td><td data-label="税込価格" class="num">580</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="ehomaki-teritama">編集</a></td></tr>
+    <tr><td data-label="商品名">まぐろ鉄火巻</td><td data-label="企画">恵方巻</td><td data-label="税込価格" class="num">480</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="ehomaki-tekka">編集</a></td></tr>
+    <tr><td data-label="商品名">特上にぎり寿司(中トロ・生まぐろ入)48貫</td><td data-label="企画">夏のおもてなし</td><td data-label="税込価格" class="num">5,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="o-tokujo48">編集</a></td></tr>
+    <tr><td data-label="商品名">得々にぎり寿司50貫</td><td data-label="企画">夏のおもてなし</td><td data-label="税込価格" class="num">4,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="o-tokutoku50">編集</a></td></tr>
+    <tr><td data-label="商品名">本まぐろずくし寿司30貫</td><td data-label="企画">夏のおもてなし</td><td data-label="税込価格" class="num">5,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="o-maguro-zukushi">編集</a></td></tr>
+    <tr><td data-label="商品名">バラエティ手まり寿司</td><td data-label="企画">夏のおもてなし</td><td data-label="税込価格" class="num">2,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="o-temari">編集</a></td></tr>
+    <tr><td data-label="商品名">豪華肉寿司盛合せ16貫+24巻</td><td data-label="企画">夏のおもてなし</td><td data-label="税込価格" class="num">4,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="o-nikuzushi">編集</a></td></tr>
+    <tr><td data-label="商品名">真鯛姿造り入りお刺身盛り合わせ</td><td data-label="企画">夏のおもてなし</td><td data-label="税込価格" class="num">4,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="o-sashimi-tai">編集</a></td></tr>
+    <tr><td data-label="商品名">ごちそうオードブル</td><td data-label="企画">夏のおもてなし</td><td data-label="税込価格" class="num">3,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="o-gochiso">編集</a></td></tr>
+    <tr><td data-label="商品名">洋風オードブル</td><td data-label="企画">夏のおもてなし</td><td data-label="税込価格" class="num">3,480</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="o-yofu">編集</a></td></tr>
+    <tr><td data-label="商品名">中華オードブル</td><td data-label="企画">夏のおもてなし</td><td data-label="税込価格" class="num">3,480</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="o-chuka">編集</a></td></tr>
+    <tr><td data-label="商品名">国産(4等級以上)牛焼肉2種盛</td><td data-label="企画">夏のおもてなし</td><td data-label="税込価格" class="num">2,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="o-yakiniku2">編集</a></td></tr>
+    <tr><td data-label="商品名">ボイルずわいがに太脚3肩</td><td data-label="企画">夏のおもてなし</td><td data-label="税込価格" class="num">2,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="o-zuwai">編集</a></td></tr>
+    <tr><td data-label="商品名">いくらしょうゆ漬け(ますこ)</td><td data-label="企画">夏のおもてなし</td><td data-label="税込価格" class="num">1,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="o-ikura">編集</a></td></tr>
+    <tr><td data-label="商品名">割子弁当(白米)</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-warigo-shiro">編集</a></td></tr>
+    <tr><td data-label="商品名">割子弁当(五目ごはん)</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">1,080</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-warigo-gomoku">編集</a></td></tr>
+    <tr><td data-label="商品名">割子弁当(助六寿司)</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">1,080</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-warigo-sukeroku">編集</a></td></tr>
+    <tr><td data-label="商品名">彩り弁当</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">1,280</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-irodori">編集</a></td></tr>
+    <tr><td data-label="商品名">ファミリーオードブル</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">2,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-family-orderve">編集</a></td></tr>
+    <tr><td data-label="商品名">三河屋特選ご馳走オードブル</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">4,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-gochiso-orderve">編集</a></td></tr>
+    <tr><td data-label="商品名">三河屋特選中華オードブル</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">3,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-chuka-orderve">編集</a></td></tr>
+    <tr><td data-label="商品名">三河屋洋風オードブル</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">3,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-yofu-orderve">編集</a></td></tr>
+    <tr><td data-label="商品名">おつまみオードブル(2〜3人前)</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">1,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-otsumami">編集</a></td></tr>
+    <tr><td data-label="商品名">握り寿司36貫</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">2,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-nigiri36">編集</a></td></tr>
+    <tr><td data-label="商品名">握り寿司48貫</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">3,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-nigiri48">編集</a></td></tr>
+    <tr><td data-label="商品名">人気のローストビーフ握り寿司</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">2,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-rb-nigiri">編集</a></td></tr>
+    <tr><td data-label="商品名">助六寿司+玉子握り8貫</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-sukeroku-tamago">編集</a></td></tr>
+    <tr><td data-label="商品名">赤飯 750g</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">880</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-sekihan">編集</a></td></tr>
+    <tr><td data-label="商品名">手作りおはぎ3種×3個</td><td data-label="企画">お惣菜・お弁当</td><td data-label="税込価格" class="num">780</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="s-ohagi">編集</a></td></tr>
+    <tr><td data-label="商品名">ローストチキン(骨付きレッグ)</td><td data-label="企画">クリスマス</td><td data-label="税込価格" class="num">680</td><td data-label="写真"><span style="color:var(--shu);font-weight:700">画像なし</span></td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="xmas-chicken">編集</a></td></tr>
+    <tr><td data-label="商品名">クリスマスケーキ 5号</td><td data-label="企画">クリスマス</td><td data-label="税込価格" class="num">3,480</td><td data-label="写真"><span style="color:var(--shu);font-weight:700">画像なし</span></td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="xmas-cake">編集</a></td></tr>
+    <tr><td data-label="商品名">黒毛和牛 サーロインブロック 500g</td><td data-label="企画">レア和牛</td><td data-label="税込価格" class="num">9,800</td><td data-label="写真"><span style="color:var(--shu);font-weight:700">画像なし</span></td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="wagyu-sirloin-block">編集</a></td></tr>
+    <tr><td data-label="商品名">黒毛和牛 シャトーブリアン 300g(2枚)</td><td data-label="企画">レア和牛</td><td data-label="税込価格" class="num">12,800</td><td data-label="写真"><span style="color:var(--shu);font-weight:700">画像なし</span></td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="wagyu-chateaubriand">編集</a></td></tr>
+    <tr><td data-label="商品名">黒毛和牛 ミスジ 焼肉用 300g</td><td data-label="企画">レア和牛</td><td data-label="税込価格" class="num">4,980</td><td data-label="写真"><span style="color:var(--shu);font-weight:700">画像なし</span></td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="wagyu-misuji">編集</a></td></tr>
+    <tr><td data-label="商品名">黒毛和牛 すき焼き用 肩ロース 500g</td><td data-label="企画">レア和牛</td><td data-label="税込価格" class="num">5,980</td><td data-label="写真">画像あり</td><td data-label="状態"><span class="badge badge--paid">有効</span></td><td data-label="操作"><a href="#edit" class="edit-link" data-slug="wagyu-sukiyaki">編集</a></td></tr>
   </table>
 </div>
 
 <div class="admin-card" id="edit">
-  <h2>商品を編集: うなぎ蒲焼 特大（一尾）</h2>
-  <div class="filter-bar">
-    <div class="field"><label>企画</label>
-      <select><option>土用の丑 うなぎ予約</option><option>節分 恵方巻のご予約</option><option>クリスマス予約</option><option>お弁当・オードブル(通年)</option><option>レア和牛肉のご予約</option></select></div>
-    <div class="field"><label>商品名</label><input type="text" value="うなぎ蒲焼 特大（一尾）"></div>
-    <div class="field"><label>カナ</label><input type="text" value="ウナギカバヤキ トクダイ"></div>
+  <h2>商品を編集</h2>
+  <div class="field" style="max-width:520px"><label style="font-weight:700">編集する商品を選ぶ（一覧の「編集」からも選べます）</label>
+    <select id="p-select">
+        <option value="u17-matsu" data-has="1" data-page="form.html" data-name="炭火焼きうなぎを使った本格うな重(松)">[土用の丑] 炭火焼きうなぎを使った本格うな重(松)</option>
+        <option value="u18-take" data-has="1" data-page="form.html" data-name="炭火焼きうなぎを使った本格うな重(竹)">[土用の丑] 炭火焼きうなぎを使った本格うな重(竹)</option>
+        <option value="u19-enman" data-has="1" data-page="form.html" data-name="メスうなぎを使った艶鰻うな重">[土用の丑] メスうなぎを使った艶鰻うな重</option>
+        <option value="u20-aichi" data-has="1" data-page="form.html" data-name="愛知県産うなぎを使った本格うな重">[土用の丑] 愛知県産うなぎを使った本格うな重</option>
+        <option value="u21-unadon" data-has="1" data-page="form.html" data-name="手作りうな丼">[土用の丑] 手作りうな丼</option>
+        <option value="u22-mabushi" data-has="1" data-page="form.html" data-name="うなぎまぶしと蒲焼のセット重">[土用の丑] うなぎまぶしと蒲焼のセット重</option>
+        <option value="u23-tokumori" data-has="1" data-page="form.html" data-name="これぞ特盛うな丼">[土用の丑] これぞ特盛うな丼</option>
+        <option value="u24-unaju" data-has="1" data-page="form.html" data-name="手作りうな重">[土用の丑] 手作りうな重</option>
+        <option value="u25-nigiri-futomaki" data-has="1" data-page="form.html" data-name="うなぎ握りと太巻き">[土用の丑] うなぎ握りと太巻き</option>
+        <option value="u26-futomaki" data-has="1" data-page="form.html" data-name="うなぎ太巻き寿司">[土用の丑] うなぎ太巻き寿司</option>
+        <option value="u07-sugata" data-has="1" data-page="form.html" data-name="うなぎ姿寿司">[土用の丑] うなぎ姿寿司</option>
+        <option value="u-nigiri15" data-has="1" data-page="form.html" data-name="うなぎ握り寿司15貫">[土用の丑] うなぎ握り寿司15貫</option>
+        <option value="u-shirayaki" data-has="1" data-page="form.html" data-name="うなぎ白焼き(一尾)">[土用の丑] うなぎ白焼き(一尾)</option>
+        <option value="u-kabayaki" data-has="1" data-page="form.html" data-name="うなぎ蒲焼(一尾)">[土用の丑] うなぎ蒲焼(一尾)</option>
+        <option value="ehomaki-roastbeef" data-has="1" data-page="form-ehomaki.html" data-name="厚切りローストビーフ極太巻">[恵方巻] 厚切りローストビーフ極太巻</option>
+        <option value="ehomaki-gyushigure" data-has="1" data-page="form-ehomaki.html" data-name="幸福牛しぐれ煮巻">[恵方巻] 幸福牛しぐれ煮巻</option>
+        <option value="ehomaki-anago" data-has="1" data-page="form-ehomaki.html" data-name="穴子たっぷり恵方巻">[恵方巻] 穴子たっぷり恵方巻</option>
+        <option value="ehomaki-teritama" data-has="1" data-page="form-ehomaki.html" data-name="照りたまチキン恵方巻">[恵方巻] 照りたまチキン恵方巻</option>
+        <option value="ehomaki-tekka" data-has="1" data-page="form-ehomaki.html" data-name="まぐろ鉄火巻">[恵方巻] まぐろ鉄火巻</option>
+        <option value="o-tokujo48" data-has="1" data-page="form-omotenashi.html" data-name="特上にぎり寿司(中トロ・生まぐろ入)48貫">[夏のおもてなし] 特上にぎり寿司(中トロ・生まぐろ入)48貫</option>
+        <option value="o-tokutoku50" data-has="1" data-page="form-omotenashi.html" data-name="得々にぎり寿司50貫">[夏のおもてなし] 得々にぎり寿司50貫</option>
+        <option value="o-maguro-zukushi" data-has="1" data-page="form-omotenashi.html" data-name="本まぐろずくし寿司30貫">[夏のおもてなし] 本まぐろずくし寿司30貫</option>
+        <option value="o-temari" data-has="1" data-page="form-omotenashi.html" data-name="バラエティ手まり寿司">[夏のおもてなし] バラエティ手まり寿司</option>
+        <option value="o-nikuzushi" data-has="1" data-page="form-omotenashi.html" data-name="豪華肉寿司盛合せ16貫+24巻">[夏のおもてなし] 豪華肉寿司盛合せ16貫+24巻</option>
+        <option value="o-sashimi-tai" data-has="1" data-page="form-omotenashi.html" data-name="真鯛姿造り入りお刺身盛り合わせ">[夏のおもてなし] 真鯛姿造り入りお刺身盛り合わせ</option>
+        <option value="o-gochiso" data-has="1" data-page="form-omotenashi.html" data-name="ごちそうオードブル">[夏のおもてなし] ごちそうオードブル</option>
+        <option value="o-yofu" data-has="1" data-page="form-omotenashi.html" data-name="洋風オードブル">[夏のおもてなし] 洋風オードブル</option>
+        <option value="o-chuka" data-has="1" data-page="form-omotenashi.html" data-name="中華オードブル">[夏のおもてなし] 中華オードブル</option>
+        <option value="o-yakiniku2" data-has="1" data-page="form-omotenashi.html" data-name="国産(4等級以上)牛焼肉2種盛">[夏のおもてなし] 国産(4等級以上)牛焼肉2種盛</option>
+        <option value="o-zuwai" data-has="1" data-page="form-omotenashi.html" data-name="ボイルずわいがに太脚3肩">[夏のおもてなし] ボイルずわいがに太脚3肩</option>
+        <option value="o-ikura" data-has="1" data-page="form-omotenashi.html" data-name="いくらしょうゆ漬け(ますこ)">[夏のおもてなし] いくらしょうゆ漬け(ますこ)</option>
+        <option value="s-warigo-shiro" data-has="1" data-page="form-sozai.html" data-name="割子弁当(白米)">[お惣菜・お弁当] 割子弁当(白米)</option>
+        <option value="s-warigo-gomoku" data-has="1" data-page="form-sozai.html" data-name="割子弁当(五目ごはん)">[お惣菜・お弁当] 割子弁当(五目ごはん)</option>
+        <option value="s-warigo-sukeroku" data-has="1" data-page="form-sozai.html" data-name="割子弁当(助六寿司)">[お惣菜・お弁当] 割子弁当(助六寿司)</option>
+        <option value="s-irodori" data-has="1" data-page="form-sozai.html" data-name="彩り弁当">[お惣菜・お弁当] 彩り弁当</option>
+        <option value="s-family-orderve" data-has="1" data-page="form-sozai.html" data-name="ファミリーオードブル">[お惣菜・お弁当] ファミリーオードブル</option>
+        <option value="s-gochiso-orderve" data-has="1" data-page="form-sozai.html" data-name="三河屋特選ご馳走オードブル">[お惣菜・お弁当] 三河屋特選ご馳走オードブル</option>
+        <option value="s-chuka-orderve" data-has="1" data-page="form-sozai.html" data-name="三河屋特選中華オードブル">[お惣菜・お弁当] 三河屋特選中華オードブル</option>
+        <option value="s-yofu-orderve" data-has="1" data-page="form-sozai.html" data-name="三河屋洋風オードブル">[お惣菜・お弁当] 三河屋洋風オードブル</option>
+        <option value="s-otsumami" data-has="1" data-page="form-sozai.html" data-name="おつまみオードブル(2〜3人前)">[お惣菜・お弁当] おつまみオードブル(2〜3人前)</option>
+        <option value="s-nigiri36" data-has="1" data-page="form-sozai.html" data-name="握り寿司36貫">[お惣菜・お弁当] 握り寿司36貫</option>
+        <option value="s-nigiri48" data-has="1" data-page="form-sozai.html" data-name="握り寿司48貫">[お惣菜・お弁当] 握り寿司48貫</option>
+        <option value="s-rb-nigiri" data-has="1" data-page="form-sozai.html" data-name="人気のローストビーフ握り寿司">[お惣菜・お弁当] 人気のローストビーフ握り寿司</option>
+        <option value="s-sukeroku-tamago" data-has="1" data-page="form-sozai.html" data-name="助六寿司+玉子握り8貫">[お惣菜・お弁当] 助六寿司+玉子握り8貫</option>
+        <option value="s-sekihan" data-has="1" data-page="form-sozai.html" data-name="赤飯 750g">[お惣菜・お弁当] 赤飯 750g</option>
+        <option value="s-ohagi" data-has="1" data-page="form-sozai.html" data-name="手作りおはぎ3種×3個">[お惣菜・お弁当] 手作りおはぎ3種×3個</option>
+        <option value="xmas-chicken" data-has="0" data-page="form.html" data-name="ローストチキン(骨付きレッグ)">[クリスマス] ローストチキン(骨付きレッグ)</option>
+        <option value="xmas-cake" data-has="0" data-page="form.html" data-name="クリスマスケーキ 5号">[クリスマス] クリスマスケーキ 5号</option>
+        <option value="wagyu-sirloin-block" data-has="0" data-page="form-wagyu.html" data-name="黒毛和牛 サーロインブロック 500g">[レア和牛] 黒毛和牛 サーロインブロック 500g</option>
+        <option value="wagyu-chateaubriand" data-has="0" data-page="form-wagyu.html" data-name="黒毛和牛 シャトーブリアン 300g(2枚)">[レア和牛] 黒毛和牛 シャトーブリアン 300g(2枚)</option>
+        <option value="wagyu-misuji" data-has="0" data-page="form-wagyu.html" data-name="黒毛和牛 ミスジ 焼肉用 300g">[レア和牛] 黒毛和牛 ミスジ 焼肉用 300g</option>
+        <option value="wagyu-sukiyaki" data-has="1" data-page="form-wagyu.html" data-name="黒毛和牛 すき焼き用 肩ロース 500g">[レア和牛] 黒毛和牛 すき焼き用 肩ロース 500g</option>
+    </select>
   </div>
+
+  <h3 style="margin-top:8px">商品写真の変更 <small style="font-weight:400;color:var(--sumi-soft)">（このデモでは実際に動きます。反映されるのはこのブラウザ内のみ）</small></h3>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;padding:12px;border:1px solid var(--washi-line);border-radius:12px;background:#FBF9F3;margin-bottom:14px">
+    <div>
+      <p style="margin:0 0 6px;font-size:.82rem;font-weight:700;color:var(--sumi-soft)">現在の写真</p>
+      <img id="p-current" src="assets/img/products/u17-matsu.jpg" alt="現在の商品写真" width="200" height="200" style="object-fit:cover;border-radius:10px;border:1px solid var(--washi-line);background:#fff">
+    </div>
+    <div id="p-staged-box" hidden>
+      <p style="margin:0 0 6px;font-size:.82rem;font-weight:700;color:#7A6220">反映待ちの新しい写真</p>
+      <img id="p-staged" alt="新しい商品写真" width="200" height="200" style="object-fit:cover;border-radius:10px;border:2px dashed var(--kin);background:#fff">
+    </div>
+    <div style="flex:1;min-width:240px">
+      <p style="margin:0 0 6px;font-size:.82rem;font-weight:700;color:var(--sumi-soft)">写真を変更する</p>
+      <input type="file" id="p-file" data-live accept="image/jpeg,image/png,image/webp" style="width:100%">
+      <p class="field-note" style="margin-top:8px">①ファイルを選ぶ → ②「プレビュー」で申込ページの見え方を確認 → ③「保存して反映」。<br>実物と異なる写真は使用しない(景表法)。JPEG/PNG/WebP・デモは2.5MBまで。</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+        <a class="btn" id="p-preview" data-live target="_blank" rel="noopener" style="min-height:38px;padding:4px 14px;font-size:.85rem" href="form.html?demoPreview=1">プレビュー↗</a>
+        <button type="button" class="btn btn--primary" id="p-commit" data-live disabled style="min-height:38px;padding:4px 14px;font-size:.85rem">保存して反映</button>
+        <button type="button" class="btn btn--ghost" id="p-reset" data-live style="min-height:38px;padding:4px 14px;font-size:.85rem">既定の写真に戻す</button>
+      </div>
+    </div>
+  </div>
+
+  <h3>基本情報</h3>
   <div class="filter-bar">
+    <div class="field"><label>商品名</label><input type="text" id="p-name" value="炭火焼きうなぎを使った本格うな重(松)"></div>
     <div class="field"><label>税込価格(円)</label><input type="number" value="3980"></div>
     <div class="field"><label>税率</label><select><option>8%(軽減・食品)</option><option>10%(酒類等)</option></select></div>
-    <div class="field"><label>単位</label><input type="text" value="尾"></div>
-    <div class="field"><label>1注文の上限</label><input type="number" value="10"></div>
-    <div class="field"><label>表示順</label><input type="number" value="10"></div>
+    <div class="field"><label>1注文の上限</label><input type="number" value="20"></div>
   </div>
-  <div class="field"><label>説明</label><textarea rows="2">三河一色産うなぎを備長炭でふっくらと。タレ・山椒付き。</textarea></div>
-
-  <h3>食品表示（商品ページの「商品情報」に表示）</h3>
+  <div class="field"><label>説明</label><textarea rows="2">三河屋極木炭の炭火焼き。うなぎ一尾分をのせた最上のうな重。</textarea></div>
   <div class="filter-bar">
-    <div class="field"><label>内容量</label><input type="text" value="1尾(約200g)・タレ山椒付き"></div>
-    <div class="field"><label>アレルゲン(8品目+準ずる20品目)</label><input type="text" value="小麦・大豆"></div>
+    <div class="field"><label>アレルゲン</label><input type="text" value="小麦・大豆"></div>
     <div class="field"><label>原料原産地</label><input type="text" value="うなぎ(愛知県産)"></div>
-  </div>
-  <div class="field"><label>原材料名・添加物</label><textarea rows="2">うなぎ(愛知県産)、醤油(小麦・大豆を含む)、砂糖、みりん、山椒</textarea></div>
-  <div class="field"><label>栄養成分表示(任意)</label><textarea rows="2">100g当たり 熱量293kcal／たんぱく質23.0g／脂質21.0g／炭水化物3.1g／食塩相当量1.3g</textarea></div>
-  <div class="filter-bar">
     <div class="field"><label>消費期限表示</label><input type="text" value="お受取日当日中"></div>
     <div class="field"><label>保存方法</label><input type="text" value="要冷蔵(10℃以下)"></div>
   </div>
-
-  <div class="field">
-    <label>商品画像（JPEG/PNG/WebP・5MBまで。実物と異なる写真は使用しない＝景表法）</label>
-    <p><img src="assets/img/products/placeholder.svg" alt="現在の商品画像" width="96" height="96" style="object-fit:cover;border:1px solid var(--washi-line)"></p>
-    <input type="file" accept="image/jpeg,image/png,image/webp">
-  </div>
-  <div class="field">
-    <label>取扱店舗（未選択=全店）</label>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:4px">
-      <label style="display:flex;gap:8px;align-items:center;font-weight:400;min-height:36px"><input type="checkbox" checked> ビッグリブ小牧店</label>
-      <label style="display:flex;gap:8px;align-items:center;font-weight:400;min-height:36px"><input type="checkbox" checked> ビッグリブ安城店</label>
-      <label style="display:flex;gap:8px;align-items:center;font-weight:400;min-height:36px"><input type="checkbox" checked> Mikawaya 稲熊店</label>
-      <label style="display:flex;gap:8px;align-items:center;font-weight:400;min-height:36px"><input type="checkbox"> パワーズ高月店</label>
-    </div>
-  </div>
   <div class="field"><label style="display:flex;gap:8px;align-items:center"><input type="checkbox" checked> 販売する</label></div>
   <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-    <a class="btn" target="_blank" rel="noopener" href="campaign.html?demoPreview=1#shinagaki">プレビュー（保存せず確認）</a>
-    <button type="button" class="btn btn--primary">保存して本番反映（デモでは無効）</button>
+    <button type="button" class="btn btn--primary">基本情報を保存（デモでは写真のみ動きます）</button>
   </div>
-  <p class="field-note">本番では「プレビュー」で、この入力内容のまま商品ページを事前確認できます（お客様には見えません）。確認後に保存すると初めて本番へ反映されます。</p>
+  <p class="field-note">本番では写真も基本情報も「プレビュー→保存」の2段階。保存すると即サイトに反映され、操作は監査ログに記録されます。</p>
 </div>
+
+<script>
+(function(){
+  var sel = document.getElementById('p-select');
+  var cur = document.getElementById('p-current');
+  var stagedBox = document.getElementById('p-staged-box');
+  var staged = document.getElementById('p-staged');
+  var file = document.getElementById('p-file');
+  var commit = document.getElementById('p-commit');
+  var reset = document.getElementById('p-reset');
+  var prev = document.getElementById('p-preview');
+  var nameInput = document.getElementById('p-name');
+  var stagedData = null;
+
+  function toast(msg, ok){
+    var t = document.createElement('div');
+    t.textContent = msg;
+    t.style.cssText = 'position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:' + (ok ? '#14503C' : '#8C1F1A') + ';color:#fff;padding:12px 22px;border-radius:999px;z-index:99;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:90vw;text-align:center';
+    document.body.append(t);
+    setTimeout(function(){ t.remove(); }, 2800);
+  }
+  function defaultSrc(slug, has){
+    return has === '1' ? 'assets/img/products/' + slug + '.jpg' : 'assets/img/products/placeholder.svg';
+  }
+  function load(){
+    var o = sel.selectedOptions[0];
+    var slug = o.value;
+    var live = null;
+    try { live = localStorage.getItem('demo_live_product_' + slug); } catch(e) {}
+    cur.src = live || defaultSrc(slug, o.dataset.has);
+    prev.href = '' + o.dataset.page + '?demoPreview=1';
+    if (nameInput) nameInput.value = o.dataset.name;
+    stagedData = null; stagedBox.hidden = true; commit.disabled = true; file.value = '';
+  }
+  sel.addEventListener('change', load);
+  document.querySelectorAll('.edit-link').forEach(function(a){
+    a.addEventListener('click', function(){ sel.value = a.dataset.slug; load(); });
+  });
+  file.addEventListener('change', function(){
+    var f = file.files && file.files[0];
+    if (!f) return;
+    if (f.size > 2.5 * 1024 * 1024) { toast('デモは2.5MBまでの画像にしてください', false); file.value = ''; return; }
+    var rd = new FileReader();
+    rd.onload = function(){
+      stagedData = rd.result;
+      staged.src = stagedData; stagedBox.hidden = false; commit.disabled = false;
+      toast('写真を読み込みました。「保存して反映」で申込ページに反映されます', true);
+    };
+    rd.readAsDataURL(f);
+  });
+  commit.addEventListener('click', function(){
+    if (!stagedData) return;
+    var slug = sel.value;
+    try {
+      localStorage.setItem('demo_live_product_' + slug, stagedData);
+    } catch(e) { toast('保存に失敗しました(画像が大きすぎます)', false); return; }
+    cur.src = stagedData;
+    stagedData = null; stagedBox.hidden = true; commit.disabled = true; file.value = '';
+    toast('✔ 保存しました。申込ページの写真が変わっています(プレビュー↗で確認)', true);
+  });
+  reset.addEventListener('click', function(){
+    var o = sel.selectedOptions[0];
+    try { localStorage.removeItem('demo_live_product_' + o.value); } catch(e) {}
+    cur.src = defaultSrc(o.value, o.dataset.has);
+    stagedData = null; stagedBox.hidden = true; commit.disabled = true; file.value = '';
+    toast('既定の写真に戻しました', true);
+  });
+  load();
+})();
+</script>
 </div>
 <script>
 document.addEventListener('click', function(e){

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>夏のおもてなしのご予約 申込フォーム｜スーパー三河屋</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=24">
+<link rel="stylesheet" href="assets/css/base.css?v=24">
+<link rel="stylesheet" href="assets/css/components.css?v=24">
+<script>
+(function(){
+  var MYV = 24;
+  fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+    if (d.v > MYV) {
+      var u = new URL(location.href);
+      u.searchParams.set('r', d.v);
+      location.replace(u.toString());
+    }
+  }).catch(function(){});
+})();
+</script>
+</head>
+<body data-theme="omotenashi">
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">予</span>
+      <span class="brand-text">三河屋<small>季節のご予約サイト</small></span>
+    </a>
+    <nav class="site-header__nav" aria-label="サイト内"><a href="index.html">トップへ戻る</a></nav>
+  </div>
+</header>
+<nav class="steps" aria-label="ご予約の進行状況">
+  <ol>
+    <li class="is-done"><span>カート</span></li>
+    <li class="is-current" aria-current="step"><span>受取指定</span></li>
+    <li><span>お客様情報</span></li>
+    <li><span>確認</span></li>
+    <li><span>完了</span></li>
+  </ol>
+</nav>
+<main id="main" class="site-main">
+<h1>夏のおもてなしのご予約 申込フォーム</h1>
+<p>お盆・帰省のごちそう。お寿司・オードブル・お肉　<strong style="color:var(--shu)">締切: 8月12日(水) 15:00まで</strong></p>
+<p class="field-note">※プレビュー版のため送信はできません(本番はこの1ページで申込→確認→完了まで進みます)</p>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>1. お品と数量</h2>
+  <p class="field-note">写真は実際の商品です(昨年までの販売時に撮影したものを含みます)。</p>
+  <ul class="shinagaki">
+    <li class="shinagaki__item">
+      <img src="assets/img/products/o-tokujo48.jpg" data-demo-key="p:o-tokujo48" alt="特上にぎり寿司(中トロ・生まぐろ入)48貫(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">特上にぎり寿司(中トロ・生まぐろ入)48貫</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">5,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">中トロ・生まぐろ入りの特上握り48貫。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="特上にぎり寿司(中トロ・生まぐろ入)48貫を減らす">−</button>
+          <input type="number" value="1" min="0" max="20" aria-label="特上にぎり寿司(中トロ・生まぐろ入)48貫の数量">
+          <button type="button" data-step="1" aria-label="特上にぎり寿司(中トロ・生まぐろ入)48貫を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/o-tokutoku50.jpg" data-demo-key="p:o-tokutoku50" alt="得々にぎり寿司50貫(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">得々にぎり寿司50貫</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">4,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">大人数の集まりにうれしい50貫。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="得々にぎり寿司50貫を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="得々にぎり寿司50貫の数量">
+          <button type="button" data-step="1" aria-label="得々にぎり寿司50貫を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/o-maguro-zukushi.jpg" data-demo-key="p:o-maguro-zukushi" alt="本まぐろずくし寿司30貫(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">本まぐろずくし寿司30貫</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">5,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">地中海産本まぐろの大トロ・中トロ・赤身各10貫。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="本まぐろずくし寿司30貫を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="本まぐろずくし寿司30貫の数量">
+          <button type="button" data-step="1" aria-label="本まぐろずくし寿司30貫を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/o-temari.jpg" data-demo-key="p:o-temari" alt="バラエティ手まり寿司(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">バラエティ手まり寿司</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">2,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">彩り豊かなひとくち手まり寿司の詰め合わせ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="バラエティ手まり寿司を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="バラエティ手まり寿司の数量">
+          <button type="button" data-step="1" aria-label="バラエティ手まり寿司を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/o-nikuzushi.jpg" data-demo-key="p:o-nikuzushi" alt="豪華肉寿司盛合せ16貫+24巻(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">豪華肉寿司盛合せ16貫+24巻</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">4,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ローストビーフ握りと肉巻きの豪華盛り。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="豪華肉寿司盛合せ16貫+24巻を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="豪華肉寿司盛合せ16貫+24巻の数量">
+          <button type="button" data-step="1" aria-label="豪華肉寿司盛合せ16貫+24巻を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/o-sashimi-tai.jpg" data-demo-key="p:o-sashimi-tai" alt="真鯛姿造り入りお刺身盛り合わせ(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">真鯛姿造り入りお刺身盛り合わせ</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">4,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">真鯛の姿造りを中心に旬の魚を盛り込みました。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="真鯛姿造り入りお刺身盛り合わせを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="真鯛姿造り入りお刺身盛り合わせの数量">
+          <button type="button" data-step="1" aria-label="真鯛姿造り入りお刺身盛り合わせを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/o-gochiso.jpg" data-demo-key="p:o-gochiso" alt="ごちそうオードブル(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ごちそうオードブル</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">3,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">夏の集まりに。焼き物・揚げ物の豪華盛り。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ごちそうオードブルを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ごちそうオードブルの数量">
+          <button type="button" data-step="1" aria-label="ごちそうオードブルを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/o-yofu.jpg" data-demo-key="p:o-yofu" alt="洋風オードブル(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">洋風オードブル</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">3,480<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ハム・ローストビーフ・サラダの洋風盛り。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="洋風オードブルを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="洋風オードブルの数量">
+          <button type="button" data-step="1" aria-label="洋風オードブルを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/o-chuka.jpg" data-demo-key="p:o-chuka" alt="中華オードブル(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">中華オードブル</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">3,480<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">唐揚げ・春巻・焼売の中華盛り。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="中華オードブルを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="中華オードブルの数量">
+          <button type="button" data-step="1" aria-label="中華オードブルを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/o-yakiniku2.jpg" data-demo-key="p:o-yakiniku2" alt="国産(4等級以上)牛焼肉2種盛(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">国産(4等級以上)牛焼肉2種盛</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">2,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">4等級以上の国産牛2部位の焼肉盛り。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="国産(4等級以上)牛焼肉2種盛を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="国産(4等級以上)牛焼肉2種盛の数量">
+          <button type="button" data-step="1" aria-label="国産(4等級以上)牛焼肉2種盛を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/o-zuwai.jpg" data-demo-key="p:o-zuwai" alt="ボイルずわいがに太脚3肩(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ボイルずわいがに太脚3肩</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">2,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">解凍するだけ。太脚のボイルずわいがに。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ボイルずわいがに太脚3肩を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ボイルずわいがに太脚3肩の数量">
+          <button type="button" data-step="1" aria-label="ボイルずわいがに太脚3肩を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/o-ikura.jpg" data-demo-key="p:o-ikura" alt="いくらしょうゆ漬け(ますこ)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">いくらしょうゆ漬け(ますこ)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">1,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">艶やかなしょうゆ漬け。ごはんのお供・手巻きに。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="いくらしょうゆ漬け(ますこ)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="いくらしょうゆ漬け(ますこ)の数量">
+          <button type="button" data-step="1" aria-label="いくらしょうゆ漬け(ますこ)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>2. お受取店舗</h2>
+  <div class="shop-tabs" role="tablist" aria-label="地域で絞り込み">
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="true" data-region="all">全店（13）</button>
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="false" data-region="愛知">愛知（8）</button>
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="false" data-region="岐阜">岐阜（4）</button>
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="false" data-region="滋賀">滋賀（1）</button>
+  </div>
+  <div class="slot-grid shop-grid">
+    <button type="button" class="shop-btn" aria-pressed="true" data-region="愛知"><span>ビッグリブ小牧店</span><small>小牧市大字間々原新田…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>ビッグリブ安城店</span><small>安城市三河安城町2丁目…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 稲熊店</span><small>岡崎市稲熊町字後田…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 上飯田店</span><small>名古屋市北区上飯田通…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 犬山店</span><small>犬山市大字五郎丸…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya御器所松風店</span><small>名古屋市昭和区明月町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 西尾一色店</span><small>西尾市一色町一色…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya ラピオ小牧店</span><small>小牧市小牧三丁目…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>Mikawaya 静里店</span><small>岐阜県大垣市静里町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>Mikawaya 船町店</span><small>岐阜県大垣市本今町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>パワーズ大井店</span><small>岐阜県大垣市大井…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>サンマート土岐口店</span><small>岐阜県土岐市土岐津町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="滋賀"><span>パワーズ高月店</span><small>滋賀県長浜市高月町…</small></button>
+  </div>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>3. お受取日（カレンダーから選択）</h2>
+  <div class="cal-wrap"><div class="cal"><p class="cal__title">2026年8月</p><div class="cal__grid"><span class="cal__dow is-sun">日</span><span class="cal__dow">月</span><span class="cal__dow">火</span><span class="cal__dow">水</span><span class="cal__dow">木</span><span class="cal__dow">金</span><span class="cal__dow is-sat">土</span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__day cal__day--off">1</span><span class="cal__day cal__day--off">2</span><span class="cal__day cal__day--off">3</span><span class="cal__day cal__day--off">4</span><span class="cal__day cal__day--off">5</span><span class="cal__day cal__day--off">6</span><span class="cal__day cal__day--off">7</span><span class="cal__day cal__day--off">8</span><span class="cal__day cal__day--off">9</span><span class="cal__day cal__day--off">10</span><span class="cal__day cal__day--off">11</span><span class="cal__day cal__day--off">12</span><button type="button" class="date-btn cal__day" data-live aria-pressed="true" data-date="2026-08-13"><span>13</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-14"><span>14</span></button><button type="button" class="date-btn cal__day is-sat" data-live aria-pressed="false" data-date="2026-08-15"><span>15</span></button><span class="cal__day cal__day--off">16</span><span class="cal__day cal__day--off">17</span><span class="cal__day cal__day--off">18</span><span class="cal__day cal__day--off">19</span><span class="cal__day cal__day--off">20</span><span class="cal__day cal__day--off">21</span><span class="cal__day cal__day--off">22</span><span class="cal__day cal__day--off">23</span><span class="cal__day cal__day--off">24</span><span class="cal__day cal__day--off">25</span><span class="cal__day cal__day--off">26</span><span class="cal__day cal__day--off">27</span><span class="cal__day cal__day--off">28</span><span class="cal__day cal__day--off">29</span><span class="cal__day cal__day--off">30</span><span class="cal__day cal__day--off">31</span></div></div></div>
+  <p class="field-note">枠のある日付だけ選べます。赤=日曜・青=土曜。</p>
+  <h2 class="mt-0" style="margin-top:8px">4. お受取時間</h2>
+  <div class="slot-grid">
+    <button type="button" class="slot-btn" aria-pressed="false"><span class="slot-time">10:00〜12:00</span><span class="slot-left">残り 7 枠</span></button>
+    <button type="button" class="slot-btn" aria-pressed="true"><span class="slot-time">12:00〜14:00</span><span class="slot-left">残り 4 枠</span></button>
+    <button type="button" class="slot-btn" disabled><span class="slot-time">14:00〜16:00</span><span class="slot-left">満枠</span></button>
+    <button type="button" class="slot-btn" aria-pressed="false"><span class="slot-time">16:00〜18:00</span><span class="slot-left">残り 9 枠</span></button>
+  </div>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>5. お客様情報</h2>
+  <div class="field"><label for="f-name">お名前<span class="req">必須</span></label><input type="text" id="f-name"></div>
+  <div class="field"><label for="f-kana">フリガナ<span class="req">必須</span></label><input type="text" id="f-kana"></div>
+  <div class="field"><label for="f-tel">お電話番号<span class="req">必須</span></label><input type="tel" id="f-tel" placeholder="例: 0568-72-5227(ハイフン無しでも可)"></div>
+  <div class="field"><label for="f-email">メールアドレス<span class="req" style="color:var(--kin)">推奨</span></label><input type="email" id="f-email"><p class="field-note">ご入力いただくと、予約番号を記載した確認メールをお送りします。</p></div>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>6. お支払い方法</h2>
+  <label style="display:flex;gap:10px;align-items:center;min-height:var(--tap);font-weight:500">
+    <input type="radio" name="pay" checked style="width:24px;height:24px"> クレジットカードで事前に支払う（お受取がスムーズです）
+  </label>
+  <label style="display:flex;gap:10px;align-items:center;min-height:var(--tap);font-weight:500">
+    <input type="radio" name="pay" style="width:24px;height:24px"> 店頭で支払う（現金・各種お支払い）
+  </label>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>7. 個人情報の取扱い</h2>
+  <p style="font-size:.95rem">ご入力いただいた情報は、<strong>①ご予約商品のご用意とお渡し時の本人確認 ②ご予約内容の確認・変更・キャンセルのご連絡</strong>のみに使用します。詳しくは<a href="legal-privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+  <label style="display:flex;gap:10px;align-items:center;min-height:var(--tap);font-weight:700">
+    <input type="checkbox" style="width:24px;height:24px"> 個人情報の取扱いに同意します<span class="req">必須</span>
+  </label>
+</section>
+
+<button type="button" class="btn btn--primary btn--block btn--xl">確認画面へ進む</button>
+<p class="center" style="margin-top:12px"><a href="index.html">トップへ戻る</a></p>
+</main>
+<aside class="tel-band" aria-label="お電話でのご予約" style="margin-top:48px">
+  <p class="tel-band__lead">お電話でのご予約も承ります</p>
+  <p class="tel-band__num"><a href="tel:0568725227">0568-72-5227</a><span class="tel-band__name">（ビッグリブ小牧店）</span></p>
+  <p class="tel-band__note">ネットが不慣れな方もご安心ください。</p>
+</aside>
+<footer class="site-footer">
+  <nav aria-label="スーパー三河屋 本店サイト" class="site-footer__main-links">
+    <span class="site-footer__main-label">スーパー三河屋 本店サイト</span>
+    <a href="https://www.biglive.jp/" rel="noopener">トップ</a>
+    <a href="https://www.biglive.jp/30shops/" rel="noopener">店舗情報</a>
+    <a href="https://www.biglive.jp/40company/" rel="noopener">会社案内</a>
+  </nav>
+  <p class="site-footer__copy">&copy; 2026 株式会社三河屋</p>
+</footer>
+<script src="assets/js/app.js" defer></script>
+<script>
+(function(){
+  function setPressed(group, btn){
+    group.querySelectorAll('[aria-pressed]').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+    btn.setAttribute('aria-pressed','true');
+  }
+  document.querySelectorAll('.shop-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.shop-tab').forEach(function(t){ t.setAttribute('aria-selected','false'); });
+      tab.setAttribute('aria-selected','true');
+      var rg = tab.dataset.region;
+      document.querySelectorAll('.shop-btn').forEach(function(b){ b.hidden = (rg !== 'all' && b.dataset.region !== rg); });
+    });
+  });
+  document.querySelectorAll('.shop-btn').forEach(function(b){
+    b.addEventListener('click', function(){ setPressed(b.closest('.shop-grid'), b); });
+  });
+  document.querySelectorAll('button.cal__day').forEach(function(b){
+    b.addEventListener('click', function(){ setPressed(b.closest('.cal-wrap'), b); });
+  });
+  document.querySelectorAll('.slot-btn').forEach(function(b){
+    if (b.disabled) return;
+    b.addEventListener('click', function(){ setPressed(b.closest('.slot-grid'), b); });
+  });
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('img[data-demo-key]').forEach(function(img){
+    try {
+      var v = localStorage.getItem('demo_live_product_' + img.dataset.demoKey.slice(2));
+      if (v) img.src = v;
+    } catch(e) {}
+  });
+  window.addEventListener('storage', function(ev){
+    if (ev.key && ev.key.indexOf('demo_live_product_') === 0) {
+      var slug = ev.key.slice('demo_live_product_'.length);
+      document.querySelectorAll('img[data-demo-key="p:' + slug + '"]').forEach(function(img){
+        img.src = ev.newValue || ('assets/img/products/' + slug + '.jpg');
+      });
+    }
+  });
+})();
+</script>
+</body>
+</html>

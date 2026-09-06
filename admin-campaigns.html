@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=23">
-<link rel="stylesheet" href="assets/css/base.css?v=23">
-<link rel="stylesheet" href="assets/css/components.css?v=23">
+<link rel="stylesheet" href="assets/css/tokens.css?v=24">
+<link rel="stylesheet" href="assets/css/base.css?v=24">
+<link rel="stylesheet" href="assets/css/components.css?v=24">
 <script>
 (function(){
-  var MYV = 23;
+  var MYV = 24;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -54,6 +54,7 @@
     <tr><th>企画</th><th>カテゴリ</th><th>受付期間</th><th>受取期間</th><th>締切</th><th class="num">商品数</th><th>公開</th><th>操作</th></tr>
     <tr><td data-label="企画">土用の丑 うなぎ予約</td><td data-label="カテゴリ">丑の日</td><td data-label="受付期間">6/20〜7/28</td><td data-label="受取期間">7/24〜7/31</td><td data-label="締切">3日前 15:00</td><td data-label="商品数" class="num">2</td><td data-label="公開"><span class="badge badge--paid">公開中</span></td><td data-label="操作" style="white-space:nowrap"><a href="#edit">編集</a>／<a href="admin-products.html">商品</a>／<button class="btn btn--ghost" style="min-height:32px;padding:0 8px;font-size:.82rem">複製</button></td></tr>
     <tr><td data-label="企画">お弁当・オードブル</td><td data-label="カテゴリ">お惣菜・お弁当</td><td data-label="受付期間">常時</td><td data-label="受取期間">ご希望日</td><td data-label="締切">2日前 15:00</td><td data-label="商品数" class="num">2</td><td data-label="公開"><span class="badge badge--paid">公開中</span></td><td data-label="操作" style="white-space:nowrap"><a href="#edit">編集</a>／<a href="admin-products.html">商品</a>／<button class="btn btn--ghost" style="min-height:32px;padding:0 8px;font-size:.82rem">複製</button></td></tr>
+    <tr><td data-label="企画">夏のおもてなしのご予約</td><td data-label="カテゴリ">夏のおもてなし</td><td data-label="受付期間">7/20〜8/12 15:00</td><td data-label="受取期間">8/13〜8/15</td><td data-label="締切">2日前 15:00</td><td data-label="商品数" class="num">12</td><td data-label="公開"><span class="badge badge--paid">公開中</span></td><td data-label="操作" style="white-space:nowrap"><a href="#edit">編集</a>／<a href="admin-products.html">商品</a>／<button class="btn btn--ghost" style="min-height:32px;padding:0 8px;font-size:.82rem">複製</button></td></tr>
     <tr><td data-label="企画">節分 恵方巻のご予約</td><td data-label="カテゴリ">恵方巻</td><td data-label="受付期間">1/5〜2/1 15:00</td><td data-label="受取期間">2/2〜2/3</td><td data-label="締切">2日前 15:00</td><td data-label="商品数" class="num">5</td><td data-label="公開"><span class="badge badge--paid">公開中</span></td><td data-label="操作" style="white-space:nowrap"><a href="#edit">編集</a>／<a href="admin-products.html">商品</a>／<button class="btn btn--ghost" style="min-height:32px;padding:0 8px;font-size:.82rem">複製</button></td></tr>
     <tr><td data-label="企画">レア和牛肉のご予約</td><td data-label="カテゴリ">レア和牛</td><td data-label="受付期間">常時</td><td data-label="受取期間">ご希望日</td><td data-label="締切">3日前 15:00</td><td data-label="商品数" class="num">4</td><td data-label="公開"><span class="badge badge--paid">公開中</span></td><td data-label="操作" style="white-space:nowrap"><a href="#edit">編集</a>／<a href="admin-products.html">商品</a>／<button class="btn btn--ghost" style="min-height:32px;padding:0 8px;font-size:.82rem">複製</button></td></tr>
     <tr><td data-label="企画">クリスマス予約</td><td data-label="カテゴリ">クリスマス</td><td data-label="受付期間">11/1〜12/18</td><td data-label="受取期間">12/22〜12/25</td><td data-label="締切">7日前 15:00</td><td data-label="商品数" class="num">2</td><td data-label="公開"><span class="badge badge--refunded">非公開</span></td><td data-label="操作" style="white-space:nowrap"><a href="#edit">編集</a>／<a href="admin-products.html">商品</a>／<button class="btn btn--ghost" style="min-height:32px;padding:0 8px;font-size:.82rem">複製</button></td></tr>
@@ -69,7 +70,7 @@
     <div class="field"><label>タイトル</label><input type="text" value="土用の丑 うなぎ予約"></div>
     <div class="field"><label>サブタイトル</label><input type="text" value="職人が焼き上げる、三河一色産の蒲焼"></div>
     <div class="field"><label>カテゴリ</label>
-      <select><option>丑の日(藍)</option><option>クリスマス(常磐)</option><option>年末(焦茶)</option><option>年始(金)</option><option>恵方巻(江戸紫)</option><option>レア和牛(小豆)</option><option>お惣菜・お弁当(若草)</option></select></div>
+      <select><option>丑の日(藍)</option><option>クリスマス(常磐)</option><option>年末(焦茶)</option><option>年始(金)</option><option>恵方巻(江戸紫)</option><option>夏のおもてなし(浅葱)</option><option>レア和牛(小豆)</option><option>お惣菜・お弁当(若草)</option></select></div>
   </div>
   <div class="filter-bar">
     <div class="field"><label>受付開始(空=常時)</label><input type="datetime-local" value="2026-06-20T00:00"></div>

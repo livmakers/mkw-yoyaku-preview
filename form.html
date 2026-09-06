@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=23">
-<link rel="stylesheet" href="assets/css/base.css?v=23">
-<link rel="stylesheet" href="assets/css/components.css?v=23">
+<link rel="stylesheet" href="assets/css/tokens.css?v=24">
+<link rel="stylesheet" href="assets/css/base.css?v=24">
+<link rel="stylesheet" href="assets/css/components.css?v=24">
 <script>
 (function(){
-  var MYV = 23;
+  var MYV = 24;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -51,29 +51,187 @@
 
 <section class="paper" style="margin-bottom:22px">
   <h2>1. お品と数量</h2>
+  <p class="field-note">写真は実際の商品です(昨年までの販売時に撮影したものを含みます)。</p>
   <ul class="shinagaki">
     <li class="shinagaki__item">
-      <img src="assets/img/products/placeholder.svg" alt="うなぎ蒲焼 特大" width="96" height="96">
+      <img src="assets/img/products/u17-matsu.jpg" data-demo-key="p:u17-matsu" alt="炭火焼きうなぎを使った本格うな重(松)(実物写真)" width="128" height="128" loading="lazy">
       <div>
-        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">うなぎ蒲焼 特大（一尾）</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">炭火焼きうなぎを使った本格うな重(松)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
         <p class="shinagaki__price">3,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">三河屋極木炭の炭火焼き。うなぎ一尾分をのせた最上のうな重。</p>
         <div class="qty-stepper">
-          <button type="button" data-step="-1" aria-label="減らす">−</button>
-          <input type="number" value="1" min="0" max="10" aria-label="うなぎ蒲焼特大の数量">
-          <button type="button" data-step="1" aria-label="増やす">＋</button>
+          <button type="button" data-step="-1" aria-label="炭火焼きうなぎを使った本格うな重(松)を減らす">−</button>
+          <input type="number" value="1" min="0" max="20" aria-label="炭火焼きうなぎを使った本格うな重(松)の数量">
+          <button type="button" data-step="1" aria-label="炭火焼きうなぎを使った本格うな重(松)を増やす">＋</button>
         </div>
-        <p class="field-note">お一人様 10尾まで(不要な場合は0のまま)</p>
       </div>
     </li>
     <li class="shinagaki__item">
-      <img src="assets/img/products/placeholder.svg" alt="うなぎ蒲焼 大" width="96" height="96">
+      <img src="assets/img/products/u18-take.jpg" data-demo-key="p:u18-take" alt="炭火焼きうなぎを使った本格うな重(竹)(実物写真)" width="128" height="128" loading="lazy">
       <div>
-        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">うなぎ蒲焼 大（一尾）</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">炭火焼きうなぎを使った本格うな重(竹)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
         <p class="shinagaki__price">2,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">炭火焼きの蒲焼に玉子焼きを添えて。</p>
         <div class="qty-stepper">
-          <button type="button" data-step="-1" aria-label="減らす">−</button>
-          <input type="number" value="0" min="0" max="10" aria-label="うなぎ蒲焼大の数量">
-          <button type="button" data-step="1" aria-label="増やす">＋</button>
+          <button type="button" data-step="-1" aria-label="炭火焼きうなぎを使った本格うな重(竹)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="炭火焼きうなぎを使った本格うな重(竹)の数量">
+          <button type="button" data-step="1" aria-label="炭火焼きうなぎを使った本格うな重(竹)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/u19-enman.jpg" data-demo-key="p:u19-enman" alt="メスうなぎを使った艶鰻うな重(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">メスうなぎを使った艶鰻うな重</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">4,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">希少なメスうなぎ「艶鰻」。ふっくら厚い身とやわらかな脂。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="メスうなぎを使った艶鰻うな重を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="メスうなぎを使った艶鰻うな重の数量">
+          <button type="button" data-step="1" aria-label="メスうなぎを使った艶鰻うな重を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/u20-aichi.jpg" data-demo-key="p:u20-aichi" alt="愛知県産うなぎを使った本格うな重(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">愛知県産うなぎを使った本格うな重</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">3,480<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">地元愛知県産うなぎの蒲焼をたっぷりと。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="愛知県産うなぎを使った本格うな重を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="愛知県産うなぎを使った本格うな重の数量">
+          <button type="button" data-step="1" aria-label="愛知県産うなぎを使った本格うな重を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/u21-unadon.jpg" data-demo-key="p:u21-unadon" alt="手作りうな丼(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">手作りうな丼</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">1,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">蒲焼をのせた定番のうな丼。まずはこの一杯から。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="手作りうな丼を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="手作りうな丼の数量">
+          <button type="button" data-step="1" aria-label="手作りうな丼を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/u22-mabushi.jpg" data-demo-key="p:u22-mabushi" alt="うなぎまぶしと蒲焼のセット重(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">うなぎまぶしと蒲焼のセット重</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">2,680<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">きざみ蒲焼のまぶしと蒲焼を一折で。薬味付き。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="うなぎまぶしと蒲焼のセット重を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="うなぎまぶしと蒲焼のセット重の数量">
+          <button type="button" data-step="1" aria-label="うなぎまぶしと蒲焼のセット重を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/u23-tokumori.jpg" data-demo-key="p:u23-tokumori" alt="これぞ特盛うな丼(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">これぞ特盛うな丼</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">2,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">蒲焼をぜいたくに重ねた特盛。食べ応え自慢。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="これぞ特盛うな丼を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="これぞ特盛うな丼の数量">
+          <button type="button" data-step="1" aria-label="これぞ特盛うな丼を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/u24-unaju.jpg" data-demo-key="p:u24-unaju" alt="手作りうな重(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">手作りうな重</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">2,480<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">店内で丁寧に仕立てるうな重。玉子焼き添え。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="手作りうな重を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="手作りうな重の数量">
+          <button type="button" data-step="1" aria-label="手作りうな重を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/u25-nigiri-futomaki.jpg" data-demo-key="p:u25-nigiri-futomaki" alt="うなぎ握りと太巻き(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">うなぎ握りと太巻き</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">1,680<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">うなぎ握りとうなぎ太巻きの盛り合わせ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="うなぎ握りと太巻きを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="うなぎ握りと太巻きの数量">
+          <button type="button" data-step="1" aria-label="うなぎ握りと太巻きを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/u26-futomaki.jpg" data-demo-key="p:u26-futomaki" alt="うなぎ太巻き寿司(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">うなぎ太巻き寿司</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">1,280<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">蒲焼と玉子・きゅうりの太巻き。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="うなぎ太巻き寿司を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="うなぎ太巻き寿司の数量">
+          <button type="button" data-step="1" aria-label="うなぎ太巻き寿司を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/u07-sugata.jpg" data-demo-key="p:u07-sugata" alt="うなぎ姿寿司(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">うなぎ姿寿司</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">1,980<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">一尾姿のままの押し寿司。切り分けてお召し上がりください。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="うなぎ姿寿司を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="うなぎ姿寿司の数量">
+          <button type="button" data-step="1" aria-label="うなぎ姿寿司を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/u-nigiri15.jpg" data-demo-key="p:u-nigiri15" alt="うなぎ握り寿司15貫(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">うなぎ握り寿司15貫</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">2,480<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">蒲焼の握りをたっぷり15貫。集まりの一品に。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="うなぎ握り寿司15貫を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="うなぎ握り寿司15貫の数量">
+          <button type="button" data-step="1" aria-label="うなぎ握り寿司15貫を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/u-shirayaki.jpg" data-demo-key="p:u-shirayaki" alt="うなぎ白焼き(一尾)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">うなぎ白焼き(一尾)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">1,880<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">わさび・塩で楽しむ白焼き。素材の味そのまま。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="うなぎ白焼き(一尾)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="うなぎ白焼き(一尾)の数量">
+          <button type="button" data-step="1" aria-label="うなぎ白焼き(一尾)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/u-kabayaki.jpg" data-demo-key="p:u-kabayaki" alt="うなぎ蒲焼(一尾)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">うなぎ蒲焼(一尾)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <p class="shinagaki__price">1,780<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">炭火でふっくらと焼いた蒲焼。タレ・山椒付き。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="うなぎ蒲焼(一尾)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="うなぎ蒲焼(一尾)の数量">
+          <button type="button" data-step="1" aria-label="うなぎ蒲焼(一尾)を増やす">＋</button>
         </div>
       </div>
     </li>
@@ -107,12 +265,7 @@
 
 <section class="paper" style="margin-bottom:22px">
   <h2>3. お受取日（カレンダーから選択）</h2>
-  <div class="cal-wrap">
-    <div class="cal">
-      <p class="cal__title">2026年8月</p>
-      <div class="cal__grid"><span class="cal__dow is-sun">日</span><span class="cal__dow">月</span><span class="cal__dow">火</span><span class="cal__dow">水</span><span class="cal__dow">木</span><span class="cal__dow">金</span><span class="cal__dow is-sat">土</span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><button type="button" class="date-btn cal__day is-sat" data-live aria-pressed="false" data-date="2026-08-01"><span>1</span></button><button type="button" class="date-btn cal__day is-sun" data-live aria-pressed="true" data-date="2026-08-02"><span>2</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-08-03"><span>3</span></button><span class="cal__day cal__day--off">4</span><span class="cal__day cal__day--off">5</span><span class="cal__day cal__day--off">6</span><span class="cal__day cal__day--off">7</span><span class="cal__day cal__day--off">8</span><span class="cal__day cal__day--off">9</span><span class="cal__day cal__day--off">10</span><span class="cal__day cal__day--off">11</span><span class="cal__day cal__day--off">12</span><span class="cal__day cal__day--off">13</span><span class="cal__day cal__day--off">14</span><span class="cal__day cal__day--off">15</span><span class="cal__day cal__day--off">16</span><span class="cal__day cal__day--off">17</span><span class="cal__day cal__day--off">18</span><span class="cal__day cal__day--off">19</span><span class="cal__day cal__day--off">20</span><span class="cal__day cal__day--off">21</span><span class="cal__day cal__day--off">22</span><span class="cal__day cal__day--off">23</span><span class="cal__day cal__day--off">24</span><span class="cal__day cal__day--off">25</span><span class="cal__day cal__day--off">26</span><span class="cal__day cal__day--off">27</span><span class="cal__day cal__day--off">28</span><span class="cal__day cal__day--off">29</span><span class="cal__day cal__day--off">30</span><span class="cal__day cal__day--off">31</span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span></div>
-    </div>
-  </div>
+  <div class="cal-wrap"><div class="cal"><p class="cal__title">2026年7月</p><div class="cal__grid"><span class="cal__dow is-sun">日</span><span class="cal__dow">月</span><span class="cal__dow">火</span><span class="cal__dow">水</span><span class="cal__dow">木</span><span class="cal__dow">金</span><span class="cal__dow is-sat">土</span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__day cal__day--off">1</span><span class="cal__day cal__day--off">2</span><span class="cal__day cal__day--off">3</span><span class="cal__day cal__day--off">4</span><span class="cal__day cal__day--off">5</span><span class="cal__day cal__day--off">6</span><span class="cal__day cal__day--off">7</span><span class="cal__day cal__day--off">8</span><span class="cal__day cal__day--off">9</span><span class="cal__day cal__day--off">10</span><span class="cal__day cal__day--off">11</span><span class="cal__day cal__day--off">12</span><span class="cal__day cal__day--off">13</span><span class="cal__day cal__day--off">14</span><span class="cal__day cal__day--off">15</span><span class="cal__day cal__day--off">16</span><span class="cal__day cal__day--off">17</span><span class="cal__day cal__day--off">18</span><span class="cal__day cal__day--off">19</span><span class="cal__day cal__day--off">20</span><span class="cal__day cal__day--off">21</span><span class="cal__day cal__day--off">22</span><span class="cal__day cal__day--off">23</span><button type="button" class="date-btn cal__day" data-live aria-pressed="true" data-date="2026-07-24"><span>24</span></button><button type="button" class="date-btn cal__day is-sat" data-live aria-pressed="false" data-date="2026-07-25"><span>25</span></button><button type="button" class="date-btn cal__day is-sun" data-live aria-pressed="false" data-date="2026-07-26"><span>26</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-07-27"><span>27</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-07-28"><span>28</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-07-29"><span>29</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-07-30"><span>30</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-07-31"><span>31</span></button></div></div></div>
   <p class="field-note">枠のある日付だけ選べます。赤=日曜・青=土曜。</p>
   <h2 class="mt-0" style="margin-top:8px">4. お受取時間</h2>
   <div class="slot-grid">
@@ -190,6 +343,24 @@
   document.querySelectorAll('.slot-btn').forEach(function(b){
     if (b.disabled) return;
     b.addEventListener('click', function(){ setPressed(b.closest('.slot-grid'), b); });
+  });
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('img[data-demo-key]').forEach(function(img){
+    try {
+      var v = localStorage.getItem('demo_live_product_' + img.dataset.demoKey.slice(2));
+      if (v) img.src = v;
+    } catch(e) {}
+  });
+  window.addEventListener('storage', function(ev){
+    if (ev.key && ev.key.indexOf('demo_live_product_') === 0) {
+      var slug = ev.key.slice('demo_live_product_'.length);
+      document.querySelectorAll('img[data-demo-key="p:' + slug + '"]').forEach(function(img){
+        img.src = ev.newValue || ('assets/img/products/' + slug + '.jpg');
+      });
+    }
   });
 })();
 </script>
