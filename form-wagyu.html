@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=24">
-<link rel="stylesheet" href="assets/css/base.css?v=24">
-<link rel="stylesheet" href="assets/css/components.css?v=24">
+<link rel="stylesheet" href="assets/css/tokens.css?v=25">
+<link rel="stylesheet" href="assets/css/base.css?v=25">
+<link rel="stylesheet" href="assets/css/components.css?v=25">
 <script>
 (function(){
-  var MYV = 24;
+  var MYV = 25;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -55,7 +55,7 @@
     <li class="shinagaki__item">
       <img src="assets/img/photos/wagyu.jpg" alt="黒毛和牛 サーロインブロック" width="96" height="96" style="object-fit:cover">
       <div>
-        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">黒毛和牛 サーロインブロック 500g</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">黒毛和牛 サーロインブロック 500g</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
         <p class="shinagaki__price">9,800<small>円(税込)</small></p>
         <p style="font-size:.9rem;color:var(--sumi-soft);margin:0 0 6px">ステーキ・ローストビーフ用の塊肉。お好みの厚さにカットも承ります(ご要望メモへ)。</p>
         <div class="qty-stepper">
@@ -69,7 +69,7 @@
     <li class="shinagaki__item">
       <img src="assets/img/photos/wagyu.jpg" alt="黒毛和牛 シャトーブリアン" width="96" height="96" style="object-fit:cover">
       <div>
-        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">黒毛和牛 シャトーブリアン 300g（2枚）</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">黒毛和牛 シャトーブリアン 300g（2枚）</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
         <p class="shinagaki__price">12,800<small>円(税込)</small></p>
         <p style="font-size:.9rem;color:var(--sumi-soft);margin:0 0 6px">ヒレの中心部のみ。1頭からわずかしか取れない希少部位です。</p>
         <div class="qty-stepper">
@@ -83,7 +83,7 @@
     <li class="shinagaki__item">
       <img src="assets/img/photos/wagyu.jpg" alt="黒毛和牛 ミスジ焼肉用" width="96" height="96" style="object-fit:cover">
       <div>
-        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">黒毛和牛 ミスジ 焼肉用 300g</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">黒毛和牛 ミスジ 焼肉用 300g</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
         <p class="shinagaki__price">4,980<small>円(税込)</small></p>
         <p style="font-size:.9rem;color:var(--sumi-soft);margin:0 0 6px">肩甲骨の内側の希少部位。きめ細かなサシが特長です。</p>
         <div class="qty-stepper">
@@ -97,7 +97,7 @@
     <li class="shinagaki__item">
       <img src="assets/img/photos/wagyu.jpg" alt="黒毛和牛 すき焼き用 肩ロース" width="96" height="96" style="object-fit:cover">
       <div>
-        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">黒毛和牛 すき焼き用 肩ロース 500g</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(詳細・成分は別タブ)</small></h3>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">黒毛和牛 すき焼き用 肩ロース 500g</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
         <p class="shinagaki__price">5,980<small>円(税込)</small></p>
         <p style="font-size:.9rem;color:var(--sumi-soft);margin:0 0 6px">ご家族のすき焼き・しゃぶしゃぶに。薄切りにしてお渡しします。</p>
         <div class="qty-stepper">
@@ -228,6 +228,61 @@
   document.querySelectorAll('.slot-btn').forEach(function(b){
     if (b.disabled) return;
     b.addEventListener('click', function(){ setPressed(b.closest('.slot-grid'), b); });
+  });
+})();
+</script>
+
+<!-- 商品カード(写真/商品名クリックで表示) -->
+<div class="pcard" id="pcard" hidden role="dialog" aria-modal="true" aria-label="商品の写真と情報">
+  <div class="pcard__dialog">
+    <button type="button" class="pcard__close" aria-label="閉じる">✕</button>
+    <img class="pcard__img" src="" alt="">
+    <h3 class="pcard__name"></h3>
+    <p class="pcard__price"></p>
+    <p class="pcard__desc"></p>
+    <p class="pcard__meta" hidden></p>
+    <p class="pcard__note">写真は実際の商品です(昨年までの販売時に撮影したものを含みます)。</p>
+  </div>
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('pcard');
+  var img = modal.querySelector('.pcard__img');
+  var name = modal.querySelector('.pcard__name');
+  var price = modal.querySelector('.pcard__price');
+  var desc = modal.querySelector('.pcard__desc');
+  var lastFocus = null;
+  function openCard(item){
+    var itImg = item.querySelector('img');
+    var itName = item.querySelector('.shinagaki__name a');
+    var itPrice = item.querySelector('.shinagaki__price');
+    var itDesc = item.querySelector('.field-note');
+    img.src = itImg ? itImg.src : '';
+    img.alt = itImg ? itImg.alt : '';
+    name.textContent = itName ? itName.textContent : '';
+    price.innerHTML = itPrice ? itPrice.innerHTML : '';
+    desc.textContent = itDesc ? itDesc.textContent : '';
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.pcard__close').focus();
+  }
+  function closeCard(){
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('.shinagaki__item').forEach(function(item){
+    var itImg = item.querySelector('img');
+    var itName = item.querySelector('.shinagaki__name a');
+    if (itImg) itImg.addEventListener('click', function(){ openCard(item); });
+    if (itName) itName.addEventListener('click', function(ev){ ev.preventDefault(); openCard(item); });
+  });
+  modal.addEventListener('click', function(ev){
+    if (ev.target === modal || ev.target.closest('.pcard__close')) closeCard();
+  });
+  document.addEventListener('keydown', function(ev){
+    if (ev.key === 'Escape' && !modal.hidden) closeCard();
   });
 })();
 </script>
