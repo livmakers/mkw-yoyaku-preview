@@ -681,6 +681,7 @@ button.cal__day[aria-pressed="true"] {
 /* 商品カード(申込フォーム: 写真/商品名クリックで大きな写真表示) */
 .shinagaki__item img { cursor: zoom-in; }
 .pcard { position: fixed; inset: 0; z-index: 90; background: rgba(27,25,23,.58); display: grid; place-items: center; padding: 18px; }
+.pcard[hidden] { display: none !important; }  /* display:gridがhidden属性に勝つのを防ぐ(v25事故) */
 .pcard__dialog { position: relative; background: var(--kinari); border-radius: 16px; max-width: 680px; width: 100%; max-height: 92vh; overflow-y: auto; padding: 18px 18px 22px; box-shadow: 0 24px 64px rgba(0,0,0,.35); }
 .pcard__img { display: block; width: 100%; height: auto; max-height: 58vh; object-fit: contain; border-radius: 12px; background: #fff; border: 1px solid var(--washi-line); }
 .pcard__name { font-family: var(--font-heading); font-size: 1.25rem; margin: 14px 0 2px; padding-right: 40px; }
