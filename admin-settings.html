@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=29">
-<link rel="stylesheet" href="assets/css/base.css?v=29">
-<link rel="stylesheet" href="assets/css/components.css?v=29">
+<link rel="stylesheet" href="assets/css/tokens.css?v=30">
+<link rel="stylesheet" href="assets/css/base.css?v=30">
+<link rel="stylesheet" href="assets/css/components.css?v=30">
 <script>
 (function(){
-  var MYV = 29;
+  var MYV = 30;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -136,7 +136,7 @@
 
   <div class="admin-card" style="margin-bottom:0" data-panel="xmas">
     <h2 style="font-size:1.05rem">クリスマスのご予約 <small style="font-weight:400;color:var(--sumi-soft)">(12月)</small></h2>
-    <div class="panel-current" style="height:150px;background:url('assets/img/photos/xmas.jpg') 50% 70% / cover;border:1px solid var(--washi-line);border-radius:10px"></div>
+    <div class="panel-current" style="height:150px;background:url('assets/img/photos/xmas.jpg') 50% 50% / cover;border:1px solid var(--washi-line);border-radius:10px"></div>
     <p class="field-note">現在の本番表示（デモ）</p>
     <div class="panel-staged" hidden style="padding:10px;border:2px dashed var(--kin);border-radius:10px;margin-bottom:8px">
       <p style="margin:0 0 6px;font-weight:700;color:#7A6220">反映待ちの変更（まだ本番未反映）</p>

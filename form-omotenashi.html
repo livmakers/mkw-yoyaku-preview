@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=29">
-<link rel="stylesheet" href="assets/css/base.css?v=29">
-<link rel="stylesheet" href="assets/css/components.css?v=29">
+<link rel="stylesheet" href="assets/css/tokens.css?v=30">
+<link rel="stylesheet" href="assets/css/base.css?v=30">
+<link rel="stylesheet" href="assets/css/components.css?v=30">
 <script>
 (function(){
-  var MYV = 29;
+  var MYV = 30;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -398,6 +398,8 @@
   function applyMax(item, max){
     var input = item.querySelector('.qty-stepper input');
     if (!input) return;
+    if (!input.dataset.baseMax) input.dataset.baseMax = input.getAttribute('max') || '20';
+    if (max === null) max = parseInt(input.dataset.baseMax, 10);
     input.max = max;
     if (parseInt(input.value, 10) > max) input.value = max;
     var note = item.querySelector('.qty-limit-note');
@@ -419,13 +421,13 @@
     if (!slug) return;
     var mq = null;
     try { mq = localStorage.getItem('demo_live_maxqty_' + slug); } catch(e) {}
-    applyMax(item, mq ? parseInt(mq, 10) : 20);
+    applyMax(item, mq ? parseInt(mq, 10) : null);
   });
   window.addEventListener('storage', function(ev){
     if (!ev.key || ev.key.indexOf('demo_live_maxqty_') !== 0) return;
     var slug = ev.key.slice('demo_live_maxqty_'.length);
     document.querySelectorAll('.shinagaki__item').forEach(function(item){
-      if (slugOf(item) === slug) applyMax(item, ev.newValue ? parseInt(ev.newValue, 10) : 20);
+      if (slugOf(item) === slug) applyMax(item, ev.newValue ? parseInt(ev.newValue, 10) : null);
     });
   });
 })();

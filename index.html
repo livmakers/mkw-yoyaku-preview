@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=29">
-<link rel="stylesheet" href="assets/css/base.css?v=29">
-<link rel="stylesheet" href="assets/css/components.css?v=29">
+<link rel="stylesheet" href="assets/css/tokens.css?v=30">
+<link rel="stylesheet" href="assets/css/base.css?v=30">
+<link rel="stylesheet" href="assets/css/components.css?v=30">
 <script>
 (function(){
-  var MYV = 29;
+  var MYV = 30;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -63,7 +63,7 @@
 <section class="hero hero--washi">
   <div class="hero__photo" data-demo-key="hero" style="background-image:url('assets/img/photos/assort.jpg');background-position:50% 45%" role="img" aria-label="三河屋の季節の食材・ごちそうイメージ写真"></div>
   <div class="hero__scrim" aria-hidden="true"></div>
-  <span class="hero__mark" aria-hidden="true">夏</span>
+  <span class="hero__mark" aria-hidden="true">冬</span>
   <span class="hero__note">写真はイメージです</span>
   <p class="hero__badge" aria-hidden="true">予約受付中</p>
   <div class="hero__inner">
@@ -75,6 +75,16 @@
       </h1>
       <p class="hero__lead"><span class="ib">季節の行事のごちそうを、</span><span class="ib">ご予約分だけ丁寧にご用意。</span><span class="ib">お近くの直営13店舗で、</span><span class="ib">お待たせせずお受け取りいただけます。</span></p>
       <div class="hero__chips">
+        <a class="hero__chip" href="form-xmas.html">
+          <span class="hero__chip-title">クリスマスのご予約</span>
+          <span class="hero__chip-state">締切 12月20日(日) 18:00</span>
+          <span class="hero__chip-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="hero__chip" href="form-osechi.html">
+          <span class="hero__chip-title">新春おせちのご予約</span>
+          <span class="hero__chip-state">締切 12月24日(木) 18:00</span>
+          <span class="hero__chip-arrow" aria-hidden="true">→</span>
+        </a>
         <a class="hero__chip" href="form-sozai.html">
           <span class="hero__chip-title">お弁当・オードブル</span>
           <span class="hero__chip-state">通年受付中</span>
@@ -112,6 +122,40 @@
   </header>
   <p class="center" style="max-width:34em;margin:0 auto 22px">カードを押すと、そのまま申込フォームへ進めます。</p>
   <div class="cat-grid">
+
+    <a class="k-poster cat-card reveal" href="form-xmas.html" style="--poster-bg:linear-gradient(150deg,#0B2E22,#14503C 60%,#1E6A50)">
+      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="xmas" style="background-image:url('assets/img/photos/xmas.jpg');background-position:50% 50%">
+        <span class="k-poster__tag">クリスマス</span>
+        <span class="k-poster__time">12月</span>
+        <span class="k-poster__date"><small>お受取</small>12.23–12.25</span>
+        <span class="k-poster__note">写真は実際の商品です</span>
+      </div>
+      <div class="k-poster__body">
+        <h3 class="k-poster__title">クリスマスのご予約</h3>
+        <p class="k-poster__subtitle">名店監修ケーキ・チキン・オードブル・焼きたてピザ。聖夜の食卓を三河屋のごちそうで。</p>
+        <div class="k-poster__foot">
+          <span class="k-poster__state k-poster__state--open">締切 12月20日(日) 18:00まで</span>
+          <span class="k-poster__cta">申込フォームへ</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="k-poster cat-card reveal" href="form-osechi.html" style="--poster-bg:linear-gradient(150deg,#3A2D0E,#6B5320 60%,#B99334)">
+      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="newyear" style="background-image:url('assets/img/photos/newyear.jpg');background-position:50% 50%">
+        <span class="k-poster__tag">年始</span>
+        <span class="k-poster__time">1月</span>
+        <span class="k-poster__date"><small>お受取</small>12.31</span>
+        <span class="k-poster__note">写真は実際の商品です</span>
+      </div>
+      <div class="k-poster__body">
+        <h3 class="k-poster__title">新春おせちのご予約</h3>
+        <p class="k-poster__subtitle">三河屋特選生おせち4種と、名店監修・メーカーおせち。新しい年の始まりの食卓に。</p>
+        <div class="k-poster__foot">
+          <span class="k-poster__state k-poster__state--open">締切 12月24日(木) 18:00まで</span>
+          <span class="k-poster__cta">申込フォームへ</span>
+        </div>
+      </div>
+    </a>
 
     <a class="k-poster cat-card reveal" href="form-sozai.html" style="--poster-bg:linear-gradient(150deg,#2F3F1A,#6F8F3A 70%,#86A653)">
       <div class="k-poster__visual k-poster__visual--photo" data-demo-key="regular" style="background-image:url('assets/img/photos/sozai-orderve.jpg');background-position:50% 45%">
@@ -156,19 +200,6 @@
   <p class="center" style="max-width:34em;margin:0 auto 22px">季節の行事にあわせて予約の暦がめぐります。受付開始までは「お品書きを見る」で内容をご覧いただけます。</p>
   <div class="cat-grid">
 
-    <div class="k-poster cat-card cat-card--idle reveal" style="--poster-bg:linear-gradient(150deg,#0B2E22,#14503C 60%,#1E6A50)">
-      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="xmas" style="background-image:url('assets/img/photos/xmas.jpg');background-position:50% 68%">
-        <span class="k-poster__tag">クリスマス</span>
-        <span class="k-poster__time">12月</span>
-        <span class="k-poster__note">写真はイメージです</span>
-      </div>
-      <div class="k-poster__body">
-        <h3 class="k-poster__title">クリスマスのご予約</h3>
-        <p class="k-poster__subtitle">ローストチキン・ケーキ・パーティーオードブル。聖夜の食卓を三河屋のごちそうで。</p>
-        <div class="k-poster__foot"><span class="k-poster__state k-poster__state--soon">次回 11月頃受付開始予定</span></div>
-      </div>
-    </div>
-
     <div class="k-poster cat-card cat-card--idle reveal" style="--poster-bg:linear-gradient(150deg,#241B10,#4A3A28 60%,#6B563C)">
       <div class="k-poster__visual k-poster__visual--photo" data-demo-key="yearend" style="background-image:url('assets/img/photos/yearend.jpg');background-position:72% 60%">
         <span class="k-poster__tag">年末</span>
@@ -178,19 +209,6 @@
       <div class="k-poster__body">
         <h3 class="k-poster__title">年末のご予約</h3>
         <p class="k-poster__subtitle">年越しそば・お寿司・オードブル。一年の締めくくりのごちそうを。</p>
-        <div class="k-poster__foot"><span class="k-poster__state k-poster__state--soon">次回 11月頃受付開始予定</span></div>
-      </div>
-    </div>
-
-    <div class="k-poster cat-card cat-card--idle reveal" style="--poster-bg:linear-gradient(150deg,#3A2D0E,#6B5320 60%,#B99334)">
-      <div class="k-poster__visual k-poster__visual--photo" data-demo-key="newyear" style="background-image:url('assets/img/photos/newyear.jpg');background-position:50% 50%">
-        <span class="k-poster__tag">年始</span>
-        <span class="k-poster__time">1月</span>
-        <span class="k-poster__note">写真はイメージです</span>
-      </div>
-      <div class="k-poster__body">
-        <h3 class="k-poster__title">年始のご予約</h3>
-        <p class="k-poster__subtitle">おせち・お正月のごちそう。新しい年の始まりの食卓に。</p>
         <div class="k-poster__foot"><span class="k-poster__state k-poster__state--soon">次回 11月頃受付開始予定</span></div>
       </div>
     </div>

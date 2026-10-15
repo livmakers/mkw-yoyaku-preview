@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新春おせちのご予約 申込フォーム｜スーパー三河屋</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=30">
+<link rel="stylesheet" href="assets/css/base.css?v=30">
+<link rel="stylesheet" href="assets/css/components.css?v=30">
+<script>
+(function(){
+  var MYV = 30;
+  fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+    if (d.v > MYV) {
+      var u = new URL(location.href);
+      u.searchParams.set('r', d.v);
+      location.replace(u.toString());
+    }
+  }).catch(function(){});
+})();
+</script>
+</head>
+<body data-theme="newyear">
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">予</span>
+      <span class="brand-text">三河屋<small>季節のご予約サイト</small></span>
+    </a>
+    <nav class="site-header__nav" aria-label="サイト内"><a href="index.html">トップへ戻る</a></nav>
+  </div>
+</header>
+<nav class="steps" aria-label="ご予約の進行状況">
+  <ol>
+    <li class="is-done"><span>カート</span></li>
+    <li class="is-current" aria-current="step"><span>受取指定</span></li>
+    <li><span>お客様情報</span></li>
+    <li><span>確認</span></li>
+    <li><span>完了</span></li>
+  </ol>
+</nav>
+<main id="main" class="site-main">
+<h1>新春おせちのご予約 申込フォーム</h1>
+<p>三河屋特選生おせちと、名店監修のおせち　<strong style="color:var(--shu)">締切: 12月24日(木) 18:00まで／お渡し 12月31日(木)</strong></p>
+<p class="field-note">※プレビュー版のため送信はできません(本番はこの1ページで申込→確認→完了まで進みます)</p>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>1. お品と数量</h2>
+  <p class="field-note">写真は実際の商品です(メーカー・カタログ撮影品を含みます)。価格は税込(通常価格)です。</p>
+  <h3 style="margin-top:26px;border-left:4px solid var(--accent);padding-left:10px">三河屋特選 生おせち</h3>
+  <p class="field-note">お渡し日: 12月31日(木)・消費期限1月2日</p>
+  <ul class="shinagaki">
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-01.jpg" data-demo-key="p:osechi-01" alt="三河屋特選 生おせち「宝華」(和洋中三段重・52品目・3〜5人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 生おせち「宝華」(和洋中三段重・52品目・3〜5人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">32,400<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">海の幸・山の幸を豪華に取り合わせた渾身の一品。消費期限1/2。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 生おせち「宝華」(和洋中三段重・52品目・3〜5人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="三河屋特選 生おせち「宝華」(和洋中三段重・52品目・3〜5人前)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 生おせち「宝華」(和洋中三段重・52品目・3〜5人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-02.jpg" data-demo-key="p:osechi-02" alt="三河屋特選 生おせち「宴」(和洋中三段重・45品目・3〜5人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 生おせち「宴」(和洋中三段重・45品目・3〜5人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">24,840<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">伝統的なおせちと現代の食文化を融合した彩り鮮やかな一品。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 生おせち「宴」(和洋中三段重・45品目・3〜5人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="三河屋特選 生おせち「宴」(和洋中三段重・45品目・3〜5人前)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 生おせち「宴」(和洋中三段重・45品目・3〜5人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-03.jpg" data-demo-key="p:osechi-03" alt="三河屋特選 生おせち「曙」(和風三段重・39品目・3〜5人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 生おせち「曙」(和風三段重・39品目・3〜5人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">18,900<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">「この内容でこの価格」お客様支持率No.1のおせち。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 生おせち「曙」(和風三段重・39品目・3〜5人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="三河屋特選 生おせち「曙」(和風三段重・39品目・3〜5人前)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 生おせち「曙」(和風三段重・39品目・3〜5人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-04.jpg" data-demo-key="p:osechi-04" alt="三河屋特選 生おせち「笑門来福」(和洋中三段重・52品目・3〜5人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 生おせち「笑門来福」(和洋中三段重・52品目・3〜5人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">22,680<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">和・洋・中の3種類の料理が同時に楽しめる欲張りなおせち。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 生おせち「笑門来福」(和洋中三段重・52品目・3〜5人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="三河屋特選 生おせち「笑門来福」(和洋中三段重・52品目・3〜5人前)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 生おせち「笑門来福」(和洋中三段重・52品目・3〜5人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-17.jpg" data-demo-key="p:osechi-17" alt="三河屋特選 生おせち「迎春」(和洋三段重・36品目・2〜3人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 生おせち「迎春」(和洋三段重・36品目・2〜3人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">12,960<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ご夫婦やカップル、小さなお子様のご家庭向けの和洋三段重。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 生おせち「迎春」(和洋三段重・36品目・2〜3人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="三河屋特選 生おせち「迎春」(和洋三段重・36品目・2〜3人前)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 生おせち「迎春」(和洋三段重・36品目・2〜3人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-18.jpg" data-demo-key="p:osechi-18" alt="三河屋特選 生おせち「順華」(和風一段重・22品目・2〜3人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 生おせち「順華」(和風一段重・22品目・2〜3人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">9,504<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">少量で十分というご要望にお応えしたリーズナブルな一段重。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 生おせち「順華」(和風一段重・22品目・2〜3人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="三河屋特選 生おせち「順華」(和風一段重・22品目・2〜3人前)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 生おせち「順華」(和風一段重・22品目・2〜3人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-19.jpg" data-demo-key="p:osechi-19" alt="三河屋特選 新春オードブル(和洋中一段・32品目・3〜5人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 新春オードブル(和洋中一段・32品目・3〜5人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">11,664<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">和洋中の食材を厳選し、彩り鮮やかに豪華に盛り込みました。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 新春オードブル(和洋中一段・32品目・3〜5人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="三河屋特選 新春オードブル(和洋中一段・32品目・3〜5人前)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 新春オードブル(和洋中一段・32品目・3〜5人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-20.jpg" data-demo-key="p:osechi-20" alt="三河屋特選 中華オードブル(中華一段・25品目・3〜5人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 中華オードブル(中華一段・25品目・3〜5人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">13,824<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">お子様にも人気の中華食材を丹精込めて盛り込んだ団欒の一品。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 中華オードブル(中華一段・25品目・3〜5人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="三河屋特選 中華オードブル(中華一段・25品目・3〜5人前)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 中華オードブル(中華一段・25品目・3〜5人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <h3 style="margin-top:26px;border-left:4px solid var(--accent);padding-left:10px">名店監修・メーカーおせち</h3>
+  <p class="field-note">早期割引(12/12まで5%OFF)対象商品あり。宅配のみ・店頭お渡しのみの商品があります。</p>
+  <ul class="shinagaki">
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-05.jpg" data-demo-key="p:osechi-05" alt="イニシオフーズ 星彩 和洋ミニ三段重(45品目・2〜3人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">イニシオフーズ 星彩 和洋ミニ三段重(45品目・2〜3人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">14,580<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">和洋の食材を少人数向けに盛り込んだ食べきり三段重。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="イニシオフーズ 星彩 和洋ミニ三段重(45品目・2〜3人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="イニシオフーズ 星彩 和洋ミニ三段重(45品目・2〜3人前)の数量">
+          <button type="button" data-step="1" aria-label="イニシオフーズ 星彩 和洋ミニ三段重(45品目・2〜3人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-06.jpg" data-demo-key="p:osechi-06" alt="イニシオフーズ 遊心亭「つどい二客」(一段重×2・30品目・2人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">イニシオフーズ 遊心亭「つどい二客」(一段重×2・30品目・2人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">12,744<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">洒落た食材を中心に盛り込んだ、つどいを彩る二客重。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="イニシオフーズ 遊心亭「つどい二客」(一段重×2・30品目・2人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="イニシオフーズ 遊心亭「つどい二客」(一段重×2・30品目・2人前)の数量">
+          <button type="button" data-step="1" aria-label="イニシオフーズ 遊心亭「つどい二客」(一段重×2・30品目・2人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-07.jpg" data-demo-key="p:osechi-07" alt="イニシオフーズ 親子三代おせち和洋三段重(59品目・4〜5人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">イニシオフーズ 親子三代おせち和洋三段重(59品目・4〜5人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">21,384<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">子どもが喜ぶメニューと上質な料理を揃えた三世代向けおせち。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="イニシオフーズ 親子三代おせち和洋三段重(59品目・4〜5人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="イニシオフーズ 親子三代おせち和洋三段重(59品目・4〜5人前)の数量">
+          <button type="button" data-step="1" aria-label="イニシオフーズ 親子三代おせち和洋三段重(59品目・4〜5人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-08.jpg" data-demo-key="p:osechi-08" alt="イニシオフーズ 味遊心 洋風オードブルプラン(26品目・3人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">イニシオフーズ 味遊心 洋風オードブルプラン(26品目・3人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">14,904<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ワインが輝く、大人の贅沢オードブル。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="イニシオフーズ 味遊心 洋風オードブルプラン(26品目・3人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="イニシオフーズ 味遊心 洋風オードブルプラン(26品目・3人前)の数量">
+          <button type="button" data-step="1" aria-label="イニシオフーズ 味遊心 洋風オードブルプラン(26品目・3人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-09.jpg" data-demo-key="p:osechi-09" alt="カネハツ 初梅(二段重・28品目・2〜3人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">カネハツ 初梅(二段重・28品目・2〜3人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">14,040<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">海の幸・山の幸の縁起物を28品目盛り込んだお手軽な二段重。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="カネハツ 初梅(二段重・28品目・2〜3人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="カネハツ 初梅(二段重・28品目・2〜3人前)の数量">
+          <button type="button" data-step="1" aria-label="カネハツ 初梅(二段重・28品目・2〜3人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-10.jpg" data-demo-key="p:osechi-10" alt="カネハツ 彩鶴(三段重・32品目・4人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">カネハツ 彩鶴(三段重・32品目・4人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">17,280<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">厳選食材32品目で作り上げたカネハツ一番人気の三段重。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="カネハツ 彩鶴(三段重・32品目・4人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="カネハツ 彩鶴(三段重・32品目・4人前)の数量">
+          <button type="button" data-step="1" aria-label="カネハツ 彩鶴(三段重・32品目・4人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-11.jpg" data-demo-key="p:osechi-11" alt="カネハツ 祝鼓(三段重・49品目・3〜4人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">カネハツ 祝鼓(三段重・49品目・3〜4人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">27,000<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">厳選食材を49品目詰め合わせたカネハツ自慢の高級おせち。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="カネハツ 祝鼓(三段重・49品目・3〜4人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="カネハツ 祝鼓(三段重・49品目・3〜4人前)の数量">
+          <button type="button" data-step="1" aria-label="カネハツ 祝鼓(三段重・49品目・3〜4人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-12.jpg" data-demo-key="p:osechi-12" alt="カネハツ 彩椿(一段重・19品目・2人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">カネハツ 彩椿(一段重・19品目・2人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">8,424<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ご夫婦・少人数に最適。厳選19品目の一段重。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="カネハツ 彩椿(一段重・19品目・2人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="カネハツ 彩椿(一段重・19品目・2人前)の数量">
+          <button type="button" data-step="1" aria-label="カネハツ 彩椿(一段重・19品目・2人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-13.jpg" data-demo-key="p:osechi-13" alt="京都清水五条「ほった」監修 100品目おせち(二段重・4〜5人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">京都清水五条「ほった」監修 100品目おせち(二段重・4〜5人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">22,464<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">京都の名店で修業した店主監修。100品目の豪快なおせち。※宅配のみ・冷凍。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="京都清水五条「ほった」監修 100品目おせち(二段重・4〜5人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="京都清水五条「ほった」監修 100品目おせち(二段重・4〜5人前)の数量">
+          <button type="button" data-step="1" aria-label="京都清水五条「ほった」監修 100品目おせち(二段重・4〜5人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-14.jpg" data-demo-key="p:osechi-14" alt="「ぎをん や満文」迎春おせち(三段重・64品目・3〜4人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">「ぎをん や満文」迎春おせち(三段重・64品目・3〜4人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">17,064<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">京都「ぎをん や満文」監修。和洋中を詰合せた三段重。※宅配のみ・冷凍。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="「ぎをん や満文」迎春おせち(三段重・64品目・3〜4人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="「ぎをん や満文」迎春おせち(三段重・64品目・3〜4人前)の数量">
+          <button type="button" data-step="1" aria-label="「ぎをん や満文」迎春おせち(三段重・64品目・3〜4人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-15.jpg" data-demo-key="p:osechi-15" alt="日本橋OIKAWA監修 春望(三段重・41品目・2人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">日本橋OIKAWA監修 春望(三段重・41品目・2人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">12,960<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">東京・日本橋の料亭の本格おせち。コンパクトなお重に41品。※店頭お渡しのみ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="日本橋OIKAWA監修 春望(三段重・41品目・2人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="日本橋OIKAWA監修 春望(三段重・41品目・2人前)の数量">
+          <button type="button" data-step="1" aria-label="日本橋OIKAWA監修 春望(三段重・41品目・2人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/osechi-16.jpg" data-demo-key="p:osechi-16" alt="RISTORANTE AKITA南青山監修 洋風オードブル(23品目・2〜3人前)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">RISTORANTE AKITA南青山監修 洋風オードブル(23品目・2〜3人前)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">11,880<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">イタリアンの名店監修。ワインに合う洋風食材23品。※店頭お渡しのみ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="RISTORANTE AKITA南青山監修 洋風オードブル(23品目・2〜3人前)を減らす">−</button>
+          <input type="number" value="0" min="0" max="5" aria-label="RISTORANTE AKITA南青山監修 洋風オードブル(23品目・2〜3人前)の数量">
+          <button type="button" data-step="1" aria-label="RISTORANTE AKITA南青山監修 洋風オードブル(23品目・2〜3人前)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>2. お受取店舗</h2>
+  <div class="shop-tabs" role="tablist" aria-label="地域で絞り込み">
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="true" data-region="all">全店（13）</button>
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="false" data-region="愛知">愛知（8）</button>
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="false" data-region="岐阜">岐阜（4）</button>
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="false" data-region="滋賀">滋賀（1）</button>
+  </div>
+  <div class="slot-grid shop-grid">
+    <button type="button" class="shop-btn" aria-pressed="true" data-region="愛知"><span>ビッグリブ小牧店</span><small>小牧市大字間々原新田…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>ビッグリブ安城店</span><small>安城市三河安城町2丁目…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 稲熊店</span><small>岡崎市稲熊町字後田…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 上飯田店</span><small>名古屋市北区上飯田通…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 犬山店</span><small>犬山市大字五郎丸…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya御器所松風店</span><small>名古屋市昭和区明月町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 西尾一色店</span><small>西尾市一色町一色…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya ラピオ小牧店</span><small>小牧市小牧三丁目…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>Mikawaya 静里店</span><small>岐阜県大垣市静里町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>Mikawaya 船町店</span><small>岐阜県大垣市本今町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>パワーズ大井店</span><small>岐阜県大垣市大井…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>サンマート土岐口店</span><small>岐阜県土岐市土岐津町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="滋賀"><span>パワーズ高月店</span><small>滋賀県長浜市高月町…</small></button>
+  </div>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>3. お受取日（カレンダーから選択）</h2>
+  <div class="cal-wrap"><div class="cal"><p class="cal__title">2026年12月</p><div class="cal__grid"><span class="cal__dow is-sun">日</span><span class="cal__dow">月</span><span class="cal__dow">火</span><span class="cal__dow">水</span><span class="cal__dow">木</span><span class="cal__dow">金</span><span class="cal__dow is-sat">土</span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__day cal__day--off">1</span><span class="cal__day cal__day--off">2</span><span class="cal__day cal__day--off">3</span><span class="cal__day cal__day--off">4</span><span class="cal__day cal__day--off">5</span><span class="cal__day cal__day--off">6</span><span class="cal__day cal__day--off">7</span><span class="cal__day cal__day--off">8</span><span class="cal__day cal__day--off">9</span><span class="cal__day cal__day--off">10</span><span class="cal__day cal__day--off">11</span><span class="cal__day cal__day--off">12</span><span class="cal__day cal__day--off">13</span><span class="cal__day cal__day--off">14</span><span class="cal__day cal__day--off">15</span><span class="cal__day cal__day--off">16</span><span class="cal__day cal__day--off">17</span><span class="cal__day cal__day--off">18</span><span class="cal__day cal__day--off">19</span><span class="cal__day cal__day--off">20</span><span class="cal__day cal__day--off">21</span><span class="cal__day cal__day--off">22</span><span class="cal__day cal__day--off">23</span><span class="cal__day cal__day--off">24</span><span class="cal__day cal__day--off">25</span><span class="cal__day cal__day--off">26</span><span class="cal__day cal__day--off">27</span><span class="cal__day cal__day--off">28</span><span class="cal__day cal__day--off">29</span><span class="cal__day cal__day--off">30</span><button type="button" class="date-btn cal__day" data-live aria-pressed="true" data-date="2026-12-31"><span>31</span></button></div></div></div>
+  <p class="field-note">枠のある日付だけ選べます。赤=日曜・青=土曜。</p>
+  <h2 class="mt-0" style="margin-top:8px">4. お受取時間</h2>
+  <div class="slot-grid">
+    <button type="button" class="slot-btn" aria-pressed="false"><span class="slot-time">10:00〜12:00</span></button>
+    <button type="button" class="slot-btn" aria-pressed="true"><span class="slot-time">12:00〜14:00</span></button>
+    <button type="button" class="slot-btn" disabled><span class="slot-time">14:00〜16:00</span><span class="slot-left">満枠</span></button>
+    <button type="button" class="slot-btn" aria-pressed="false"><span class="slot-time">16:00〜18:00</span></button>
+  </div>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>5. お客様情報</h2>
+  <div class="field"><label for="f-name">お名前<span class="req">必須</span></label><input type="text" id="f-name"></div>
+  <div class="field"><label for="f-kana">フリガナ<span class="req">必須</span></label><input type="text" id="f-kana"></div>
+  <div class="field"><label for="f-tel">お電話番号<span class="req">必須</span></label><input type="tel" id="f-tel" placeholder="例: 0568-72-5227(ハイフン無しでも可)"></div>
+  <div class="field"><label for="f-email">メールアドレス<span class="req" style="color:var(--kin)">推奨</span></label><input type="email" id="f-email"><p class="field-note">ご入力いただくと、予約番号を記載した確認メールをお送りします。</p></div>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>6. お支払い方法</h2>
+  <label style="display:flex;gap:10px;align-items:center;min-height:var(--tap);font-weight:500">
+    <input type="radio" name="pay" checked style="width:24px;height:24px"> クレジットカードで事前に支払う（お受取がスムーズです）
+  </label>
+  <label style="display:flex;gap:10px;align-items:center;min-height:var(--tap);font-weight:500">
+    <input type="radio" name="pay" style="width:24px;height:24px"> 店頭で支払う（現金・各種お支払い）
+  </label>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>7. 個人情報の取扱い</h2>
+  <p style="font-size:.95rem">ご入力いただいた情報は、<strong>①ご予約商品のご用意とお渡し時の本人確認 ②ご予約内容の確認・変更・キャンセルのご連絡</strong>のみに使用します。詳しくは<a href="legal-privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+  <label style="display:flex;gap:10px;align-items:center;min-height:var(--tap);font-weight:700">
+    <input type="checkbox" style="width:24px;height:24px"> 個人情報の取扱いに同意します<span class="req">必須</span>
+  </label>
+</section>
+
+<button type="button" class="btn btn--primary btn--block btn--xl">確認画面へ進む</button>
+<p class="center" style="margin-top:12px"><a href="index.html">トップへ戻る</a></p>
+</main>
+<aside class="tel-band" aria-label="お電話でのご予約" style="margin-top:48px">
+  <p class="tel-band__lead">お電話でのご予約も承ります</p>
+  <p class="tel-band__num"><a href="tel:0568725227">0568-72-5227</a><span class="tel-band__name">（ビッグリブ小牧店）</span></p>
+  <p class="tel-band__note">ネットが不慣れな方もご安心ください。</p>
+</aside>
+<footer class="site-footer">
+  <nav aria-label="スーパー三河屋 本店サイト" class="site-footer__main-links">
+    <span class="site-footer__main-label">スーパー三河屋 本店サイト</span>
+    <a href="https://www.biglive.jp/" rel="noopener">トップ</a>
+    <a href="https://www.biglive.jp/30shops/" rel="noopener">店舗情報</a>
+    <a href="https://www.biglive.jp/40company/" rel="noopener">会社案内</a>
+  </nav>
+  <p class="site-footer__copy">&copy; 2026 株式会社三河屋</p>
+</footer>
+<script src="assets/js/app.js" defer></script>
+<script>
+(function(){
+  function setPressed(group, btn){
+    group.querySelectorAll('[aria-pressed]').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+    btn.setAttribute('aria-pressed','true');
+  }
+  document.querySelectorAll('.shop-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.shop-tab').forEach(function(t){ t.setAttribute('aria-selected','false'); });
+      tab.setAttribute('aria-selected','true');
+      var rg = tab.dataset.region;
+      document.querySelectorAll('.shop-btn').forEach(function(b){ b.hidden = (rg !== 'all' && b.dataset.region !== rg); });
+    });
+  });
+  document.querySelectorAll('.shop-btn').forEach(function(b){
+    b.addEventListener('click', function(){ setPressed(b.closest('.shop-grid'), b); });
+  });
+  document.querySelectorAll('button.cal__day').forEach(function(b){
+    b.addEventListener('click', function(){ setPressed(b.closest('.cal-wrap'), b); });
+  });
+  document.querySelectorAll('.slot-btn').forEach(function(b){
+    if (b.disabled) return;
+    b.addEventListener('click', function(){ setPressed(b.closest('.slot-grid'), b); });
+  });
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('img[data-demo-key]').forEach(function(img){
+    try {
+      var v = localStorage.getItem('demo_live_product_' + img.dataset.demoKey.slice(2));
+      if (v) img.src = v;
+    } catch(e) {}
+  });
+  window.addEventListener('storage', function(ev){
+    if (ev.key && ev.key.indexOf('demo_live_product_') === 0) {
+      var slug = ev.key.slice('demo_live_product_'.length);
+      document.querySelectorAll('img[data-demo-key="p:' + slug + '"]').forEach(function(img){
+        img.src = ev.newValue || ('assets/img/products/' + slug + '.jpg');
+      });
+    }
+  });
+})();
+</script>
+
+<!-- 商品カード(写真/商品名クリックで表示) -->
+<div class="pcard" id="pcard" hidden role="dialog" aria-modal="true" aria-label="商品の写真と情報">
+  <div class="pcard__dialog">
+    <button type="button" class="pcard__close" aria-label="閉じる">✕</button>
+    <img class="pcard__img" src="" alt="">
+    <h3 class="pcard__name"></h3>
+    <p class="pcard__price"></p>
+    <p class="pcard__desc"></p>
+    <p class="pcard__meta" hidden></p>
+    <p class="pcard__note">写真は実際の商品です(昨年までの販売時に撮影したものを含みます)。</p>
+  </div>
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('pcard');
+  var img = modal.querySelector('.pcard__img');
+  var name = modal.querySelector('.pcard__name');
+  var price = modal.querySelector('.pcard__price');
+  var desc = modal.querySelector('.pcard__desc');
+  var lastFocus = null;
+  function openCard(item){
+    var itImg = item.querySelector('img');
+    var itName = item.querySelector('.shinagaki__name a');
+    var itPrice = item.querySelector('.shinagaki__price');
+    var itDesc = item.querySelector('.field-note');
+    img.src = itImg ? itImg.src : '';
+    img.alt = itImg ? itImg.alt : '';
+    name.textContent = itName ? itName.textContent : '';
+    price.innerHTML = itPrice ? itPrice.innerHTML : '';
+    desc.textContent = itDesc ? itDesc.textContent : '';
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.pcard__close').focus();
+  }
+  function closeCard(){
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('.shinagaki__item').forEach(function(item){
+    var itImg = item.querySelector('img');
+    var itName = item.querySelector('.shinagaki__name a');
+    if (itImg) itImg.addEventListener('click', function(){ openCard(item); });
+    if (itName) itName.addEventListener('click', function(ev){ ev.preventDefault(); openCard(item); });
+  });
+  modal.addEventListener('click', function(ev){
+    if (ev.target === modal || ev.target.closest('.pcard__close')) closeCard();
+  });
+  document.addEventListener('keydown', function(ev){
+    if (ev.key === 'Escape' && !modal.hidden) closeCard();
+  });
+})();
+</script>
+<script>
+(function(){
+  function applyMax(item, max){
+    var input = item.querySelector('.qty-stepper input');
+    if (!input) return;
+    if (!input.dataset.baseMax) input.dataset.baseMax = input.getAttribute('max') || '20';
+    if (max === null) max = parseInt(input.dataset.baseMax, 10);
+    input.max = max;
+    if (parseInt(input.value, 10) > max) input.value = max;
+    var note = item.querySelector('.qty-limit-note');
+    if (!note) {
+      note = document.createElement('p');
+      note.className = 'field-note qty-limit-note';
+      note.style.margin = '4px 0 0';
+      var st = item.querySelector('.qty-stepper');
+      st.parentNode.insertBefore(note, st.nextSibling);
+    }
+    note.textContent = 'お一人様 ' + max + ' 点まで';
+  }
+  function slugOf(item){
+    var img = item.querySelector('img[data-demo-key]');
+    return img ? img.dataset.demoKey.slice(2) : null;
+  }
+  document.querySelectorAll('.shinagaki__item').forEach(function(item){
+    var slug = slugOf(item);
+    if (!slug) return;
+    var mq = null;
+    try { mq = localStorage.getItem('demo_live_maxqty_' + slug); } catch(e) {}
+    applyMax(item, mq ? parseInt(mq, 10) : null);
+  });
+  window.addEventListener('storage', function(ev){
+    if (!ev.key || ev.key.indexOf('demo_live_maxqty_') !== 0) return;
+    var slug = ev.key.slice('demo_live_maxqty_'.length);
+    document.querySelectorAll('.shinagaki__item').forEach(function(item){
+      if (slugOf(item) === slug) applyMax(item, ev.newValue ? parseInt(ev.newValue, 10) : null);
+    });
+  });
+})();
+</script>
+</body>
+</html>

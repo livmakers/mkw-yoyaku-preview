@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>クリスマスのご予約 申込フォーム｜スーパー三河屋</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=30">
+<link rel="stylesheet" href="assets/css/base.css?v=30">
+<link rel="stylesheet" href="assets/css/components.css?v=30">
+<script>
+(function(){
+  var MYV = 30;
+  fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+    if (d.v > MYV) {
+      var u = new URL(location.href);
+      u.searchParams.set('r', d.v);
+      location.replace(u.toString());
+    }
+  }).catch(function(){});
+})();
+</script>
+</head>
+<body data-theme="xmas">
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">予</span>
+      <span class="brand-text">三河屋<small>季節のご予約サイト</small></span>
+    </a>
+    <nav class="site-header__nav" aria-label="サイト内"><a href="index.html">トップへ戻る</a></nav>
+  </div>
+</header>
+<nav class="steps" aria-label="ご予約の進行状況">
+  <ol>
+    <li class="is-done"><span>カート</span></li>
+    <li class="is-current" aria-current="step"><span>受取指定</span></li>
+    <li><span>お客様情報</span></li>
+    <li><span>確認</span></li>
+    <li><span>完了</span></li>
+  </ol>
+</nav>
+<main id="main" class="site-main">
+<h1>クリスマスのご予約 申込フォーム</h1>
+<p>ケーキ・チキン・オードブル・ピザ　<strong style="color:var(--shu)">締切: 12月20日(日) 18:00まで／お渡し 12月23日(水)〜25日(金)</strong></p>
+<p class="field-note">※プレビュー版のため送信はできません(本番はこの1ページで申込→確認→完了まで進みます)</p>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>1. お品と数量</h2>
+  <p class="field-note">写真は実際の商品です(メーカー・カタログ撮影品を含みます)。価格は税込です。</p>
+  <h3 style="margin-top:26px;border-left:4px solid var(--accent);padding-left:10px">有名店監修スイーツ</h3>
+  <p class="field-note">お渡し日: 12月23日(水)〜25日(金)</p>
+  <ul class="shinagaki">
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-01.jpg" data-demo-key="p:xmas-01" alt="ホテルオークラ キャラメルダブルナッツショコラ 5号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ホテルオークラ キャラメルダブルナッツショコラ 5号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,299<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ホテルオークラ監修。キャラメルとナッツのショコラケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ホテルオークラ キャラメルダブルナッツショコラ 5号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ホテルオークラ キャラメルダブルナッツショコラ 5号の数量">
+          <button type="button" data-step="1" aria-label="ホテルオークラ キャラメルダブルナッツショコラ 5号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-02.jpg" data-demo-key="p:xmas-02" alt="patisserie KIHACHI監修 トライフルショートケーキ 5号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">patisserie KIHACHI監修 トライフルショートケーキ 5号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,083<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">キハチ監修。苺とクリームのトライフル仕立て。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="patisserie KIHACHI監修 トライフルショートケーキ 5号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="patisserie KIHACHI監修 トライフルショートケーキ 5号の数量">
+          <button type="button" data-step="1" aria-label="patisserie KIHACHI監修 トライフルショートケーキ 5号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-03.jpg" data-demo-key="p:xmas-03" alt="辻利兵衛本店 宇治抹茶もんぶらんけーき 5号相当(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">辻利兵衛本店 宇治抹茶もんぶらんけーき 5号相当</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,299<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">宇治の老舗茶舗監修の抹茶モンブラン。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="辻利兵衛本店 宇治抹茶もんぶらんけーき 5号相当を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="辻利兵衛本店 宇治抹茶もんぶらんけーき 5号相当の数量">
+          <button type="button" data-step="1" aria-label="辻利兵衛本店 宇治抹茶もんぶらんけーき 5号相当を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-04.jpg" data-demo-key="p:xmas-04" alt="ガレー ベルギーショコラノワール(約22cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ガレー ベルギーショコラノワール(約22cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,219<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ベルギー王室御用達ガレーのショコラケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ガレー ベルギーショコラノワール(約22cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ガレー ベルギーショコラノワール(約22cm)の数量">
+          <button type="button" data-step="1" aria-label="ガレー ベルギーショコラノワール(約22cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-05.jpg" data-demo-key="p:xmas-05" alt="アトリエ・ド・フロマージュ ノエル・フロマージュ(約18cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">アトリエ・ド・フロマージュ ノエル・フロマージュ(約18cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,003<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">チーズ工房アトリエ・ド・フロマージュのクリスマスチーズケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="アトリエ・ド・フロマージュ ノエル・フロマージュ(約18cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="アトリエ・ド・フロマージュ ノエル・フロマージュ(約18cm)の数量">
+          <button type="button" data-step="1" aria-label="アトリエ・ド・フロマージュ ノエル・フロマージュ(約18cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-06.jpg" data-demo-key="p:xmas-06" alt="テオブロマ ショコラジャンドゥーヤ 4号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">テオブロマ ショコラジャンドゥーヤ 4号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,867<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ショコラティエ土屋公二のジャンドゥーヤケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="テオブロマ ショコラジャンドゥーヤ 4号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="テオブロマ ショコラジャンドゥーヤ 4号の数量">
+          <button type="button" data-step="1" aria-label="テオブロマ ショコラジャンドゥーヤ 4号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-07.jpg" data-demo-key="p:xmas-07" alt="町村農場 農場のダブルフロマージュ 4号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">町村農場 農場のダブルフロマージュ 4号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,867<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">北海道・町村農場のミルクを使った2層のチーズケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="町村農場 農場のダブルフロマージュ 4号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="町村農場 農場のダブルフロマージュ 4号の数量">
+          <button type="button" data-step="1" aria-label="町村農場 農場のダブルフロマージュ 4号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-08.jpg" data-demo-key="p:xmas-08" alt="賛否両論 店主笠原将弘のヘーゼルナッツモンブラン 5号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">賛否両論 店主笠原将弘のヘーゼルナッツモンブラン 5号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,299<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">和食の名店「賛否両論」監修モンブラン。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="賛否両論 店主笠原将弘のヘーゼルナッツモンブラン 5号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="賛否両論 店主笠原将弘のヘーゼルナッツモンブラン 5号の数量">
+          <button type="button" data-step="1" aria-label="賛否両論 店主笠原将弘のヘーゼルナッツモンブラン 5号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <h3 style="margin-top:26px;border-left:4px solid var(--accent);padding-left:10px">クリスマススイーツ</h3>
+  <ul class="shinagaki">
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-09.jpg" data-demo-key="p:xmas-09" alt="FLO PRESTIGE PARIS フルーツカスタードタルト 5号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">FLO PRESTIGE PARIS フルーツカスタードタルト 5号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,191<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">彩り豊かなフルーツとカスタードのタルト。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="FLO PRESTIGE PARIS フルーツカスタードタルト 5号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="FLO PRESTIGE PARIS フルーツカスタードタルト 5号の数量">
+          <button type="button" data-step="1" aria-label="FLO PRESTIGE PARIS フルーツカスタードタルト 5号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-10.jpg" data-demo-key="p:xmas-10" alt="ベイクド・アルル クリスマスナッツ&ベリー(約17.5cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ベイクド・アルル クリスマスナッツ&ベリー(約17.5cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,651<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ナッツとベリーを飾った北海道生まれのケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ベイクド・アルル クリスマスナッツ&ベリー(約17.5cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ベイクド・アルル クリスマスナッツ&ベリー(約17.5cm)の数量">
+          <button type="button" data-step="1" aria-label="ベイクド・アルル クリスマスナッツ&ベリー(約17.5cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-11.jpg" data-demo-key="p:xmas-11" alt="ベイクド・アルル 5種ベリー贅沢レアチーズタルト 5号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ベイクド・アルル 5種ベリー贅沢レアチーズタルト 5号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,679<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">5種のベリーをのせたレアチーズタルト。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ベイクド・アルル 5種ベリー贅沢レアチーズタルト 5号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ベイクド・アルル 5種ベリー贅沢レアチーズタルト 5号の数量">
+          <button type="button" data-step="1" aria-label="ベイクド・アルル 5種ベリー贅沢レアチーズタルト 5号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-12.jpg" data-demo-key="p:xmas-12" alt="銀座ブールミッシュ監修 フレーズノエル 5号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">銀座ブールミッシュ監修 フレーズノエル 5号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,299<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">洋菓子の名店ブールミッシュ監修の苺のクリスマスケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="銀座ブールミッシュ監修 フレーズノエル 5号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="銀座ブールミッシュ監修 フレーズノエル 5号の数量">
+          <button type="button" data-step="1" aria-label="銀座ブールミッシュ監修 フレーズノエル 5号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-13.jpg" data-demo-key="p:xmas-13" alt="栄光堂監修 濃厚チーズケーキ(約11.5cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">栄光堂監修 濃厚チーズケーキ(約11.5cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,975<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">濃厚なめらかなベイクドチーズケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="栄光堂監修 濃厚チーズケーキ(約11.5cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="栄光堂監修 濃厚チーズケーキ(約11.5cm)の数量">
+          <button type="button" data-step="1" aria-label="栄光堂監修 濃厚チーズケーキ(約11.5cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-14.jpg" data-demo-key="p:xmas-14" alt="栄光堂監修 苺のティラミス(約11cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">栄光堂監修 苺のティラミス(約11cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,895<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">苺を合わせたクリスマス仕立てのティラミス。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="栄光堂監修 苺のティラミス(約11cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="栄光堂監修 苺のティラミス(約11cm)の数量">
+          <button type="button" data-step="1" aria-label="栄光堂監修 苺のティラミス(約11cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-15.jpg" data-demo-key="p:xmas-15" alt="栄光堂監修 ノエル・ショコラ(約17cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">栄光堂監修 ノエル・ショコラ(約17cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,219<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">チョコづくしのブッシュドノエル。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="栄光堂監修 ノエル・ショコラ(約17cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="栄光堂監修 ノエル・ショコラ(約17cm)の数量">
+          <button type="button" data-step="1" aria-label="栄光堂監修 ノエル・ショコラ(約17cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-16.jpg" data-demo-key="p:xmas-16" alt="栄光堂監修 クリスマスキャラメルナッツ(約11.5×7.5cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">栄光堂監修 クリスマスキャラメルナッツ(約11.5×7.5cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,139<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">キャラメルとナッツの焼き菓子ケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="栄光堂監修 クリスマスキャラメルナッツ(約11.5×7.5cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="栄光堂監修 クリスマスキャラメルナッツ(約11.5×7.5cm)の数量">
+          <button type="button" data-step="1" aria-label="栄光堂監修 クリスマスキャラメルナッツ(約11.5×7.5cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-17.jpg" data-demo-key="p:xmas-17" alt="ベイクド・アルル 北海道フロマージュタルト 4号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ベイクド・アルル 北海道フロマージュタルト 4号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,944<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">北海道産チーズのベイクドタルト。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ベイクド・アルル 北海道フロマージュタルト 4号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ベイクド・アルル 北海道フロマージュタルト 4号の数量">
+          <button type="button" data-step="1" aria-label="ベイクド・アルル 北海道フロマージュタルト 4号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-18.jpg" data-demo-key="p:xmas-18" alt="五洋食品産業 4種のパーティーアソート 6号(4種×3個)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">五洋食品産業 4種のパーティーアソート 6号(4種×3個)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,435<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">モンブラン・ガトーショコラ・チーズ・ベリームースの12カット。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="五洋食品産業 4種のパーティーアソート 6号(4種×3個)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="五洋食品産業 4種のパーティーアソート 6号(4種×3個)の数量">
+          <button type="button" data-step="1" aria-label="五洋食品産業 4種のパーティーアソート 6号(4種×3個)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <h3 style="margin-top:26px;border-left:4px solid var(--accent);padding-left:10px">選べる楽しいケーキ</h3>
+  <ul class="shinagaki">
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-19.jpg" data-demo-key="p:xmas-19" alt="ヤマザキ クリスマス ペアケーキ(約11cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス ペアケーキ(約11cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,651<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">苺ジャムケーキとチョコケーキ、2つの味が楽しめるペア。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス ペアケーキ(約11cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス ペアケーキ(約11cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス ペアケーキ(約11cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-20.jpg" data-demo-key="p:xmas-20" alt="ヤマザキ クリスマス ショートケーキ詰合せ6号(直径約18cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス ショートケーキ詰合せ6号(直径約18cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,759<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">6種の味が楽しめるパーティー向け詰合せ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス ショートケーキ詰合せ6号(直径約18cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス ショートケーキ詰合せ6号(直径約18cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス ショートケーキ詰合せ6号(直径約18cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-21.jpg" data-demo-key="p:xmas-21" alt="ヤマザキ クリスマス 4種のアソートケーキ6号(直径約18cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 4種のアソートケーキ6号(直径約18cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,083<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">苺ショート・チョコ・チーズスフレ・マロンの4種アソート。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 4種のアソートケーキ6号(直径約18cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 4種のアソートケーキ6号(直径約18cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 4種のアソートケーキ6号(直径約18cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-22.jpg" data-demo-key="p:xmas-22" alt="ヤマザキ クリスマス 苺とチョコの切れてるケーキ6号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 苺とチョコの切れてるケーキ6号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,299<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">苺ショートとチョコ、2つの味のカット済みケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 苺とチョコの切れてるケーキ6号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 苺とチョコの切れてるケーキ6号の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 苺とチョコの切れてるケーキ6号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-23.jpg" data-demo-key="p:xmas-23" alt="ヤマザキ クリスマス パーティーアソートケーキ6号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス パーティーアソートケーキ6号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,327<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">クリスマスらしい飾り付けの6種アソート。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス パーティーアソートケーキ6号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス パーティーアソートケーキ6号の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス パーティーアソートケーキ6号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-24.jpg" data-demo-key="p:xmas-24" alt="ヤマザキ クリスマス 北海道産チーズのスフレケーキ5号(直径約15cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 北海道産チーズのスフレケーキ5号(直径約15cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,923<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">北海道産チーズを使用したスフレチーズケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 北海道産チーズのスフレケーキ5号(直径約15cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 北海道産チーズのスフレケーキ5号(直径約15cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 北海道産チーズのスフレケーキ5号(直径約15cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-25.jpg" data-demo-key="p:xmas-25" alt="ヤマザキ クリスマス 宇治抹茶ケーキ4号(直径約13cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 宇治抹茶ケーキ4号(直径約13cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,543<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">宇治抹茶を使用した抹茶づくしのケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 宇治抹茶ケーキ4号(直径約13cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 宇治抹茶ケーキ4号(直径約13cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 宇治抹茶ケーキ4号(直径約13cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-26.jpg" data-demo-key="p:xmas-26" alt="フジパン モンブラン4号(直径約12cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">フジパン モンブラン4号(直径約12cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,219<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">マロンホイップと渋皮付き栗のモンブラン。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="フジパン モンブラン4号(直径約12cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="フジパン モンブラン4号(直径約12cm)の数量">
+          <button type="button" data-step="1" aria-label="フジパン モンブラン4号(直径約12cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-27.jpg" data-demo-key="p:xmas-27" alt="ヤマザキ不二家 クリスマス プチケーキアソート(12種)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ不二家 クリスマス プチケーキアソート(12種)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,327<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">12種類のプチサイズケーキの詰合せ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ不二家 クリスマス プチケーキアソート(12種)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ不二家 クリスマス プチケーキアソート(12種)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ不二家 クリスマス プチケーキアソート(12種)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-28.jpg" data-demo-key="p:xmas-28" alt="不二家 クリスマス 切れてるミルフィーユ(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">不二家 クリスマス 切れてるミルフィーユ</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,003<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">カスタードホイップをサンドしたカット済みミルフィーユ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="不二家 クリスマス 切れてるミルフィーユを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="不二家 クリスマス 切れてるミルフィーユの数量">
+          <button type="button" data-step="1" aria-label="不二家 クリスマス 切れてるミルフィーユを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-29.jpg" data-demo-key="p:xmas-29" alt="ヤマザキ クリスマス 糖質を抑えた苺のケーキ4号(直径約13cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 糖質を抑えた苺のケーキ4号(直径約13cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,787<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">糖質58%オフ(日本食品標準成分表2020比)の苺ケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 糖質を抑えた苺のケーキ4号(直径約13cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 糖質を抑えた苺のケーキ4号(直径約13cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 糖質を抑えた苺のケーキ4号(直径約13cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-30.jpg" data-demo-key="p:xmas-30" alt="ヤマザキ クリスマス 糖質を抑えたバスク風チーズケーキ4号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 糖質を抑えたバスク風チーズケーキ4号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,679<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">糖質37%オフのバスク風チーズケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 糖質を抑えたバスク風チーズケーキ4号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 糖質を抑えたバスク風チーズケーキ4号の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 糖質を抑えたバスク風チーズケーキ4号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <h3 style="margin-top:26px;border-left:4px solid var(--accent);padding-left:10px">クリスマスケーキ</h3>
+  <ul class="shinagaki">
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-31.jpg" data-demo-key="p:xmas-31" alt="ヤマザキ クリスマス 生ケーキ4号(直径約13cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 生ケーキ4号(直径約13cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,571<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">口どけの良いスポンジと苺の定番生ケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 生ケーキ4号(直径約13cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 生ケーキ4号(直径約13cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 生ケーキ4号(直径約13cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-32.jpg" data-demo-key="p:xmas-32" alt="ヤマザキ クリスマス 生ケーキ5号(直径約15cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 生ケーキ5号(直径約15cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,543<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">口どけの良いスポンジと苺の定番生ケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 生ケーキ5号(直径約15cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 生ケーキ5号(直径約15cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 生ケーキ5号(直径約15cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-33.jpg" data-demo-key="p:xmas-33" alt="ヤマザキ クリスマス 生ケーキ6号(直径約18cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 生ケーキ6号(直径約18cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,975<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">口どけの良いスポンジと苺の定番生ケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 生ケーキ6号(直径約18cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 生ケーキ6号(直径約18cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 生ケーキ6号(直径約18cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-34.jpg" data-demo-key="p:xmas-34" alt="ヤマザキ クリスマス 生ケーキ7号(直径約21cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 生ケーキ7号(直径約21cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,731<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">大人数で楽しめる特大サイズの生ケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 生ケーキ7号(直径約21cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 生ケーキ7号(直径約21cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 生ケーキ7号(直径約21cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-35.jpg" data-demo-key="p:xmas-35" alt="ヤマザキ クリスマス 生チョコケーキ4号(直径約13cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 生チョコケーキ4号(直径約13cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,571<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">チョコチップとチョコクリームのチョコづくしケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 生チョコケーキ4号(直径約13cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 生チョコケーキ4号(直径約13cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 生チョコケーキ4号(直径約13cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-36.jpg" data-demo-key="p:xmas-36" alt="ヤマザキ クリスマス 生チョコケーキ5号(直径約15cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 生チョコケーキ5号(直径約15cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,543<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">チョコチップとチョコクリームのチョコづくしケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 生チョコケーキ5号(直径約15cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 生チョコケーキ5号(直径約15cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 生チョコケーキ5号(直径約15cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-37.jpg" data-demo-key="p:xmas-37" alt="ヤマザキ クリスマス 生チョコケーキ6号(直径約18cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 生チョコケーキ6号(直径約18cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,975<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">チョコチップとチョコクリームのチョコづくしケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 生チョコケーキ6号(直径約18cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 生チョコケーキ6号(直径約18cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 生チョコケーキ6号(直径約18cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-38.jpg" data-demo-key="p:xmas-38" alt="ヤマザキ クリスマス 苺サンド4号(直径約13cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 苺サンド4号(直径約13cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,759<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">角切り苺と苺プレザーブをサンドした乳風味豊かなケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 苺サンド4号(直径約13cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 苺サンド4号(直径約13cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 苺サンド4号(直径約13cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-39.jpg" data-demo-key="p:xmas-39" alt="ヤマザキ クリスマス 苺サンド5号(直径約15cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 苺サンド5号(直径約15cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,515<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">角切り苺と苺プレザーブをサンドした乳風味豊かなケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 苺サンド5号(直径約15cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 苺サンド5号(直径約15cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 苺サンド5号(直径約15cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-40.jpg" data-demo-key="p:xmas-40" alt="ヤマザキ クリスマス 苺サンド6号(直径約18cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス 苺サンド6号(直径約18cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">5,271<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">角切り苺と苺プレザーブをサンドした乳風味豊かなケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス 苺サンド6号(直径約18cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス 苺サンド6号(直径約18cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス 苺サンド6号(直径約18cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-41.jpg" data-demo-key="p:xmas-41" alt="フジパン アンパンマンケーキ5号(直径約15cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">フジパン アンパンマンケーキ5号(直径約15cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,623<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">切り取って使えるコースター付き。お子様に人気のキャラクターケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="フジパン アンパンマンケーキ5号(直径約15cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="フジパン アンパンマンケーキ5号(直径約15cm)の数量">
+          <button type="button" data-step="1" aria-label="フジパン アンパンマンケーキ5号(直径約15cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-42.jpg" data-demo-key="p:xmas-42" alt="シナモロール ふわふわ雲の上のクリスマスパーティー4号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">シナモロール ふわふわ雲の上のクリスマスパーティー4号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,299<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">オリジナルステッカー1枚付き。数量限定。お渡し日12/23〜25。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="シナモロール ふわふわ雲の上のクリスマスパーティー4号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="シナモロール ふわふわ雲の上のクリスマスパーティー4号の数量">
+          <button type="button" data-step="1" aria-label="シナモロール ふわふわ雲の上のクリスマスパーティー4号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-43.jpg" data-demo-key="p:xmas-43" alt="ヤマザキ おうちで飾ろう!クリスマスケーキ5号(直径約15cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ おうちで飾ろう!クリスマスケーキ5号(直径約15cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,139<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">お家で自由に飾り付けできるシンプルなケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ おうちで飾ろう!クリスマスケーキ5号(直径約15cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ おうちで飾ろう!クリスマスケーキ5号(直径約15cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ おうちで飾ろう!クリスマスケーキ5号(直径約15cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-44.jpg" data-demo-key="p:xmas-44" alt="ヤマザキ クリスマス ホワイトケーキ6号(直径約18cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス ホワイトケーキ6号(直径約18cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,787<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">あんずジャムを2層サンドした、どこか懐かしいバタークリームケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス ホワイトケーキ6号(直径約18cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス ホワイトケーキ6号(直径約18cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス ホワイトケーキ6号(直径約18cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-45.jpg" data-demo-key="p:xmas-45" alt="ヤマザキ クリスマス チョコケーキ6号(直径約18cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ クリスマス チョコケーキ6号(直径約18cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,787<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">コーヒー風味クリームのどこか懐かしいチョコケーキ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ クリスマス チョコケーキ6号(直径約18cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ クリスマス チョコケーキ6号(直径約18cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ クリスマス チョコケーキ6号(直径約18cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-46.jpg" data-demo-key="p:xmas-46" alt="ヤマザキ シュトーレン(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ シュトーレン</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,275<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ヨーロッパの伝統的なクリスマス菓子。ラム酒漬けフルーツ入り。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ シュトーレンを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ シュトーレンの数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ シュトーレンを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-47.jpg" data-demo-key="p:xmas-47" alt="ヤマザキ シュトーレン(マジパン入り)(約22.5cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ シュトーレン(マジパン入り)(約22.5cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,787<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ラム酒漬けフルーツとナッツを練り込み、マジパンを入れた期間限定品。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ シュトーレン(マジパン入り)(約22.5cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ シュトーレン(マジパン入り)(約22.5cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ シュトーレン(マジパン入り)(約22.5cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-48.jpg" data-demo-key="p:xmas-48" alt="ヤマザキ たっぷりりんごのアップルパイ(縦約13cm横約24cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ヤマザキ たっぷりりんごのアップルパイ(縦約13cm横約24cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,923<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">カスタードと蜜漬けりんごを重ねて焼き上げたアップルパイ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ヤマザキ たっぷりりんごのアップルパイ(縦約13cm横約24cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ヤマザキ たっぷりりんごのアップルパイ(縦約13cm横約24cm)の数量">
+          <button type="button" data-step="1" aria-label="ヤマザキ たっぷりりんごのアップルパイ(縦約13cm横約24cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <h3 style="margin-top:26px;border-left:4px solid var(--accent);padding-left:10px">アイスケーキ&アイスクリーム・冷凍食品</h3>
+  <p class="field-note">冷凍でのお渡しとなります。</p>
+  <ul class="shinagaki">
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-49.jpg" data-demo-key="p:xmas-49" alt="オハヨー乳業 ブリュレギフト(104ml×4個+100ml×8個)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">オハヨー乳業 ブリュレギフト(104ml×4個+100ml×8個)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">5,055<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">BRULEE MILKとALMOND CARAMEL計8個の詰合せ。冷凍でのお渡し。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="オハヨー乳業 ブリュレギフト(104ml×4個+100ml×8個)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="オハヨー乳業 ブリュレギフト(104ml×4個+100ml×8個)の数量">
+          <button type="button" data-step="1" aria-label="オハヨー乳業 ブリュレギフト(104ml×4個+100ml×8個)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-50.jpg" data-demo-key="p:xmas-50" alt="オハヨー乳業 生チョコ&ベリーのアイスクリームケーキ5号(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">オハヨー乳業 生チョコ&ベリーのアイスクリームケーキ5号</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,407<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">濃厚ミルクアイスに苺とラズベリーのソース。冷凍でのお渡し。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="オハヨー乳業 生チョコ&ベリーのアイスクリームケーキ5号を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="オハヨー乳業 生チョコ&ベリーのアイスクリームケーキ5号の数量">
+          <button type="button" data-step="1" aria-label="オハヨー乳業 生チョコ&ベリーのアイスクリームケーキ5号を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-51.jpg" data-demo-key="p:xmas-51" alt="オハヨー乳業 プチアイスボール(10ml×54個)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">オハヨー乳業 プチアイスボール(10ml×54個)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,003<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">バニラ・キャラメル・あまおう苺の個包装プチアイス。冷凍でのお渡し。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="オハヨー乳業 プチアイスボール(10ml×54個)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="オハヨー乳業 プチアイスボール(10ml×54個)の数量">
+          <button type="button" data-step="1" aria-label="オハヨー乳業 プチアイスボール(10ml×54個)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-52.jpg" data-demo-key="p:xmas-52" alt="オハヨー乳業 ジャージー牛乳アイスクリームギフト(120ml×10個)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">オハヨー乳業 ジャージー牛乳アイスクリームギフト(120ml×10個)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,543<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">希少なジャージー牛の生乳を使ったプレミアムアイス。冷凍。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="オハヨー乳業 ジャージー牛乳アイスクリームギフト(120ml×10個)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="オハヨー乳業 ジャージー牛乳アイスクリームギフト(120ml×10個)の数量">
+          <button type="button" data-step="1" aria-label="オハヨー乳業 ジャージー牛乳アイスクリームギフト(120ml×10個)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-53.jpg" data-demo-key="p:xmas-53" alt="銀座千疋屋 ストロベリーアイスケーキ(約11cm角)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">銀座千疋屋 ストロベリーアイスケーキ(約11cm角)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,968<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">バニラアイスにストロベリーソースをミックス。冷凍でのお渡し。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="銀座千疋屋 ストロベリーアイスケーキ(約11cm角)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="銀座千疋屋 ストロベリーアイスケーキ(約11cm角)の数量">
+          <button type="button" data-step="1" aria-label="銀座千疋屋 ストロベリーアイスケーキ(約11cm角)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-54.jpg" data-demo-key="p:xmas-54" alt="帝国ホテル 海老のマカロニグラタン 200g(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">帝国ホテル 海老のマカロニグラタン 200g</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">679<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">海老の旨みが詰まったホワイトソースのグラタン。冷凍食品。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="帝国ホテル 海老のマカロニグラタン 200gを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="帝国ホテル 海老のマカロニグラタン 200gの数量">
+          <button type="button" data-step="1" aria-label="帝国ホテル 海老のマカロニグラタン 200gを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-55.jpg" data-demo-key="p:xmas-55" alt="帝国ホテル 海老のドリア 190g(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">帝国ホテル 海老のドリア 190g</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">679<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">海老のエキスを加えたホワイトソースのドリア。冷凍食品。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="帝国ホテル 海老のドリア 190gを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="帝国ホテル 海老のドリア 190gの数量">
+          <button type="button" data-step="1" aria-label="帝国ホテル 海老のドリア 190gを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <h3 style="margin-top:26px;border-left:4px solid var(--accent);padding-left:10px">ペット用ケーキ</h3>
+  <p class="field-note">全て犬猫用です。犬猫以外には与えないでください。※消費税10%</p>
+  <ul class="shinagaki">
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-56.jpg" data-demo-key="p:xmas-56" alt="ジャベル 犬猫用ペコちゃんのショートケーキ(約9cm 3号)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ジャベル 犬猫用ペコちゃんのショートケーキ(約9cm 3号)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,288<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ペット用ケーキ。犬猫以外には与えないでください。※消費税10%</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ジャベル 犬猫用ペコちゃんのショートケーキ(約9cm 3号)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ジャベル 犬猫用ペコちゃんのショートケーキ(約9cm 3号)の数量">
+          <button type="button" data-step="1" aria-label="ジャベル 犬猫用ペコちゃんのショートケーキ(約9cm 3号)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-57.jpg" data-demo-key="p:xmas-57" alt="ジャベル 犬猫用3種のプチケーキアソート(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ジャベル 犬猫用3種のプチケーキアソート</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,408<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">食べやすい一口サイズのペット用プチケーキ3種。※消費税10%</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ジャベル 犬猫用3種のプチケーキアソートを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ジャベル 犬猫用3種のプチケーキアソートの数量">
+          <button type="button" data-step="1" aria-label="ジャベル 犬猫用3種のプチケーキアソートを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-58.jpg" data-demo-key="p:xmas-58" alt="ジャベル 犬猫用笛吹サンタのブッシュドノエル(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ジャベル 犬猫用笛吹サンタのブッシュドノエル</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,628<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">切り株タイプのペット用ブッシュドノエル。※消費税10%</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ジャベル 犬猫用笛吹サンタのブッシュドノエルを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ジャベル 犬猫用笛吹サンタのブッシュドノエルの数量">
+          <button type="button" data-step="1" aria-label="ジャベル 犬猫用笛吹サンタのブッシュドノエルを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <h3 style="margin-top:26px;border-left:4px solid var(--accent);padding-left:10px">北海道産小麦使用 天使のもっちりピザ(焼きたて)</h3>
+  <p class="field-note">取扱店舗限定・ご予約締切12/20(日)18時・お渡し12/23〜25 店頭のみ</p>
+  <ul class="shinagaki">
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-01-m.jpg" data-demo-key="p:pizza-01-m" alt="ペパロニサラミピザ Mサイズ(約28cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ペパロニサラミピザ Mサイズ(約28cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">862<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ペパロニサラミピザ Mサイズ(約28cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ペパロニサラミピザ Mサイズ(約28cm)の数量">
+          <button type="button" data-step="1" aria-label="ペパロニサラミピザ Mサイズ(約28cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-01-ll.jpg" data-demo-key="p:pizza-01-ll" alt="ペパロニサラミピザ LLサイズ(約35cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ペパロニサラミピザ LLサイズ(約35cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ペパロニサラミピザ LLサイズ(約35cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ペパロニサラミピザ LLサイズ(約35cm)の数量">
+          <button type="button" data-step="1" aria-label="ペパロニサラミピザ LLサイズ(約35cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-02-m.jpg" data-demo-key="p:pizza-02-m" alt="じゃがマヨベーコンピザ Mサイズ(約28cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">じゃがマヨベーコンピザ Mサイズ(約28cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">862<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="じゃがマヨベーコンピザ Mサイズ(約28cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="じゃがマヨベーコンピザ Mサイズ(約28cm)の数量">
+          <button type="button" data-step="1" aria-label="じゃがマヨベーコンピザ Mサイズ(約28cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-02-ll.jpg" data-demo-key="p:pizza-02-ll" alt="じゃがマヨベーコンピザ LLサイズ(約35cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">じゃがマヨベーコンピザ LLサイズ(約35cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="じゃがマヨベーコンピザ LLサイズ(約35cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="じゃがマヨベーコンピザ LLサイズ(約35cm)の数量">
+          <button type="button" data-step="1" aria-label="じゃがマヨベーコンピザ LLサイズ(約35cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-03-m.jpg" data-demo-key="p:pizza-03-m" alt="ツナマヨピザ Mサイズ(約28cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ツナマヨピザ Mサイズ(約28cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">862<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ツナマヨピザ Mサイズ(約28cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ツナマヨピザ Mサイズ(約28cm)の数量">
+          <button type="button" data-step="1" aria-label="ツナマヨピザ Mサイズ(約28cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-03-ll.jpg" data-demo-key="p:pizza-03-ll" alt="ツナマヨピザ LLサイズ(約35cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ツナマヨピザ LLサイズ(約35cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ツナマヨピザ LLサイズ(約35cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ツナマヨピザ LLサイズ(約35cm)の数量">
+          <button type="button" data-step="1" aria-label="ツナマヨピザ LLサイズ(約35cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-04-m.jpg" data-demo-key="p:pizza-04-m" alt="ガーリックトマトピザ Mサイズ(約28cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ガーリックトマトピザ Mサイズ(約28cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">862<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ガーリックトマトピザ Mサイズ(約28cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ガーリックトマトピザ Mサイズ(約28cm)の数量">
+          <button type="button" data-step="1" aria-label="ガーリックトマトピザ Mサイズ(約28cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-04-ll.jpg" data-demo-key="p:pizza-04-ll" alt="ガーリックトマトピザ LLサイズ(約35cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ガーリックトマトピザ LLサイズ(約35cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ガーリックトマトピザ LLサイズ(約35cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ガーリックトマトピザ LLサイズ(約35cm)の数量">
+          <button type="button" data-step="1" aria-label="ガーリックトマトピザ LLサイズ(約35cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-05-m.jpg" data-demo-key="p:pizza-05-m" alt="ミートMIXピザ Mサイズ(約28cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ミートMIXピザ Mサイズ(約28cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">862<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ミートMIXピザ Mサイズ(約28cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ミートMIXピザ Mサイズ(約28cm)の数量">
+          <button type="button" data-step="1" aria-label="ミートMIXピザ Mサイズ(約28cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-05-ll.jpg" data-demo-key="p:pizza-05-ll" alt="ミートMIXピザ LLサイズ(約35cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ミートMIXピザ LLサイズ(約35cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ミートMIXピザ LLサイズ(約35cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ミートMIXピザ LLサイズ(約35cm)の数量">
+          <button type="button" data-step="1" aria-label="ミートMIXピザ LLサイズ(約35cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-06-m.jpg" data-demo-key="p:pizza-06-m" alt="ほうれん草ベーコンピザ Mサイズ(約28cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ほうれん草ベーコンピザ Mサイズ(約28cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">862<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ほうれん草ベーコンピザ Mサイズ(約28cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ほうれん草ベーコンピザ Mサイズ(約28cm)の数量">
+          <button type="button" data-step="1" aria-label="ほうれん草ベーコンピザ Mサイズ(約28cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-06-ll.jpg" data-demo-key="p:pizza-06-ll" alt="ほうれん草ベーコンピザ LLサイズ(約35cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ほうれん草ベーコンピザ LLサイズ(約35cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ほうれん草ベーコンピザ LLサイズ(約35cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ほうれん草ベーコンピザ LLサイズ(約35cm)の数量">
+          <button type="button" data-step="1" aria-label="ほうれん草ベーコンピザ LLサイズ(約35cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-07-m.jpg" data-demo-key="p:pizza-07-m" alt="ジャーマンポテトピザ Mサイズ(約28cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ジャーマンポテトピザ Mサイズ(約28cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">862<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ジャーマンポテトピザ Mサイズ(約28cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ジャーマンポテトピザ Mサイズ(約28cm)の数量">
+          <button type="button" data-step="1" aria-label="ジャーマンポテトピザ Mサイズ(約28cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-07-ll.jpg" data-demo-key="p:pizza-07-ll" alt="ジャーマンポテトピザ LLサイズ(約35cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ジャーマンポテトピザ LLサイズ(約35cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ジャーマンポテトピザ LLサイズ(約35cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ジャーマンポテトピザ LLサイズ(約35cm)の数量">
+          <button type="button" data-step="1" aria-label="ジャーマンポテトピザ LLサイズ(約35cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-08-m.jpg" data-demo-key="p:pizza-08-m" alt="マルゲリータピザ Mサイズ(約28cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">マルゲリータピザ Mサイズ(約28cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">862<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="マルゲリータピザ Mサイズ(約28cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="マルゲリータピザ Mサイズ(約28cm)の数量">
+          <button type="button" data-step="1" aria-label="マルゲリータピザ Mサイズ(約28cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-08-ll.jpg" data-demo-key="p:pizza-08-ll" alt="マルゲリータピザ LLサイズ(約35cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">マルゲリータピザ LLサイズ(約35cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="マルゲリータピザ LLサイズ(約35cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="マルゲリータピザ LLサイズ(約35cm)の数量">
+          <button type="button" data-step="1" aria-label="マルゲリータピザ LLサイズ(約35cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-09-m.jpg" data-demo-key="p:pizza-09-m" alt="照焼チキンピザ Mサイズ(約28cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">照焼チキンピザ Mサイズ(約28cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">862<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="照焼チキンピザ Mサイズ(約28cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="照焼チキンピザ Mサイズ(約28cm)の数量">
+          <button type="button" data-step="1" aria-label="照焼チキンピザ Mサイズ(約28cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-09-ll.jpg" data-demo-key="p:pizza-09-ll" alt="照焼チキンピザ LLサイズ(約35cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">照焼チキンピザ LLサイズ(約35cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="照焼チキンピザ LLサイズ(約35cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="照焼チキンピザ LLサイズ(約35cm)の数量">
+          <button type="button" data-step="1" aria-label="照焼チキンピザ LLサイズ(約35cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-10-m.jpg" data-demo-key="p:pizza-10-m" alt="グラタンピザ(ベーコン) Mサイズ(約28cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">グラタンピザ(ベーコン) Mサイズ(約28cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">862<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="グラタンピザ(ベーコン) Mサイズ(約28cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="グラタンピザ(ベーコン) Mサイズ(約28cm)の数量">
+          <button type="button" data-step="1" aria-label="グラタンピザ(ベーコン) Mサイズ(約28cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-10-ll.jpg" data-demo-key="p:pizza-10-ll" alt="グラタンピザ(ベーコン) LLサイズ(約35cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">グラタンピザ(ベーコン) LLサイズ(約35cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="グラタンピザ(ベーコン) LLサイズ(約35cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="グラタンピザ(ベーコン) LLサイズ(約35cm)の数量">
+          <button type="button" data-step="1" aria-label="グラタンピザ(ベーコン) LLサイズ(約35cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-11-m.jpg" data-demo-key="p:pizza-11-m" alt="和風もちピザ Mサイズ(約28cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">和風もちピザ Mサイズ(約28cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">862<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="和風もちピザ Mサイズ(約28cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="和風もちピザ Mサイズ(約28cm)の数量">
+          <button type="button" data-step="1" aria-label="和風もちピザ Mサイズ(約28cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-11-ll.jpg" data-demo-key="p:pizza-11-ll" alt="和風もちピザ LLサイズ(約35cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">和風もちピザ LLサイズ(約35cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="和風もちピザ LLサイズ(約35cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="和風もちピザ LLサイズ(約35cm)の数量">
+          <button type="button" data-step="1" aria-label="和風もちピザ LLサイズ(約35cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-12-m.jpg" data-demo-key="p:pizza-12-m" alt="ねぎマヨチャーシューピザ Mサイズ(約28cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ねぎマヨチャーシューピザ Mサイズ(約28cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">862<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ねぎマヨチャーシューピザ Mサイズ(約28cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ねぎマヨチャーシューピザ Mサイズ(約28cm)の数量">
+          <button type="button" data-step="1" aria-label="ねぎマヨチャーシューピザ Mサイズ(約28cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/pizza-12-ll.jpg" data-demo-key="p:pizza-12-ll" alt="ねぎマヨチャーシューピザ LLサイズ(約35cm)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">ねぎマヨチャーシューピザ LLサイズ(約35cm)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px"></p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="ねぎマヨチャーシューピザ LLサイズ(約35cm)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="ねぎマヨチャーシューピザ LLサイズ(約35cm)の数量">
+          <button type="button" data-step="1" aria-label="ねぎマヨチャーシューピザ LLサイズ(約35cm)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <h3 style="margin-top:26px;border-left:4px solid var(--accent);padding-left:10px">クリスマスパーティーメニュー(オードブル・チキン・お寿司)</h3>
+  <p class="field-note">ご予約締切12/20(日)18時・お渡し12/23〜25 店頭のみ ※消費期限は当日</p>
+  <ul class="shinagaki">
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-83.jpg" data-demo-key="p:xmas-83" alt="三河屋特選 国産ローストチキンレッグ 1本(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 国産ローストチキンレッグ 1本</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">917<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">国産鶏の溢れる旨み。クリスマスの主役。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 国産ローストチキンレッグ 1本を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 国産ローストチキンレッグ 1本の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 国産ローストチキンレッグ 1本を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-84.jpg" data-demo-key="p:xmas-84" alt="三河屋特選 国産ローストチキンレッグ 2本(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 国産ローストチキンレッグ 2本</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,834<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">国産鶏の溢れる旨み。ご家族でどうぞ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 国産ローストチキンレッグ 2本を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 国産ローストチキンレッグ 2本の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 国産ローストチキンレッグ 2本を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-85.jpg" data-demo-key="p:xmas-85" alt="三河屋特選 ローストチキンレッグ(中国産) 1本(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 ローストチキンレッグ(中国産) 1本</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">530<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">香ばしくジューシー。かぶりつく美味しさを手軽に。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 ローストチキンレッグ(中国産) 1本を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 ローストチキンレッグ(中国産) 1本の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 ローストチキンレッグ(中国産) 1本を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-86.jpg" data-demo-key="p:xmas-86" alt="三河屋特選 ローストチキンレッグ(中国産) 2本(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 ローストチキンレッグ(中国産) 2本</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,059<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">香ばしくジューシー。かぶりつく美味しさを手軽に。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 ローストチキンレッグ(中国産) 2本を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 ローストチキンレッグ(中国産) 2本の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 ローストチキンレッグ(中国産) 2本を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-87.jpg" data-demo-key="p:xmas-87" alt="三河屋特選 サクサクチキン 5本(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 サクサクチキン 5本</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,350<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">衣のサクサク感と鶏の旨みがたまらないプレーン味。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 サクサクチキン 5本を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 サクサクチキン 5本の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 サクサクチキン 5本を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-88.jpg" data-demo-key="p:xmas-88" alt="三河屋特選 骨なしフライドチキン 10個(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 骨なしフライドチキン 10個</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,707<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">骨なしでパクッと食べやすい、笑顔弾むパーティーの味。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 骨なしフライドチキン 10個を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 骨なしフライドチキン 10個の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 骨なしフライドチキン 10個を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-89.jpg" data-demo-key="p:xmas-89" alt="三河屋特選 フライドチキンドラムサイセット 10個(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 フライドチキンドラムサイセット 10個</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,139<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ガツンと本格派。部位ごとの旨みをみんなでシェア。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 フライドチキンドラムサイセット 10個を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 フライドチキンドラムサイセット 10個の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 フライドチキンドラムサイセット 10個を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-90.jpg" data-demo-key="p:xmas-90" alt="三河屋特選 旨唐揚げ 1000g(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 旨唐揚げ 1000g</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,139<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ジューシーな旨みが大盛りの定番人気。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 旨唐揚げ 1000gを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 旨唐揚げ 1000gの数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 旨唐揚げ 1000gを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-91.jpg" data-demo-key="p:xmas-91" alt="三河屋特選 旨竜田揚げ 1000g(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 旨竜田揚げ 1000g</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,139<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">サクッと軽やかな、いくらでも手が伸びるやみつきの味。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 旨竜田揚げ 1000gを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 旨竜田揚げ 1000gの数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 旨竜田揚げ 1000gを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-92.jpg" data-demo-key="p:xmas-92" alt="三河屋特選 山盛りポテト 800g(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 山盛りポテト 800g</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">1,080<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">パーティーに欠かせない山盛り人気者。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 山盛りポテト 800gを減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 山盛りポテト 800gの数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 山盛りポテト 800gを増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-93.jpg" data-demo-key="p:xmas-93" alt="三河屋特選 ごちそうオードブルL(3〜4人用)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 ごちそうオードブルL(3〜4人用)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,299<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">鶏モモ唐揚・春巻・ローストカットチキン・エビマヨ等の大満足の一皿。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 ごちそうオードブルL(3〜4人用)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 ごちそうオードブルL(3〜4人用)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 ごちそうオードブルL(3〜4人用)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-94.jpg" data-demo-key="p:xmas-94" alt="三河屋特選 ごちそうオードブルM(2〜3人用)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 ごちそうオードブルM(2〜3人用)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">3,219<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">少人数の特別な夜に。人気アイテムをギュッと詰めた一皿。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 ごちそうオードブルM(2〜3人用)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 ごちそうオードブルM(2〜3人用)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 ごちそうオードブルM(2〜3人用)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-95.jpg" data-demo-key="p:xmas-95" alt="三河屋特選 中華DELIオードブル(3〜4人用)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 中華DELIオードブル(3〜4人用)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,299<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">本格中華で聖夜をおしゃれに。大人のごちそう。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 中華DELIオードブル(3〜4人用)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 中華DELIオードブル(3〜4人用)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 中華DELIオードブル(3〜4人用)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-96.jpg" data-demo-key="p:xmas-96" alt="三河屋特選 特上握り寿司36貫(3〜4人用)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 特上握り寿司36貫(3〜4人用)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">4,299<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">マグロ・サーモン・イクラ・ズワイガニ等の厳選ネタ。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 特上握り寿司36貫(3〜4人用)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 特上握り寿司36貫(3〜4人用)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 特上握り寿司36貫(3〜4人用)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-97.jpg" data-demo-key="p:xmas-97" alt="三河屋特選 特上握り寿司48貫(4〜5人用)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 特上握り寿司48貫(4〜5人用)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">5,379<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">マグロ・サーモン・イクラ・ズワイガニ等の厳選ネタ。※写真は36貫のものです。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 特上握り寿司48貫(4〜5人用)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 特上握り寿司48貫(4〜5人用)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 特上握り寿司48貫(4〜5人用)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-98.jpg" data-demo-key="p:xmas-98" alt="三河屋特選 豪華肉寿司盛合せ(2〜3人用)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 豪華肉寿司盛合せ(2〜3人用)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,700<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">ローストビーフ握り・牛しぐれ煮巻など、お肉とシャリの贅沢。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 豪華肉寿司盛合せ(2〜3人用)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 豪華肉寿司盛合せ(2〜3人用)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 豪華肉寿司盛合せ(2〜3人用)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-99.jpg" data-demo-key="p:xmas-99" alt="三河屋特選 手毬寿司(2〜3人用)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 手毬寿司(2〜3人用)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,700<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">まるで宝石。見て可愛く食べて美味しい上品な逸品。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 手毬寿司(2〜3人用)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 手毬寿司(2〜3人用)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 手毬寿司(2〜3人用)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+    <li class="shinagaki__item">
+      <img src="assets/img/products/xmas-100.jpg" data-demo-key="p:xmas-100" alt="三河屋特選 助六寿司盛合せ(3〜4人用)(実物写真)" width="128" height="128" loading="lazy">
+      <div>
+        <h3 class="shinagaki__name"><a href="#" target="_blank" rel="noopener">三河屋特選 助六寿司盛合せ(3〜4人用)</a> <small style="font-weight:400;font-size:.75rem;color:var(--sumi-soft)">(押すと大きな写真)</small></h3>
+        <p class="shinagaki__price">2,463<small>円(税込)</small></p>
+        <p class="field-note" style="margin:2px 0 6px">太巻寿司・サラダ巻・稲荷寿司・玉子握り。伝統の味。</p>
+        <div class="qty-stepper">
+          <button type="button" data-step="-1" aria-label="三河屋特選 助六寿司盛合せ(3〜4人用)を減らす">−</button>
+          <input type="number" value="0" min="0" max="20" aria-label="三河屋特選 助六寿司盛合せ(3〜4人用)の数量">
+          <button type="button" data-step="1" aria-label="三河屋特選 助六寿司盛合せ(3〜4人用)を増やす">＋</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>2. お受取店舗</h2>
+  <div class="shop-tabs" role="tablist" aria-label="地域で絞り込み">
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="true" data-region="all">全店（13）</button>
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="false" data-region="愛知">愛知（8）</button>
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="false" data-region="岐阜">岐阜（4）</button>
+    <button type="button" class="shop-tab" data-live role="tab" aria-selected="false" data-region="滋賀">滋賀（1）</button>
+  </div>
+  <div class="slot-grid shop-grid">
+    <button type="button" class="shop-btn" aria-pressed="true" data-region="愛知"><span>ビッグリブ小牧店</span><small>小牧市大字間々原新田…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>ビッグリブ安城店</span><small>安城市三河安城町2丁目…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 稲熊店</span><small>岡崎市稲熊町字後田…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 上飯田店</span><small>名古屋市北区上飯田通…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 犬山店</span><small>犬山市大字五郎丸…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya御器所松風店</span><small>名古屋市昭和区明月町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya 西尾一色店</span><small>西尾市一色町一色…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="愛知"><span>Mikawaya ラピオ小牧店</span><small>小牧市小牧三丁目…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>Mikawaya 静里店</span><small>岐阜県大垣市静里町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>Mikawaya 船町店</span><small>岐阜県大垣市本今町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>パワーズ大井店</span><small>岐阜県大垣市大井…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="岐阜"><span>サンマート土岐口店</span><small>岐阜県土岐市土岐津町…</small></button>
+    <button type="button" class="shop-btn" aria-pressed="false" data-region="滋賀"><span>パワーズ高月店</span><small>滋賀県長浜市高月町…</small></button>
+  </div>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>3. お受取日（カレンダーから選択）</h2>
+  <div class="cal-wrap"><div class="cal"><p class="cal__title">2026年12月</p><div class="cal__grid"><span class="cal__dow is-sun">日</span><span class="cal__dow">月</span><span class="cal__dow">火</span><span class="cal__dow">水</span><span class="cal__dow">木</span><span class="cal__dow">金</span><span class="cal__dow is-sat">土</span><span class="cal__empty"></span><span class="cal__empty"></span><span class="cal__day cal__day--off">1</span><span class="cal__day cal__day--off">2</span><span class="cal__day cal__day--off">3</span><span class="cal__day cal__day--off">4</span><span class="cal__day cal__day--off">5</span><span class="cal__day cal__day--off">6</span><span class="cal__day cal__day--off">7</span><span class="cal__day cal__day--off">8</span><span class="cal__day cal__day--off">9</span><span class="cal__day cal__day--off">10</span><span class="cal__day cal__day--off">11</span><span class="cal__day cal__day--off">12</span><span class="cal__day cal__day--off">13</span><span class="cal__day cal__day--off">14</span><span class="cal__day cal__day--off">15</span><span class="cal__day cal__day--off">16</span><span class="cal__day cal__day--off">17</span><span class="cal__day cal__day--off">18</span><span class="cal__day cal__day--off">19</span><span class="cal__day cal__day--off">20</span><span class="cal__day cal__day--off">21</span><span class="cal__day cal__day--off">22</span><button type="button" class="date-btn cal__day" data-live aria-pressed="true" data-date="2026-12-23"><span>23</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-12-24"><span>24</span></button><button type="button" class="date-btn cal__day" data-live aria-pressed="false" data-date="2026-12-25"><span>25</span></button><span class="cal__day cal__day--off">26</span><span class="cal__day cal__day--off">27</span><span class="cal__day cal__day--off">28</span><span class="cal__day cal__day--off">29</span><span class="cal__day cal__day--off">30</span><span class="cal__day cal__day--off">31</span></div></div></div>
+  <p class="field-note">枠のある日付だけ選べます。赤=日曜・青=土曜。</p>
+  <h2 class="mt-0" style="margin-top:8px">4. お受取時間</h2>
+  <div class="slot-grid">
+    <button type="button" class="slot-btn" aria-pressed="false"><span class="slot-time">10:00〜12:00</span></button>
+    <button type="button" class="slot-btn" aria-pressed="true"><span class="slot-time">12:00〜14:00</span></button>
+    <button type="button" class="slot-btn" disabled><span class="slot-time">14:00〜16:00</span><span class="slot-left">満枠</span></button>
+    <button type="button" class="slot-btn" aria-pressed="false"><span class="slot-time">16:00〜18:00</span></button>
+  </div>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>5. お客様情報</h2>
+  <div class="field"><label for="f-name">お名前<span class="req">必須</span></label><input type="text" id="f-name"></div>
+  <div class="field"><label for="f-kana">フリガナ<span class="req">必須</span></label><input type="text" id="f-kana"></div>
+  <div class="field"><label for="f-tel">お電話番号<span class="req">必須</span></label><input type="tel" id="f-tel" placeholder="例: 0568-72-5227(ハイフン無しでも可)"></div>
+  <div class="field"><label for="f-email">メールアドレス<span class="req" style="color:var(--kin)">推奨</span></label><input type="email" id="f-email"><p class="field-note">ご入力いただくと、予約番号を記載した確認メールをお送りします。</p></div>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>6. お支払い方法</h2>
+  <label style="display:flex;gap:10px;align-items:center;min-height:var(--tap);font-weight:500">
+    <input type="radio" name="pay" checked style="width:24px;height:24px"> クレジットカードで事前に支払う（お受取がスムーズです）
+  </label>
+  <label style="display:flex;gap:10px;align-items:center;min-height:var(--tap);font-weight:500">
+    <input type="radio" name="pay" style="width:24px;height:24px"> 店頭で支払う（現金・各種お支払い）
+  </label>
+</section>
+
+<section class="paper" style="margin-bottom:22px">
+  <h2>7. 個人情報の取扱い</h2>
+  <p style="font-size:.95rem">ご入力いただいた情報は、<strong>①ご予約商品のご用意とお渡し時の本人確認 ②ご予約内容の確認・変更・キャンセルのご連絡</strong>のみに使用します。詳しくは<a href="legal-privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+  <label style="display:flex;gap:10px;align-items:center;min-height:var(--tap);font-weight:700">
+    <input type="checkbox" style="width:24px;height:24px"> 個人情報の取扱いに同意します<span class="req">必須</span>
+  </label>
+</section>
+
+<button type="button" class="btn btn--primary btn--block btn--xl">確認画面へ進む</button>
+<p class="center" style="margin-top:12px"><a href="index.html">トップへ戻る</a></p>
+</main>
+<aside class="tel-band" aria-label="お電話でのご予約" style="margin-top:48px">
+  <p class="tel-band__lead">お電話でのご予約も承ります</p>
+  <p class="tel-band__num"><a href="tel:0568725227">0568-72-5227</a><span class="tel-band__name">（ビッグリブ小牧店）</span></p>
+  <p class="tel-band__note">ネットが不慣れな方もご安心ください。</p>
+</aside>
+<footer class="site-footer">
+  <nav aria-label="スーパー三河屋 本店サイト" class="site-footer__main-links">
+    <span class="site-footer__main-label">スーパー三河屋 本店サイト</span>
+    <a href="https://www.biglive.jp/" rel="noopener">トップ</a>
+    <a href="https://www.biglive.jp/30shops/" rel="noopener">店舗情報</a>
+    <a href="https://www.biglive.jp/40company/" rel="noopener">会社案内</a>
+  </nav>
+  <p class="site-footer__copy">&copy; 2026 株式会社三河屋</p>
+</footer>
+<script src="assets/js/app.js" defer></script>
+<script>
+(function(){
+  function setPressed(group, btn){
+    group.querySelectorAll('[aria-pressed]').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+    btn.setAttribute('aria-pressed','true');
+  }
+  document.querySelectorAll('.shop-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.shop-tab').forEach(function(t){ t.setAttribute('aria-selected','false'); });
+      tab.setAttribute('aria-selected','true');
+      var rg = tab.dataset.region;
+      document.querySelectorAll('.shop-btn').forEach(function(b){ b.hidden = (rg !== 'all' && b.dataset.region !== rg); });
+    });
+  });
+  document.querySelectorAll('.shop-btn').forEach(function(b){
+    b.addEventListener('click', function(){ setPressed(b.closest('.shop-grid'), b); });
+  });
+  document.querySelectorAll('button.cal__day').forEach(function(b){
+    b.addEventListener('click', function(){ setPressed(b.closest('.cal-wrap'), b); });
+  });
+  document.querySelectorAll('.slot-btn').forEach(function(b){
+    if (b.disabled) return;
+    b.addEventListener('click', function(){ setPressed(b.closest('.slot-grid'), b); });
+  });
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('img[data-demo-key]').forEach(function(img){
+    try {
+      var v = localStorage.getItem('demo_live_product_' + img.dataset.demoKey.slice(2));
+      if (v) img.src = v;
+    } catch(e) {}
+  });
+  window.addEventListener('storage', function(ev){
+    if (ev.key && ev.key.indexOf('demo_live_product_') === 0) {
+      var slug = ev.key.slice('demo_live_product_'.length);
+      document.querySelectorAll('img[data-demo-key="p:' + slug + '"]').forEach(function(img){
+        img.src = ev.newValue || ('assets/img/products/' + slug + '.jpg');
+      });
+    }
+  });
+})();
+</script>
+
+<!-- 商品カード(写真/商品名クリックで表示) -->
+<div class="pcard" id="pcard" hidden role="dialog" aria-modal="true" aria-label="商品の写真と情報">
+  <div class="pcard__dialog">
+    <button type="button" class="pcard__close" aria-label="閉じる">✕</button>
+    <img class="pcard__img" src="" alt="">
+    <h3 class="pcard__name"></h3>
+    <p class="pcard__price"></p>
+    <p class="pcard__desc"></p>
+    <p class="pcard__meta" hidden></p>
+    <p class="pcard__note">写真は実際の商品です(昨年までの販売時に撮影したものを含みます)。</p>
+  </div>
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('pcard');
+  var img = modal.querySelector('.pcard__img');
+  var name = modal.querySelector('.pcard__name');
+  var price = modal.querySelector('.pcard__price');
+  var desc = modal.querySelector('.pcard__desc');
+  var lastFocus = null;
+  function openCard(item){
+    var itImg = item.querySelector('img');
+    var itName = item.querySelector('.shinagaki__name a');
+    var itPrice = item.querySelector('.shinagaki__price');
+    var itDesc = item.querySelector('.field-note');
+    img.src = itImg ? itImg.src : '';
+    img.alt = itImg ? itImg.alt : '';
+    name.textContent = itName ? itName.textContent : '';
+    price.innerHTML = itPrice ? itPrice.innerHTML : '';
+    desc.textContent = itDesc ? itDesc.textContent : '';
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.pcard__close').focus();
+  }
+  function closeCard(){
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('.shinagaki__item').forEach(function(item){
+    var itImg = item.querySelector('img');
+    var itName = item.querySelector('.shinagaki__name a');
+    if (itImg) itImg.addEventListener('click', function(){ openCard(item); });
+    if (itName) itName.addEventListener('click', function(ev){ ev.preventDefault(); openCard(item); });
+  });
+  modal.addEventListener('click', function(ev){
+    if (ev.target === modal || ev.target.closest('.pcard__close')) closeCard();
+  });
+  document.addEventListener('keydown', function(ev){
+    if (ev.key === 'Escape' && !modal.hidden) closeCard();
+  });
+})();
+</script>
+<script>
+(function(){
+  function applyMax(item, max){
+    var input = item.querySelector('.qty-stepper input');
+    if (!input) return;
+    if (!input.dataset.baseMax) input.dataset.baseMax = input.getAttribute('max') || '20';
+    if (max === null) max = parseInt(input.dataset.baseMax, 10);
+    input.max = max;
+    if (parseInt(input.value, 10) > max) input.value = max;
+    var note = item.querySelector('.qty-limit-note');
+    if (!note) {
+      note = document.createElement('p');
+      note.className = 'field-note qty-limit-note';
+      note.style.margin = '4px 0 0';
+      var st = item.querySelector('.qty-stepper');
+      st.parentNode.insertBefore(note, st.nextSibling);
+    }
+    note.textContent = 'お一人様 ' + max + ' 点まで';
+  }
+  function slugOf(item){
+    var img = item.querySelector('img[data-demo-key]');
+    return img ? img.dataset.demoKey.slice(2) : null;
+  }
+  document.querySelectorAll('.shinagaki__item').forEach(function(item){
+    var slug = slugOf(item);
+    if (!slug) return;
+    var mq = null;
+    try { mq = localStorage.getItem('demo_live_maxqty_' + slug); } catch(e) {}
+    applyMax(item, mq ? parseInt(mq, 10) : null);
+  });
+  window.addEventListener('storage', function(ev){
+    if (!ev.key || ev.key.indexOf('demo_live_maxqty_') !== 0) return;
+    var slug = ev.key.slice('demo_live_maxqty_'.length);
+    document.querySelectorAll('.shinagaki__item').forEach(function(item){
+      if (slugOf(item) === slug) applyMax(item, ev.newValue ? parseInt(ev.newValue, 10) : null);
+    });
+  });
+})();
+</script>
+</body>
+</html>
