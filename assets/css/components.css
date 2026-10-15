@@ -692,3 +692,16 @@ button.cal__day[aria-pressed="true"] {
 .pcard__detail { font-size: .9rem; }
 .pcard__close { position: absolute; top: 10px; right: 10px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--washi-line); background: #fff; font-size: 1.2rem; line-height: 1; cursor: pointer; }
 .pcard__close:hover { background: var(--kinari-deep); }
+
+/* v31: 申込フォームの広幅バランス調整(PCで表示が小さい対応)
+   form-wideページは共通幅変数を1080pxへ(ヘッダー/工程バー/本文が揃って広がる) */
+body.form-wide { --content-w: 1080px; }
+.shinagaki__item { grid-template-columns: 150px 1fr; gap: 16px; }
+.shinagaki__item img { width: 150px; height: 150px; }
+@media (min-width: 900px) {
+  body.form-wide .shinagaki { display: grid; grid-template-columns: 1fr 1fr; gap: 0 44px; }
+}
+@media (max-width: 520px) {
+  .shinagaki__item { grid-template-columns: 104px 1fr; gap: 12px; }
+  .shinagaki__item img { width: 104px; height: 104px; }
+}
