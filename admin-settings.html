@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=31">
-<link rel="stylesheet" href="assets/css/base.css?v=31">
-<link rel="stylesheet" href="assets/css/components.css?v=31">
+<link rel="stylesheet" href="assets/css/tokens.css?v=32">
+<link rel="stylesheet" href="assets/css/base.css?v=32">
+<link rel="stylesheet" href="assets/css/components.css?v=32">
 <script>
 (function(){
-  var MYV = 31;
+  var MYV = 32;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -62,6 +62,36 @@
 <p>トップページの透かしヒーロー・8カテゴリカードの写真をここで差し替えられます。<strong>流れ: アップロード → プレビューで確認 → 保存して反映</strong>（確認するまで本番は変わりません）。</p>
 <div class="notice">写真の注意: 実物と異なる写真を特定商品の写真として使わない(景表法)。フリー素材は必ず出典台帳(CREDITS.md)に追記。人物・他店の看板が写るものは不可。</div>
 <p class="field-note">このデモでは変更が実際に動きます（反映されるのはこのブラウザ内のみ。本番は全お客様の画面に反映）</p>
+
+<div class="admin-card">
+  <h2 style="font-size:1.05rem">消費税率の設定 <small style="font-weight:400;color:var(--sumi-soft)">(お受取日=引渡日基準で自動適用・このデモでは実際に動きます)</small></h2>
+  <p class="field-note">税率改正時はここで切替後の税率と適用開始日を設定します。開始日以降のお受取分から新税率で内税計算されます(<strong>税込価格は変わりません</strong>。価格改定は「商品」画面から)。</p>
+  <p style="margin:6px 0 14px">現在の設定: <strong id="tax-status">切替なし(軽減税率8%・標準税率10%で計算)</strong></p>
+  <div class="field">
+    <label>軽減税率(食品)の切替後税率</label>
+    <div class="tax-tabs" role="radiogroup" aria-label="軽減税率の切替後税率">
+      <label><input type="radio" name="d-tax-food" data-live value="" checked><span>8%のまま</span></label>
+      <label><input type="radio" name="d-tax-food" data-live value="1"><span>1%</span></label>
+      <label><input type="radio" name="d-tax-food" data-live value="5"><span>5%</span></label>
+      <label><input type="radio" name="d-tax-food" data-live value="0"><span>0%</span></label>
+    </div>
+  </div>
+  <div class="field">
+    <label>標準税率(ペット用ケーキ等)の切替後税率</label>
+    <div class="tax-tabs" role="radiogroup" aria-label="標準税率の切替後税率">
+      <label><input type="radio" name="d-tax-std" data-live value="" checked><span>10%のまま</span></label>
+      <label><input type="radio" name="d-tax-std" data-live value="8"><span>8%</span></label>
+      <label><input type="radio" name="d-tax-std" data-live value="5"><span>5%</span></label>
+      <label><input type="radio" name="d-tax-std" data-live value="1"><span>1%</span></label>
+    </div>
+  </div>
+  <div class="filter-bar">
+    <div class="field"><label>適用開始日(この日のお受取分から)</label><input type="date" id="d-tax-date" data-live value="2027-04-01"></div>
+    <div class="field" style="align-self:end"><button type="button" class="btn btn--primary" id="d-tax-save" data-live>保存して反映</button></div>
+    <div class="field" style="align-self:end"><button type="button" class="btn btn--ghost" id="d-tax-reset" data-live>切替なしに戻す</button></div>
+  </div>
+  <p class="field-note">保存すると、該当するお受取期間の申込ページに「◯月◯日以降のお受取分は消費税率◯%」の案内が表示されます。</p>
+</div>
 
 <div class="stat-tiles" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
   <div class="admin-card" style="margin-bottom:0" data-panel="hero">
@@ -477,6 +507,58 @@ document.addEventListener('click', function(e){
 
     refresh();
   });
+})();
+</script>
+<script>
+(function(){
+  var status = document.getElementById('tax-status');
+  function toast(msg){
+    var t = document.createElement('div');
+    t.textContent = msg;
+    t.style.cssText = 'position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:#14503C;color:#fff;padding:12px 22px;border-radius:999px;z-index:99;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:90vw;text-align:center';
+    document.body.append(t);
+    setTimeout(function(){ t.remove(); }, 2800);
+  }
+  function render(cfg){
+    if (!cfg || !cfg.date || (cfg.food === '' && cfg.std === '')) {
+      status.textContent = '切替なし(軽減税率8%・標準税率10%で計算)';
+      return;
+    }
+    status.textContent = cfg.date + ' のお受取分から 軽減税率(食品) ' + (cfg.food !== '' ? cfg.food + '%' : '8%のまま')
+      + '／標準税率 ' + (cfg.std !== '' ? cfg.std + '%' : '10%のまま');
+  }
+  function load(){
+    var cfg = null;
+    try { cfg = JSON.parse(localStorage.getItem('demo_live_tax') || 'null'); } catch(e) {}
+    if (cfg) {
+      document.getElementById('d-tax-date').value = cfg.date || '';
+      var f = document.querySelector('input[name="d-tax-food"][value="' + (cfg.food || '') + '"]');
+      var s2 = document.querySelector('input[name="d-tax-std"][value="' + (cfg.std || '') + '"]');
+      if (f) f.checked = true;
+      if (s2) s2.checked = true;
+    }
+    render(cfg);
+  }
+  document.getElementById('d-tax-save').addEventListener('click', function(){
+    var cfg = {
+      date: document.getElementById('d-tax-date').value,
+      food: document.querySelector('input[name="d-tax-food"]:checked').value,
+      std: document.querySelector('input[name="d-tax-std"]:checked').value
+    };
+    if (!cfg.date) { toast('適用開始日を入力してください'); return; }
+    if (cfg.food === '' && cfg.std === '') { toast('切替後の税率を選択してください'); return; }
+    try { localStorage.setItem('demo_live_tax', JSON.stringify(cfg)); } catch(e) {}
+    render(cfg);
+    toast('✔ 保存しました。' + cfg.date + ' のお受取分から新税率で計算します(申込ページに案内表示)');
+  });
+  document.getElementById('d-tax-reset').addEventListener('click', function(){
+    try { localStorage.removeItem('demo_live_tax'); } catch(e) {}
+    document.querySelector('input[name="d-tax-food"][value=""]').checked = true;
+    document.querySelector('input[name="d-tax-std"][value=""]').checked = true;
+    render(null);
+    toast('切替なしに戻しました(現行税率のまま)');
+  });
+  load();
 })();
 </script>
 </body>

@@ -9,12 +9,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=31">
-<link rel="stylesheet" href="assets/css/base.css?v=31">
-<link rel="stylesheet" href="assets/css/components.css?v=31">
+<link rel="stylesheet" href="assets/css/tokens.css?v=32">
+<link rel="stylesheet" href="assets/css/base.css?v=32">
+<link rel="stylesheet" href="assets/css/components.css?v=32">
 <script>
 (function(){
-  var MYV = 31;
+  var MYV = 32;
   fetch('version.json?ts=' + Date.now(), {cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     if (d.v > MYV) {
       var u = new URL(location.href);
@@ -455,6 +455,35 @@
     document.querySelectorAll('.shinagaki__item').forEach(function(item){
       if (slugOf(item) === slug) applyMax(item, ev.newValue ? parseInt(ev.newValue, 10) : null);
     });
+  });
+})();
+</script>
+<script>
+(function(){
+  var cfg = null;
+  try { cfg = JSON.parse(localStorage.getItem('demo_live_tax') || 'null'); } catch(e) {}
+  function jd(iso){ var p = iso.split('-'); return parseInt(p[0],10) + '年' + parseInt(p[1],10) + '月' + parseInt(p[2],10) + '日'; }
+  function apply(c){
+    var old = document.getElementById('demo-tax-note');
+    if (old) old.remove();
+    if (!c || !c.date || c.food === '') return;
+    var dates = [].map.call(document.querySelectorAll('button.date-btn'), function(b){ return b.dataset.date; });
+    if (!dates.some(function(d){ return d >= c.date; })) return; // 受取期間が切替日前なら非表示
+    var h2s = [].filter.call(document.querySelectorAll('section.paper h2'), function(h){ return h.textContent.indexOf('お品と数量') >= 0; });
+    if (!h2s.length) return;
+    var pNote = document.createElement('p');
+    pNote.className = 'field-note';
+    pNote.id = 'demo-tax-note';
+    pNote.style.cssText = 'font-weight:700;color:var(--sumi)';
+    pNote.textContent = jd(c.date) + '以降のお受取分は消費税率' + c.food + '%で内税計算します(税込価格は変わりません)。';
+    h2s[0].parentNode.insertBefore(pNote, h2s[0].nextSibling);
+  }
+  apply(cfg);
+  window.addEventListener('storage', function(ev){
+    if (ev.key !== 'demo_live_tax') return;
+    var c = null;
+    try { c = JSON.parse(ev.newValue || 'null'); } catch(e) {}
+    apply(c);
   });
 })();
 </script>

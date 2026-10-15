@@ -705,3 +705,12 @@ body.form-wide { --content-w: 1080px; }
   .shinagaki__item { grid-template-columns: 104px 1fr; gap: 12px; }
   .shinagaki__item img { width: 104px; height: 104px; }
 }
+
+/* 消費税率の選択タブ(管理サイト) */
+.tax-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.tax-tabs label { cursor: pointer; margin: 0; }
+.tax-tabs input { position: absolute; opacity: 0; width: 0; height: 0; }
+.tax-tabs span { display: inline-flex; align-items: center; min-height: 42px; padding: 4px 20px; border: 1.5px solid var(--washi-line); border-radius: 999px; background: #fff; font-weight: 700; font-variant-numeric: tabular-nums; }
+.tax-tabs input:checked + span { background: var(--sumi); color: #fff; border-color: var(--sumi); }
+.tax-tabs input:focus-visible + span { outline: 2px solid var(--kin); outline-offset: 2px; }
+.tax-tabs span:hover { border-color: var(--sumi); }
