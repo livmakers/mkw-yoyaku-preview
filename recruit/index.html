@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>三河屋 幹部候補採用</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="三河屋グループ（ビッグリブ・パワーズ・Mikawaya・サンマート）の店舗マネージャー・経営幹部候補の募集ページです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@700;900&family=Anton&family=Roboto+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: 夜明け前の市場のような深緑の帯と、朝の光のような白い紙面を交互に重ねる。値札ゴールドを一点の光として使い、巨大な英字の透かしとマーキーで「動いている店」を表現する。単一テーマで設計。 */
+:root{
+  color-scheme:light;
+  --forest:#0a3a2a;
+  --forest-2:#07281d;
+  --leaf:#1f6b4a;
+  --paper:#fbfaf5;
+  --paper-2:#f1efe4;
+  --ink:#122019;
+  --muted:#5a665f;
+  --gold:#f2b705;
+  --gold-soft:#ffe08a;
+  --red:#d33a2c;
+  --line:#dcdccd;
+  --on-dark:#f4f1e6;
+  --on-dark-muted:#b9c7bd;
+  --ph-bg:#fff4c7;
+  --ph-line:#c99a00;
+  --f-display:"Dela Gothic One","Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif;
+  --f-mincho:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+  --f-latin:"Anton","Impact","Arial Narrow",sans-serif;
+  --f-mono:"Roboto Mono",ui-monospace,Menlo,monospace;
+  --img:"?fm=jpg&q=70&w=1800&auto=format&fit=crop";
+}
+*{box-sizing:border-box}
+body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+html{scroll-behavior:smooth;background:var(--paper);overflow-x:clip}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:clip}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));position:relative;z-index:2}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.3}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+section{position:relative;padding-block:clamp(72px,11vw,130px);overflow:hidden}
+
+/* 共通パーツ */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--leaf)}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+.dark .eyebrow{color:var(--gold)}
+.h2{font-family:var(--f-display);font-weight:400;font-size:clamp(1.8rem,5vw,3.1rem);letter-spacing:.01em;margin-top:14px}
+.h2 .mk{background:linear-gradient(transparent 60%,var(--gold-soft) 60%);padding:0 .06em}
+.dark .h2 .mk{background:none;color:var(--gold)}
+.lead{color:var(--muted);font-size:1.04rem;max-width:40em;margin-top:18px}
+.dark{background:var(--forest);color:var(--on-dark)}
+.dark .lead{color:var(--on-dark-muted)}
+
+/* 透かし（巨大英字） */
+.wm{position:absolute;z-index:1;pointer-events:none;user-select:none;font-family:var(--f-latin);font-size:clamp(7rem,24vw,22rem);line-height:.8;letter-spacing:-.01em;white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px rgba(10,58,42,.10)}
+.dark .wm{-webkit-text-stroke:1.5px rgba(242,183,5,.16)}
+.wm.r{right:-.08em}.wm.l{left:-.06em}
+.wm.t{top:.15em}.wm.b{bottom:.05em}
+
+/* 要確認 */
+.ph{background:var(--ph-bg);border:1.5px dashed var(--ph-line);border-radius:6px;padding:1px 8px;font-weight:500;color:var(--ink)}
+.ph::before{content:"要確認";font-family:var(--f-mono);font-size:.66rem;font-weight:700;letter-spacing:.06em;background:var(--ph-line);color:#1b1a10;border-radius:3px;padding:0 5px;margin-right:6px;vertical-align:2px}
+
+/* ボタン */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;font-family:var(--f-body);font-weight:900;text-decoration:none;border-radius:999px;padding:17px 32px;border:0;cursor:pointer;font-size:1.02rem;overflow:hidden;isolation:isolate;transition:transform .25s ease,box-shadow .25s ease}
+.btn .arw{display:inline-block;transition:transform .25s ease}
+.btn:hover{transform:translateY(-3px)}
+.btn:hover .arw{transform:translateX(5px)}
+.btn-gold{background:var(--gold);color:#1a1503;box-shadow:0 10px 30px rgba(242,183,5,.35)}
+.btn-gold::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.6s ease-in-out infinite;z-index:-1}
+@keyframes shine{0%,55%{transform:translateX(-120%)}85%,100%{transform:translateX(120%)}}
+.btn-line{background:transparent;color:var(--on-dark);border:1.5px solid rgba(244,241,230,.5);padding:15px 26px}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;flex-direction:column;color:var(--on-dark);background:var(--forest-2);margin-top:calc(-1 * env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px);overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:-4%;z-index:-2;background:
+  linear-gradient(115deg,rgba(7,40,29,.94) 0%,rgba(7,40,29,.78) 42%,rgba(7,40,29,.35) 100%),
+  url("https://images.unsplash.com/photo-1761281206511-cf440dbb4e6b?fm=jpg&q=70&w=2000&auto=format&fit=crop") center/cover no-repeat,
+  radial-gradient(1200px 600px at 80% 20%,#1f6b4a 0%,transparent 60%),
+  linear-gradient(160deg,#0a3a2a,#051c14);
+  animation:kenburns 22s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.08) translate(-1%,-1%)}}
+.hero-grain{position:absolute;inset:0;z-index:-1;opacity:.35;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}
+.hero .wm{-webkit-text-stroke:1.5px rgba(244,241,230,.14);bottom:-.08em;left:-.04em;z-index:-1;animation:drift 40s linear infinite}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-12%)}}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-block:22px;position:relative;z-index:3}
+.brand{font-family:var(--f-mincho);font-weight:900;font-size:1.28rem;letter-spacing:.08em;line-height:1.3}
+.brand small{display:block;font-family:var(--f-mono);font-weight:500;font-size:.64rem;letter-spacing:.14em;color:var(--on-dark-muted)}
+.nav .btn{padding:11px 20px;font-size:.88rem}
+.hero-body{flex:1;display:grid;align-content:center;padding-block:clamp(30px,6vw,60px) clamp(80px,10vw,120px)}
+.badge{display:inline-flex;align-items:center;gap:10px;align-self:start;justify-self:start;background:rgba(242,183,5,.14);border:1px solid rgba(242,183,5,.5);color:var(--gold-soft);border-radius:999px;padding:7px 16px;font-weight:700;font-size:.88rem;letter-spacing:.06em;animation:rise .9s .1s both}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(242,183,5,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(242,183,5,0)}100%{box-shadow:0 0 0 0 rgba(242,183,5,0)}}
+.hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.6rem,8.4vw,6.2rem);line-height:1.18;letter-spacing:.01em;margin-top:26px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .ln>span{display:inline-block;animation:lineup 1s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 .ln:nth-child(2)>span{animation-delay:.18s}
+.hero h1 .gold{color:var(--gold);position:relative}
+.hero h1 .gold::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.12em;background:var(--gold);transform-origin:left;animation:underline 1s .9s cubic-bezier(.7,0,.2,1) both}
+@keyframes lineup{from{transform:translateY(105%)}to{transform:none}}
+@keyframes underline{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero .sub{margin-top:28px;font-size:clamp(1rem,1.6vw,1.14rem);max-width:33em;color:#dfe7e1;animation:rise .9s .5s both}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;animation:rise .9s .7s both}
+.hero-meta{position:absolute;right:max(18px,env(safe-area-inset-right,0px));bottom:34px;z-index:3;display:flex;gap:28px;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;color:var(--on-dark-muted)}
+.hero-meta b{display:block;font-family:var(--f-latin);font-size:2rem;letter-spacing:.02em;color:var(--on-dark);font-weight:400;line-height:1.1}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;width:1px;height:56px;background:linear-gradient(var(--gold),transparent);animation:cue 2.2s ease-in-out infinite}
+@keyframes cue{0%{transform:translateX(-50%) scaleY(0);transform-origin:top}50%{transform:translateX(-50%) scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:translateX(-50%) scaleY(0);transform-origin:bottom}}
+
+/* ===== マーキー ===== */
+.marquee{background:var(--gold);color:#1a1503;overflow:hidden;padding-block:16px;transform:rotate(-1.2deg);margin:0 -2%;width:104%;max-width:none;position:relative;z-index:4;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.marquee-track{display:flex;gap:0;width:max-content;animation:mq 30s linear infinite}
+.marquee span{font-family:var(--f-display);font-size:clamp(1.1rem,2.4vw,1.6rem);padding-inline:28px;white-space:nowrap;display:inline-flex;align-items:center;gap:28px}
+.marquee span::after{content:"✦";font-size:.8em}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* スクロール演出（初期状態でも読める） */
+.rv{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+@keyframes reveal{from{opacity:.2;transform:translateY(60px)}to{opacity:1;transform:none}}
+.zoom{animation:zoomin linear both;animation-timeline:view();animation-range:entry 0% cover 50%}
+@keyframes zoomin{from{transform:scale(1.18)}to{transform:scale(1)}}
+@supports not (animation-timeline:view()){.rv,.zoom{animation:none}}
+
+/* ===== NOW ===== */
+.now-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,6vw,70px);align-items:center}
+.photo-stack{position:relative;aspect-ratio:4/5;max-width:100%}
+.ph-img{position:absolute;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px rgba(10,58,42,.25);background:linear-gradient(145deg,var(--leaf),var(--forest))}
+.ph-img>div{position:absolute;inset:0;background-size:cover;background-position:center}
+.ph-img.a{inset:0 18% 16% 0}
+.ph-img.b{inset:46% 0 0 34%;border:8px solid var(--paper)}
+.ph-img .cap{position:absolute;left:14px;bottom:12px;z-index:2;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.12em;color:#fff;background:rgba(7,40,29,.55);padding:3px 8px;border-radius:4px;backdrop-filter:blur(4px)}
+.stamp{position:absolute;top:-22px;right:4%;z-index:3;width:128px;height:128px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;text-align:center;font-family:var(--f-display);font-size:.95rem;line-height:1.3;box-shadow:0 14px 30px rgba(211,58,44,.35);animation:spin 18s linear infinite}
+.stamp span{animation:spin 18s linear infinite reverse;display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.timeline{display:grid;gap:0;margin-top:34px;border-left:2px solid var(--line)}
+.tl{position:relative;padding:4px 0 26px 26px}
+.tl::before{content:"";position:absolute;left:-8px;top:10px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3px solid var(--leaf)}
+.tl:last-child{padding-bottom:0}
+.tl time{font-family:var(--f-mono);font-weight:700;font-size:.8rem;letter-spacing:.08em;color:var(--leaf)}
+.tl h3{font-family:var(--f-body);font-weight:900;font-size:1.2rem;margin-top:2px}
+.tl p{color:var(--muted);font-size:.93rem;margin-top:2px}
+.areas{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px;align-items:center}
+.areas .lb{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;color:var(--muted)}
+.pref{font-family:var(--f-mincho);font-weight:900;font-size:1.25rem;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--forest);color:var(--gold-soft);transition:transform .3s}
+.pref:hover{transform:translateY(-4px) rotate(-6deg)}
+
+/* ===== MISSION ===== */
+.missions{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.mcard{position:relative;border-radius:20px;overflow:hidden;min-height:460px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;isolation:isolate;min-width:0;background:var(--forest)}
+.mcard .bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.mcard::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,40,29,.05) 20%,rgba(7,40,29,.92) 78%)}
+.mcard:hover .bg{transform:scale(1.07)}
+.mcard .no{position:absolute;top:18px;left:22px;font-family:var(--f-latin);font-size:4.6rem;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.75)}
+.mcard .body{padding:26px 26px 30px}
+.mcard h3{font-family:var(--f-display);font-weight:400;font-size:1.65rem;letter-spacing:.02em}
+.mcard .en{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.2em;color:var(--gold-soft)}
+.mcard p{font-size:.93rem;color:#e4ebe6;margin-top:10px}
+
+/* ===== CAREER ===== */
+.stairs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:end;margin-top:64px}
+.stair{position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(244,241,230,.16);border-radius:18px;padding:28px 26px;backdrop-filter:blur(6px);min-width:0;transition:transform .35s,border-color .35s}
+.stair:hover{transform:translateY(-6px);border-color:var(--gold)}
+.stair:nth-child(1){margin-bottom:0}
+.stair:nth-child(2){margin-bottom:60px}
+.stair:nth-child(3){margin-bottom:120px;background:linear-gradient(160deg,rgba(242,183,5,.22),rgba(242,183,5,.04));border-color:rgba(242,183,5,.55)}
+.stair .lv{font-family:var(--f-latin);font-size:3.4rem;line-height:1;color:var(--gold)}
+.stair .lv small{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.2em;color:var(--on-dark-muted);margin-left:8px;vertical-align:middle}
+.stair h3{font-family:var(--f-display);font-weight:400;font-size:1.45rem;margin-top:10px}
+.stair ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:7px;font-size:.92rem;color:#d6e0d9}
+.stair li{display:grid;grid-template-columns:16px 1fr;gap:8px}
+.stair li::before{content:"";width:8px;height:8px;margin-top:.7em;border-radius:2px;background:var(--gold);transform:rotate(45deg)}
+.arrow-up{position:absolute;right:20px;top:20px;font-size:1.3rem;color:var(--gold)}
+.career-note{margin-top:30px;font-size:.88rem;color:var(--on-dark-muted)}
+
+/* ===== WANT ===== */
+.want-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.wcard{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 24px 26px;transition:transform .35s,box-shadow .35s;min-width:0;overflow:hidden}
+.wcard::after{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--gold),var(--leaf));transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.7,0,.2,1)}
+.wcard:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(10,58,42,.12)}
+.wcard:hover::after{transform:scaleX(1)}
+.wcard .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--forest);color:var(--gold);margin-bottom:18px}
+.wcard .ic svg{width:26px;height:26px}
+.wcard h3{font-weight:900;font-size:1.12rem}
+.wcard p{color:var(--muted);font-size:.92rem;margin-top:8px}
+
+/* ===== PHILOSOPHY ===== */
+.philo{position:relative;color:#fff;text-align:left;isolation:isolate;padding-block:clamp(110px,16vw,190px)}
+.philo .bg{position:absolute;inset:0;z-index:-2;background:
+  url("https://images.unsplash.com/photo-1653222439737-a377eb21c965?fm=jpg&q=70&w=2000&auto=format&fit=crop") center/cover no-repeat,
+  linear-gradient(150deg,#1f6b4a,#07281d);background-attachment:fixed}
+.philo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(7,40,29,.93),rgba(7,40,29,.6))}
+.philo .q{font-family:var(--f-mincho);font-weight:900;font-size:clamp(1.6rem,4.4vw,3rem);line-height:1.6;max-width:21em;margin-top:22px}
+.philo .q em{font-style:normal;color:var(--gold)}
+.philo .src{margin-top:22px;font-size:.86rem;color:var(--on-dark-muted)}
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:48px}
+.quotes blockquote{margin:0;border-left:3px solid var(--gold);padding:6px 0 6px 20px;font-size:1rem;color:#e7eee9;font-family:var(--f-mincho);font-weight:700;line-height:1.9}
+
+/* ===== TERMS ===== */
+.table-box{margin-top:48px;overflow-x:auto;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:0 20px 50px rgba(10,58,42,.07)}
+table{width:100%;border-collapse:collapse;min-width:580px}
+th,td{text-align:left;vertical-align:top;padding:20px 24px;border-bottom:1px solid var(--line);font-size:.96rem}
+tr:last-child th,tr:last-child td{border-bottom:0}
+th{width:10em;font-weight:900;white-space:nowrap;color:var(--forest);background:var(--paper-2)}
+td .ph{display:inline-block;margin:3px 0}
+
+/* ===== FLOW ===== */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:48px 0 0;padding:0;list-style:none;counter-reset:f}
+.flow li{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 22px;min-width:0}
+.flow li::before{counter-increment:f;content:counter(f,decimal-leading-zero);font-family:var(--f-latin);font-size:3rem;line-height:1;color:var(--gold);display:block;margin-bottom:10px}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-12px;top:44px;width:8px;height:8px;border-top:2px solid var(--leaf);border-right:2px solid var(--leaf);transform:rotate(45deg);z-index:2}
+.flow b{font-weight:900;font-size:1.06rem;display:block}
+.flow span{font-size:.88rem;color:var(--muted);display:block;margin-top:6px}
+
+/* ===== FORM ===== */
+.apply{position:relative;isolation:isolate;color:var(--on-dark)}
+.apply .bg{position:absolute;inset:0;z-index:-2;background:
+  url("https://images.unsplash.com/photo-1545186182-9faaf78480b8?fm=jpg&q=70&w=2000&auto=format&fit=crop") center/cover no-repeat,
+  linear-gradient(160deg,#0a3a2a,#051c14)}
+.apply::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,40,29,.9),rgba(7,40,29,.97))}
+.apply-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,64px);align-items:start}
+.apply-side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 30px)}
+.apply-side .big{font-family:var(--f-display);font-size:clamp(2.2rem,5.4vw,3.6rem);line-height:1.25;margin-top:14px}
+.apply-side .big span{color:var(--gold)}
+.apply-side p{color:var(--on-dark-muted);margin-top:18px}
+.apply-side .pts{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px;font-size:.92rem}
+.apply-side .pts li{display:flex;gap:10px;align-items:center}
+.apply-side .pts li::before{content:"✓";width:22px;height:22px;border-radius:50%;background:var(--gold);color:#1a1503;display:grid;place-items:center;font-size:.72rem;font-weight:900;flex:none}
+.form-card{background:var(--paper);color:var(--ink);border-radius:22px;padding:clamp(22px,4vw,42px);box-shadow:0 40px 80px rgba(0,0,0,.35);min-width:0}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.field{display:grid;gap:6px;min-width:0}
+.field.full{grid-column:1/-1}
+label,.legend{font-weight:700;font-size:.92rem}
+.req{font-family:var(--f-mono);font-size:.64rem;background:var(--red);color:#fff;border-radius:3px;padding:1px 6px;margin-left:8px;vertical-align:2px}
+.opt{font-family:var(--f-mono);font-size:.64rem;border:1px solid var(--line);color:var(--muted);border-radius:3px;padding:0 6px;margin-left:8px;vertical-align:2px}
+input[type=text],input[type=email],select,textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;transition:border-color .2s,box-shadow .2s}
+textarea{min-height:130px;resize:vertical;line-height:1.7}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--leaf);box-shadow:0 0 0 4px rgba(242,183,5,.35)}
+.hint{font-size:.8rem;color:var(--muted)}
+.radios{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.radios label{display:flex;gap:10px;align-items:flex-start;font-weight:500;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;background:#fff;line-height:1.5;transition:all .2s}
+.radios label:has(input:checked){border-color:var(--leaf);background:#fff8dc;box-shadow:inset 0 0 0 1px var(--leaf)}
+.radios input{margin-top:4px;accent-color:var(--leaf)}
+.agree{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:.92rem}
+.agree input{margin-top:6px;accent-color:var(--leaf);width:18px;height:18px;flex:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.submit-row{margin-top:28px;display:grid;gap:12px;justify-items:stretch}
+.btn-submit{width:100%;font-size:1.1rem;padding:19px 34px}
+.btn-submit[disabled]{opacity:.6;cursor:wait}
+.err{color:var(--red);font-size:.86rem;font-weight:700}
+.done{display:grid;gap:14px;text-align:center;justify-items:center;padding-block:30px}
+.done .ok{width:84px;height:84px;border-radius:50%;background:var(--gold);display:grid;place-items:center;font-size:2.2rem;color:#1a1503;animation:pop .6s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+.done h3{font-family:var(--f-display);font-weight:400;font-size:1.6rem}
+.done p{color:var(--muted);max-width:30em}
+.preview-note{font-size:.8rem;color:var(--muted);border-left:3px solid var(--ph-line);padding-left:10px}
+
+footer{background:var(--forest-2);color:var(--on-dark-muted);padding-block:44px;font-size:.84rem}
+footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer .brand{color:var(--on-dark)}
+footer .credit{margin-top:22px;font-size:.72rem;line-height:1.7;opacity:.75}
+
+/* モバイル */
+@media (max-width:900px){
+  .now-grid,.apply-grid{grid-template-columns:1fr}
+  .apply-side{position:static}
+  .missions,.want-grid{grid-template-columns:1fr 1fr}
+  .mcard{min-height:380px}
+  .stairs{grid-template-columns:1fr;gap:14px}
+  .stair:nth-child(n){margin-bottom:0}
+  .stair:nth-child(2){margin-left:6%}
+  .stair:nth-child(3){margin-left:12%}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2)::after{display:none}
+  .quotes{grid-template-columns:1fr}
+  .hero-meta{display:none}
+  .philo .bg{background-attachment:scroll}
+}
+@media (max-width:560px){
+  .missions,.want-grid,.fgrid,.radios,.flow{grid-template-columns:1fr}
+  .flow li::after{display:none}
+  .mcard{min-height:340px}
+  .nav .btn{display:none}
+  .stamp{width:104px;height:104px;font-size:.8rem;top:-16px}
+  .photo-stack{aspect-ratio:1/1.05}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<main data-mode="live">
+
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grain" aria-hidden="true"></div>
+  <div class="wm" aria-hidden="true">CHALLENGE&nbsp;CHALLENGE</div>
+  <div class="wrap nav">
+    <div class="brand">三河屋グループ<small>BIGLIVE / POWER'S / MIKAWAYA / SUNMART</small></div>
+    <a class="btn btn-gold" href="#apply">エントリー <span class="arw">→</span></a>
+  </div>
+  <div class="wrap hero-body">
+    <span class="badge"><i></i>店舗マネージャー・経営幹部候補 募集</span>
+    <h1>
+      <span class="ln"><span>お店を変える人に、</span></span>
+      <span class="ln"><span><span class="gold">会社の未来</span>を任せたい。</span></span>
+    </h1>
+    <p class="sub">売場を立て直した経験、ヒット商品を生んだ経験。あなたが積み上げてきたものを、三河屋の店舗でそのまま武器にしてください。その先には、商品開発、そして経営の席があります。</p>
+    <div class="cta">
+      <a class="btn btn-gold" href="#apply">応募フォームへ進む <span class="arw">→</span></a>
+      <a class="btn btn-line" href="#mission">仕事の中身を見る</a>
+    </div>
+  </div>
+  <div class="hero-meta" aria-hidden="true">
+    <div><b>4</b>PREFECTURES</div>
+    <div><b>4</b>BRANDS</div>
+    <div><b>2026</b>RENEWAL</div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</header>
+
+<div style="overflow:hidden;padding-block:6px;margin-top:-20px;position:relative;z-index:4"><div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>売場をつくる</span><span>商品を生む</span><span>人を育てる</span><span>店を変える</span><span>経営に挑む</span><span>MAKE THE STORE</span>
+    <span>売場をつくる</span><span>商品を生む</span><span>人を育てる</span><span>店を変える</span><span>経営に挑む</span><span>MAKE THE STORE</span>
+  </div>
+</div></div>
+
+<section id="now">
+  <div class="wm r t" aria-hidden="true">NOW</div>
+  <div class="wrap now-grid">
+    <div class="photo-stack rv">
+      <div class="stamp" aria-hidden="true"><span>2026<br>リニューアル<br>続々</span></div>
+      <div class="ph-img a"><div class="zoom" style="background-image:url('https://images.unsplash.com/photo-1648421962392-428aa4da63c4?fm=jpg&q=70&w=1400&auto=format&fit=crop')"></div><span class="cap">FRESH PRODUCE</span></div>
+      <div class="ph-img b"><div class="zoom" style="background-image:url('https://images.unsplash.com/photo-1722639096482-4e1a805f9b0b?fm=jpg&q=70&w=1200&auto=format&fit=crop')"></div><span class="cap">SALES FLOOR</span></div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Now</span>
+      <h2 class="h2">三河屋は、いま<br><span class="mk">店を変えている最中</span>です。</h2>
+      <p class="lead">2026年は、主力店のリニューアルと新しい売場企画が続いています。この変化の真ん中に、現場を任せられる人が必要です。</p>
+      <div class="timeline">
+        <div class="tl"><time datetime="2026-06">2026.06</time><h3>ビッグリブ小牧店 リニューアル改装オープン</h3><p>つくり直した売場を、次のステージへ伸ばす。</p></div>
+        <div class="tl"><time datetime="2026-07">2026.07</time><h3>ビッグリブ安城店 リニューアル改装オープン</h3><p>改装後の店づくりを、数字と現場の両方で引っぱる。</p></div>
+        <div class="tl"><time datetime="2026-10">2026.10 – 12</time><h3>コストコフェア開催</h3><p>話題の企画で、来店のきっかけをつくる。</p></div>
+      </div>
+      <div class="areas"><span class="lb">AREA</span><span class="pref">愛知</span><span class="pref">岐阜</span><span class="pref">三重</span><span class="pref">滋賀</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="mission" style="background:var(--paper-2)">
+  <div class="wm l b" aria-hidden="true">MISSION</div>
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Mission</span>
+      <h2 class="h2">任せたい仕事は、<span class="mk">3つ</span>。</h2>
+    </div>
+    <div class="missions">
+      <article class="mcard rv">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1788710737703-48dee6844122?fm=jpg&q=70&w=1000&auto=format&fit=crop')"></div>
+        <span class="no" aria-hidden="true">01</span>
+        <div class="body"><span class="en">REVITALIZE</span><h3>店を活性化する</h3><p>売場、品ぞろえ、価格、接客、人の配置。店の数字を自分の判断で動かし、お客様が通いたくなる店に育てます。</p></div>
+      </article>
+      <article class="mcard rv">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1765480953875-a7338f896e91?fm=jpg&q=70&w=1000&auto=format&fit=crop')"></div>
+        <span class="no" aria-hidden="true">02</span>
+        <div class="body"><span class="en">CREATE</span><h3>商品を生み出す</h3><p>「何よりもおいしさが一番」。売場で見えたお客様の声を、オリジナル商品や新しい企画に変えていきます。</p></div>
+      </article>
+      <article class="mcard rv">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1788634162768-9365b7d84c1b?fm=jpg&q=70&w=1000&auto=format&fit=crop')"></div>
+        <span class="no" aria-hidden="true">03</span>
+        <div class="body"><span class="en">LEAD</span><h3>人を育てる</h3><p>パート・アルバイトから社員まで、チームが自分で考えて動ける店へ。人が育つ店は、数字も伸びます。</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="career" class="dark">
+  <div class="wm r t" aria-hidden="true">FUTURE</div>
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Career</span>
+      <h2 class="h2">店長で、<span class="mk">終わらない。</span></h2>
+      <p class="lead">入口は店舗マネージャー。成果と意欲しだいで、商品開発や複数店舗の責任者、そして経営層へと役割が広がります。</p>
+    </div>
+    <div class="stairs">
+      <div class="stair rv"><div class="lv">01<small>STAGE</small></div><h3>店舗マネージャー</h3><ul><li>1店舗の売上・利益・人の責任者</li><li>売場改善と販促の企画・実行</li><li>スタッフの採用と育成</li></ul></div>
+      <div class="stair rv"><div class="lv">02<small>STAGE</small></div><h3>商品開発・複数店舗の統括</h3><ul><li>オリジナル商品・売場企画の開発</li><li>複数店舗の数字と運営の統括</li><li>成功した型を他店へ広げる</li></ul></div>
+      <div class="stair rv"><span class="arrow-up" aria-hidden="true">↗</span><div class="lv">03<small>STAGE</small></div><h3>経営層</h3><ul><li>事業全体の戦略づくりに参加</li><li>新しい店・新しい事業の立ち上げ</li><li>グループの次の成長を担う</li></ul></div>
+    </div>
+    <p class="career-note">※ 各ステージへの登用の目安（期間・基準）：<span class="ph">登用基準・目安期間を記入</span></p>
+  </div>
+</section>
+
+<section id="want">
+  <div class="wm l t" aria-hidden="true">WANTED</div>
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Who we want</span>
+      <h2 class="h2">こんな人を、<span class="mk">待っています。</span></h2>
+      <p class="lead">業界経験は問いません。ただし、自分の手で何かを良くした経験は、必ず聞かせてください。</p>
+    </div>
+    <div class="want-grid">
+      <div class="wcard rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><h3>店や事業を立て直した経験</h3><p>売上・客数・利益など、自分の打ち手で数字を動かしたことがある人。</p></div>
+      <div class="wcard rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></div><h3>商品や企画を形にした経験</h3><p>新商品、売場企画、販促。アイデアを実際に売れる形にした人。</p></div>
+      <div class="wcard rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14a6.5 6.5 0 0 1 3.5 6"/></svg></div><h3>チームを率いた経験</h3><p>人数の大小は問いません。人を動かして結果を出した人。</p></div>
+      <div class="wcard rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></div><h3>将来は経営に関わりたい</h3><p>店長で止まらず、会社の舵取りまで目指したい人。</p></div>
+      <div class="wcard rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></svg></div><h3>変化を楽しめる</h3><p>前例がないことに、まず手を挙げられる人。</p></div>
+      <div class="wcard rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.4 0-8-3.4-8-8 0-3 2-5.5 4.5-5.5 1.4 0 2.6.6 3.5 1.5.9-.9 2.1-1.5 3.5-1.5C18 7.5 20 10 20 13c0 4.6-3.6 8-8 8z"/><path d="M12 9c0-3 1.5-5 4-6"/></svg></div><h3>「食」が好き</h3><p>おいしいものを、お値打ちに届けることに誇りを持てる人。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="philo" id="philosophy">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="wm r b" aria-hidden="true">OISHISA</div>
+  <div class="wrap rv">
+    <span class="eyebrow" style="color:var(--gold)">Philosophy</span>
+    <p class="q">「食」を通じて、いい品物を<em>お値打ち</em>に。<br>選ばれ続けるために、何よりも<em>おいしさが一番。</em></p>
+    <p class="src">三河屋の考え方（公式サイトより）</p>
+    <div class="quotes">
+      <blockquote>私達の素晴らしい商品、サービスで、お客様・従業員・関係する世界の人々のより豊かな暮らしに寄与します。</blockquote>
+      <blockquote>人が創り、人が支える。夢を語り、夢を叶えるスーパーを目指しております。</blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="terms">
+  <div class="wm l t" aria-hidden="true">JOB</div>
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Requirements</span>
+      <h2 class="h2">募集要項</h2>
+      <p class="lead">黄色い枠の項目は現在調整中です。くわしくは選考の中でご説明します。</p>
+    </div>
+    <div class="table-box rv">
+      <table>
+        <tbody>
+          <tr><th>募集職種</th><td>① 店舗マネージャー（店長・店長候補）<br>② 経営幹部候補（商品開発・複数店舗統括・経営企画など）</td></tr>
+          <tr><th>仕事内容</th><td>店舗の売上・利益・人材の管理、売場づくり、販促企画、商品開発への参画。経営幹部候補は、事業戦略づくりや新規事業にも関わります。</td></tr>
+          <tr><th>応募資格</th><td>店舗運営・商品開発・マネジメントのいずれかの実務経験がある方。<br><span class="ph">必須経験年数・学歴などの条件を記入</span></td></tr>
+          <tr><th>雇用形態</th><td><span class="ph">正社員／試用期間の有無・期間を記入</span></td></tr>
+          <tr><th>勤務地</th><td>愛知・岐阜・三重・滋賀の各店舗、または本部。<br><span class="ph">本部所在地・転勤の有無を記入</span></td></tr>
+          <tr><th>給与</th><td><span class="ph">月給〇〇万円〜〇〇万円（経験・能力により決定）を記入</span><br><span class="ph">賞与・昇給の回数を記入</span></td></tr>
+          <tr><th>勤務時間</th><td><span class="ph">シフト制・実働時間・休憩を記入</span></td></tr>
+          <tr><th>休日休暇</th><td><span class="ph">年間休日数・有給休暇・特別休暇を記入</span></td></tr>
+          <tr><th>待遇・福利厚生</th><td><span class="ph">社会保険・交通費・社員割引などを記入</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="flow" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Process</span>
+      <h2 class="h2">選考の流れ</h2>
+    </div>
+    <ol class="flow">
+      <li class="rv"><b>フォームから応募</b><span>このページ下のフォームに入力して送信してください。</span></li>
+      <li class="rv"><b>書類確認</b><span>内容を確認し、担当者からメールでご連絡します。</span></li>
+      <li class="rv"><b>面接</b><span><span class="ph">面接回数・形式（対面／オンライン）を記入</span></span></li>
+      <li class="rv"><b>内定</b><span><span class="ph">応募から内定までの目安期間を記入</span></span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="apply" id="apply">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="wm r t" aria-hidden="true">ENTRY</div>
+  <div class="wrap apply-grid">
+    <div class="apply-side">
+      <span class="eyebrow">Entry</span>
+      <p class="big">次の三河屋を、<br><span>あなたの手で。</span></p>
+      <p>入力は3分ほど。送信した内容は採用担当者に直接届き、担当者からメールでご連絡します。</p>
+      <ul class="pts"><li>電話でのご連絡はいたしません</li><li>業界未経験でも応募できます</li><li>まずは話を聞きたい方も歓迎です</li></ul>
+    </div>
+
+    <div class="form-card">
+      <form id="entry" novalidate>
+        <input type="hidden" name="_subject" value="【三河屋 採用応募】店舗マネージャー・経営幹部候補">
+        <input type="hidden" name="_template" value="table">
+        <div class="hp" aria-hidden="true"><label for="f-hp">この欄は空のままにしてください</label><input type="text" id="f-hp" name="_honey" tabindex="-1" autocomplete="off"></div>
+
+        <div class="fgrid">
+          <div class="field"><label for="f-name">お名前<span class="req">必須</span></label><input type="text" id="f-name" name="お名前" autocomplete="name" required></div>
+          <div class="field"><label for="f-kana">ふりがな<span class="req">必須</span></label><input type="text" id="f-kana" name="ふりがな" required></div>
+          <div class="field full"><label for="f-mail">メールアドレス<span class="req">必須</span></label><input type="email" id="f-mail" name="email" autocomplete="email" inputmode="email" required><span class="hint">選考のご連絡はこのアドレスにお送りします。</span></div>
+          <div class="field"><label for="f-age">年齢<span class="opt">任意</span></label><input type="text" id="f-age" name="年齢" inputmode="numeric"></div>
+          <div class="field"><label for="f-area">お住まいの地域<span class="req">必須</span></label><input type="text" id="f-area" name="お住まいの地域" placeholder="例）愛知県名古屋市" required></div>
+
+          <div class="field full" role="radiogroup" aria-labelledby="lg-pos">
+            <span class="legend" id="lg-pos">希望するポジション<span class="req">必須</span></span>
+            <div class="radios">
+              <label><input type="radio" id="pos-1" name="希望ポジション" value="店舗マネージャー" required>店舗マネージャー</label>
+              <label><input type="radio" id="pos-2" name="希望ポジション" value="商品開発・売場企画">商品開発・売場企画</label>
+              <label><input type="radio" id="pos-3" name="希望ポジション" value="経営幹部候補">経営幹部候補</label>
+              <label><input type="radio" id="pos-4" name="希望ポジション" value="相談して決めたい">相談して決めたい</label>
+            </div>
+          </div>
+
+          <div class="field"><label for="f-ind">これまでの業界<span class="req">必須</span></label>
+            <select id="f-ind" name="これまでの業界" required>
+              <option value="">選んでください</option>
+              <option>スーパー・食品小売</option><option>外食・飲食</option><option>小売（食品以外）</option><option>食品メーカー・卸</option><option>その他</option>
+            </select></div>
+          <div class="field"><label for="f-years">その業界での経験年数<span class="req">必須</span></label>
+            <select id="f-years" name="経験年数" required>
+              <option value="">選んでください</option>
+              <option>3年未満</option><option>3〜5年</option><option>5〜10年</option><option>10〜20年</option><option>20年以上</option>
+            </select></div>
+          <div class="field full"><label for="f-team">マネジメント経験<span class="req">必須</span></label>
+            <select id="f-team" name="マネジメント経験" required>
+              <option value="">選んでください</option>
+              <option>なし</option><option>5人未満のチーム</option><option>5〜20人</option><option>20〜50人</option><option>50人以上・複数拠点</option>
+            </select></div>
+
+          <div class="field full"><label for="f-record">あなたが「良くした」経験<span class="req">必須</span></label><textarea id="f-record" name="実績・経験" required placeholder="例）担当店の売場を組み替え、1年で売上を前年比○％に伸ばした／地元食材を使ったオリジナル惣菜を企画し、定番商品にした"></textarea><span class="hint">数字や具体的な取り組みがあると、選考がスムーズです。</span></div>
+          <div class="field full"><label for="f-will">三河屋で挑戦したいこと<span class="opt">任意</span></label><textarea id="f-will" name="挑戦したいこと" placeholder="例）店舗の活性化、商品開発、将来の経営参画など"></textarea></div>
+          <div class="field full"><label for="f-start">入社できる時期<span class="opt">任意</span></label><input type="text" id="f-start" name="入社可能時期" placeholder="例）2027年4月ごろ／相談したい"></div>
+
+          <div class="field full"><label class="agree" for="f-agree"><input type="checkbox" id="f-agree" name="個人情報の取り扱い" value="同意する" required><span>入力した個人情報を、採用選考とそのご連絡のためにだけ使うことに同意します。</span></label></div>
+        </div>
+
+        <div class="submit-row">
+          <button class="btn btn-gold btn-submit" type="submit" id="f-submit">この内容で応募する <span class="arw">→</span></button>
+          <p class="err" id="f-err" role="alert" hidden></p>
+          <p class="preview-note" id="f-preview-note">これはプレビュー版です。送信ボタンを押しても応募は届きません。公開版では、送信すると採用担当者のメールに届きます。</p>
+        </div>
+      </form>
+
+      <div class="done" id="f-done" hidden>
+        <div class="ok" aria-hidden="true">✓</div>
+        <h3>ご応募ありがとうございます。</h3>
+        <p>内容を確認のうえ、担当者からご入力のメールアドレスへご連絡します。数日たっても連絡がない場合は、迷惑メールフォルダもご確認ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span class="brand">株式会社三河屋（三河屋グループ）</span>
+      <a href="https://www.biglive.jp/" target="_blank" rel="noopener">三河屋 公式サイト ↗</a>
+    </div>
+    <p class="credit">写真：Unsplash（Unsplash License）David Trinks, Nathan Jeon, Brad, Luba Glazunova, Lumin Osity, Zoshua Colah, Ella, Morgan Von Gunten</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ENDPOINT = "https://formsubmit.co/ajax/n-sato@biglive.jp";
+  var mode = document.querySelector("main").getAttribute("data-mode");
+  var form = document.getElementById("entry");
+  var err = document.getElementById("f-err");
+  var btn = document.getElementById("f-submit");
+  var done = document.getElementById("f-done");
+  var btnHTML = btn.innerHTML;
+  if (mode === "live") document.getElementById("f-preview-note").hidden = true;
+
+  function check(){
+    var bad = [];
+    form.querySelectorAll("[required]").forEach(function(el){
+      if (el.type === "radio") {
+        if (!form.querySelector('input[name="'+el.name+'"]:checked') && bad.indexOf("希望するポジション") < 0) bad.push("希望するポジション");
+      } else if (el.type === "checkbox") {
+        if (!el.checked) bad.push("個人情報の取り扱いへの同意");
+      } else if (!el.value.trim() || (el.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value))) {
+        var lb = form.querySelector('label[for="'+el.id+'"]');
+        bad.push(lb ? lb.childNodes[0].textContent.trim() : el.name);
+      }
+    });
+    return bad;
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    err.hidden = true;
+    var bad = check();
+    if (bad.length) { err.textContent = "次の項目を入力してください：" + bad.join("、"); err.hidden = false; return; }
+    if (mode !== "live") { form.hidden = true; done.hidden = false; done.scrollIntoView({block:"center"}); return; }
+    var data = {};
+    new FormData(form).forEach(function(v,k){ data[k] = v; });
+    data._replyto = data.email;
+    btn.disabled = true; btn.textContent = "送信しています…";
+    fetch(ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body:JSON.stringify(data)})
+      .then(function(r){ return r.json().then(function(j){ if(!r.ok || String(j.success) === "false") throw new Error(j.message||"error"); }); })
+      .then(function(){ form.hidden = true; done.hidden = false; done.scrollIntoView({block:"center"}); })
+      .catch(function(){ err.textContent = "送信できませんでした。通信状態を確認して、もう一度お試しください。"; err.hidden = false; btn.disabled = false; btn.innerHTML = btnHTML; });
+  });
+})();
+</script>
+</body>
+</html>
